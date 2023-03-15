@@ -14,10 +14,12 @@ Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se orga
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Aline Azedias de Souza
+* Carine Pinho Lacerda
+* Lucas Gabriel Duarte Enis
+* Talysson Moraes Lourenço de Oliveira
+* Tiago Henrique Oliveira Souza
+* Vinícius Nogueira do Prado
 
 ## Orientador
 
