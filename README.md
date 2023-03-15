@@ -1,12 +1,16 @@
-# TÍTULO DO PROJETO
+# Protags
 
-`CURSO`
+Análise e Desenvolvimento de Sistemas
 
-`DISCIPLINA`
+Aplicação Web Front-End
 
-`SEMESTRE`
+1º SEMESTRE
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+>Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+
+Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se organizar quanto às informações obrigatórias a respeito de custos financeiros para se manterem ativas. 
+
+
 
 ## Integrantes
 
