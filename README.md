@@ -8,7 +8,7 @@ Aplicação Web Front-End
 
 >Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
-Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se organizar quanto aos custos obrigatórios a respeito de informações financeiras para se manterem ativas. 
+Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se organizarem quanto aos custos obrigatórios a respeito de informações financeiras para se manterem ativas. 
 
 É um sistema simples, porém eficaz, permite que usuários com qualquer instrução financeira ou tecnológica consiga se orientar quanto a sua usabilidade.
 
