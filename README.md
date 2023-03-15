@@ -24,7 +24,8 @@ Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se orga
 
 ## Orientador
 
-Simone Alves Nogueira
+Simone Alves Nogueira 
+
 
 ## Instruções de utilização
 
