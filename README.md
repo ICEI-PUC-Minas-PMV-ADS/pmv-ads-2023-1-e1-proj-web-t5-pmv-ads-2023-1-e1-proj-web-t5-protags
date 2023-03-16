@@ -16,7 +16,7 @@ Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se orga
 ## Integrantes
 
 * Aline Azedias de Souza
-* Carine Pinho Lacerda
+* Carine Pinho Lacerda 
 * Lucas Gabriel Duarte Enis
 * Talysson Moraes Lourenço de Oliveira
 * Tiago Henrique Oliveira Souza
