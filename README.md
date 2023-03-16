@@ -19,7 +19,7 @@ Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se orga
 * Carine Pinho Lacerda 
 * Lucas Gabriel Duarte Enis
 * Talysson Moraes Lourenço de Oliveira
-* Tiago Henrique Oliveira Souza
+* Tiago Henrique Oliveira Souza 
 * Vinícius Nogueira do Prado
 
 ## Orientador
