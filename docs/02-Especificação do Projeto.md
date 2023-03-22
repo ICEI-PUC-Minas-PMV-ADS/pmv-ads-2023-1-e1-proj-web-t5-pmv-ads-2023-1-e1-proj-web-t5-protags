@@ -8,7 +8,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+- Stella Priscilla tem 25 anos, reside em Minas Gerais e completou sua graduação recentemente. Não é casada e não possui filhos. Stella decidiu abrir seu próprio negócio de venda de acessórios para celulares já que se identifica com o ramo e percebe como algo presente no dia-a-dia das pessoas. Stella tem conhecimento sobre seu público-alvo, sabe que a maior parte são mulheres de 18 a 35 anos de classe média. Entretanto, não possui o serviço de contabilidade e também não possui alguma ferramenta para auxiliá-la no controle financeiro de sua empresa. A empresa da Stella é virtual, portanto não precisa se preocupar com algumas despesas fixas de locais físicos, porém, sente que necessita de alguma ferramenta que possa ajudá-la a ter mais controle sobre seu caixa disponível para investir em publicidade online.
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
