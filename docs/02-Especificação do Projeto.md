@@ -31,7 +31,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |--------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|
 |Stella Priscilla    | Controlar minhas movimentações financeiras    | Ter mais controle sobre meu caixa disponível e poder investir em publicidade online de forma mais assertiva|
 |Carolina Pinho      | Fazer a gestão dos recursos de forma simples  | Ter uma ferramenta simples de mexer e com custo baixo para ajudar a alavancar seu negócio     |
-|Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
+|Marcelo Cardoso     | Monitorar renda e gastos da empresa           | Evitar declínio financeiro de seu negócio e distribuir salários apropriadamente               |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
