@@ -9,7 +9,8 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 ## Personas
 
 - Stella Priscilla tem 25 anos, reside em Minas Gerais e completou sua graduação recentemente. Não é casada e não possui filhos. Stella decidiu abrir seu próprio negócio de venda de acessórios para celulares já que se identifica com o ramo e percebe como algo presente no dia-a-dia das pessoas. Stella tem conhecimento sobre seu público-alvo, sabe que a maior parte são mulheres de 18 a 35 anos de classe média. Entretanto, não possui o serviço de contabilidade e também não possui alguma ferramenta para auxiliá-la no controle financeiro de sua empresa. A empresa da Stella é virtual, portanto não precisa se preocupar com algumas despesas fixas de locais físicos, porém, sente que necessita de alguma ferramenta que possa ajudá-la a ter mais controle sobre seu caixa disponível para investir em publicidade online.
-
+- 
+Carolina Pinho tem 29 anos, é formada em administração, solteira e não tem filhos, tem uma loja de roupas recém aberta no bairro onde mora com seus pais. Sua prioridade é conseguir novos clientes e contratar um(a) funcionário(a) para revesar turno na loja. Com a empresa muito nova no mercado não tem como comprometer uma parte da renda pagando um contador e ela também não tem experiência com gestão financeira. Sua ideia é fazer controle dos recursos utilizando alguma ferramenta como o excel ou algo parecido, onde ela tenha mais facilidade para administrar seu caixa.
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
 > **Links Úteis**:
@@ -29,7 +30,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                                                                        |
 |--------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|
 |Stella Priscilla    | Controlar minhas movimentações financeiras    | Ter mais controle sobre meu caixa disponível e poder investir em publicidade online de forma mais assertiva|
-|Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
+|Carolina Pinho      | Fazer a gestão dos recursos de forma simples  | Ter uma ferramenta simples de mexer e com custo baixo para ajudar a alavancar seu negócio     |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
@@ -54,6 +55,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
 |RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-003| Mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA | 
 
 
 ### Requisitos não Funcionais
@@ -62,6 +64,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-003| O sistema deve pedir senha para o administrador acessar |  ALTA |
+|RNF-004| O sistema deve ter vários níveis de senha para acessos. Exemplo: Nem todos funcionários devem ter acesso as informações por completo |  ALTA |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
