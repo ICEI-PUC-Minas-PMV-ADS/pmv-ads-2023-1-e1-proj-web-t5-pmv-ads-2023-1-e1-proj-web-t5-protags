@@ -20,13 +20,13 @@ Nosso principal objetivo é fazer com que pequenas empresas e empreendedores ini
 
 Como por exemplo: 
 
-#### - Meios que permitam que usuários leigos consigam utilizar a plataforma sem dificuldade.
+- Meios que permitam que usuários leigos consigam utilizar a plataforma sem dificuldade.
 
-#### - Se organizem melhor quanto aos pagamentos de despesas obrigatórias.  
+- Se organizem melhor quanto aos pagamentos de despesas obrigatórias.  
 
-#### - Possam observar com mais clareza sobre suas movimentações financeiras. 
+- Possam observar com mais clareza sobre suas movimentações financeiras. 
 
-#### - Consigam armazenar informações adicionais com facilidade. 
+- Consigam armazenar informações adicionais com facilidade. 
 
 ## Justificativa
 
