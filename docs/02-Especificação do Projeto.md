@@ -8,9 +8,23 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
+<picture>
+  <img height="100px" src="https://img.freepik.com/vetores-premium/avatar-de-linda-garota-de-desenho-animado-retrato-de-mulher-deslumbrante-personagem-feminina-fofa-ilustracao-vetorial-plana-em-fundo-branco_627510-1563.jpg?w=2000">
+ 
+</picture>
+
 - Stella Priscilla tem 25 anos, reside em Minas Gerais e completou sua graduação recentemente. Não é casada e não possui filhos. Stella decidiu abrir seu próprio negócio de venda de acessórios para celulares já que se identifica com o ramo e percebe como algo presente no dia-a-dia das pessoas. Stella tem conhecimento sobre seu público-alvo, sabe que a maior parte são mulheres de 18 a 35 anos de classe média. Entretanto, não possui o serviço de contabilidade e também não possui alguma ferramenta para auxiliá-la no controle financeiro de sua empresa. A empresa da Stella é virtual, portanto não precisa se preocupar com algumas despesas fixas de locais físicos, porém, sente que necessita de alguma ferramenta que possa ajudá-la a ter mais controle sobre seu caixa disponível para investir em publicidade online.
 
+<picture> 
+<img height="100px" src="https://png.pngtree.com/element_our/png/20181206/female-avatar-vector-icon-png_262142.jpg">
+</picture>
+
+
 - Carolina Pinho tem 29 anos, é formada em administração, solteira e não tem filhos, tem uma loja de roupas recém aberta no bairro onde mora com seus pais. Sua prioridade é conseguir novos clientes e contratar um(a) funcionário(a) para revesar turno na loja. Com a empresa muito nova no mercado não tem como comprometer uma parte da renda pagando um contador e ela também não tem experiência com gestão financeira. Sua ideia é fazer controle dos recursos utilizando alguma ferramenta como o excel ou algo parecido, onde ela tenha mais facilidade para administrar seu caixa.
+
+<picture> 
+<img height="100px" src="https://png.pngtree.com/element_our/png/20181124/businessman-vector-icon-png_246587.jpg">
+</picture>
 
 - Marcelo Cardoso tem 26 anos, reside em Mato Grosso do Sul e tem seu startup com apenas 3 funcionários incluindo ele mesmo, onde eles fazem pequenos aplicativos de acordo com o pedido de seus clientes, com os seus conhecimentos básicos da linguagem de código Python. No momento, ele é casado, e é um calouro em uma faculdade. Está estudando Análise e desenvolvimento de sistemas para desenvolver suas hard-skills e expandir o seu startup, pois está com medo que o estado financeiro da sua empresa não consiga sustentar os funcionários. Marcelo diz que sempre entendeu matemática e quer entender melhor a área de TI.
 
