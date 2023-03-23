@@ -28,6 +28,12 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 - Marcelo Cardoso tem 26 anos, reside em Mato Grosso do Sul e tem seu startup com apenas 3 funcionários incluindo ele mesmo, onde eles fazem pequenos aplicativos de acordo com o pedido de seus clientes, com os seus conhecimentos básicos da linguagem de código Python. No momento, ele é casado, e é um calouro em uma faculdade. Está estudando Análise e desenvolvimento de sistemas para desenvolver suas hard-skills e expandir o seu startup, pois está com medo que o estado financeiro da sua empresa não consiga sustentar os funcionários. Marcelo diz que sempre entendeu matemática e quer entender melhor a área de TI.
 
+<picture> 
+<img height="100px" src="https://cdn-icons-png.flaticon.com/512/201/201634.png">
+</picture>
+
+- Vitória Caetano tem 25 anos, tem o ensino médio completo, e mora no Rio de Janeiro. Em 2019 ela abriu a sua loja física de assistência técnica e acessórios de celular, ele é MEI e possui dois funcionários. Ela é uma empreendedora dedicada e apaixonada por tecnologia e está sempre em busca de novas formas de inovar e melhorar seu negócio. Ela tem muita experiência no mercado de celulares e tecnologia, mas não tem muita habilidade em gerenciar finanças e muitas vezes gasta mais do que deveria e tem dificuldade em controlar suas despesas.
+
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
 > **Links Úteis**:
@@ -49,7 +55,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Stella Priscilla    | Controlar minhas movimentações financeiras    | Ter mais controle sobre meu caixa disponível e poder investir em publicidade online de forma mais assertiva|
 |Carolina Pinho      | Fazer a gestão dos recursos de forma simples  | Ter uma ferramenta simples de mexer e com custo baixo para ajudar a alavancar seu negócio     |
 |Marcelo Cardoso     | Monitorar renda e gastos da empresa           | Evitar declínio financeiro de seu negócio e distribuir salários apropriadamente               |
-|Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
+|Vitória Caetano     | Controlar melhor as despesas da loja          | Evitar gastos desnecessários e ter uma visão mais clara do desempenho financeiro de sua loja  |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
 
