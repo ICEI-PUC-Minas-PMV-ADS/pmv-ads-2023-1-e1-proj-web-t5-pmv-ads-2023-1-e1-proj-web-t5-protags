@@ -34,6 +34,12 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 - Vitória Caetano tem 25 anos, tem o ensino médio completo, e mora no Rio de Janeiro. Em 2019 ela abriu a sua loja física de assistência técnica e acessórios de celular, ele é MEI e possui dois funcionários. Ela é uma empreendedora dedicada e apaixonada por tecnologia e está sempre em busca de novas formas de inovar e melhorar seu negócio. Ela tem muita experiência no mercado de celulares e tecnologia, mas não tem muita habilidade em gerenciar finanças e muitas vezes gasta mais do que deveria e tem dificuldade em controlar suas despesas.
 
+<picture>
+<img height="100px" src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-2-avatar-2754578_120514.png">
+</picture>
+  
+ - Wenderson Felis tem 44 Anos, é técnico em ciências contábeis, é casado e tem 2 filhos,  empreende em um escritório de contabilidade a 20 anos junto com a sua mãe, no começo da empresa ele focava em buscar novos clientes e deixar o nome da empresa no mercado, hoje com a empresa mais consolidada, ele procura meios para facilitar o seu dia a dia, ele pretende passar boa parte dos seus controles para ferramentas virtuais, principalmente para substituir a planilha de Excel que ele usa para controle financeiro.
+
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
 > **Links Úteis**:
