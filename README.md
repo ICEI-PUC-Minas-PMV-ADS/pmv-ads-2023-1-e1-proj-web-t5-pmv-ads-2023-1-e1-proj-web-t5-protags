@@ -1,10 +1,10 @@
 # Protags
 
-Análise e Desenvolvimento de Sistemas
+#### `Análise e Desenvolvimento de Sistemas`
 
-Aplicação Web Front-End
+#### `Projeto: Desenvolvimento de Aplicação Web Front-End - Turma 4 - Eixo 1`
 
-1º SEMESTRE
+#### `Primeiro Semestre - 2023/01`
 
 Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se organizarem quanto aos custos obrigatórios a respeito de informações financeiras para se manterem ativas. 
 
