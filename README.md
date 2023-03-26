@@ -1,10 +1,17 @@
 # Protags
 
-#### `Análise e Desenvolvimento de Sistemas`
+<div align="center">
+<img width="200px" height="200px" src="Protags.png">
+</div>
 
-#### `Projeto: Desenvolvimento de Aplicação Web Front-End - Turma 4 - Eixo 1`
+<div align="center">
 
-#### `Primeiro Semestre - 2023/01`
+### `Análise e Desenvolvimento de Sistemas` 
+
+### `Projeto: Desenvolvimento de Aplicação Web Front-End - Turma 4 - Eixo 1`
+
+### `Primeiro Semestre - 2023/01`
+</div>
 
 Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se organizarem quanto aos custos obrigatórios a respeito de informações financeiras para se manterem ativas. 
 
