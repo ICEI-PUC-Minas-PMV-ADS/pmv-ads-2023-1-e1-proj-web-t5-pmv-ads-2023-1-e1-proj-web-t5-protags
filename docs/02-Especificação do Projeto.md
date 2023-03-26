@@ -8,10 +8,15 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-<picture>
-  <img height="100px" src="https://img.freepik.com/vetores-premium/avatar-de-linda-garota-de-desenho-animado-retrato-de-mulher-deslumbrante-personagem-feminina-fofa-ilustracao-vetorial-plana-em-fundo-branco_627510-1563.jpg?w=2000">
- 
-</picture>
+
+
+<img src="https://www.fakepersongenerator.com/Face/female/female20171025988590698.jpg" width="200%"> | Stella Priscilla, 25 anos                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| Ocupação                                                                                                                 | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Aplicativos preferidos                                                                                                   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Motivações                                                                                                               | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Seus Hobbies                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Frustrações?                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
 
 - Stella Priscilla tem 25 anos, reside em Minas Gerais e completou sua graduação recentemente. Não é casada e não possui filhos. Stella decidiu abrir seu próprio negócio de venda de acessórios para celulares já que se identifica com o ramo e percebe como algo presente no dia-a-dia das pessoas. Stella tem conhecimento sobre seu público-alvo, sabe que a maior parte são mulheres de 18 a 35 anos de classe média. Entretanto, não possui o serviço de contabilidade e também não possui alguma ferramenta para auxiliá-la no controle financeiro de sua empresa. A empresa da Stella é virtual, portanto não precisa se preocupar com algumas despesas fixas de locais físicos, porém, sente que necessita de alguma ferramenta que possa ajudá-la a ter mais controle sobre seu caixa disponível para investir em publicidade online.
 
