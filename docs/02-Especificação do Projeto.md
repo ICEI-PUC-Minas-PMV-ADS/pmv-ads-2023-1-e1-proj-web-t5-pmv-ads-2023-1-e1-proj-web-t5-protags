@@ -8,6 +8,9 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
+As personas inclusas durante o processo de pesquisa e desenvolvimento do problema são apresentadas nas imagens a seguir:
+
+## `STELLA PRISCILLA DA SILVA`
 <img src="https://i.pinimg.com/236x/96/ac/e8/96ace8194bdc0aa8c5420453f6941431.jpg" width="200%"> | Stella Priscilla, 25 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | Autônoma, proprietária de uma loja virtual de acessórios para celulares |
@@ -18,7 +21,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 - Stella Priscilla tem 25 anos, reside em Minas Gerais e completou sua graduação recentemente. Não é casada e não possui filhos. Stella decidiu abrir seu próprio negócio de venda de acessórios para celulares já que se identifica com o ramo e percebe como algo presente no dia-a-dia das pessoas. Stella tem conhecimento sobre seu público-alvo, sabe que a maior parte são mulheres de 18 a 35 anos de classe média. Entretanto, não possui o serviço de contabilidade e também não possui alguma ferramenta para auxiliá-la no controle financeiro de sua empresa. A empresa da Stella é virtual, portanto não precisa se preocupar com algumas despesas fixas de locais físicos, porém, sente que necessita de alguma ferramenta que possa ajudá-la a ter mais controle sobre seu caixa disponível para investir em publicidade online.
 
-
+## `CAROLINA PINHO`
 <img src="https://png.pngtree.com/element_our/png/20181206/female-avatar-vector-icon-png_262142.jpg" width="200%"> | Carolina Pinho, 29 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
@@ -29,7 +32,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 - Carolina Pinho tem 29 anos, é formada em administração, solteira e não tem filhos, tem uma loja de roupas recém aberta no bairro onde mora com seus pais. Sua prioridade é conseguir novos clientes e contratar um(a) funcionário(a) para revesar turno na loja. Com a empresa muito nova no mercado não tem como comprometer uma parte da renda pagando um contador e ela também não tem experiência com gestão financeira. Sua ideia é fazer controle dos recursos utilizando alguma ferramenta como o excel ou algo parecido, onde ela tenha mais facilidade para administrar seu caixa.
 
-
+## `MARCELO CARDOSO`
 <img src="https://png.pngtree.com/element_our/png/20181124/businessman-vector-icon-png_246587.jpg" width="200%"> | Marcelo Cardoso, 26 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
@@ -40,7 +43,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 - Marcelo Cardoso tem 26 anos, reside em Mato Grosso do Sul e tem seu startup com apenas 3 funcionários incluindo ele mesmo, onde eles fazem pequenos aplicativos de acordo com o pedido de seus clientes, com os seus conhecimentos básicos da linguagem de código Python. No momento, ele é casado, e é um calouro em uma faculdade. Está estudando Análise e desenvolvimento de sistemas para desenvolver suas hard-skills e expandir o seu startup, pois está com medo que o estado financeiro da sua empresa não consiga sustentar os funcionários. Marcelo diz que sempre entendeu matemática e quer entender melhor a área de TI.
 
-
+## `VITÓRIA CAETANO`
 <img src="https://cdn-icons-png.flaticon.com/512/201/201634.png" width="200%"> | Vitória Caetano, 26 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
@@ -51,7 +54,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 - Vitória Caetano tem 25 anos, tem o ensino médio completo, e mora no Rio de Janeiro. Em 2019 ela abriu a sua loja física de assistência técnica e acessórios de celular, ele é MEI e possui dois funcionários. Ela é uma empreendedora dedicada e apaixonada por tecnologia e está sempre em busca de novas formas de inovar e melhorar seu negócio. Ela tem muita experiência no mercado de celulares e tecnologia, mas não tem muita habilidade em gerenciar finanças e muitas vezes gasta mais do que deveria e tem dificuldade em controlar suas despesas.
 
-
+## `WENDERSON FELIS`
 <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-2-avatar-2754578_120514.png" width="200%"> | Wenderson Felis, 26 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
