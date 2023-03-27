@@ -85,7 +85,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Carolina Pinho      | Fazer a gestão dos recursos de forma simples  | Ter uma ferramenta simples de mexer e com custo baixo para ajudar a alavancar seu negócio     |
 |Marcelo Cardoso     | Monitorar renda e gastos da empresa           | Evitar declínio financeiro de seu negócio e distribuir salários apropriadamente               |
 |Vitória Caetano     | Controlar melhor as despesas da loja          | Evitar gastos desnecessários e ter uma visão mais clara do desempenho financeiro de sua loja  |
-|Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
+|Wenderson Felis     | Facilitar controle de contas, no dia a dia    | Ter uma ferramenta, com uma interface mais bonita, para ajudar no controle de contas a pagar  |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
