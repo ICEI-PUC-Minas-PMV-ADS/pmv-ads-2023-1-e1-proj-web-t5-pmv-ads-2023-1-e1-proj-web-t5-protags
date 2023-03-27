@@ -8,7 +8,7 @@
 
 ### `Análise e Desenvolvimento de Sistemas` 
 
-### `Projeto: Desenvolvimento de Aplicação Web Front-End - Turma 4 - Eixo 1`
+### `Projeto: Desenvolvimento de Aplicação Web Front-End - Turma 5 - Eixo 1`
 
 ### `Primeiro Semestre - 2023/01`
 </div>
