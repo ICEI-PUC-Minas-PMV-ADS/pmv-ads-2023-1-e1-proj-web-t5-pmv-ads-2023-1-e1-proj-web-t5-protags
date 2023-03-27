@@ -57,10 +57,10 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 ## `WENDERSON FELIS`
 <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-2-avatar-2754578_120514.png" width="200%"> | Wenderson Felis, 26 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| Ocupação                                                                                                                 | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Aplicativos preferidos                                                                                                   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Motivações                                                                                                               | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Seus Hobbies                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Ocupação                                                                                                                 | Empresario, proprietario de um escritorio de contabilidade |
+| Aplicativos preferidos                                                                                                   | Whatsapp, Facebook, instagram e Youtube |
+| Motivações                                                                                                               | Melhorar o ambiente e o serviço prestado no seu escritorio |
+| Seus Hobbies                                                                                                             | Assistir series e filmes, ir para a roça e  tocar violão |
 | Frustrações?                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
   
  - Wenderson Felis tem 44 Anos, é técnico em ciências contábeis, é casado e tem 2 filhos,  empreende em um escritório de contabilidade a 20 anos junto com a sua mãe, no começo da empresa ele focava em buscar novos clientes e deixar o nome da empresa no mercado, hoje com a empresa mais consolidada, ele procura meios para facilitar o seu dia a dia, ele pretende passar boa parte dos seus controles para ferramentas virtuais, principalmente para substituir a planilha de Excel que ele usa para controle financeiro.
