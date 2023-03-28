@@ -61,7 +61,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 | Aplicativos preferidos                                                                                                   | Whatsapp, Facebook, instagram e Youtube |
 | Motivações                                                                                                               | Melhorar o ambiente e o serviço prestado no seu escritorio |
 | Seus Hobbies                                                                                                             | Assistir series e filmes, ir para a roça e  tocar violão |
-| Frustrações?                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Frustrações?                                                                                                             | Não ter um bom controle sobre todas as contas a pagar |
   
  - Wenderson Felis tem 44 Anos, é técnico em ciências contábeis, é casado e tem 2 filhos,  empreende em um escritório de contabilidade a 20 anos junto com a sua mãe, no começo da empresa ele focava em buscar novos clientes e deixar o nome da empresa no mercado, hoje com a empresa mais consolidada, ele procura meios para facilitar o seu dia a dia, ele pretende passar boa parte dos seus controles para ferramentas virtuais, principalmente para substituir a planilha de Excel que ele usa para controle financeiro.
 
