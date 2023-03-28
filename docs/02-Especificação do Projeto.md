@@ -35,11 +35,11 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 ## `MARCELO CARDOSO`
 <img src="https://png.pngtree.com/element_our/png/20181124/businessman-vector-icon-png_246587.jpg" width="200%"> | Marcelo Cardoso, 26 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| Ocupação                                                                                                                 | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Aplicativos preferidos                                                                                                   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Motivações                                                                                                               | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Seus Hobbies                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Frustrações?                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Ocupação                                                                                                                 | Proprietário de sua empresa |
+| Aplicativos preferidos                                                                                                   | Facebook, LinkedIn, Instagram |
+| Motivações                                                                                                               | Aprender novas hard skills e desenvolver-lás, expandir o seu negócio financeiramente |
+| Seus Hobbies                                                                                                             | Gosta de ajudar sua noiva com sua loja de artesanato no tempo livre, além de ler livros e escutar música |
+| Frustrações?                                                                                                             | A falta de formas de saber o rendimento e investimentos no seu startup para distribuir salários apropriadamente |
 
 - Marcelo Cardoso tem 26 anos, reside em Mato Grosso do Sul e tem seu startup com apenas 3 funcionários incluindo ele mesmo, onde eles fazem pequenos aplicativos de acordo com o pedido de seus clientes, com os seus conhecimentos básicos da linguagem de código Python. No momento, ele é casado, e é um calouro em uma faculdade. Está estudando Análise e desenvolvimento de sistemas para desenvolver suas hard-skills e expandir o seu startup, pois está com medo que o estado financeiro da sua empresa não consiga sustentar os funcionários. Marcelo diz que sempre entendeu matemática e quer entender melhor a área de TI.
 
