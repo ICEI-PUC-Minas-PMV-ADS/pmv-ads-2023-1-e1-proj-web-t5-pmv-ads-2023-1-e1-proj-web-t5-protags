@@ -41,13 +41,10 @@ O que nos mostra que é indispensável desenvolver uma solução onde micro-empr
 
 ## Público-Alvo
 
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Com base em uma pesquisa publicada no site G1, revela-se que 70% das empresas em atividade no Brasil são representadas por MEIs. Nossa solução será desenvolvida especialmente para atender às necessidades de empreendedores iniciantes e microempresários que ainda não conseguem gerir suas despesas de forma eficaz. 
 
-> Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Ao identificarmos a necessidade de uma ferramenta de fácil uso para auxiliar os MEIs e MEs a gerir suas finanças, estabelecemos como público-alvo homens e mulheres entre 18 e 39 anos, que já abriram seu MEI ou Microempresa (ME), com um capital inicial de 1.000 a 10.000 reais e que não possuem algum ou nenhum conhecimento em controle financeiro. Dessa forma, esperamos contribuir para o crescimento desses empreendedores, auxiliando-os a tomar decisões mais assertivas em relação a suas finanças.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Sabemos que o gerenciamento financeiro é um grande desafio, nossa solução visa simplificar esse processo, oferecendo uma ferramenta intuitiva e de fácil usabilidade, que permita aos usuários gerenciar seus movimentos financeiros sem a necessidade de conhecimentos avançados em finanças ou contabilidade. Com isso, esperamos ajudar esses empreendedores a reduzir o estresse financeiro e a dedicar mais tempo e energia para o crescimento de seus negócios.
+
+Com isso, esperamos ajudar a fortalecer o ecossistema empreendedor do Brasil, auxiliando esses empreendedores a alcançar seus objetivos e realizar seus sonhos.
