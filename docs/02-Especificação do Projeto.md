@@ -55,7 +55,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 - Vitória Caetano tem 25 anos, tem o ensino médio completo, e mora no Rio de Janeiro. Em 2019 ela abriu a sua loja física de assistência técnica e acessórios de celular, ele é MEI e possui dois funcionários. Ela é uma empreendedora dedicada e apaixonada por tecnologia e está sempre em busca de novas formas de inovar e melhorar seu negócio. Ela tem muita experiência no mercado de celulares e tecnologia, mas não tem muita habilidade em gerenciar finanças e muitas vezes gasta mais do que deveria e tem dificuldade em controlar suas despesas.
 
 ## `WENDERSON FELIS`
-<img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-2-avatar-2754578_120514.png" width="200%"> | Wenderson Felis, 26 anos                                                                                     |
+<img src="https://i.pinimg.com/564x/91/0a/8e/910a8e6b33969203f750fef8be6f0807.jpg" width="200%"> | Wenderson Felis, 26 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | Empresario, proprietario de um escritorio de contabilidade |
 | Aplicativos preferidos                                                                                                   | Whatsapp, Facebook, instagram e Youtube |
