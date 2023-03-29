@@ -59,7 +59,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | Empresario, proprietario de um escritorio de contabilidade |
 | Aplicativos preferidos                                                                                                   | Whatsapp, Facebook, instagram e Youtube |
-| Motivações                                                                                                               | Melhorar o ambiente e o serviço prestado no seu escritorio |
+| Motivações                                                                                                               | Manter seus clientes, melhorar o serviço prestado no seu escritorio e achar ferramentas para poupar de tempo para todos do escritorio |
 | Seus Hobbies                                                                                                             | Assistir series e filmes, ir para a roça e  tocar violão |
 | Frustrações?                                                                                                             | Não ter um bom controle sobre todas as contas a pagar |
   
