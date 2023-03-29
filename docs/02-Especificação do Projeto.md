@@ -24,11 +24,11 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 ## `CAROLINA PINHO`
 <img src="https://png.pngtree.com/element_our/png/20181206/female-avatar-vector-icon-png_262142.jpg" width="200%"> | Carolina Pinho, 29 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| Ocupação                                                                                                                 | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Aplicativos preferidos                                                                                                   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Motivações                                                                                                               | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Seus Hobbies                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Frustrações?                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Ocupação                                                                                                                 | Gerente de uma grande empresa e também é proprietária de uma loja de roupas. |
+| Aplicativos preferidos                                                                                                   | Whatsapp e instagram |
+| Motivações                                                                                                               | Ter seu próprio negócio e não trabalhar mais para outras empresas |
+| Seus Hobbies                                                                                                             | Sair com os amigos, viajar, ler livros e academia |
+o| Frustrações?                                                                                                             | Não ter tempo suficiênte para alavancar sua marca.|
 
 - Carolina Pinho tem 29 anos, é formada em administração, solteira e não tem filhos, tem uma loja de roupas recém aberta no bairro onde mora com seus pais. Sua prioridade é conseguir novos clientes e contratar um(a) funcionário(a) para revesar turno na loja. Com a empresa muito nova no mercado não tem como comprometer uma parte da renda pagando um contador e ela também não tem experiência com gestão financeira. Sua ideia é fazer controle dos recursos utilizando alguma ferramenta como o excel ou algo parecido, onde ela tenha mais facilidade para administrar seu caixa.
 
