@@ -65,15 +65,16 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
   
  - Wenderson Felis tem 44 Anos, é técnico em ciências contábeis, é casado e tem 2 filhos,  empreende em um escritório de contabilidade a 20 anos junto com a sua mãe, no começo da empresa ele focava em buscar novos clientes e deixar o nome da empresa no mercado, hoje com a empresa mais consolidada, ele procura meios para facilitar o seu dia a dia, ele pretende passar boa parte dos seus controles para ferramentas virtuais, principalmente para substituir a planilha de Excel que ele usa para controle financeiro.
 
+## `LUCAS FERNANDO`
 <img src="https://i0.wp.com/engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia360-4.png?resize=791%2C785&ssl=1" width="200%"> | Lucas Fernando, 29 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | Engenheiro de produção. Trabalha com montagem de móveis planejados de luxo a mais de 5 anos, com uma equipe de 5 pessoas atende prédios residências e condomínios. |
-| Aplicativos preferidos                                                                                                   | Instagram |
-| Motivações                                                                                                               | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Seus Hobbies                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Frustrações?                                                                                                             | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Aplicativos preferidos                                                                                                   | WhatsApp, Instagram, Facebook, Aplicativo de banco e LinkedIn |
+| Motivações                                                                                                               | Família e o crescimento do negócio |
+| Seus Hobbies                                                                                                             | Viajar com a Família e pedalar de bicicleta |
+| Frustrações?                                                                                                             | Não ter clareza sobre custos fixos da empresa e fluxo de caixa e como expandir o negôcio/aumentar número de clientes |
 
-
+- Lucas Fernando tem 29 anos, sua formação e de Engenheiro de produção, caso é tem
 
 ## Histórias de Usuários
 
@@ -86,7 +87,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Marcelo Cardoso     | Monitorar renda e gastos da empresa           | Evitar declínio financeiro de seu negócio e distribuir salários apropriadamente               |
 |Vitória Caetano     | Controlar melhor as despesas da loja          | Evitar gastos desnecessários e ter uma visão mais clara do desempenho financeiro de sua loja  |
 |Wenderson Felis     | Facilitar controle de contas, no dia a dia    | Ter uma ferramenta, com uma interface mais bonita, para ajudar no controle de contas a pagar  |
-|Administrador       | Alterar permissões                            | Permitir que possam administrar contas                                                        |
+|Lucas Fernando       | Ter clareza de todas as contas a pagar do mês| Saber o que vai sobrar para ser reivestido em outras áreas                                    |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
