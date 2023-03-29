@@ -33,7 +33,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 - Carolina Pinho tem 29 anos, é formada em administração, solteira e não tem filhos, tem uma loja de roupas recém aberta no bairro onde mora com seus pais. Sua prioridade é conseguir novos clientes e contratar um(a) funcionário(a) para revesar turno na loja. Com a empresa muito nova no mercado não tem como comprometer uma parte da renda pagando um contador e ela também não tem experiência com gestão financeira. Sua ideia é fazer controle dos recursos utilizando alguma ferramenta como o excel ou algo parecido, onde ela tenha mais facilidade para administrar seu caixa.
 
 ## `MARCELO CARDOSO`
-<img src="https://i.pinimg.com/564x/46/a4/b2/46a4b24a18c605f3d7a4f98a642ef367.jpg" width="290" height="290"> | Marcelo Cardoso, 26 anos                                                                                     |
+<img src="https://i.pinimg.com/originals/52/a6/f9/52a6f9c91961246e095fbbf398829273.jpg" width="300" height="250"> | Marcelo Cardoso, 26 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | Proprietário de sua empresa |
 | Aplicativos preferidos                                                                                                   | Facebook, LinkedIn, Instagram |
