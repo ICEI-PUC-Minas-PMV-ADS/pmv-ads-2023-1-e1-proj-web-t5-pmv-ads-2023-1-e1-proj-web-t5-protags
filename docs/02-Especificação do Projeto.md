@@ -28,7 +28,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 | Aplicativos preferidos                                                                                                   | Whatsapp e instagram |
 | Motivações                                                                                                               | Ter seu próprio negócio e não trabalhar mais para outras empresas |
 | Seus Hobbies                                                                                                             | Sair com os amigos, viajar, ler livros e academia |
-o| Frustrações?                                                                                                             | Não ter tempo suficiênte para alavancar sua marca|
+| Frustrações?                                                                                                             | Não ter tempo suficiênte para alavancar sua marca|
 
 - Carolina Pinho tem 29 anos, é formada em administração, solteira e não tem filhos, tem uma loja de roupas recém aberta no bairro onde mora com seus pais. Sua prioridade é conseguir novos clientes e contratar um(a) funcionário(a) para revesar turno na loja. Com a empresa muito nova no mercado não tem como comprometer uma parte da renda pagando um contador e ela também não tem experiência com gestão financeira. Sua ideia é fazer controle dos recursos utilizando alguma ferramenta como o excel ou algo parecido, onde ela tenha mais facilidade para administrar seu caixa.
 
