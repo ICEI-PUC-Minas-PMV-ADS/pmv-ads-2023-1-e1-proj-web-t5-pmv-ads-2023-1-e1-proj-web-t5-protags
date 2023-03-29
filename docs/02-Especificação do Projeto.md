@@ -74,7 +74,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 | Seus Hobbies                                                                                                             | Viajar com a Família e pedalar de bicicleta |
 | Frustrações?                                                                                                             | Não ter clareza sobre custos fixos da empresa e fluxo de caixa e como expandir o negôcio/aumentar número de clientes |
 
-- Lucas Fernando tem 29 anos, sua formação e de Engenheiro de produção, caso é tem
+- Lucas Fernando tem 29 anos, sua formação e de Engenheiro de produção, casado é tem 3 filhos, trabalha com móveis planejados a mais de 5 anos, sempre prezando por entregar qualidade e sofisticação aos seus clientes, hoje com a excelência do serviço prestado e diversas recomendações de seus clientes, busca crescer seu negôcio e também saber onde investir e qual momento inestir seu dinheiro de forma mais adequada.
 
 ## Histórias de Usuários
 
