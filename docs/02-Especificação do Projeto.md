@@ -139,8 +139,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
-|03| Não pode ser desenvolvido um módulo de backend        |
-|04| Não pode ser desenvolvido um módulo de backend        |
+|03| Não pode ser utilizado banco de dados nas primeiras etapas do projeto       |
+|04| Não pode ser vinculado com alguma API      |
+|05| O projeto não poderá possuir integrações com outros sistemas nas primeiras etapas do projeto     |
 
 
 
