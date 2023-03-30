@@ -5,11 +5,11 @@
 O principal problema enfrentado por pequenos empresários é o gerenciamento inadequado do fluxo de caixa. Que na maioria dos casos muitos deles não tem um fluxo de caixa e os poucos que tem passam por dificuldades de incapacidade de pagar contas em determinados meses, alguns podendo chegar até a falência. A solução mais adequada com base no perfil dos pequenos empresários e um sistema que unifique o gereciamento das despesas, como: pagamento de contas, contas a receber e faturamento. 
 
 Algumas ferramentas e ações que podem contribuir para um melhor gerencimanto são: 
-  1 - Gerenciamento adequado do fluxo de caixa;
-  2 - Controle de custos;
-  3 - Busca por crédito e financiamento;
-  4 - Desenvolvimento de um plano financeiro sólido;
-  5 - Busca por consultoria financeira.
+  * Gerenciamento adequado do fluxo de caixa;
+  * Controle de custos;
+  * Busca por crédito e financiamento;
+  * Desenvolvimento de um plano financeiro sólido;
+  * Busca por consultoria financeira.
   
  E com base nas pesquisas e formulário do google definimos as personas que seguem:
 
