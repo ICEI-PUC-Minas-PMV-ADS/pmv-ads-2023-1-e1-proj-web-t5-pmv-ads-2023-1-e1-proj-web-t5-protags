@@ -116,8 +116,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-008| Permitir que o anexe documentos/comprovantes de pagamento | MÉDIA |
 |RF-009| Mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
 |RNF-010| O sistema deve ter uma interface organizada e de fácil usabilidade |  ALTA |
-
-
+|RNF-011| O sistema deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes |  ALTA |
+|RNF-012| O sistema deve mostrar qual porcetagem está liberada para reinvestimentos |  MÉDIA |
 
 
 ### Requisitos não Funcionais
