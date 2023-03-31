@@ -129,7 +129,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-002| O sistema deve ter vários níveis de senha para acessos. Exemplo: Nem todos funcionários devem ter acesso as informações por completo |  ALTA |
 |RNF-003| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-004| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-005| O sistema deve ter um alerta, quando estiver perto do vencimento de alguma conta |  BAIXO |
+|RNF-005| O sistema deve ter um alerta quando algum pagamento, estiver perto do vencimento |  BAIXO |
 
 
 
