@@ -90,7 +90,8 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                                                                        |
 |--------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|
 |Stella Priscilla    | Controlar minhas movimentações financeiras    | Ter mais controle sobre meu caixa disponível e poder investir em publicidade online de forma mais assertiva|
-|Carolina Pinho      | Fazer a gestão dos recursos de forma simples  | Ter uma ferramenta simples de mexer e com custo baixo para ajudar a alavancar seu negócio     |
+|Carolina Pinho      | Ter o controle dos gastos fixos da empresa    | Ter uma ferramenta simples de mexer e baixo custo que possa controlar e monitorar os gastos fixos|
+|Carolina Pinho      | Controlar qual porcentagem do lucro total pode ser reinvestida | Conseguir visualizar o que pode ser reinvestido em marketing para alcançar mais possíveis cliente;|
 |Marcelo Cardoso     | Monitorar renda e gastos da empresa           | Evitar declínio financeiro de seu negócio e distribuir salários apropriadamente               |
 |Vitória Caetano     | Controlar melhor as despesas da loja          | Evitar gastos desnecessários e ter uma visão mais clara do desempenho financeiro de sua loja  |
 |Wenderson Felis     | Facilitar controle de contas, no dia a dia    | Ter uma ferramenta virtual, com uma interface mais intuitiva, para ajudar no controle de contas a pagar  |
