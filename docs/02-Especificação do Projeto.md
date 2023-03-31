@@ -17,16 +17,16 @@ Algumas ferramentas e ações que podem contribuir para um melhor gerencimanto s
 
 As personas inclusas durante o processo de pesquisa e desenvolvimento do problema são apresentadas nas imagens a seguir:
 
-## `STELLA PRISCILLA DA SILVA`
-<img src="https://i.pinimg.com/236x/96/ac/e8/96ace8194bdc0aa8c5420453f6941431.jpg" width="200%"> | Stella Priscilla, 25 anos                                                                                     |
+## `Mayara de Azevedo`
+<img src="https://i.pinimg.com/564x/72/5f/92/725f92ea795944a82587c8c8d82b4e79.jpg" width="65%"> | Mayara, 23 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| Ocupação                                                                                                                 | Autônoma, proprietária de uma loja virtual de acessórios para celulares |
-| Aplicativos preferidos                                                                                                   | Whatsapp, Instagram, Facebook, Spotify e Youtube |
-| Motivações                                                                                                               | Conseguir desenvolver sua empresa virtual para ter mais liberdade geográfica e financeira |
-| Seus Hobbies                                                                                                             | Conhecer lugares novos, assistir séries e encontrar com as amigas |
-| Frustrações?                                                                                                             | Não ter clareza sobre seus rendimentos com sua loja para alavancar suas vendas |
+| Ocupação                                                                                                                 | Vendedora |
+| Aplicativos preferidos                                                                                                   | Kindle, Skeelo, Tiktok e Spotify |
+| Motivações                                                                                                               | Abrir sua própria livraria |
+| Seus Hobbies                                                                                                             | Ler livros sobre ficção e suspense |
+| Frustrações?                                                                                                             | Não ter conhecimento tecnológico e sobre finanças para realizar seu sonho |
 
-- Stella Priscilla tem 25 anos, reside em Minas Gerais e completou sua graduação recentemente. Não é casada e não possui filhos. Stella decidiu abrir seu próprio negócio de venda de acessórios para celulares já que se identifica com o ramo e percebe como algo presente no dia-a-dia das pessoas. Stella tem conhecimento sobre seu público-alvo, sabe que a maior parte são mulheres de 18 a 35 anos de classe média. Entretanto, não possui o serviço de contabilidade e também não possui alguma ferramenta para auxiliá-la no controle financeiro de sua empresa. A empresa da Stella é virtual, portanto não precisa se preocupar com algumas despesas fixas de locais físicos, porém, sente que necessita de alguma ferramenta que possa ajudá-la a ter mais controle sobre seu caixa disponível para investir em publicidade online.
+- Mayara tem 23 anos, mora atualmente na capital de São Paulo e é apaixonada por leitura. Se formou há 5 meses em literatura e sempre foi apaixonada por seus livros. Sempre ao entrar em uma livraria para escolher sua próxima experiência literária, imaginava-se sendo dona de sua própria livraria. Entretanto, nos ultimos anos vem trabalhando como vendedora de seguros. Mayara juntou dinheiro durante alguns anos e agora decidiu abrir seu negócio, mas não possui conhecimentos sobre finanças e tecnologias. Mayara deseja encontrar uma ferramenta que a auxilie a organizar suas futuras despesas para realizar seu sonho de ter uma livraria.
 
 ## `CAROLINA PINHO`
 <img src="https://th.bing.com/th/id/R.f87bd7ad7c9d9d2aa4ddaf4d3b99999f?rik=Civn4V3aD8o4lA&riu=http%3a%2f%2f3.bp.blogspot.com%2f_MuGfCmiNLMA%2fTQA_wcfUhdI%2fAAAAAAAAAlo%2fsxOLoY2SL5E%2fs400%2fanzalna2.jpg&ehk=zHxGkS4zWcOkJ3sn%2fXCBUTLG2ApV%2fty%2bupCoNVHD45Q%3d&risl=&pid=ImgRaw&r=0" width="225" height="250" > | Carolina Pinho, 29 anos                                                                                     |
@@ -93,7 +93,6 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |Carolina Pinho      | Controlar e monitorar os gastos fixos da empresa | Ter uma ferramenta simples de mexer e baixo custo que possa controlar e monitorar os gastos fixos|
 |Carolina Pinho      | Controlar qual porcentagem do lucro total pode ser reinvestida | Conseguir visualizar o que pode ser reinvestido em marketing para alcançar mais possíveis cliente;|
 |Marcelo Cardoso     | Monitorar renda e gastos da empresa           | Evitar declínio financeiro de seu negócio e distribuir salários apropriadamente               |
-|Marcelo Cardoso     | Poder consultar faturamentos                  | Ter uma forma eficiente de consultar se os seus clientes pagaram o preço dos serviços de sua empresa|
 |Vitória Caetano     | Controlar melhor as despesas da loja          | Evitar gastos desnecessários e ter uma visão mais clara do desempenho financeiro de sua loja  |
 |Wenderson Felis     | Facilitar controle de contas, no dia a dia    | Ter uma ferramenta virtual, com uma interface mais intuitiva, para ajudar no controle de contas a pagar  |
 |Lucas Fernando       | Ter clareza de todas as contas a pagar do mês| Saber o que vai sobrar para ser reivestido em outras áreas                                    |
