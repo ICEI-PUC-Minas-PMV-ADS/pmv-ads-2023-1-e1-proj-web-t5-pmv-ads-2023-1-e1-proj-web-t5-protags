@@ -93,6 +93,7 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |Carolina Pinho      | Controlar e monitorar os gastos fixos da empresa | Ter uma ferramenta simples de mexer e baixo custo que possa controlar e monitorar os gastos fixos|
 |Carolina Pinho      | Controlar qual porcentagem do lucro total pode ser reinvestida | Conseguir visualizar o que pode ser reinvestido em marketing para alcançar mais possíveis cliente;|
 |Marcelo Cardoso     | Monitorar renda e gastos da empresa           | Evitar declínio financeiro de seu negócio e distribuir salários apropriadamente               |
+|Marcelo Cardoso     | Poder consultar faturamentos                  | Ter uma forma eficiente de consultar se os seus clientes pagaram o preço dos serviços de sua empresa|
 |Vitória Caetano     | Controlar melhor as despesas da loja          | Evitar gastos desnecessários e ter uma visão mais clara do desempenho financeiro de sua loja  |
 |Wenderson Felis     | Facilitar controle de contas, no dia a dia    | Ter uma ferramenta virtual, com uma interface mais intuitiva, para ajudar no controle de contas a pagar  |
 |Lucas Fernando       | Ter clareza de todas as contas a pagar do mês| Saber o que vai sobrar para ser reivestido em outras áreas                                    |
