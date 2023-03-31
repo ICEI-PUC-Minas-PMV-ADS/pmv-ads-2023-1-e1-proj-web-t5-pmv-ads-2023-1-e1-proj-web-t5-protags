@@ -106,28 +106,30 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RNF-001| O Site deve apresentar na página principal um gráfico contendo o fluxo de caixa |  ALTA |
-|RNF-002| O Site deve conter menus de navegação rápida |  ALTA |
-|RNF-003| O Site deve conter a capacidade de registrar e controlar contas a pagar, com recursos de categorização e controle de prazos de pagamento |  ALTA |
-|RNF-004| O Site deve conter a capacidade de registrar e controlar contas a receber, com recursos de categorização e controle de prazos de recebimento |  ALTA |
-|RNF-005| O Site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |  ALTA |
-|RNF-006| O Site deve permitir o usuário a exportação das informações |  MÉDIA |
-|RF-007| Permitir que o usuário cadastre informações | ALTA |
-|RF-008| Permitir que o anexe documentos/comprovantes de pagamento | MÉDIA |
+|RF-001| O Site deve conter menus de navegação rápida |  ALTA |
+|RF-002| Permitir que o usuário cadastre informações | ALTA |
+|RF-003| O Site deve ter uma interface organizada e de fácil usabilidade |  ALTA |
+|RF-004| O Site deve conter a capacidade de registrar e controlar contas a pagar, com recursos de categorização e controle de prazos de pagamento |  ALTA |
+|RF-005| O Site deve conter a capacidade de registrar e controlar contas a receber, com recursos de categorização e controle de prazos de recebimento |  ALTA |
+|RF-006| O Site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |  ALTA |
+|RF-007| O Site deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes |  ALTA |
+|RF-008| O Site deve apresentar na página principal um gráfico contendo o fluxo de caixa |  ALTA |
 |RF-009| Mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
-|RNF-010| O sistema deve ter uma interface organizada e de fácil usabilidade |  ALTA |
-|RNF-011| O sistema deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes |  ALTA |
-|RNF-012| O sistema deve mostrar qual porcetagem está liberada para reinvestimentos |  MÉDIA |
+|RF-010| O Site deve mostrar qual porcetagem está liberada para reinvestimentos |  MÉDIA |
+|RF-011| O Site deve permitir o usuário a exportação das informações |  MÉDIA |
+|RF-012| Permitir que o anexe documentos/comprovantes de pagamento | MÉDIA |
+
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-003| O sistema deve pedir senha para o administrador acessar |  ALTA |
-|RNF-004| O sistema deve ter vários níveis de senha para acessos. Exemplo: Nem todos funcionários devem ter acesso as informações por completo |  ALTA |
+|RNF-001| O sistema deve pedir senha para o administrador acessar |  ALTA |
+|RNF-002| O sistema deve ter vários níveis de senha para acessos. Exemplo: Nem todos funcionários devem ter acesso as informações por completo |  ALTA |
+|RNF-003| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
+|RNF-004| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-005| O sistema deve ter um alerta, quando estiver perto do vencimento de alguma conta |  BAIXO |
 
 
 
