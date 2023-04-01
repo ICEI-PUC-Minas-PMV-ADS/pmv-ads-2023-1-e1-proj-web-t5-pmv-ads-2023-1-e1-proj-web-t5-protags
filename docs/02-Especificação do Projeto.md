@@ -99,7 +99,7 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |Vitória Caetano     | Um software que permita ter clareza nas minhas movimentações financeiras         | Coseguir manter minha empresa e não entrar em falência por motivos financeiros   |
 |Wenderson Felis     | Facilitar controle de contas, no dia a dia    | Ter uma ferramenta virtual, com uma interface mais intuitiva, para ajudar no controle de contas a pagar  |
 |Lucas Fernando       | Ter clareza de todas as contas a pagar do mês| Saber o que vai sobrar para ser reivestido em outras áreas                                    |
-|Lucas Fernando       | Ter melhor gerenciamento das receitas da empresa | Saber de forma mais prática os valores gerados no mês pela empresa (receita, despesas, etc)|
+|Lucas Fernando       | Ter melhor gerenciamento das receitas da empresa | Saber de forma mais dinâmica os valores gerados no mês pela empresa (receita, despesas, etc)|
 
 ## Requisitos
 
