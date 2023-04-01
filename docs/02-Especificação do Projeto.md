@@ -96,6 +96,7 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |Marcelo Cardoso     | Monitorar renda e gastos da empresa           | Evitar declínio financeiro de seu negócio e distribuir salários apropriadamente               |
 |Marcelo Cardoso     | Poder consultar faturamentos                  | Ter uma forma eficiente de consultar se os seus clientes pagaram o preço dos serviços de sua empresa|
 |Vitória Caetano     | Controlar melhor as despesas da loja          | Evitar gastos desnecessários e ter uma visão mais clara do desempenho financeiro de sua loja  |
+|Vitória Caetano     | Um software que permita ter clareza nas minhas movimentações financeiras         | Coseguir manter minha empresa e não entrar em falência por motivos financeiros   |
 |Wenderson Felis     | Facilitar controle de contas, no dia a dia    | Ter uma ferramenta virtual, com uma interface mais intuitiva, para ajudar no controle de contas a pagar  |
 |Lucas Fernando       | Ter clareza de todas as contas a pagar do mês| Saber o que vai sobrar para ser reivestido em outras áreas                                    |
 
@@ -120,6 +121,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-010| O Site deve mostrar qual porcetagem está liberada para reinvestimentos |  MÉDIA |
 |RF-011| O Site deve permitir o usuário a exportação das informações |  MÉDIA |
 |RF-012| Permitir que o anexe documentos/comprovantes de pagamento | MÉDIA |
+|RF-013| O site deve ser capaz de registrar e gerenciar todas as transações financeiras, incluindo compras, vendas, recebimentos e pagamentos. | MÉDIA |
 
 
 
@@ -132,6 +134,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-004| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
 |RNF-005| O sistema deve ter um alerta quando algum pagamento, estiver perto do vencimento |  BAIXO |
+|RNF-007| O site precisa ter recursos de segurança, como autenticação, autorização e criptografia, para garantir a proteção das informações financeiras dos usuários contra acesso não autorizado e roubo de informações. |  ALTA |
 
 
 
