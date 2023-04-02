@@ -47,4 +47,4 @@ Ao identificarmos a necessidade de uma ferramenta de fácil uso para auxiliar os
 
 Sabemos que o gerenciamento financeiro é um grande desafio, nossa solução visa simplificar esse processo, oferecendo uma ferramenta intuitiva e de fácil usabilidade, que permita aos usuários gerenciar seus movimentos financeiros sem a necessidade de conhecimentos avançados em finanças ou contabilidade. Com isso, esperamos ajudar esses empreendedores a reduzir o estresse financeiro e a dedicar mais tempo e energia para o crescimento de seus negócios.
 
-Com isso, esperamos ajudar a fortalecer o ecossistema empreendedor do Brasil, auxiliando esses empreendedores a alcançar seus objetivos e realizar seus sonhos.
+Em conclusão, esperamos ajudar a fortalecer o ecossistema empreendedor do Brasil, auxiliando esses empreendedores a alcançar seus objetivos e realizar seus sonhos.
