@@ -85,34 +85,41 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |Marcelo Cardoso     | Exibir alertas financeiros       | Evitar declínio financeiro de seu negócio           |
 |Marcelo Cardoso     | Poder consultar faturamentos                  | Ter uma forma eficiente de consultar se os seus clientes pagaram o preço dos serviços de sua empresa|
 |Vitória Caetano     | Ter uma ferramenta que calcule a margem de lucro | Ter uma ferramenta onde mostre de forma simples a margem de lucro| 
-|Vitória Caetano     | Um software que permita ter clareza nas minhas movimentações financeiras | Coseguir manter minha empresa e não entrar em falência por motivos financeiros |
+|Vitória Caetano     | Uma ferramenta que não exija muito conhecimento sobre contabilidade para ser utilizado | Conseguir organizar o financeiro da minha empresa de forma simples e intuitiva |
 |Wenderson Felis     | Facilitar controle de contas, no dia a dia    | Ter uma ferramenta virtual, com uma interface mais intuitiva, para ajudar no controle de contas a pagar  |
 |Wenderson Felis     | Monitorar qual valor está sendo gasto com reinvestimentos  | Ter uma ferramenta que mostre qual parte do lucro está sendo usado para reinvestimento  |
-|Lucas Fernando       | Ter clareza de todas as contas a pagar do mês| Saber o que vai sobrar para ser reivestido em outras áreas                                    |
+|Lucas Fernando       | Ter clareza de todas as contas a pagar do mês| Obter detalhamento sobre as contas pagas durante o mês                                   |
 |Lucas Fernando       | Ter melhor gerenciamento das receitas da empresa | Saber de forma mais dinâmica os valores gerados no mês pela empresa (receita, despesas, etc)|
+
+
 
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
+
+
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O Site deve conter menus de navegação rápida |  ALTA |
-|RF-002| Permitir que o usuário cadastre, visualize, altere e exclua informações | ALTA |
-|RF-003| O Site deve ter uma interface organizada e de fácil usabilidade |  ALTA |
-|RF-004| O Site deve conter a capacidade de registrar e controlar contas a pagar, com recursos de categorização e controle de prazos de pagamento |  ALTA |
-|RF-005| O Site deve conter a capacidade de registrar e controlar contas a receber, com recursos de categorização e controle de prazos de recebimento |  ALTA |
-|RF-006| O Site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |  ALTA |
-|RF-007| O Site deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes |  ALTA |
-|RF-008| O Site deve apresentar na página principal um gráfico contendo o fluxo de caixa |  ALTA |
-|RF-009| O site deve mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
-|RF-010| O Site deve mostrar qual valor foi utilizado para reinvestimentos |  MÉDIA |
-|RF-011| O site deve conter um calendario com um resumo de informações diarias. | MÉDIA |
-|RF-012| O Site deve permitir o usuário a exportação das informações |  MÉDIA |
-|RF-013| Permitir que o anexe documentos/comprovantes de pagamento | MÉDIA |
-|RF-014| O site deve ser capaz de registrar e gerenciar todas as transações financeiras, incluindo compras, vendas, recebimentos e pagamentos. | MÉDIA |
+|RF-001| O site deve conter uma forma de apresentar informações os usuários terão periodicamente |  ALTA |
+|RF-002| O site deve conter um gráfico de desempenho da empresa |  ALTA |
+|RF-003| O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |  ALTA |
+|RF-004| O site deve mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
+|RF-005| O site deve exibir alertas financeiros para informar o usuário | ALTA |
+|RF-006| O site deve conter a capacidade de registrar e controlar contas a receber, com recursos de categorização e controle de prazos de recebimento |  ALTA |
+|RF-007| O site deve conter informações sobre margem de lucro de produtos e/ou serviços | ALTA |
+|RF-008| O site deve conter usabilidade simples para usuários com qualquer nível de conhecimento sobre finanças e tecnologia | ALTA |
+|RF-009| O site deve mostrar qual valor foi utilizado para reinvestimentos |  ALTA |
+|RF-010| O site deve conter a capacidade de registrar e controlar contas a pagar, com recursos de categorização e controle de prazos de pagamento |  ALTA |
+|RF-011| O site deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes |  ALTA |
+|RF-012| O site deve apresentar a relação entre produtos/serviços vendidos e o faturamento total obtido |  ALTA |
+|RF-013| Permitir que o usuário cadastre, visualize, altere e exclua informações | ALTA |
+|RF-014| O Site deve ter uma interface organizada e de fácil usabilidade |  MÉDIA |
+|RF-015| O Site deve permitir o usuário a exportação das informações |  BAIXA |
+|RF-016| Permitir que o anexe documentos/comprovantes de pagamento | BAIXA |
+|RF-017| O site deve conter um calendario com um resumo de informações diarias. | BAIXA |
 
 
 
@@ -121,12 +128,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve pedir senha para o administrador acessar |  ALTA |
-|RNF-002| O sistema deve ter vários níveis de senha para acessos. Exemplo: Nem todos funcionários devem ter acesso as informações por completo |  ALTA |
-|RNF-003| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-004| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-005| O sistema deve ter um alerta quando algum pagamento, estiver perto do vencimento |  BAIXO |
+|RF-001| O Site deve conter menus de navegação rápida |  ALTA |
+|RNF-002| O sistema deve pedir senha para o administrador acessar |  ALTA |
+|RNF-003| O sistema deve ter vários níveis de senha para acessos. Exemplo: Nem todos funcionários devem ter acesso as informações por completo |  ALTA |
+|RNF-004| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
+|RNF-005| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-006| O sistema deve ter um alerta quando algum pagamento, estiver perto do vencimento |  BAIXO |
 |RNF-007| O site precisa ter recursos de segurança, como autenticação, autorização e criptografia, para garantir a proteção das informações financeiras dos usuários contra acesso não autorizado e roubo de informações. |  ALTA |
+
 
 
 
