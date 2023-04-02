@@ -103,7 +103,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O site deve conter uma forma de apresentar informações os usuários terão periodicamente |  ALTA |
+|RF-001| O site deve conter uma forma de apresentar informações sobre despesas que os usuários terão periodicamente |  ALTA |
 |RF-002| O site deve conter um gráfico de desempenho da empresa |  ALTA |
 |RF-003| O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |  ALTA |
 |RF-004| O site deve mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
