@@ -13,9 +13,9 @@
 ### `Primeiro Semestre - 2023/01`
 </div>
 
-Nosso projeto aborda o problema que empresas recém-abertas enfrentam ao se organizarem quanto aos custos obrigatórios a respeito de informações financeiras para se manterem ativas. 
+Nosso projeto aborda o problema que pequenas empresas enfrentam ao se organizarem quanto aos custos obrigatórios a respeito de informações financeiras para se manterem ativas. 
 
-É um sistema simples, porém eficaz, permite que usuários com qualquer instrução financeira ou tecnológica consigam se orientar quanto a sua usabilidade.
+É um sistema simples e eficaz, permite que usuários com qualquer instrução financeira ou tecnológica consigam se orientar quanto a sua usabilidade.
 
 
 ## Integrantes
