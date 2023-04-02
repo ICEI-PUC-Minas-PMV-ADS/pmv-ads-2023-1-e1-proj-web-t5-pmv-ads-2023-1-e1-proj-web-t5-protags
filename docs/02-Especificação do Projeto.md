@@ -78,7 +78,7 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                                                                        |
 |--------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|
-| Mayara    | Uma ferramenta para saber quais despesas terei periodicamente     | Abrir minha própria livraria e realizar meu sonho |
+| Mayara    | Uma ferramenta acessível financeiramente para organizar despesas    | Abrir minha própria livraria e realizar meu sonho |
 | Mayara    | Um gráfico que mostre o desempenho do meu negócio     | Ter projeções de crescimento da minha livraria |
 |Carolina Pinho      | Ferramenta que controle e monitore os gastos fixos da empresa | Ter uma ferramenta simples de mexer e baixo custo que possa controlar e monitorar os gastos fixos da empresa
 |Carolina Pinho      | Controlar qual porcentagem do lucro total pode ser reinvestida | Conseguir visualizar o que pode ser reinvestido em marketing para alcançar mais possíveis cliente
@@ -103,7 +103,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O site deve conter uma forma de apresentar informações sobre despesas que os usuários terão periodicamente |  ALTA |
+|RF-001| O site deve ser acessível para qualquer pessoa indepentende do nível financeiro ou tecnolócico em que se encontra |  ALTA |
 |RF-002| O site deve conter um gráfico de desempenho da empresa |  ALTA |
 |RF-003| O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |  ALTA |
 |RF-004| O site deve mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
