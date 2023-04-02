@@ -7,7 +7,7 @@ Com base em pesquisas realizadas pelos membros do nosso grupo, conseguimos obter
 As personas inclusas durante o processo de pesquisa e desenvolvimento do problema são apresentadas nas imagens a seguir:
 
 ## `Mayara de Azevedo`
-<img src="https://i.pinimg.com/564x/72/5f/92/725f92ea795944a82587c8c8d82b4e79.jpg" width="55%"> | Mayara, 23 anos                                                                                     |
+<img src="https://imgur.com/n1NXKSD"> | Mayara, 23 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | Vendedora |
 | Aplicativos preferidos                                                                                                   | Kindle, Skeelo, Tiktok e Spotify |
