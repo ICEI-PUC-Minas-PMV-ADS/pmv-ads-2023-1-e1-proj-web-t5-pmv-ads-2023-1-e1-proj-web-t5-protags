@@ -120,9 +120,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-008| O Site deve apresentar na página principal um gráfico contendo o fluxo de caixa |  ALTA |
 |RF-009| Mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
 |RF-010| O Site deve mostrar qual porcetagem está liberada para reinvestimentos |  MÉDIA |
-|RF-011| O Site deve permitir o usuário a exportação das informações |  MÉDIA |
-|RF-012| Permitir que o anexe documentos/comprovantes de pagamento | MÉDIA |
-|RF-013| O site deve ser capaz de registrar e gerenciar todas as transações financeiras, incluindo compras, vendas, recebimentos e pagamentos. | MÉDIA |
+|RF-011| O site deve conter um calendario com um resumo de informações diarias. | MÉDIA |
+|RF-012| O Site deve permitir o usuário a exportação das informações |  MÉDIA |
+|RF-013| Permitir que o anexe documentos/comprovantes de pagamento | MÉDIA |
+|RF-014| O site deve ser capaz de registrar e gerenciar todas as transações financeiras, incluindo compras, vendas, recebimentos e pagamentos. | MÉDIA |
+
 
 
 
