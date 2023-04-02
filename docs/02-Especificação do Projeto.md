@@ -82,12 +82,12 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 | Mayara    | Um gráfico que mostre o desempenho do meu negócio     | Ter projeções de crescimento da minha livraria |
 |Carolina Pinho      | Ferramenta que controle e monitore os gastos fixos da empresa | Ter uma ferramenta simples de mexer e baixo custo que possa controlar e monitorar os gastos fixos da empresa
 |Carolina Pinho      | Controlar qual porcentagem do lucro total pode ser reinvestida | Conseguir visualizar o que pode ser reinvestido em marketing para alcançar mais possíveis cliente
-|Marcelo Cardoso     | Monitorar renda e gastos da empresa           | Evitar declínio financeiro de seu negócio e distribuir salários apropriadamente               |
+|Marcelo Cardoso     | Exibir alertas financeiros       | Evitar declínio financeiro de seu negócio           |
 |Marcelo Cardoso     | Poder consultar faturamentos                  | Ter uma forma eficiente de consultar se os seus clientes pagaram o preço dos serviços de sua empresa|
-|Vitória Caetano     | Calcular margem de lucro | Ter uma ferramenta onde mostre de forma simples a margem de lucro| 
+|Vitória Caetano     | Ter uma ferramenta que calcule a margem de lucro | Ter uma ferramenta onde mostre de forma simples a margem de lucro| 
 |Vitória Caetano     | Um software que permita ter clareza nas minhas movimentações financeiras | Coseguir manter minha empresa e não entrar em falência por motivos financeiros |
 |Wenderson Felis     | Facilitar controle de contas, no dia a dia    | Ter uma ferramenta virtual, com uma interface mais intuitiva, para ajudar no controle de contas a pagar  |
-|Wenderson Felis     | Poder ver o liquido para reenvestimentos    | Ter uma ferramenta que conseguiria dizer quanto daria para reinvestir na empresa  |
+|Wenderson Felis     | Monitorar qual valor está sendo gasto com reinvestimentos  | Ter uma ferramenta que mostre qual parte do lucro está sendo usado para reinvestimento  |
 |Lucas Fernando       | Ter clareza de todas as contas a pagar do mês| Saber o que vai sobrar para ser reivestido em outras áreas                                    |
 |Lucas Fernando       | Ter melhor gerenciamento das receitas da empresa | Saber de forma mais dinâmica os valores gerados no mês pela empresa (receita, despesas, etc)|
 
@@ -107,8 +107,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-006| O Site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |  ALTA |
 |RF-007| O Site deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes |  ALTA |
 |RF-008| O Site deve apresentar na página principal um gráfico contendo o fluxo de caixa |  ALTA |
-|RF-009| Mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
-|RF-010| O Site deve mostrar qual porcetagem está liberada para reinvestimentos |  MÉDIA |
+|RF-009| O site deve mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
+|RF-010| O Site deve mostrar qual valor foi utilizado para reinvestimentos |  MÉDIA |
 |RF-011| O site deve conter um calendario com um resumo de informações diarias. | MÉDIA |
 |RF-012| O Site deve permitir o usuário a exportação das informações |  MÉDIA |
 |RF-013| Permitir que o anexe documentos/comprovantes de pagamento | MÉDIA |
