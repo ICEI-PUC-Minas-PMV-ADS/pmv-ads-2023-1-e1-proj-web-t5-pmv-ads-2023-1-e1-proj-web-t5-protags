@@ -7,7 +7,7 @@ Com base em pesquisas realizadas pelos membros do nosso grupo, conseguimos obter
 As personas inclusas durante o processo de pesquisa e desenvolvimento do problema são apresentadas nas imagens a seguir:
 
 ## `Mayara de Azevedo`
-<img src="https://i.pinimg.com/564x/72/5f/92/725f92ea795944a82587c8c8d82b4e79.jpg" width="65%"> | Mayara, 23 anos                                                                                     |
+<img src="https://i.pinimg.com/564x/72/5f/92/725f92ea795944a82587c8c8d82b4e79.jpg" width="55%"> | Mayara, 23 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | Vendedora |
 | Aplicativos preferidos                                                                                                   | Kindle, Skeelo, Tiktok e Spotify |
@@ -51,7 +51,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 - Vitória Caetano tem 25 anos, tem o ensino médio completo, e mora no Rio de Janeiro. Em 2019 ela abriu a sua loja física de assistência técnica e acessórios de celular, ele é MEI e possui dois funcionários. Ela é uma empreendedora dedicada e apaixonada por tecnologia e está sempre em busca de novas formas de inovar e melhorar seu negócio. Ela tem muita experiência no mercado de celulares e tecnologia, mas não tem muita habilidade em gerenciar finanças e muitas vezes gasta mais do que deveria e tem dificuldade em controlar suas despesas.
 
 ## `WENDERSON FELIS`
-<img src="https://i.pinimg.com/564x/e0/bc/5c/e0bc5cd4f1d7cff7116a325490b3010d.jpg" width="200%"> | Wenderson Felis, 39 anos                                                                                     |
+<img src="https://i.pinimg.com/564x/e0/bc/5c/e0bc5cd4f1d7cff7116a325490b3010d.jpg" width="70%"> | Wenderson Felis, 39 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | Empresario, proprietario de um escritorio de contabilidade |
 | Aplicativos preferidos                                                                                                   | Whatsapp, Facebook, instagram e Youtube |
@@ -62,7 +62,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
  - Wenderson Felis tem 39 Anos, é técnico em ciências contábeis, é casado e tem 2 filhos,  empreende em um escritório de contabilidade a 20 anos em uma empresa familiar. No começo da sua carreira, ele buscou fazer contabilidade para assumir a empresa da familia, quando ele assumiu a empresa, ele focava em buscar novos clientes e a manter os antigos clientes. Hoje com a empresa mais consolidada, por alguns conselhos de um de seus funcionarios, ele está a procura meios para facilitar os processos de gestão da sua empresa, ele pretende passar boa parte dos seus controles para ferramentas virtuais com interfaces mais intuitivas, principalmente para substituir a planilha de Excel que ele usa para controle financeiro.
 
 ## `LUCAS FERNANDO`
-<img src="https://i0.wp.com/engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia360-4.png?resize=791%2C785&ssl=1" width="200%"> | Lucas Fernando, 29 anos                                                                                     |
+<img src="https://i0.wp.com/engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia360-4.png?resize=791%2C785&ssl=1" width="63%"> | Lucas Fernando, 29 anos                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Ocupação                                                                                                                 | Engenheiro de produção. Trabalha com montagem de móveis planejados de luxo. |
 | Aplicativos preferidos                                                                                                   | WhatsApp, Instagram, Facebook, Aplicativo de banco e LinkedIn |
