@@ -48,30 +48,32 @@ Apresente a divisão de papéis entre os membros do grupo.
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+O aplicativo "Trello" está sendo utilizado para organizar as atividades e processos do projeto, separadas nas seguintes categorias: 
+
+- `Fluxo de ideias`: Neste processo, os conceitos são avaliados e, caso aprovados, se tornam itens de backlog ou tarefas a serem realizadas.
+- `Backlog/Tarefas`: É onde os backlogs e as tarefas são armazenados, e cada membro da equipe escolhe uma tarefa para concluir.
+- `A fazer`: As tarefas que necessitam ser desenvolvidas no momento. Esta categoria representa as "backlog sprints".
+- `Em andamento`: Tarefas que estão sendo desenvolvidas.
+- `Atrasado`: São onde as tarefas atrasadas ficam; onde elas ganham uma prioridade maior.
+- `Teste`: Avaliação das tarefas. Apenas as tarefas que foram concluídas e estão sendo testadas vão aqui.
+- `Concluído`: Os itens que são concluídos e testados com sucesso são movidos para esta categoria, que é composta por tarefas completamente estáveis e que não precisam de revisões adicionais.
+<figure>
+<img src="/docs/img/trello.png" alt="Algo deu errado" width="100%">
+<i style="size:0.1em;">Figura 1 - Tela das categorias de tarefas. </i>
 
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+- Github
+- Git
+- Microsoft Teams
+- Whatsapp
+- Figma
+- Draw.io
+- Trello
 
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+Para a comunicação rápida entre os membros da equipe, o WhatsApp foi selecionado. 
+Já o Microsoft Teams foi escolhido para reuniões mais detalhadas e minuciosas sobre as ideias do projeto. 
+O Draw.io foi utilizado para planejar os fluxos de usuário e visualizar ideias de como o site deve ser,
+enquanto o Figma foi usado para transformar essas ideias em realidade.
