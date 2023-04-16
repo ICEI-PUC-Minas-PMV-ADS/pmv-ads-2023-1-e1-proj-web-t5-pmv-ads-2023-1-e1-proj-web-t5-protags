@@ -1,8 +1,7 @@
 
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
+<span style="color:red">
 Todo o versionamento do projeto será feito via Git com repositório GitHub. Estamos utilizando a ferramenta Figma para desenvolver a parte do design e o Draw.io para desenvolver todos os gráficos e fluxogramas do projeto. Quanto ao método de gestão, estamos utilizando a plataforma Trello para controle das etapas, atividades e para fazer a gestão de times do projeto. A comunicação do grupo é feita atraves do aplicativo Whatsapp e em algumas reuniões feitas no Microsoft Teams.
 
 ## Controle de Versão
