@@ -28,7 +28,6 @@ etiquetas:
 - `help wanted`: Indica que um mantenedor deseja ajudar em um problema ou uma pull request
 - `invalid`: Indica que um problema, pull request ou discussão já não é relevante
 - `question`: Indica que um problema, pull request ou discussão precisa de mais informações
-- `bug`: uma funcionalidade encontra-se com problemas
 - `wontfix`: Indica que o trabalho não continuará em um problema, pull request ou discussão
 
 Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
