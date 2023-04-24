@@ -111,3 +111,7 @@ Permite ao usuário alterar informações sobre sua conta. Permite ao administra
 
 <img src="/docs/img/Configurações.png" alt="Algo deu errado" width="75%">
 <i style="size:0.1em;">Figura 13 - Configuarações. </i>
+
+
+
+- Para melhor visualização do Diagrama de Fluxo de telas, acesse o link: https://app.diagrams.net/#G1A8DXrKQd2iRjTcePnI5yJZIqwMuCpFJB
