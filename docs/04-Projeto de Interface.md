@@ -21,7 +21,7 @@ Todas as páginas seguem um template padrão, como será visto nesta imagem. O t
 ### Home Page
 A Home Page fará uma breve apresentação do sistema, contendo alguns depoimentos de usuários do sistema. Nessa tela é possível acessar o menu de registrar uma nova conta e entrar com uma conta existente;
 
-<img src="/docs/img/Tela inicial.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Home Page.png" alt="Algo deu errado" width="75%">
 <i style="size:0.1em;">Figura 3 - Home Page. </i>
 
 ### Página de Registro
