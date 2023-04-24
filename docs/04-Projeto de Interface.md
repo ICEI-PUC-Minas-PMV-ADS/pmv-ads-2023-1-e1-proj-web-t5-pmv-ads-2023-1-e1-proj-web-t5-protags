@@ -1,103 +1,113 @@
 
 # Projeto de Interface
 
-Está sendo estabelecido um foco na usabilidade, agilidade e acessibilidade do site, para que o aplicativo desperdice o mínimo de tempo o possível e consiga passar todas as informações necessárias para o usuário, e ao mesmo tempo garantindo a segurança da sua conta.
+As páginas do site foram desenvolvidas baseadas na usabilidade do usuário
 
 ## User Flow
 O seguinte diagrama demonstra fluxo do usuário pelas diferentes páginas do site. Cada elemento deste diagrama será esclarecido na seção de Wireframes.
 
 <img src="/docs/img/novo user flow.png" alt="Algo deu errado" width="100%">
-<i style="size:0.1em;">Figura 2 - O User flow. </i>
+<i style="size:0.1em;">Figura 1 - User flow. </i>
 
 ## Wireframes
 
- Como dito no User Flow, se segue as páginas do site. Todas as páginas seguem uma template definida, como será visto nesta imagem. O template possui o cabeçalho que enquadra todos os atalho utéis para o usuário.
+Todas as páginas seguem um template padrão, como será visto nesta imagem. O template possui o cabeçalho que enquadra todos os atalho utéis para o usuário.
+ 
+### Template padrão
 
 <img src="/docs/img/Template.jpg" alt="Algo deu errado" width="100%">
- <i style="size:0.1em;">Figura 3 - O Template que o site segue. </i>
-
-### Tela inicial
-A tela inicial, que vai possuir depoimentos de vários clientes, além do atalho de entrar na conta e registrar uma nova conta;
-
-<img src="/docs/img/Tela inicial.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 4 - A tela inicial. </i>
-
-### Página de registro
-A tela de registro vai permitir que um novo usuário consiga criar a sua própria conta. Quando todas as informações necessárias para o registro do usuário serem preenchidas, o usuário será automaticamente levado para a Home Page;
-
-<img src="/docs/img/Página de registro.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 5 - A tela de registro. </i>
-
-### Página de login
-A tela de login, que vai permitir o usuário conectar a sua conta. Nota que há um link disponível para que novos usuário sejam redirecionados à página de registro;
-
-<img src="/docs/img/Página de login.png" alt="Algo deu errado" width="100%">
-<i style="size:0.1em;">Figura 6 - A tela de Login. </i>
+ <i style="size:0.1em;">Figura 2 - Template padrão. </i>
 
 ### Home Page
+A Home Page fará uma breve apresentação do sistema, contendo alguns depoimentos de usuários do sistema. Nessa tela é possível acessar o menu de registrar uma nova conta e entrar com uma conta existente;
+
+<img src="/docs/img/Tela inicial.png" alt="Algo deu errado" width="75%">
+<i style="size:0.1em;">Figura 3 - Home Page. </i>
+
+### Página de Registro
+A tela de registro permite que um novo usuário consiga criar a sua própria conta. Quando todas as informações necessárias para o registro do usuário serem preenchidas e o cadastro for efetuado com sucesso, o usuário será levado para a Página Inicial;
+
+<img src="/docs/img/Página de registro.png" alt="Algo deu errado" width="75%">
+<i style="size:0.1em;">Figura 4 - A tela de registro. </i>
+
+### Página de Login
+A tela de login permite a um usuário existente entrar em sua conta no site. Também contém um link rápido para a página de registro caso ainda não exista uma conta criada.;
+
+<img src="/docs/img/Página de login.png" alt="Algo deu errado" width="100%">
+<i style="size:0.1em;">Figura 5 - A tela de Login. </i>
+
+### Página Inicial
 A tela principal do site. Esta serve para acompanhar eventos agendados e criar eventos, além de possuir os seguintes elementos:
 - Cabeçalho - contém todos os atalhos úteis para a navegação do site;
- - Início - Manda o usuário para à home page do site;
- - Logo - Funciona como o botão de início, mandando o usuário à home page do site;
+ - Início - Redireciona o usuário para a página inicial do site;
+ - Logo - Funciona como o botão de início, redirecionando o usuário à página inicial do site;
  - Contas - Abre um menu suspenso que oferece as opções para direcionar o usuário tanto à página de registro de contas pagas/pagadas como à página de registro de contas a receber/recebidas.
- - Pagamentos - Abre um menu suspenso que oferece as opções para direcionar o usuário tanto à página de contas a pagar como à página de contas a receber;
+ - Pagamentos - Abre um menu suspenso que oferece as opções para direcionar o usuário tanto à página de contas a pagar/pagas quanto à página de contas a receber/recebidas;
  - Desempenho - Leva o usuário à página de desempenho;
- - Financeiro - Leva o usuário à página de dados financeiros;
+ - Financeiro - Leva o usuário à página de visualização de informações financeiras;
  - Configurações - leva o usuário à página de configurações de sua conta;
 
 <img src="/docs/img/Home Page.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 7 - A Home Page. </i>
+<i style="size:0.1em;">Figura 6 - Página inicial. </i>
 
 ### Registro de contas pagas/a pagar
-A tela que possui dados sobre contas a pagar e pagas. Nota que é possível anexar comprovantes e definir descrições;
+Permite ao usuário preencher todas as informações relevantes ao cadastrar uma conta a ser paga.
+Permite anexo de documentos para fins de comprovação de pagamento.
 
 <img src="/docs/img/Tela de Registro de contas pagas.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 8 - A tela de Registro de contas pagas/a pagar. </i>
+<i style="size:0.1em;">Figura 7 - Registro de contas pagas/a pagar. </i>
 
 ### Registro de contas recebidas/a receber
-A tela que registra dados sobre contas recebidas e a receber. Também é possível anexar arquivos aqui;
+Permite ao usuário preencher todas as informações relevantes ao cadastrar uma conta a ser recebida.
+Permite anexo de documentos para fins de comprovação de recebimento.
 
 <img src="/docs/img/Tela de registro de contas recebidas.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 9 - A tela de Registro de contas recebidas/a receber. </i>
+<i style="size:0.1em;">Figura 8 - Registro de contas recebidas/a receber. </i>
 
-### Contas a pagar
-A tela que possui uma tabela com todas as contas que precisam ser pagas.
+### Dashboard de contas a pagar
+Permite o usuário visualizar as contas que serão pagas.
+Contém filtros de pesquisa.
 
 <img src="/docs/img/Tela de contas a pagar.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 10 - A tela de contas a pagar. </i>
+<i style="size:0.1em;">Figura 9 - Contas a pagar. </i>
 
-### Contas a receber
-A tela que possui uma tabela com todas as contas que vão ser recebidas.
+### Dashboard de contas a receber
+Permite o usuário visualizar as contas que serão recebidas.
+Contém filtros de pesquisa.
 
 <img src="/docs/img/Contas a receber.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 11 - A tela de contas a receber. </i>
+<i style="size:0.1em;">Figura 10 - Contas a receber. </i>
 
-### Desempenho
-A tela que possui o desempenho financeiro de sua empresa.
-
-<img src="/docs/img/Desempenho.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 12 - A tela de desempenho. </i>
-
-### Financeiro
-A tela que possui descrições mais detalhadas do movimento financeiro de sua empresa.
-
-<img src="/docs/img/Financeiro.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 13 - A tela de finanças. </i>
-
-### Configurações
-A tela de configuração da conta do usuário.
-
-<img src="/docs/img/configurações da conta.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 14 - A tela de configurações da conta. </i>
-
-### Contas pagas
-A tela que possui uma tabela sobre contas pagas.
+### Dashboard de contas pagas
+Permite o usuário visualizar as contas que já foram pagas.
+Contém filtros de pesquisa.
 
 <img src="/docs/img/contas pagas.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 15 - A tela de contas pagas. </i>
+<i style="size:0.1em;">Figura 14 - Contas pagas. </i>
 
-### Contas recebidas
-A tela que possui uma tabela com todas as contas recebidas.
+### Dashboard de contas recebidas
+Permite o usuário visualizar as contas que já foram recebidas.
+Contém filtros de pesquisa.
 
 <img src="/docs/img/contas recebidas.png" alt="Algo deu errado" width="75%">
-<i style="size:0.1em;">Figura 16 - A tela de contas recebidas. </i>
+<i style="size:0.1em;">Figura 15 - Contas recebidas. </i>
+
+### Dashboard de desempenho
+Fornece uma visualização rápida de como está o desempenho da empresa.
+
+<img src="/docs/img/Desempenho.png" alt="Algo deu errado" width="75%">
+<i style="size:0.1em;">Figura 11 - Dashboard de Desempenho. </i>
+
+### Dashboard Financeiro
+Permite que o usuário visualize com clareza as movimentações financeiras por período
+Contém informativos sobre o estado do caixa.
+
+<img src="/docs/img/Financeiro.png" alt="Algo deu errado" width="75%">
+<i style="size:0.1em;">Figura 12 - Dashboard Financeiro. </i>
+
+
+### Configurações
+Permite ao usuário alterar informações sobre sua conta. Permite ao administrador alterar informações sobre sua conta, cadastrar e/ou excluir usuários de sua empresa.
+
+<img src="/docs/img/configurações da conta.png" alt="Algo deu errado" width="75%">
+<i style="size:0.1em;">Figura 13 - Configuarações. </i>
