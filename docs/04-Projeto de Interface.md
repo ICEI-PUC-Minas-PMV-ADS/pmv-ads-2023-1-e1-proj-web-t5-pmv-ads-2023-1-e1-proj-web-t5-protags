@@ -11,12 +11,12 @@ O seguinte diagrama demonstra fluxo do usuário pelas diferentes páginas do sit
 
 ## Wireframes
 
- Como dito no User Flow, se segue as páginas do site. Todas as páginas seguem uma template definida, como será visto nesta imagem. O template possui o cabeçalho que enquadra todos os atalho utéis para o usuário.
+ Como dito no User Flow, seguem as páginas do site. Todas as páginas contém um template definido, como será visto nesta imagem. O template possui o cabeçalho que enquadra todos os atalho utéis para o usuário.
 
 <img src="/docs/img/Template.jpg" alt="Algo deu errado" width="100%">
  <i style="size:0.1em;">Figura 3 - O Template que o site segue. </i>
 
-### Tela inicial
+### Homepage
 A tela inicial, que vai possuir depoimentos de vários clientes, além do atalho de entrar na conta e registrar uma nova conta;
 
 <img src="/docs/img/Tela inicial.png" alt="Algo deu errado" width="75%">
@@ -34,7 +34,7 @@ A tela de login, que vai permitir o usuário conectar a sua conta. Nota que há 
 <img src="/docs/img/Página de login.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 6 - A tela de Login. </i>
 
-### Home Page
+### Tela inicial
 A tela principal do site. Esta serve para acompanhar eventos agendados e criar eventos, além de possuir os seguintes elementos:
 - Cabeçalho - contém todos os atalhos úteis para a navegação do site;
  - Início - Manda o usuário para à home page do site;
