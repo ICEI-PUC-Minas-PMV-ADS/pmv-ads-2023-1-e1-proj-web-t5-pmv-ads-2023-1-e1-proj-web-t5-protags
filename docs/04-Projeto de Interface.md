@@ -21,13 +21,13 @@ Todas as páginas seguem um template padrão, como será visto nesta imagem. O t
 ### Home Page
 A Home Page fará uma breve apresentação do sistema, contendo alguns depoimentos de usuários do sistema. Nessa tela é possível acessar o menu de registrar uma nova conta e entrar com uma conta existente;
 
-<img src="/docs/img/HomePage.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/HomePage.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 3 - Home Page. </i>
 
 ### Página de Registro
 A tela de registro permite que um novo usuário consiga criar a sua própria conta. Quando todas as informações necessárias para o registro do usuário serem preenchidas e o cadastro for efetuado com sucesso, o usuário será levado para a Página Inicial;
 
-<img src="/docs/img/Register Page.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Register Page.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 4 - A tela de registro. </i>
 
 ### Página de Login
@@ -47,69 +47,69 @@ A tela principal do site. Esta serve para acompanhar eventos agendados e criar e
  - Financeiro - Leva o usuário à página de visualização de informações financeiras;
  - Configurações - leva o usuário à página de configurações de sua conta;
 
-<img src="/docs/img/Tela Inicial.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Tela Inicial.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 6 - Página inicial. </i>
 
 ### Registro de contas pagas/a pagar
 Permite ao usuário preencher todas as informações relevantes ao cadastrar uma conta a ser paga.
 Permite anexo de documentos para fins de comprovação de pagamento.
 
-<img src="/docs/img/Registro contas a pagar.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Registro contas a pagar.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 7 - Registro de contas pagas/a pagar. </i>
 
 ### Registro de contas recebidas/a receber
 Permite ao usuário preencher todas as informações relevantes ao cadastrar uma conta a ser recebida.
 Permite anexo de documentos para fins de comprovação de recebimento.
 
-<img src="/docs/img/Registro contas a receber.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Registro contas a receber.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 8 - Registro de contas recebidas/a receber. </i>
 
 ### Dashboard de contas a pagar
 Permite o usuário visualizar as contas que serão pagas.
 Contém filtros de pesquisa.
 
-<img src="/docs/img/Dashboard Contas a Pagar.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Dashboard Contas a Pagar.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 9 - Contas a pagar. </i>
 
 ### Dashboard de contas a receber
 Permite o usuário visualizar as contas que serão recebidas.
 Contém filtros de pesquisa.
 
-<img src="/docs/img/Dashboard Contas a Receber.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Dashboard Contas a Receber.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 10 - Contas a receber. </i>
 
 ### Dashboard de contas pagas
 Permite o usuário visualizar as contas que já foram pagas.
 Contém filtros de pesquisa.
 
-<img src="/docs/img/Dashboard Contas Pagas.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Dashboard Contas Pagas.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 14 - Contas pagas. </i>
 
 ### Dashboard de contas recebidas
 Permite o usuário visualizar as contas que já foram recebidas.
 Contém filtros de pesquisa.
 
-<img src="/docs/img/Dashboard Contas Recebidas.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Dashboard Contas Recebidas.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 15 - Contas recebidas. </i>
 
 ### Dashboard de desempenho
 Fornece uma visualização rápida de como está o desempenho da empresa.
 
-<img src="/docs/img/Dashboard Desempenho.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Dashboard Desempenho.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 11 - Dashboard de Desempenho. </i>
 
 ### Dashboard Financeiro
 Permite que o usuário visualize com clareza as movimentações financeiras por período
 Contém informativos sobre o estado do caixa.
 
-<img src="/docs/img/Dashboard Financeiro.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Dashboard Financeiro.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 12 - Dashboard Financeiro. </i>
 
 
 ### Configurações
 Permite ao usuário alterar informações sobre sua conta. Permite ao administrador alterar informações sobre sua conta, cadastrar e/ou excluir usuários de sua empresa.
 
-<img src="/docs/img/Configurações.png" alt="Algo deu errado" width="75%">
+<img src="/docs/img/Configurações.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 13 - Configuarações. </i>
 
 
