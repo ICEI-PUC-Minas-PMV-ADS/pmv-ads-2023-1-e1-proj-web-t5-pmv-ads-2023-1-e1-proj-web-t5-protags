@@ -15,7 +15,7 @@ Todas as páginas seguem um template padrão, como será visto nesta imagem. O t
  
 ### Template padrão
 
-<img src="/docs/img/Template.jpg" alt="Algo deu errado" width="100%">
+<img src="/docs/img/Template.png" alt="Algo deu errado" width="100%">
  <i style="size:0.1em;">Figura 2 - Template padrão. </i>
 
 ### Home Page
