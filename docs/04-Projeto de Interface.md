@@ -11,12 +11,12 @@ O seguinte diagrama demonstra fluxo do usuário pelas diferentes páginas do sit
 
 ## Wireframes
 
- Como dito no User Flow, seguem as páginas do site. Todas as páginas contém um template definido, como será visto nesta imagem. O template possui o cabeçalho que enquadra todos os atalho utéis para o usuário.
+ Como dito no User Flow, se segue as páginas do site. Todas as páginas seguem uma template definida, como será visto nesta imagem. O template possui o cabeçalho que enquadra todos os atalho utéis para o usuário.
 
 <img src="/docs/img/Template.jpg" alt="Algo deu errado" width="100%">
  <i style="size:0.1em;">Figura 3 - O Template que o site segue. </i>
 
-### Homepage
+### Tela inicial
 A tela inicial, que vai possuir depoimentos de vários clientes, além do atalho de entrar na conta e registrar uma nova conta;
 
 <img src="/docs/img/Tela inicial.png" alt="Algo deu errado" width="75%">
@@ -34,7 +34,7 @@ A tela de login, que vai permitir o usuário conectar a sua conta. Nota que há 
 <img src="/docs/img/Página de login.png" alt="Algo deu errado" width="100%">
 <i style="size:0.1em;">Figura 6 - A tela de Login. </i>
 
-### Tela inicial
+### Home Page
 A tela principal do site. Esta serve para acompanhar eventos agendados e criar eventos, além de possuir os seguintes elementos:
 - Cabeçalho - contém todos os atalhos úteis para a navegação do site;
  - Início - Manda o usuário para à home page do site;
@@ -84,11 +84,20 @@ A tela que possui descrições mais detalhadas do movimento financeiro de sua em
 <img src="/docs/img/Financeiro.png" alt="Algo deu errado" width="75%">
 <i style="size:0.1em;">Figura 13 - A tela de finanças. </i>
 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+### Configurações
+A tela de configuração da conta do usuário.
+
+<img src="/docs/img/configurações da conta.png" alt="Algo deu errado" width="75%">
+<i style="size:0.1em;">Figura 14 - A tela de configurações da conta. </i>
+
+### Contas pagas
+A tela que possui uma tabela sobre contas pagas.
+
+<img src="/docs/img/contas pagas.png" alt="Algo deu errado" width="75%">
+<i style="size:0.1em;">Figura 15 - A tela de contas pagas. </i>
+
+### Contas recebidas
+A tela que possui uma tabela com todas as contas recebidas.
+
+<img src="/docs/img/contas recebidas.png" alt="Algo deu errado" width="75%">
+<i style="size:0.1em;">Figura 16 - A tela de contas recebidas. </i>
