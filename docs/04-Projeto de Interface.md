@@ -115,3 +115,5 @@ Permite ao usuário alterar informações sobre sua conta. Permite ao administra
 
 
 - Para melhor visualização do Diagrama de Fluxo de telas, acesse o link: https://app.diagrams.net/#G1A8DXrKQd2iRjTcePnI5yJZIqwMuCpFJB
+
+- Para melhor visualização da iteração de telas, acesse o link: https://www.figma.com/proto/7jwY7rAVcMpL60iG3avmGe/Protags?node-id=1-2&scaling=scale-down&page-id=0%3A1
