@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    min-height: 10vh;
+    background-color: #47141e;
+}
+
+#dropdownMenuButton {
+    background-color: #47141E;
+    border-color: #47141E;
+}
+
+.logopng {
+    width: 10rem;
+
+}
+
+
+.texto {
+    margin-bottom: 0;
+}
+
+
+.conteudo {
+    min-height: 78vh;
+}
+
+.footer {
+    min-height: 6vh;
+    background-color: #47141E;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    text-emphasis-color: #fff;
+    margin-bottom: 0px;
+}

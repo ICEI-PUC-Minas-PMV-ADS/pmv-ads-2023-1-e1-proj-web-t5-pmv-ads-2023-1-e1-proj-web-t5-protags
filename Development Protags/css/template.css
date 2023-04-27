@@ -1,0 +1,44 @@
+* { padding: 0; margin: 0;}
+
+header {
+    display: flex;
+    align-items: flex-end;
+    min-height: 10vh;
+    background-color: #47141e;
+}
+
+.texto {
+    margin-bottom:0;
+}
+
+
+.conteudo {
+    min-height: 78vh;
+}
+
+.voltarpng {
+    width: 2.0rem;
+    position: relative;
+    margin-top:0;
+    margin-left:0;
+    position:relative;
+}
+
+.logopng {
+    width:10rem;
+}
+
+.footer {
+    min-height: 6vh;
+    background-color: #47141E;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    text-emphasis-color: #fff;
+    margin-bottom:0px;
+}
+
+.navbar {
+    display:inline-block;
+    line-height: 20px;
+}
