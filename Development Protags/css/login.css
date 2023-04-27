@@ -1,10 +1,11 @@
+body {
+    background-color: #fff;
+    font-family:sans-serif;
+}
+
 .logo {
     background-color: #47141e;
     margin: -1rem;
-}
-
-body {
-    background-color: #fff;
 }
 
 .img-log {
@@ -14,12 +15,45 @@ body {
     margin-right: auto;
 }
 
-
-.formregister {
-    background:#47141e;
-    display:flex;
-    flex-direction: row;
+.card-body {
+    display: flex;
     justify-content: center;
     align-items: center;
+  }
   
+  .login-form {
+    max-width: 400px;
+  }
+  
+  .card-body {
+    width:400px;
+    height:400px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin:auto;
+    border:solid 1px;
+    box-shadow: 10px 10px 10px 5px black; 
+    background-color: #47141e;
+    color: #fff;
+    border-radius:50px;
+  }
+
+  .button {
+    display:flex;
+    justify-content: center; 
+    margin:auto;
+    margin-top:50px;
+    border-radius:10px; 
+    margin-right:38%;
+  }
+
+  .button:hover {
+    background-color: #47141e;
+    color: #fff;
+ }
+ 
+ .form-group {
+  margin-top: 5px;
 }
