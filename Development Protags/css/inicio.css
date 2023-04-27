@@ -1,3 +1,5 @@
+/* TEMPLATE PADRÃO */
+
 * {
     padding: 0;
     margin: 0;
@@ -25,10 +27,6 @@ header {
 }
 
 
-.conteudo {
-    min-height: 78vh;
-}
-
 .footer {
     min-height: 6vh;
     background-color: #47141E;
@@ -38,3 +36,11 @@ header {
     text-emphasis-color: #fff;
     margin-bottom: 0px;
 }
+
+/* BODY */
+
+.conteudo {
+    min-height: 78vh;
+    
+}
+
