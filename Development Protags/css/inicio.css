@@ -1,4 +1,7 @@
 /* TEMPLATE PADRÃO */
+.body {
+    font-family: sans-serif;
+}
 
 * {
     padding: 0;
@@ -41,6 +44,128 @@ header {
 
 .conteudo {
     min-height: 78vh;
-    
+
 }
 
+/* CRIAR EVENTO */
+
+.card-evento {
+    align-items: end;
+    margin: 0 auto;
+}
+
+.text-ev {
+    margin-left: 90px;
+}
+
+.form-control {
+    width: 190px;
+    margin-left: 30px;
+}
+
+.button-cadastrar-ev {
+    background-color: #47141E;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 90px;
+}
+
+.criar-evento {
+    color: #fff;
+}
+
+.book {
+    float: left;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 220px;
+    height: 646px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+
+.cover {
+    top: 0;
+    position: absolute;
+    background-color: #47141E;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+}
+
+/* CARDS EVENTOS */
+
+.title-eventos {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    background: #47141E;
+    color: #fff;
+    border-style: solid 2px;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+}
+
+#card-ev {
+    border-color: #47141E;
+    border-width: 2px;
+}
+
+.card-body {
+    height: 120px;
+    gap: 5px;
+}
+
+.date-eventos {
+    margin-left: 37rem;
+}
+
+.meio-eventos {
+    margin-left: 37rem;
+
+}
+
+.space {
+    height: 22px;
+}
