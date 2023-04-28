@@ -19,6 +19,7 @@
         crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="/Development Protags/css/template.css">
+    <link rel="stylesheet" href="/Development Protags/css/configuracoes.css">
     <title>Configurações</title>
 </head>
 
@@ -90,12 +91,59 @@
 
     <!-- O QUE PRECISA SER DESENVOLVIDO -->
 
-    <div class="conteudo">
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="box ">
+                        <h1>Perfil</h1>
+                    </div>
+                    <label for="name" class="form-label">Alterar Nome da Empresa:</label>
+                    <input type="text" class="form-control text-center" id="name" placeholder="Novo nome empresarial">
+                    <label for="cnpj" class="form-label">Alterar CNPJ</label>
+                    <input type="text" class="form-control text-center" id="cnpj" placeholder="00.000.000/0001/00">
+                </form>
+            </div>
 
+            <div class="col">
+                <form>
+                    <div class="box ">
+                        <h1>Membros</h1>
+                    </div>
+                    <label for="newuser" class="form-label">Cadastrar Novo Usuário</label>
+                    <input type="text" class="form-control text-center" id="newuser" placeholder="Novo usuário">
+                    <label for="cadastrarsenha" class="form-label">Cadastrar Senha</label>
+                    <input type="password" class="form-control text-center" id="cadastrarsenha" placeholder="Senha">
+                    <label for="membro" class="form-label ">Excluir Membro</label>
+                    <select class="form-select form-select-sm text-center">
+                        <option selected>Selecione</option>
+                        <option value="1">Membro 1</option>
+                        <option value="2">Membro 2</option>
+                        <option value="3">Membro 3</option>
+                    </select>
+                    <label for="password" class="form-label">Senha Administrador</label>
+                    <input type="password" class="form-control text-center" id="password" placeholder="Digite a senha">
+                </form>
+            </div>
 
+            <div class="col">
+                <form>
+                    <div class="box">
+                        <h1>Segurança</h1>
+                    </div>
+                    <label for="email" class="form-label">Alterar Email</label>
+                    <input type="email" class="form-control text-center" id="email" placeholder="Novo email">
+                    <label for="mudarsenha" class="form-label">Alterar Senha</label>
+                    <input type="password" class="form-control text-center" id="mudarsenha" placeholder="Senha Atual">
+                    <label for="confirm_password" class="form-label">Confimar Nova Senha</label>
+                    <input type="password" class="form-control text-center" id="confirm_password"
+                        placeholder="Nova Senha"><br>
+
+                    <button type="submit" class="button">Salvar alterações</button>
+                </form>
+            </div>
+        </div>
     </div>
-
-
 
 
     <!-- RODAPÉ DA PÁGINA -->
