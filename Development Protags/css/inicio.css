@@ -1,13 +1,22 @@
 /* TEMPLATE PADRÃO */
+.body {
+    font-family: sans-serif;
+}
 
 * {
     padding: 0;
     margin: 0;
 }
 
-header {
-    display: flex;
-    min-height: 10vh;
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+    background-color: transparent;
+    color: transparent;
+}
+
+.header {
+    min-height: 12vh;
+    width: 100vw;
     background-color: #47141e;
 }
 
@@ -18,6 +27,7 @@ header {
 
 .logopng {
     width: 10rem;
+    margin-left: 10px;
 
 }
 
@@ -27,20 +37,150 @@ header {
 }
 
 
-.footer {
-    min-height: 6vh;
+#footer {
+    min-height: 8vh;
     background-color: #47141E;
     color: #fff;
-    position: relative;
-    text-align: center;
     text-emphasis-color: #fff;
-    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 /* BODY */
 
 .conteudo {
     min-height: 78vh;
-    
+
 }
 
+/* CRIAR EVENTO */
+
+
+
+.card-evento {
+    align-items: end;
+    margin: 0 auto;
+}
+
+
+.button-cadastrar-ev {
+    background-color: #47141E;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.button-cadastrar-ev:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+.create-ev {
+    bottom: fixed;
+}
+
+.criar-evento {
+    color: #fff;
+}
+
+.book {
+    float: left;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+
+@media (max-width: 678px) {
+    .book {
+        height: 15vh;
+    }
+}
+
+.cover {
+    top: 0;
+    position: absolute;
+    background-color: #47141E;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+}
+
+/* CARDS EVENTOS */
+
+#body-card {
+    border: outset;
+    border-radius: 20px;
+}
+
+#card-view {
+    border: solid 1px #c0c0c0;
+    border-radius: 20px;
+    border-color: #47141E;
+}
+
+#titlerow {
+    background-color: #47141E;
+}
+
+.btn-outline-success {
+    background-color: #47141E;
+    color: #fff;
+}
+
+.btn-outline-success:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+/* Paginas */
+
+
+.page-link {
+    color: #47141E;
+}

@@ -57,3 +57,13 @@ body {
  .form-group {
   margin-top: 5px;
 }
+
+#footer {
+  min-height: 8vh;
+  background-color: #47141E;
+  color: #fff;
+  text-emphasis-color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
