@@ -146,9 +146,15 @@
 
 /* CARDS EVENTOS */
 
-#card-view {
-    border: solid 2px #c0c0c0;
+#body-card {
+    border: outset;
     border-radius: 20px;
+}
+
+#card-view {
+    border: solid 1px #c0c0c0;
+    border-radius: 20px;
+    border-color: #47141E;
 }
 
 #titlerow {
