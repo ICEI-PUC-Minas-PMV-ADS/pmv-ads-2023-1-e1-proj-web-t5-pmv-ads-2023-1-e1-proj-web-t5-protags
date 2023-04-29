@@ -1,11 +1,12 @@
 /* TEMPLATE PADRÃO */
-.body {
-    font-family: sans-serif;
-}
 
 * {
     padding: 0;
     margin: 0;
+}
+
+.body {
+    font-family: sans-serif;
 }
 
 .navbar-toggler-icon {
@@ -31,21 +32,19 @@
 
 }
 
-
 .texto {
     margin-bottom: 0;
 }
-
 
 #footer {
     min-height: 8vh;
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-}
+  }
 
 /* BODY */
 
@@ -57,12 +56,10 @@
 /* CRIAR EVENTO */
 
 
-
 .card-evento {
     align-items: end;
     margin: 0 auto;
 }
-
 
 .button-cadastrar-ev {
     background-color: #47141E;
@@ -179,7 +176,6 @@
 }
 
 /* Paginas */
-
 
 .page-link {
     color: #47141E;

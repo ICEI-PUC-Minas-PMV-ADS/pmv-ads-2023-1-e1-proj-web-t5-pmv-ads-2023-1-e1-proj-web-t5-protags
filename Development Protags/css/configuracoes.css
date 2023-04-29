@@ -3,7 +3,11 @@
     margin: 0;
 }
 
-header {
+.body {
+    font-family: sans-serif;
+}
+
+.header {
     display: flex;
     min-height: 10vh;
     background-color: #47141e;
@@ -14,28 +18,31 @@ header {
     border-color: #47141E;
 }
 
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+    background-color: transparent;
+    color: transparent;
+}
+
 .logopng {
     width: 10rem;
 
 }
 
-
 .texto {
     margin-bottom: 0;
 }
 
-
 .conteudo {
     min-height: 78vh;
 }
-
 
 #footer {
     min-height: 8vh;
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
