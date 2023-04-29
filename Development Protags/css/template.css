@@ -29,12 +29,12 @@ header {
     min-height: 78vh;
 }
 
-.footer {
-    min-height: 6vh;
+#footer {
+    min-height: 8vh;
     background-color: #47141E;
     color: #fff;
-    position: relative;
-    text-align: center;
     text-emphasis-color: #fff;
-    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
