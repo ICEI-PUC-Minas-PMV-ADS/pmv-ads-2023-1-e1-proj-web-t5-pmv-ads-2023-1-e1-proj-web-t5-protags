@@ -15,7 +15,7 @@
 }
 
 .header {
-    min-height: 10vh;
+    min-height: 12vh;
     width: 100vw;
     background-color: #47141e;
 }
@@ -37,14 +37,14 @@
 }
 
 
-.footer {
-    min-height: 6vh;
+#footer {
+    min-height: 8vh;
     background-color: #47141E;
     color: #fff;
-    position: relative;
-    text-align: center;
     text-emphasis-color: #fff;
-    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 /* BODY */
@@ -69,6 +69,12 @@
     color: #fff;
     border-radius: 5px;
     padding: 5px 10px;
+}
+
+.button-cadastrar-ev:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
 }
 
 .create-ev {
@@ -163,7 +169,7 @@
 
 .btn-outline-success {
     background-color: #47141E;
-   color: #fff;
+    color: #fff;
 }
 
 .btn-outline-success:hover {
@@ -176,6 +182,5 @@
 
 
 .page-link {
-    text-emphasis-color: #fff;
     color: #47141E;
 }
