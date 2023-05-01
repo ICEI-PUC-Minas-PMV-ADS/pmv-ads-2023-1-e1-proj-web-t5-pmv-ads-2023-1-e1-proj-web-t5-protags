@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    min-height: 10vh;
+    background-color: #47141e;
+    
+}
+
+#dropdownMenuButton {
+    background-color: #47141E;
+    border-color: #47141E;
+}
+
+.logopng {
+    width: 10rem;
+
+}
+
+
+.texto {
+    margin-bottom: 0;
+}
+
+
+.conteudo {
+    min-height: 78vh;
+}
+
+#footer {
+    min-height: 8vh;
+    background-color: #47141E;
+    color: #fff;
+    text-emphasis-color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Caixas para Entradas e Saidas */
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    vertical-align: top;
+}
+
+#box {
+    display: inline-block;
+    width: 25%;
+    margin: 5px;
+    vertical-align: top;
+}
+
+#box_green {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 25px;   
+    padding: 13px;
+    color: black;
+    border-radius: 7px;
+    border: 2px solid rgb(50, 190, 50);
+}
+
+#box_red {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 25px;   
+    padding: 13px;
+    color: black;
+    border-radius: 7px;
+    border: 2px solid rgb(199, 35, 35);
+}
+/* Fim - Caixas para Entradas e Saidas */
+
+/* Inicio - Informativos*/
+#informativos {
+    display: block;
+    align-content: flex-start;
+    width: 50%;
+    padding: 5px;
+    margin: 5px ;
+    height: 118px;
+    border: 2px solid black;
+    border-radius: 9px;
+}
+
+h3 {
+    padding: 0px;
+    margin: 0px;
+    border: 2px solid black;
+    border-radius: 9px;
+}
+
+#periodo_info_1, #periodo_info_2, #result_info_1, #result_info_2 {
+    font-size: 15px;
+    text-align: center;
+    height: 10px;
+    padding: 8px;
+}
+#result_info_1 {
+    color: red;
+}
+/* Fim - Informativos*/
+
+/* Inicio - Movimentações Recentes  */
+
+/* Fim - Movimentações Recentes  */
