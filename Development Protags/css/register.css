@@ -16,10 +16,11 @@ body {
 }
 
 .card-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
   
   .login-form {
     max-width: 400px;
@@ -63,7 +64,7 @@ body {
   background-color: #47141E;
   color: #fff;
   text-emphasis-color: #fff;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }

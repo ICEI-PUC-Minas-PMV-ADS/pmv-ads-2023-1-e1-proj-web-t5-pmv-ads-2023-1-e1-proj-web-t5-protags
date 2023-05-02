@@ -34,7 +34,7 @@ header {
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-}
+  }
