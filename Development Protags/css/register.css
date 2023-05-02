@@ -51,13 +51,16 @@ body {
     margin:auto;
     margin-top:50px;
     border-radius:10px; 
-    margin-right:38%;
   }
 
   .button:hover {
     background-color: #47141e;
     color: #fff;
  }
+
+ #naotem {
+  justify-content: center;
+}
 
  #footer {
   min-height: 8vh;

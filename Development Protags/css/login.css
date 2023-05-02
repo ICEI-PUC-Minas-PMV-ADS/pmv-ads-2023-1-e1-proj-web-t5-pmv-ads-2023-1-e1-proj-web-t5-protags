@@ -47,7 +47,6 @@ body {
   margin: auto;
   margin-top: 50px;
   border-radius: 10px;
-  margin-right: 38%;
 }
 
 .button:hover {
@@ -57,6 +56,14 @@ body {
 
 .form-group {
   margin-top: 5px;
+}
+
+#card-log {
+  width: 100%;
+}
+
+#naotem {
+  justify-content: center;
 }
 
 #footer {

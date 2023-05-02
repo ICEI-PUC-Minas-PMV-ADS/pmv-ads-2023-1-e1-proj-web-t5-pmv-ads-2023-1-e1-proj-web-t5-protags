@@ -37,7 +37,7 @@
 }
 
 #footer {
-    min-height: 8vh;
+    min-height: 5vh;
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
@@ -49,7 +49,7 @@
 /* BODY */
 
 .conteudo {
-    min-height: 78vh;
+    min-height: 83vh;
 
 }
 
@@ -106,12 +106,6 @@
     -ms-flex-pack: center;
     justify-content: center;
     color: #000;
-}
-
-@media (max-width: 678px) {
-    .book {
-        height: 15vh;
-    }
 }
 
 .cover {
