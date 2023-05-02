@@ -18,7 +18,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="/Development Protags/css/template.css">
+    <link rel="stylesheet" href="/Development Protags/css/areceber.css">
     <title>Contas a receber</title>
 </head>
 
@@ -94,7 +94,69 @@
 
     <div class="conteudo">
 
+        <!--ELEMENTOS DA LINHA 1-->
+        <div class="titulo">Contas à receber</div>
+        <div class="div4">
+            <div class="linha4"> <!--ENTRADA DO NÚMERO DA CONTA-->
+                <label for="rconta">Conta</label>
+                <input type="number" min="0">
+            </div>
+            <div class="linha4"> <!--SELECIONADOR DE PARCELAS-->
+                <label for="rparcelas">Parcelas</label>
+                <select name="rparcelas" id="rparcelas">
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <div class="linha4"> <!--ENTRADA DO VALOR-->
+                <label for="rvalor" id="rvalor">Valor</label>
+                <input type="text" value="R$">
+            </div>
+            <div class="linha4"> <!--ENTRADA DA DATA DE EMISSÃO-->
+                <label for="rdatadeEmissao">Data de emissão</label>
+                <input type="date">
+            </div>
+            <div class="linha4"> <!--ENTRADA DA DATA DE VENCIMENTO-->
+                <label for="rdatadeVencimento">Data de Vencimento</label>
+                <input id="rdatadeVencimento" type="date">
+            </div>
+        </div> 
 
+        <!--ELEMENTOS DA LINHA 2-->
+        <div class="div5">
+            <div class="linha5"> <!--ENTRADA DO PAGAR PARA-->
+                <label for="rpagarPara">Pagar para</label>
+                <input type="text" placeholder="Insira um nome" style="width: 30vw;">
+            </div>
+            <div class="linha5"> <!--ENTRADA DA DESCRIÇÃO-->
+                <label for="rDescricao">Descrição</label>
+                <input type="text" placeholder="Insira a descrição" style="width: 30vw;">
+            </div>
+        </div>
+
+        <!--ELEMENTOS DA LINHA 3-->
+        <div class="div6">
+            <div class="linha6"> <!--SELECIONADOR DE DATA-->
+                <label for="rcondicaoPagamento">Condição de Pagamento</label>
+                <select name="rcondicaoPagamento" id="rcondicaoPagamento">
+                    <option value="1">1 dia</option>
+                </select>
+            </div>
+            <div class="linha6">
+                <label for="rSituação">Situação</label> <!--SITUAÇÃO-->
+                <select name="rSituação" id="rSituação">
+                    <option value="rPago">Pago</option>
+                    <option value="rPendente">Pendente</option>
+                    <option value="rAtrasado">Atrasado</option>
+                </select>
+            </div>
+            <div class="linha6">
+                <label for="ranexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
+                <input type="file" id="rArquivo" name="rArquivo">
+            </div>
+        </div>
+        <div class="rcadastrar"> <!--CADASTRAR C. PARA PAGAR-->
+            <input type="button" value="Cadastrar" onclick="null">
+        </div>
     </div>
 
 
