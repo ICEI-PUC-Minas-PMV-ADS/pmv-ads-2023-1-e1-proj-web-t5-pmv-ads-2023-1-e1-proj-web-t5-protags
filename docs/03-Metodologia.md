@@ -13,9 +13,9 @@ foi utilizado para hospedagem do repositório.
 O projeto segue a seguinte convenção para o nome de branches:
 
 - `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
+- `(Nome)`: branch pessoal de cada integrante.
+
+Cada membro do grupo escreve sua parte do código em sua própria branch, na qual também corrige quaisquer erros causados pelo novo código. Depois disso, o novo código é mesclado na branch principal (main) e o comando git pull é usado para atualizar as branches dos outros integrantes.
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para
 etiquetas:
