@@ -19,6 +19,7 @@
         crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="/Development Protags/css/template.css">
+    <link rel="stylesheet" href="/Development Protags/css/areceber.css">
     <title>Contas a receber</title>
 </head>
 
@@ -89,13 +90,173 @@
 
 
     <!-- O QUE PRECISA SER DESENVOLVIDO -->
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu dropdown</title>
+        <link rel="stylesheet" href="areceber.css">
+    </head>
+    <body>
+        <nav class="dp-menu">
+            <ul>
+                <li><a href="#">Contas à pagar</a>
+                <ul>
+                    <li><a href="#">Contas pagas</a></li>
+                </ul>
+                </li>
+                <li><a href="#">Contas à receber</a>
+                <ul>
+                   <li><a href="#">Contas recebidas</a></li>
+                </ul>
+            </li>
+            </ul>
+        </nav>
+      
+        
+    </body>
+    </html>
 
-    <div class="conteudo">
+</table>
+<table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">CONTA</th>
+        <th scope="col">VENCIMENTO</th>
+        <th scope="col">PARCELA</th>
+        <th scope="col">RECEBER DE</th>
+        <th scope="col">DESCRIÇÃO</th>
+        <th scope="col">COMPROVANTE</th>
+        <th scope="col">DATA DE RECEBIMENTO</th>
+        <th scope="col">VALOR</th>
+        <th scope="col">SITUAÇÃO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">01</th>
+        <td>30/04/2023</td>
+        <td>01/02</td>
+        <td>Eletrocell</td>
+        <td>Venda de películas</td>
+        <td></td>
+        <td></td>
+        <td>R$580,00</td>
+        <td><div>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton-pagas"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    PAGO
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-pagas">
+                    <a class="dropdown-item" href="#">A PAGAR</a>
+                    <a class="dropdown-item" href="#">RECEBIDO</a>
+                    <a class="dropdown-item" href="#">A RECEBER</a>
+                </div></td>
+        </nav>
 
-
-    </div>
-
-
+      </tr>
+      <tr>
+        <th scope="row">02</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">03</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <th scope="row">04</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr>
+        <th scope="row">05</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">06</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">07</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">08</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">09</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 
     <!-- RODAPÉ DA PÁGINA -->
