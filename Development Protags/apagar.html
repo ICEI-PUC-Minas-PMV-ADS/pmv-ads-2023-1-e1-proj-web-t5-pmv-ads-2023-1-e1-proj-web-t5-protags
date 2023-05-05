@@ -18,7 +18,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="/Development Protags/css/template.css">
+    <link rel="stylesheet" href="/Development Protags/css/apagar.css">
     <title>Contas a pagar</title>
 </head>
 
@@ -30,11 +30,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-3">
             <div class="container-fluid">
                 <img src="/Development Protags/images/Protags.png" alt="logo" class="logopng"></img>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 pt-3">
                         <li class="nav-item">
@@ -88,12 +90,75 @@
     </header>
 
 
-    <!-- O QUE PRECISA SER DESENVOLVIDO -->
+    <!-- CONTEUDO DA PÁGINA -->
 
     <div class="conteudo">
 
+        <!--ELEMENTOS DA LINHA 1-->
+        <div class="titulo">Contas à pagar</div>
+        <div class="div1">
+            <div class="linha1"> <!--ENTRADA DO NÚMERO DA CONTA-->
+                <label for="pconta">Conta</label>
+                <input type="number" min="0">
+            </div>
+            <div class="linha1"> <!--SELECIONADOR DE PARCELAS-->
+                <label for="pparcelas">Parcelas</label>
+                <select name="pparcelas" id="pparcelas">
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <div class="linha1"> <!--ENTRADA DO VALOR-->
+                <label for="pvalor" id="pvalor">Valor</label>
+                <input type="text" value="R$">
+            </div>
+            <div class="linha1"> <!--ENTRADA DA DATA DE EMISSÃO-->
+                <label for="pdatadeEmissao">Data de emissão</label>
+                <input type="date">
+            </div>
+            <div class="linha1"> <!--ENTRADA DA DATA DE VENCIMENTO-->
+                <label for="pdatadeVencimento">Data de Vencimento</label>
+                <input id="pdatadeVencimento" type="date">
+            </div>
+        </div> 
 
+        <!--ELEMENTOS DA LINHA 2-->
+        <div class="div2">
+            <div class="linha2"> <!--ENTRADA DO PAGAR PARA-->
+                <label for="ppagarPara">Pagar para</label>
+                <input type="text" placeholder="Insira um nome" style="width: 30vw;">
+            </div>
+            <div class="linha2"> <!--ENTRADA DA DESCRIÇÃO-->
+                <label for="pDescricao">Descrição</label>
+                <input type="text" placeholder="Insira a descrição" style="width: 30vw;">
+            </div>
+        </div>
+
+        <!--ELEMENTOS DA LINHA 3-->
+        <div class="div3">
+            <div class="linha3"> <!--SELECIONADOR DE DATA-->
+                <label for="pcondicaoPagamento">Condição de Pagamento</label>
+                <select name="pcondicaoPagamento" id="pcondicaoPagamento">
+                    <option value="1">1 dia</option>
+                </select>
+            </div>
+            <div class="linha3">
+                <label for="pSituação">Situação</label> <!--SITUAÇÃO-->
+                <select name="pSituação" id="pSituação">
+                    <option value="cPago">Pago</option>
+                    <option value="cPendente">Pendente</option>
+                    <option value="cAtrasado">Atrasado</option>
+                </select>
+            </div>
+            <div class="linha3">
+                <label for="panexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
+                <input type="file" id="pArquivo" name="pArquivo">
+            </div>
+        </div>
+        <div class="pcadastrar"> <!--CADASTRAR C. PARA PAGAR-->
+            <input type="button" value="Cadastrar" onclick="null">
+        </div>
     </div>
+  
 
 
 
