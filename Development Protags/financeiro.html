@@ -91,43 +91,70 @@
     <!-- O QUE PRECISA SER DESENVOLVIDO -->
 
     <main>
-        <section class="box_Entrada_Saida_Financeiro">
-            <div id="box">
+        <section>
+            <div class="entrada_saida">
                 <h2> Entradas </h2>
-                    <p id="box_green"> R$ 479,90 </p>
+                    <p class="box_green"> R$ 479,90 </p>
                 <h2> A receber </h2>
-                    <p id="box_green"> R$ 1.570,90 </p>
+                    <p class="box_green"> R$ 11.570,90 </p>
             </div>
-            <div id="box">
-                <h2> Saidas </h2>
-                    <p id="box_red"> R$ 750,00 </p>
-                <h2> A pagar</h2>
-                    <p id="box_red"> R$ 980,00 </p>
+            <div class="entrada_saida">
+                <h3> Saidas </h3>
+                    <p class="box_red"> R$ 750,00 </p>
+                <h3> A pagar</h3>
+                    <p class="box_red"> R$ 980,00 </p>
             </div>
         </section>
-        <section class="informativo_Financeiro">
-            <div id="informativos">
-                <h3> Informativo 1 </h3>
-                    <p id="periodo_info_1"> Periodo: 04/04/2023 até 14/04/2023 </p>
-                    <p id="result_info_1"> Despesas maiores que receitas</p>    
+        <section>
+            <div class="informativos">
+                <h4> Informativo 1 </h4>
+                    <p class="period_info_1"> Periodo: 04/04/2023 até 14/04/2023 </p>
+                    <p class="result_info_1"> Despesas maiores que receitas</p>    
             </div>
-            <div id="informativos">
-                <h3> Informativo 2 </h3>
-                    <p id="periodo_info_2"> Periodo: 04/04/2023 até 14/04/2023 </p>
-                    <p id="result_info_2"> Saldo disponivel: (-) R$ 270,10 </p>
+            <div class="informativos">
+                <h4> Informativo 2 </h4>
+                    <p class="period_info_2"> Periodo: 04/04/2023 até 14/04/2023 </p>
+                    <p class="result_info_2"> Saldo disponivel: (-) R$ 270,10 </p>
             </div>
         </section>
     </main>
-<!--    <aside class="Grafico_Financeiro"> 
-            <div id="Movimentações_Recentes"> Movimentações_Recentes
-                <h4>Inicio</h4>
-                    <p id=""> 04/04/2023 </p>
-                <h4>Fim</h4>
-                    <p id=""> 14/04/2023 </p>
+    <aside> 
+            <div class="Movimentações_Recentes">Movimentações_Recentes</div>
+            <div class="pesquisa_grafico">
+                <h5>Inicio</h5>
+                <h5>Fim</h5>
+                <h5></h5>
+                    <p class="box_empty"> 04/04/2023 </p>
+                    <p class="box_empty"> 14/04/2023 </p>
+                    <p class="box_red_full">Pesquisar </p>      
+                <h6>Movimentação entre 04/04/2023 a 14/04/2023</h6>          
             </div>
-        </aside>  -->
 
-    </div>
+            <div class="caixa">
+                <div class="grafico">
+                    <div class="escala">
+                        <div>1050</div>
+                        <div>900</div>
+                        <div>750</div>
+                        <div>600</div>
+                        <div>450</div>
+                        <div>300</div>
+                        <div>150</div>
+                        <div>0</div>
+                    </div>
+                
+                    <div class="barras">
+                        <div class="barGreen"></div>
+                        <div class="barRed"></div>
+                    </div>
+                      
+                    <div class="rotulos">
+                        <div>Entrada</div>
+                        <div>Saida</div>
+                    </div>
+                </div>
+            </div>
+    </aside>
 
 
 
