@@ -1,13 +1,18 @@
-function login(){
+let usuario = document.getElementById('exampleInputEmail1').value;
 
-let email = document.getElementById('exampleInputEmail1').value;
 let senha = document.getElementById('senha').value;
 
-if (email === 'admin' && senha === 'admin') {
+function login(){
+
+if (usuario === 'admin' && senha === 'admin') {
+
   alert('Login efetuado com sucesso')
   window.location.href = "inicio.html"
+
 } else (
+
   alert('Login ou senha incorretos')
+  
 )
 
 }
