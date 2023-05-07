@@ -20,7 +20,6 @@ let labelConfirmSenha = document.querySelector('#labelConfirmSenha')
 let validConfirmSenha = 'false'
 
 let msgError = document.querySelector("#msgError")
-let msgSuccess = document.querySelector("#msgSuccess")
 
 
 
@@ -101,11 +100,10 @@ confirmSenha.addEventListener('keyup', () => {
 
 })
 
+
 //Eventos de validação de formulário
 
-
 function cadastrar() {
-
 
     console.log(validNome, validUsuario, validSenha, validConfirmSenha)
 
@@ -123,19 +121,15 @@ function cadastrar() {
 
         localStorage.setItem('listaUser', JSON.stringify(listaUser))
 
-
-        msgSuccess.setAttribute('style', 'display: block')
-        msgSuccess.innerHTML = '<strong>Usuário cadastrado com sucesso!</strong>'
-        msgError.setAttribute('style', 'display: none')
-        msgSuccess.innerHTML = ''
-        window.location.href = "./login.html"
+        window.location.href = 'login.html';
+        alert('Usuário cadastrado com sucesso!')
 
     } else {
 
         msgError.setAttribute('style', 'display: block')
         msgError.innerHTML = '<strong>Preencha todos os campos corretamente.</strong>'
         msgSuccess.setAttribute('style', 'display: none')
-        msgSuccess.innerHTML = ''
+        alert('Preencha todos os campos corretamente.')
 
     }
 }

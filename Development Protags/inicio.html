@@ -85,7 +85,7 @@
                     Usuário
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="login.html">Sair</a>
+                    <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
                 </div>
             </div>
     </div>
@@ -105,7 +105,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="text-ev">Data</h5>
-                                    <input type="date" class="form-control" placeholder="Data">
+                                    <input type="date" class="form-control" placeholder="Data" id="dataCad">
                                 </div>
                             </div>
 
@@ -114,7 +114,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="text-ev">Horário</h5>
-                                    <input type="time" class="form-control" placeholder="Horário">
+                                    <input type="time" class="form-control" placeholder="Horário" id="horarioCad">
                                 </div>
                             </div>
 
@@ -123,7 +123,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="text-ev">Meio de contato</h5>
-                                    <input type="contact" class="form-control" placeholder="Ex: Teams">
+                                    <input type="contact" class="form-control" placeholder="Ex: Teams" id="contatoCad">
                                 </div>
                             </div>
 
@@ -132,7 +132,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="text-ev text-justify"><label for="descricao">Descrição</label></h5>
-                                    <textarea class="form-control" id="descricao" name="descricao" rows="5"
+                                    <textarea class="form-control" id="descricaoCad" name="descricao" rows="5"
                                         style="height: 100px; resize: vertical;"
                                         placeholder="Ex: Alinhamento sobre projeto"></textarea>
                                 </div>
@@ -142,7 +142,7 @@
 
                             <div class="row text-center">
                                 <div class="col">
-                                    <button type="submit" class="button-cadastrar-ev">Cadastrar</button>
+                                    <button onclick="cadEvento()" type="submit" class="button-cadastrar-ev">Cadastrar</button>
                                 </div>
                             </div>
                         </div>

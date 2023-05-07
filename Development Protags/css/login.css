@@ -75,3 +75,16 @@ body {
   bottom: 0;
   width: 100%;
 }
+
+.msgError {
+color: #ff0000;
+background-color: #ffbbbb;
+padding: 10px;
+border-radius: 5px;
+display: none;
+height: 30px;
+justify-content: center;
+text-align: center;
+align-items: center;
+font-size: medium;
+}

@@ -25,6 +25,11 @@ body {
   .login-form {
     max-width: 400px;
   }
+
+  #butt {
+    position: relative;
+    margin: auto;
+  }
   
   .card-body {
     width:400px;
@@ -85,19 +90,15 @@ body {
 }
 
 #msgError {
-text-align: center;
 color: #ff0000;
-background-color: #ffbbbb;
+background-color: none;
 padding: 10px;
 border-radius: 5px;
 display: none;
+height: 30px;
+justify-content: center;
+text-align: center;
+align-items: center;
+font-size: medium;
 }
- 
-#msgSuccess {
-  text-align: center;
-  color: #00bb00;
-  background-color: #bbffbe;
-  padding: 10px;
-  border-radius: 5px;
-  display: none;
-}
+
