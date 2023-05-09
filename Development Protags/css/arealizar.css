@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    min-height: 10vh;
+    background-color: #47141e;
+
+}
+
+#dropdownMenuButton {
+    background-color: #47141E;
+    border-color: #47141E;
+}
+
+#dropdownMenuButton-pagas {
+background-color: green;
+}
+
+#dropdownMenuButton-apagar {
+	background-color: yellow;
+}
+
+#dropdownMenuButton-recebido {
+	background-color: green;
+}
+
+#dropdownMenuButton-areceber {
+	background-color: yellow;
+	}
+
+#dropdownMenuButton-pendente {
+		background-color: red;
+		}	
+
+#dropdown-item {
+	background-color: #ffff;
+}
+
+.logopng {
+    width: 10rem;
+
+}
+
+
+.texto {
+    margin-bottom: 0;
+}
+
+
+.conteudo {
+    min-height: 78vh;
+}
+
+#footer {
+    min-height: 8vh;
+    background-color: #47141E;
+    color: #fff;
+    text-emphasis-color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	margin: 20px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table th,
+table td {
+	padding: 10px;
+	text-align: left;
+}
+
+table th {
+	background-color: #f2f2f2;
+}
+
+table td {
+	border-bottom: 1px solid #ddd;
+}
+
+table td.status-pago {
+	color: green;
+}
+
+table td.status-pendente {
+	color: orange;
+}
+
+table td.status-vencido {
+	color: red;
+}
+
+:root{
+    --cor-fundo: #000000;
+    --cor-texto: #ffffff;
+    --cor-hover: #47141e;
+}
+.dp-menu ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.dp-menu ul{
+background-color: var(--cor-fundo);
+position: relative;
+}
+
+.dp-menu ul li{
+display: inline-block;
+}
+
+.dp-menu ul li a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.dp-menu ul li a:hover{
+    background-color: var(--cor-hover);
+    }
+
+/*sub menu*/
+.dp-menu ul ul {
+    display: none;
+    position: absolute;
+    }
+
+.dp-menu ul li:hover ul {
+    display: block;
+    }
+
+.dp-menu ul ul{
+    width: 150px;
+    }
+
+.dp-menu ul ul li a {
+    display: block;
+    }
