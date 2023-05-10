@@ -118,19 +118,30 @@
         <span class="outterTableHeaderRight">
 								 
 								
-            <a href="apagar.html" title="" id="btn_novo" onmouseover="Tip(&quot;Criar&quot;)"><i class="dvm-circle"></i> CADASTRAR</a>&nbsp;
-        		
+            <td class="doublelineformat ">
+                <br>
+                <span class="outterTableHeaderRight">
+                                     
+                <button type="button" class="btn btn-success"  style="margin-left:20px;"
+            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+      CADASTRAR
+    </button>
+
     </span>
 
-        <td class="doublelineformat ">
-            <br>
-            <div align="right" style="padding-right:10px;">
-                <input type="hidden" name="resetCurrentPage" value="<null>">
-                <input type="hidden" name="clearFilter" value="false">
-                <span id="filtrar" style="text-transform:none;"><a href="#" title="" id="btn_filtro" onclick="javascript:resetPage();doFilter();" onmouseover="Tip(&quot;Filtrar&quot;)"><i class="fas fa-filter w3darkgray"></i> Filtrar</a></span>		
-                <button type="button" onclick="form.ACAO.value ='gerar';if (mensagemConfirmacao('1')) {form.action = '/w3erp/financeiro/relatorio/ContaCSVListagem?classe=PAGAR'; submitForm()}" title="" id="btn_gerarcsv"><i class="far fa-file-code w3darkgray"></i> Gerar CSV</button>
-                <button type="button" onclick="form.ACAO.value ='gerar';if (mensagemConfirmacao('0')) {form.action = '/w3erp/financeiro/relatorio/ContaListagem?classe=PAGAR&amp;fromListagem=true'; submitForm()}" title="" id="btn_gerar"><i class="far fa-file-pdf w3darkgray"></i> Gerar PDF</button>
-                
+    <td class="doublelineformat ">
+        <br>
+        <div align="right" style="padding-right:10px;">
+            <button type="button" class="btn btn-primary"
+    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+Gerar CSV
+</button>
+
+<button type="button" class="btn btn-primary"
+    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+Gerar PDF
+</button>
+     
                 
             </div>
             <br>
@@ -146,7 +157,7 @@
             <th scope="col">CONTA</th>
             <th scope="col">VENCIMENTO</th>
             <th scope="col">PARCELA</th>
-            <th scope="col">RECEBER DE</th>
+            <th scope="col">PAGAR PARA</th>
             <th scope="col">DESCRIÇÃO</th>
             <th scope="col">COMPROVANTE</th>
             <th scope="col">DATA DE RECEBIMENTO</th>
@@ -167,7 +178,7 @@
             <td></td>
             <td></td>
             <td>R$580,00</td>
-            <td><select name="acoes" class="selectAcoes" onchange="javascript:fazerAcao(this);" style="width:210px;">
+            <td><select name="acoes" class="selectAcoes" onchange="javascript:fazerAcao(this);" style="width:auto;">
                 <option value="<null>" class="nullValue"></option>
                 
                 
