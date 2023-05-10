@@ -145,7 +145,8 @@ display: inline-block;
 
 .dp-menu ul li:hover ul {
     display: block;
-    }
+    width: auto;
+}
 
 .dp-menu ul ul{
     width: 150px;
