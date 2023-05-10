@@ -106,8 +106,6 @@
     border-radius: 5px;
 }
 
-
-
 /* CARDS EVENTOS */
 
 #body-card {
@@ -138,10 +136,6 @@
 
 /* Paginas */
 
-.page-link {
-    color: #47141E;
-}
-
 .concluidoCard {
     background-color: #47141E;
     color: #fff;
@@ -153,4 +147,11 @@
     background-color: #fff;
     color: #000;
     border-color: #000;
+}
+
+.logout {
+    --bs-dropdown-min-width: 5.5rem;
+}
+
+.navbar-expand-lg {
 }

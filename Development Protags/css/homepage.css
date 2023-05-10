@@ -71,11 +71,14 @@ h2 {
 
 .person1 {
     position: relative;
+    border-radius: 100px;
 }
 
 .person2 {
     position: relative;
+    border-radius: 100px;
 }
+
 
 #footer {
     min-height: 8vh;

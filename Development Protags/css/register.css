@@ -9,10 +9,14 @@ body {
 }
 
 .img-log {
-  width: 23rem;
+  width: 17rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#cardregister {
+  height: 100%;
 }
 
 .card-body {
@@ -23,7 +27,7 @@ body {
 }
 
 .login-form {
-  max-width: 400px;
+  max-width: 300px;
 }
 
 #butt {
@@ -33,7 +37,7 @@ body {
 
 .card-body {
   width: 400px;
-  height: 400px;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,13 +83,17 @@ body {
   justify-content: center;
 }
 
+.entrar {
+  color: #77c1f9;
+}
+
 #footer {
   min-height: 8vh;
   background-color: #47141E;
   color: #fff;
   text-emphasis-color: #fff;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  margin-top: 10%;
   width: 100%;
 }
 

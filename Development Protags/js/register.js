@@ -105,8 +105,6 @@ confirmSenha.addEventListener('keyup', () => {
 
 function cadastrar() {
 
-    console.log(validNome, validUsuario, validSenha, validConfirmSenha)
-
     if (validNome === 'true' && validUsuario === 'true' && validSenha === 'true' && validConfirmSenha === 'true') {
 
         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')

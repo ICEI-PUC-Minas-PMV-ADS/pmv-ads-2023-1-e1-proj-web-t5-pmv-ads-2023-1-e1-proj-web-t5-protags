@@ -41,9 +41,7 @@ if (localStorage.getItem('token') === null) {
             `;
 
             cardContainer.insertAdjacentElement('afterbegin', cardHTML)
-
         })
-
     }
 
     // Variáveis dos inputs para cadastrar evento
