@@ -42,10 +42,10 @@
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    margin-top: 300px;
     width: 100%;
-}
+  }
 
 /* BODY */
 
@@ -134,7 +134,6 @@
     border-color: #000;
 }
 
-/* Paginas */
 
 .concluidoCard {
     background-color: #47141E;
@@ -153,5 +152,8 @@
     --bs-dropdown-min-width: 5.5rem;
 }
 
-.navbar-expand-lg {
+.deleteicon {
+    max-width: 35px;
+    max-height: 35px;
+    border-radius: 10px;
 }

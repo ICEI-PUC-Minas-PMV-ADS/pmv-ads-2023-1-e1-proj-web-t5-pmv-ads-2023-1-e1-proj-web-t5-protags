@@ -1,5 +1,5 @@
 
-// Trava na página para ser acessada somente se estiver logado
+// Não permite que o usuário entre no sistema sem estar logado
 
 if (localStorage.getItem('token') === null) {
 
@@ -16,6 +16,8 @@ if (localStorage.getItem('token') === null) {
 
         let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
 
+        // Cria um container puxando a estrutura HTML 'tbody'
+        
         const cardContainer = document.querySelector('tbody');
 
         // Verifica cada array do localStorage e os exibe na tela

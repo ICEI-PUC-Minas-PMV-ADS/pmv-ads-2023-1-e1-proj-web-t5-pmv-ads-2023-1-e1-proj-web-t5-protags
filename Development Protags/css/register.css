@@ -88,12 +88,12 @@ body {
 }
 
 #footer {
-  min-height: 8vh;
+  min-height: 5vh;
   background-color: #47141E;
   color: #fff;
   text-emphasis-color: #fff;
   position: relative;
-  margin-top: 10%;
+  margin-top: 187px;
   width: 100%;
 }
 

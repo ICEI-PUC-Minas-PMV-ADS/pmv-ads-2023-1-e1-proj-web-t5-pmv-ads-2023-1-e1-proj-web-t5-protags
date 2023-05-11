@@ -56,8 +56,8 @@ h2 {
 
 #features {
     padding: 7% 15%;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .depoimentos {
@@ -81,32 +81,32 @@ h2 {
 
 
 #footer {
-    min-height: 8vh;
+    min-height: 5vh;
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    margin-top: 187px;
     width: 100%;
-  }
+}
 
 .cta {
     text-align: center;
-    padding: 2% 40% 2% 40%;
     display: inline;
 }
 
 .log {
-    padding: 2% 40% 2% 40%;
+    margin-top: 7%;
+  
 }
 
 .btnlog {
     border-radius: 5px;
-    background-color:#47141e;
+    background-color: #47141e;
     color: #fff;
 }
 
 .btnlog:hover {
     background-color: #fff;
-    color:#000
+    color: #000
 }

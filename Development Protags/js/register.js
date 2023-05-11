@@ -27,7 +27,7 @@ let msgError = document.querySelector("#msgError")
 
 nome.addEventListener('keyup', () => {
 
-    if (nome.value.length <= 4) {
+    if (nome.value.length <= 3) {
 
         labelNome.setAttribute('style', 'color: red')
         nome.setAttribute('style', 'border: solid 3px red')
