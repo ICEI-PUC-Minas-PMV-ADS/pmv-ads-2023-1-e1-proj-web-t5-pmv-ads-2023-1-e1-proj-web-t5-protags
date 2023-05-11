@@ -9,18 +9,15 @@ let usuario = document.querySelector('#usuario')
 let labelUsuario = document.querySelector('#labelUsuario')
 let validUsuario = 'false'
 
-
 let senha = document.querySelector('#senha')
 let labelSenha = document.querySelector('#labelSenha')
 let validSenha = 'false'
-
 
 let confirmSenha = document.querySelector('#confirmSenha')
 let labelConfirmSenha = document.querySelector('#labelConfirmSenha')
 let validConfirmSenha = 'false'
 
 let msgError = document.querySelector("#msgError")
-
 
 
 //Eventos de validação de campos preenchidos

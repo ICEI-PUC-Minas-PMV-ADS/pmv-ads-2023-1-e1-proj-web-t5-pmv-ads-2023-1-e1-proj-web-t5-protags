@@ -148,6 +148,19 @@
     border-color: #000;
 }
 
+.excluirCard{
+    background-color: #47141E;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.excluirCard:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
 .logout {
     --bs-dropdown-min-width: 5.5rem;
 }
