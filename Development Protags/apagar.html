@@ -125,23 +125,23 @@
         <div class="div2">
             <div class="linha2"> <!--ENTRADA DO PAGAR PARA-->
                 <label for="ppagarPara">Pagar para</label>
-                <input type="text" placeholder="Insira um nome" style="width: 30vw;">
+                <input type="text" placeholder="Insira um nome">
             </div>
-            <div class="linha2"> <!--ENTRADA DA DESCRIÇÃO-->
-                <label for="pDescricao">Descrição</label>
-                <input type="text" placeholder="Insira a descrição" style="width: 30vw;">
-            </div>
-        </div>
-
-        <!--ELEMENTOS DA LINHA 3-->
-        <div class="div3">
-            <div class="linha3"> <!--SELECIONADOR DE DATA-->
+            <div class="linha2"> <!--SELECIONADOR DE DATA-->
                 <label for="pcondicaoPagamento">Condição de Pagamento</label>
                 <select name="pcondicaoPagamento" id="pcondicaoPagamento">
                     <option value="1">1 dia</option>
                 </select>
             </div>
-            <div class="linha3">
+            <div class="linha2"> <!--ENTRADA DA DESCRIÇÃO-->
+                <label for="pDescricao">Descrição</label>
+                <input type="text" placeholder="Insira a descrição">
+            </div>
+            <div class="linha2">
+                <label for="panexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
+                <input type="file" id="pArquivo" name="pArquivo">
+            </div>
+            <div class="linha2">
                 <label for="pSituação">Situação</label> <!--SITUAÇÃO-->
                 <select name="pSituação" id="pSituação">
                     <option value="cPago">Pago</option>
@@ -149,10 +149,10 @@
                     <option value="cAtrasado">Atrasado</option>
                 </select>
             </div>
-            <div class="linha3">
-                <label for="panexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
-                <input type="file" id="pArquivo" name="pArquivo">
-            </div>
+        </div>
+
+        <!--ELEMENTOS DA LINHA 3-->
+        <div class="div3">
         </div>
         <div class="pcadastrar"> <!--CADASTRAR C. PARA PAGAR-->
             <input type="button" value="Cadastrar" onclick="null">
