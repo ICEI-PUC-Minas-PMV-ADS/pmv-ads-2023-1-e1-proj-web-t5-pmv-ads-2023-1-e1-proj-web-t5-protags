@@ -18,7 +18,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="/Development Protags/css/template.css">
+    <link rel="stylesheet" href="/Development Protags/css/financeiro.css">
     <title>Financeiro</title>
 </head>
 
@@ -92,10 +92,71 @@
 
     <!-- O QUE PRECISA SER DESENVOLVIDO -->
 
-    <div class="conteudo">
+    <main>
+        <section>
+            <div class="entrada_saida">
+                <h2> Entradas </h2>
+                    <p class="box_green"> R$ 479,90 </p>
+                <h2> A receber </h2>
+                    <p class="box_green"> R$ 11.570,90 </p>
+            </div>
+            <div class="entrada_saida">
+                <h3> Saidas </h3>
+                    <p class="box_red"> R$ 750,00 </p>
+                <h3> A pagar</h3>
+                    <p class="box_red"> R$ 980,00 </p>
+            </div>
+        </section>
+        <section>
+            <div class="informativos">
+                <h4> Informativo 1 </h4>
+                    <p class="period_info_1"> Periodo: 04/04/2023 até 14/04/2023 </p>
+                    <p class="result_info_1"> Despesas maiores que receitas</p>    
+            </div>
+            <div class="informativos">
+                <h4> Informativo 2 </h4>
+                    <p class="period_info_2"> Periodo: 04/04/2023 até 14/04/2023 </p>
+                    <p class="result_info_2"> Saldo disponivel: (-) R$ 270,10 </p>
+            </div>
+        </section>
+    </main>
+    <aside> 
+            <div class="Movimentações_Recentes">Movimentações_Recentes</div>
+            <div class="pesquisa_grafico">
+                <h5>Inicio</h5>
+                <h5>Fim</h5>
+                <h5></h5>
+                    <p class="box_empty"> 04/04/2023 </p>
+                    <p class="box_empty"> 14/04/2023 </p>
+                    <p class="box_red_full">Pesquisar </p>      
+                <h6>Movimentação entre 04/04/2023 a 14/04/2023</h6>          
+            </div>
 
-
-    </div>
+            <div class="caixa">
+                <div class="grafico">
+                    <div class="escala">
+                        <div>1050</div>
+                        <div>900</div>
+                        <div>750</div>
+                        <div>600</div>
+                        <div>450</div>
+                        <div>300</div>
+                        <div>150</div>
+                        <div>0</div>
+                    </div>
+                
+                    <div class="barras">
+                        <div class="barGreen"></div>
+                        <div class="barRed"></div>
+                    </div>
+                      
+                    <div class="rotulos">
+                        <div>Entrada</div>
+                        <div>Saida</div>
+                    </div>
+                </div>
+            </div>
+    </aside>
 
 
 

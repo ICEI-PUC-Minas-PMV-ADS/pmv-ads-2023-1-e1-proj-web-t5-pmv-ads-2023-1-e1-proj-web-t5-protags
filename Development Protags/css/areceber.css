@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    min-height: 10vh;
+    background-color: #47141e;
+}
+
+#dropdownMenuButton {
+    background-color: #47141E;
+    border-color: #47141E;
+}
+
+#footer {
+    height: 8vh;
+    background-color: #47141E;
+    color: #fff;
+    text-emphasis-color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+.logopng {
+    width: 10rem;
+}
+
+
+.texto {
+    margin-bottom: 0;
+}
+
+.titulo {
+    background-color: #47141E;
+    width: 14rem;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    min-height: 38rem;
+}
+
+.div4, .div5, .div6, .rcadastrar, .titulo {
+    display: flex;
+    justify-content:space-between;
+}
+
+.div5 {
+    gap: 100px;
+}
+
+.linha4, .linha5, .linha6 {
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.rcadastrar {
+    position:fixed;
+    bottom: 8vh;
+    margin-bottom: 1vh;
+    right: 1px;
+    align-items: flex-end;
+}
+
+.linha6 input[type=file] {
+    background-color: white;
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+@media only screen and (max-width: 768px){
+    .conteudo, .div4, .div5, .div6{
+        flex-direction: column;
+        padding: -100px;
+    }
+    #footer {
+        position: relative;
+    }
+    .rcadastrar {
+        position: absolute;
+        top: 90rem;
+    }
+}
+
+label {
+    font-size: 2rem;
+    padding-right: 0.5rem;
+    text-align: center;
+}
+
+input {
+    font-size: 1.5rem;
+    border-radius:0.5rem;
+    border-width: 0.2rem;
+    border-color: gray;
+    width: 15vw;
+    height: 4rem;
+    padding-left: 0.5rem;
+    align-content: center;
+}
+
+select {
+    font-size: 1.5rem;
+    align-items: center;
+    border-radius: .3rem;
+    text-align: center;
+    width: 8rem;
+    height: 4rem;
+}
