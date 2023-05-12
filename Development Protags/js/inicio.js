@@ -1,5 +1,4 @@
 
-
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {
     localStorage.removeItem('token')
@@ -14,17 +13,17 @@ if (localStorage.getItem('token') === null) {
 
 } else {
 
-    // Fazer com que os Cards de eventos criados sejam exibidos na página ao carregar (onload)
+    // Faz com que os Cards de eventos criados sejam exibidos na página ao carregar (onload)
     window.onload = function () {
 
         // Cria um array com as informações dos inputs e salva no localStorage
-        let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
-
-        // Cria um container puxando a estrutura HTML 'tbody'
-        const cardContainer = document.querySelector('tbody');
+        const listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
 
         // Verifica cada array do localStorage e os exibe na tela
         listEv.forEach(function (evento) {
+
+            // Cria um container puxando a estrutura HTML 'tbody'
+            const cardContainer = document.querySelector('tbody');
 
             // Cria a estrutura do Card a ser exibido
             const cardHTML = document.createElement('tr');
@@ -38,9 +37,12 @@ if (localStorage.getItem('token') === null) {
             <p class="text-center">${evento.descEv} 
             <br>
             <br>
-            <button type="button" class="concluidoCard">Concluído</button>
-            <button type="button" class="excluirCard">Excluir</button>
-            </div
+            <div class="crudBtn">
+            <button type="button"><img src="./images/concluido.png" id="concluidoicon"></button>
+            <button type="button"><img src="./images/editar.png" id="editaricon"></button>
+            <button type="button"><img src="./images/delete.png" id="deleteicon"Excluir</button>
+            </div>
+            </div>
             </td>
             `;
             cardContainer.insertAdjacentElement('afterbegin', cardHTML)
@@ -48,11 +50,11 @@ if (localStorage.getItem('token') === null) {
     }
 
     // Variáveis dos inputs para cadastrar evento
-    let dataCad = document.querySelector('#dataCad')
-    let horarioCad = document.querySelector('#horarioCad')
-    let contatoCad = document.querySelector('#contatoCad')
-    let quemCad = document.querySelector('#quemCad')
-    let descricaoCad = document.querySelector('#descricaoCad')
+    const dataCad = document.querySelector('#dataCad')
+    const horarioCad = document.querySelector('#horarioCad')
+    const contatoCad = document.querySelector('#contatoCad')
+    const quemCad = document.querySelector('#quemCad')
+    const descricaoCad = document.querySelector('#descricaoCad')
 
     // Função ativada pelo botão de cadastrar
     function cadEvento() {
@@ -113,7 +115,6 @@ if (localStorage.getItem('token') === null) {
             cardToRemove.parentNode.removeChild(cardToRemove);
         });
 
-
         // Acrescenta os novos Cards no topo da lista
         cardContainer.insertAdjacentElement('afterbegin', cardHTML)
 
@@ -140,16 +141,24 @@ function filtrarResultados() {
 
     // Filtra os resultados com base no status selecionado
     if (statusSelecionado === 'todos') {
+
         // Se "Todos" estiver selecionado, mostrar todos os resultados
         // Código de mostrar todos os resultados aqui
+
     } else if (statusSelecionado === 'pendentes') {
+
         // Se "Pendentes" estiver selecionado, mostrar apenas os resultados pendentes
         // Código de mostrar resultados pendentes aqui
+
     } else if (statusSelecionado === 'concluidos') {
+
         // Se "Concluídos" estiver selecionado, mostrar apenas os resultados concluídos
         // Código de mostrar resultados concluídos aqui
+
     } else {
+
         // Se nenhum status específico estiver selecionado, mostrar todos os resultados
         // Código de mostrar todos os resultados aqui
+
     }
 }
