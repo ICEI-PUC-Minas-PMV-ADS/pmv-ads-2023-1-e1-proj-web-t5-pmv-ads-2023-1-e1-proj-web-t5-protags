@@ -1,4 +1,3 @@
-
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {
     localStorage.removeItem('token')
@@ -17,35 +16,51 @@ if (localStorage.getItem('token') === null) {
     window.onload = function () {
 
         // Cria um array com as informações dos inputs e salva no localStorage
-        const listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
+        let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
 
         // Verifica cada array do localStorage e os exibe na tela
         listEv.forEach(function (evento) {
 
             // Cria um container puxando a estrutura HTML 'tbody'
             const cardContainer = document.querySelector('tbody');
+            const eventId = evento.id;
 
             // Cria a estrutura do Card a ser exibido
             const cardHTML = document.createElement('tr');
             cardHTML.setAttribute('class', 'mb-0 pb-0')
 
             cardHTML.innerHTML = `
-            <td>
-            <div class="col-12 mb-2 pt-2" id="card-view">
-            <h4 class="text-center">${evento.dataEv} às ${evento.horarioEv}</h4 
-            <p class="text-center">${evento.contatoEv} com ${evento.quemEv}</p>
-            <p class="text-center">${evento.descEv} 
-            <br>
-            <br>
-            <div class="crudBtn">
-            <button type="button"><img src="./images/concluido.png" id="concluidoicon"></button>
-            <button type="button"><img src="./images/editar.png" id="editaricon"></button>
-            <button type="button"><img src="./images/delete.png" id="deleteicon"Excluir</button>
-            </div>
-            </div>
+            <td id="${evento.id}">
+                <div class="col-12 mb-2 pt-2" id="card-view">
+                    <div class="col-12 mb-2 pt-2">
+                        <h4 class="text-center">${evento.dataEv} às ${evento.horarioEv}</h4 
+                        <p class="text-center">${evento.contatoEv} com ${evento.quemEv}</p>
+                        <p class="text-center">${evento.descEv} 
+                        <br>
+                        <br>
+                        <div class="crudBtn">
+                            <button type="button"><img src="./images/concluido.png" id="concluidoicon"></button>
+                            <button type="button"><img src="./images/editar.png" id="editaricon"></button>
+                            <button type="button"><img src="./images/delete.png" id="deleteicon"Excluir</button>
+                        </div>
+                    </div>
+                </div>
             </td>
             `;
             cardContainer.insertAdjacentElement('afterbegin', cardHTML)
+
+            const excluir = document.getElementById('deleteicon');
+
+            // Adiciona um event listener para o botão de excluir
+            excluir.addEventListener('click', () => {
+                // Remove o evento correspondente do localStorage
+                listEv = listEv.filter(ev => ev.id !== evento.id);
+                localStorage.setItem('listEv', JSON.stringify(listEv));
+
+                // Remove o card correspondente da página
+                const cardToRemove = document.getElementById(eventId);
+                cardToRemove.parentNode.removeChild(cardToRemove);
+            });
         })
     }
 
@@ -92,28 +107,23 @@ if (localStorage.getItem('token') === null) {
 
         // Cria a estrutura do Card a ser exibido
         cardHTML.innerHTML = `
-     <td>
-      <div class="col-12 mb-2 pt-2" id="${eventId}">
-        <h4 class="text-center">${newEvent.dataEv} às ${newEvent.horarioEv}</h4>
-         <p class="text-center">${newEvent.contatoEv} com ${newEvent.quemEv}</p>
-         <p class="text-center">${newEvent.descEv}</p>
-         <button type="button" class="concluidoCard">Concluído</button>
-         <button type="button" class="excluirCard">Excluir</button>
-      </div>
-     </td>
+        <td id="${eventId}">
+            <div class="col-12 mb-2 pt-2" id="card-view">
+                <div class="col-12 mb-2 pt-2">
+                    <h4 class="text-center">${newEvent.dataEv} às ${newEvent.horarioEv}</h4>
+                    <p class="text-center">${newEvent.contatoEv} com ${newEvent.quemEv}</p>
+                    <p class="text-center">${newEvent.descEv}</p>
+                    <br>
+                    <br>
+                    <div class="crudBtn">
+                        <button type="button"><img src="./images/concluido.png" id="concluidoicon"></button>
+                        <button type="button"><img src="./images/editar.png" id="editaricon"></button>
+                        <button type="button"><img src="./images/delete.png" id="deleteicon"Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </td>
     `;
-
-        // Adiciona um event listener para o botão de excluir
-        cardHTML.querySelector('.excluirCard').addEventListener('click', () => {
-
-            // Remove o evento correspondente do localStorage
-            listEv = listEv.filter(evento => evento.id !== eventId);
-            localStorage.setItem('listEv', JSON.stringify(listEv));
-
-            // Remove o card correspondente da página
-            const cardToRemove = document.getElementById(eventId);
-            cardToRemove.parentNode.removeChild(cardToRemove);
-        });
 
         // Acrescenta os novos Cards no topo da lista
         cardContainer.insertAdjacentElement('afterbegin', cardHTML)
@@ -125,8 +135,84 @@ if (localStorage.getItem('token') === null) {
         document.querySelector('#contatoCad').value = '';
         document.querySelector('#descricaoCad').value = ''
 
+        // Recarrega a página para atualizar as informações
+        location.reload();
     }
 }
+
+
+
+
+
+// TESTES EDITAR EVENTO // NÃO ESTÁ FUNCIONANDO AINDA
+
+
+
+
+const editEvento = document.getElementById('editaricon');
+
+// Adiciona um event listener para o botão de editar
+editEvento.addEventListener('click', () => {
+
+// Função para recuperar um evento do localStorage
+function getEvento(id) {
+    console.log(getEvento);
+    const listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
+    return listEv.find((ev) => ev.id === id)
+  }
+  
+  // Função para atualizar as informações do evento
+  function atualizarEvento(id, newData) {
+    const listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
+    const index = listEv.findIndex((ev) => ev.id === id)
+    listEv[index] = { ...listEv[index], ...newData }
+    localStorage.setItem('listEv', JSON.stringify(listEv))
+  }
+  
+  // Função para salvar as atualizações do evento
+  function salvarEdicao(id) {
+    const dataEv = document.querySelector(`#${id} .dataEv`).value
+    const horarioEv = document.querySelector(`#${id} .horarioEv`).value
+    const contatoEv = document.querySelector(`#${id} .contatoEv`).value
+    const quemEv = document.querySelector(`#${id} .quemEv`).value
+    const descEv = document.querySelector(`#${id} .descEv`).value
+  
+    atualizarEvento(id, { dataEv, horarioEv, contatoEv, quemEv, descEv })
+  
+    alert('Evento atualizado com sucesso!')
+  }
+  
+  function editarEvento(event) {
+    const card = event.target.closest('.card')
+    const id = card.getAttribute('id')
+    const evento = getEvento(id)
+  
+    card.innerHTML = `
+      <div class="dataEv">${evento.dataEv}</div>
+      <input type="text" class="horarioEv" value="${evento.horarioEv}">
+      <input type="text" class="contatoEv" value="${evento.contatoEv}">
+      <input type="text" class="quemEv" value="${evento.quemEv}">
+      <input type="text" class="descEv" value="${evento.descEv}">
+      <button type="button" onclick="salvarEdicao('${id}')">Salvar</button>
+    `
+  }
+});
+  
+
+// TESTES EDITAR EVENTO ^^
+
+
+
+
+
+
+
+
+
+// TESTES FILTRAR STATUS
+
+
+
 
 // Pega o botão "Pesquisar" e o menu suspenso de status
 const pesquisarBtn = document.getElementById('pesquisar');
@@ -162,3 +248,8 @@ function filtrarResultados() {
 
     }
 }
+
+
+
+
+// TESTES FILTRAR STATUS ^^
