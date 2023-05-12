@@ -20,6 +20,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/Development Protags/css/template.css">
     <link rel="stylesheet" href="/Development Protags/css/configuracoes.css">
+    <!-- <script src="/Development Protags/js/configuracoes.js"></script> -->
     <title>Configurações</title>
 </head>
 
@@ -30,7 +31,7 @@
             <img src="/Development Protags/images/Protags.png" alt="logo" class="logopng"></img>
 
 
-            
+
             <button class="navbar-toggler me-2 transparent" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -92,59 +93,63 @@
     <!-- O QUE PRECISA SER DESENVOLVIDO -->
 
     <div class="container col-lg ">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <form>
+        <form id="form">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="box ">
                         <h1>Perfil</h1>
                     </div>
-                    <label for="name" class="form-label">Alterar Nome da Empresa:</label>
-                    <input type="text" class="form-control text-center" id="name" placeholder="Novo nome empresarial">
-                    <label for="cnpj" class="form-label">Alterar CNPJ</label>
-                    <input type="text" class="form-control text-center" id="cnpj" placeholder="00.000.000/0001/00">
-                </form>
-            </div>
+                    <label for="nomeEmpresa" id="LabelnomeEmpresa" class="form-label">Alterar Nome da Empresa:</label>
+                    <input type="text" id="nomeEmpresa" class="form-control text-center"
+                        placeholder="Novo nome empresarial">
 
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <form>
+                    <label for="cnpj" id="Labelcnpj" class="form-label">Alterar CNPJ</label>
+                    <input type="text" id="cnpj" class="form-control text-center" placeholder="00.000.000/0001/00">
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="box">
                         <h1>Membros</h1>
                     </div>
-                    <label for="newuser" class="form-label">Cadastrar Novo Usuário</label>
-                    <input type="text" class="form-control text-center" id="newuser" placeholder="Novo usuário">
-                    <label for="cadastrarsenha" class="form-label">Cadastrar Senha</label>
-                    <input type="password" class="form-control text-center" id="cadastrarsenha" placeholder="Senha">
-                    <label for="membro" class="form-label ">Excluir Membro</label>
-                    <select class="form-select form-select-sm text-center">
+                    <label for="newUser" id="LabelnewUser" class="form-label">Cadastrar Novo Usuário</label>
+                    <input type="text" id="newUser" class="form-control text-center" placeholder="Novo usuário">
+
+                    <label for="cadastrarSenha" id="LabelcadastrarSenha" class="form-label">Cadastrar Senha</label>
+                    <input type="password" id="cadastrarSenha" class="form-control text-center" placeholder="Senha">
+
+                    <label id="LabelExcluir" for="membro" class="form-label">Excluir Membro</label>
+                    <select class="form-select form-select-sm text-center" id="excluir">
                         <option selected>Selecione</option>
                         <option value="1">Membro 1</option>
                         <option value="2">Membro 2</option>
                         <option value="3">Membro 3</option>
                     </select>
-                    <label for="password" class="form-label">Senha Administrador</label>
-                    <input type="password" class="form-control text-center" id="password" placeholder="Digite a senha">
-                </form>
-            </div>
+                    <label for="password" id="Labelpassword" class="form-label">Senha Administrador</label>
+                    <input type="password" id="password" class="form-control text-center" placeholder="Digite a senha">
+                </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <form>
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="box">
                         <h1>Segurança</h1>
                     </div>
-                    <label for="email" class="form-label">Alterar Email</label>
-                    <input type="email" class="form-control text-center" id="email" placeholder="Novo email">
-                    <label for="mudarsenha" class="form-label">Alterar Senha</label>
-                    <input type="password" class="form-control text-center" id="mudarsenha" placeholder="Senha Atual">
-                    <label for="confirm_password" class="form-label">Confimar Nova Senha</label>
-                    <input type="password" class="form-control text-center" id="confirm_password"
+                    <label for="email" id="LabelEmail" class="form-label">Alterar Email</label>
+                    <input type="email" id="email" class="form-control text-center" placeholder="Novo email">
+
+                    <label for="mudarSenha" id="LabelmudarSenha" class="form-label">Alterar Senha</label>
+                    <input type="password" id="mudarSenha" class="form-control text-center" placeholder="Senha Atual">
+
+                    <label for="confirmPassword" id="LabelconfirmPassword" class="form-label">Confimar Nova
+                        Senha</label>
+                    <input type="password" id="confirmPassword" class="form-control text-center"
                         placeholder="Nova Senha"><br>
+
                     <div class="d-flex justify-content-center align-items-center">
-                        <button class="button">Salvar Alterações</button>
+                        <button type="submit" id="btn">Salvar Alterações</button>
                     </div>
-                    <!-- <button type="submit" class="button">Salvar alterações</button> -->
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 
 
@@ -156,6 +161,16 @@
             <a class="text-light" href="homepage.html">Protags</a>
         </div>
     </footer>
+    <script src="/Development Protags/js/configuracoes.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
