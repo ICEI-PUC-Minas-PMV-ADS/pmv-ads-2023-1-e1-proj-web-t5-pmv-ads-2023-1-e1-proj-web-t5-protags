@@ -97,53 +97,53 @@
         <!--ELEMENTOS DA LINHA 1-->
         <div class="titulo">Contas à Receber</div>
         <div class="div4">
-            <div class="linha4"> <!--ENTRADA DO NÚMERO DA CONTA-->
+            <div class="linha3"> <!--ENTRADA DO NÚMERO DA CONTA-->
                 <label for="rconta">Conta</label>
-                <input type="number" min="0">
+                <input id="rsConta" type="number" min="0">
             </div>
-            <div class="linha4"> <!--SELECIONADOR DE PARCELAS-->
+            <div class="linha3"> <!--ENTRADA DO VALOR-->
+                <label for="rvalor" id="rvalor">Valor</label>
+                <input id="rsValor" type="text" value="R$">
+            </div>
+            <div class="linha3"> <!--SELECIONADOR DE PARCELAS-->
                 <label for="rparcelas">Parcelas</label>
-                <select name="rparcelas" id="rparcelas">
+                <select id="rsParcelas" name="rparcelas">
                     <option value="1">1</option>
                 </select>
             </div>
-            <div class="linha4"> <!--ENTRADA DO VALOR-->
-                <label for="rvalor" id="rvalor">Valor</label>
-                <input type="text" value="R$">
-            </div>
-            <div class="linha4"> <!--ENTRADA DA DATA DE EMISSÃO-->
+            <div class="linha3"> <!--ENTRADA DA DATA DE EMISSÃO-->
                 <label for="rdatadeEmissao">Data de emissão</label>
-                <input type="date">
+                <input id ="rsDatadeEmissao" type="date">
             </div>
-            <div class="linha4"> <!--ENTRADA DA DATA DE VENCIMENTO-->
+            <div class="linha3"> <!--ENTRADA DA DATA DE VENCIMENTO-->
                 <label for="rdatadeVencimento">Data de Vencimento</label>
-                <input id="rdatadeVencimento" type="date">
+                <input id="rsDatadeVenci" type="date">
             </div>
         </div> 
 
         <!--ELEMENTOS DA LINHA 2-->
         <div class="div5">
-            <div class="linha5"> <!--ENTRADA DO PAGAR PARA-->
+            <div class="linha4"> <!--ENTRADA DO PAGAR PARA-->
                 <label for="rpagarPara">Pagar para</label>
-                <input type="text" placeholder="Insira um nome">
+                <input id="rsPagarPara" type="text" placeholder="Insira um nome">
             </div>
-            <div class="linha5"> <!--SELECIONADOR DE DATA-->
+            <div class="linha4"> <!--SELECIONADOR DE DATA-->
                 <label for="rcondicaoPagamento">Condição de Pagamento</label>
-                <select name="rcondicaoPagamento" id="rcondicaoPagamento">
+                <select id="rsCondicaoPag" name="rcondicaoPagamento">
                     <option value="1">1 dia</option>
                 </select>
             </div>
-            <div class="linha5"> <!--ENTRADA DA DESCRIÇÃO-->
-                <label for="rDescricao">Descrição</label>
-                <input type="text" placeholder="Insira a descrição">
+            <div class="linha4"> <!--ENTRADA DA DESCRIÇÃO-->
+                <label for="rDescricao">Descrição (Opcional)</label>
+                <input id = "rsDescricao" type="text" placeholder="Insira a descrição">
             </div>
-            <div class="linha5">
+            <div class="linha4">
                 <label for="ranexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
-                <input type="file" id="rArquivo" name="rArquivo">
+                <input id="rsArquivo" type="file" name="rArquivo">
             </div>
-            <div class="linha5">
+            <div class="linha4">
                 <label for="rSituação">Situação</label> <!--SITUAÇÃO-->
-                <select name="rSituação" id="rSituação">
+                <select id="rsSituacao" name="rSituacao">
                     <option value="cPago">Pago</option>
                     <option value="cPendente">Pendente</option>
                     <option value="cAtrasado">Atrasado</option>
@@ -155,7 +155,7 @@
         <div class="div6">
         </div>
         <div class="rcadastrar"> <!--CADASTRAR C. PARA PAGAR-->
-            <input type="button" value="Cadastrar" onclick="null">
+            <button id="rregCadastrar">Cadastrar</button>
         </div>
     </div>
   
@@ -173,6 +173,7 @@
         </div>
         <!-- Copyright -->
       </footer>
+      <script src="js/areceber.js"></script>
 </body>
 
 </html>

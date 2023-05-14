@@ -99,25 +99,27 @@
         <div class="div1">
             <div class="linha1"> <!--ENTRADA DO NÚMERO DA CONTA-->
                 <label for="pconta">Conta</label>
-                <input type="number" min="0">
+                <input id="psConta" type="number" min="0">
             </div>
-            <div class="linha1"> <!--SELECIONADOR DE PARCELAS-->
-                <label for="pparcelas">Parcelas</label>
-                <select name="pparcelas" id="pparcelas">
-                    <option value="1">1</option>
-                </select>
+            <div class="linha1">
             </div>
             <div class="linha1"> <!--ENTRADA DO VALOR-->
                 <label for="pvalor" id="pvalor">Valor</label>
-                <input type="text" value="R$">
+                <input id="psValor" type="text" value="R$">
+            </div>
+            <div class="linha1"> <!--SELECIONADOR DE PARCELAS-->
+                <label for="pparcelas">Parcelas</label>
+                <select id="psParcelas" name="pparcelas">
+                    <option value="1">1</option>
+                </select>
             </div>
             <div class="linha1"> <!--ENTRADA DA DATA DE EMISSÃO-->
                 <label for="pdatadeEmissao">Data de emissão</label>
-                <input type="date">
+                <input id="psDatadeEmissao" type="date">
             </div>
             <div class="linha1"> <!--ENTRADA DA DATA DE VENCIMENTO-->
                 <label for="pdatadeVencimento">Data de Vencimento</label>
-                <input id="pdatadeVencimento" type="date">
+                <input id="psDatadeVenci" type="date">
             </div>
         </div> 
 
@@ -125,25 +127,25 @@
         <div class="div2">
             <div class="linha2"> <!--ENTRADA DO PAGAR PARA-->
                 <label for="ppagarPara">Pagar para</label>
-                <input type="text" placeholder="Insira um nome">
+                <input id="psPagarPara" type="text" placeholder="Insira um nome">
             </div>
             <div class="linha2"> <!--SELECIONADOR DE DATA-->
                 <label for="pcondicaoPagamento">Condição de Pagamento</label>
-                <select name="pcondicaoPagamento" id="pcondicaoPagamento">
+                <select id="psCondicaoPag" name="pcondicaoPagamento">
                     <option value="1">1 dia</option>
                 </select>
             </div>
             <div class="linha2"> <!--ENTRADA DA DESCRIÇÃO-->
-                <label for="pDescricao">Descrição</label>
-                <input type="text" placeholder="Insira a descrição">
+                <label for="pDescricao">Descrição (Opcional)</label>
+                <input id ="psDescricao" type="text" placeholder="Insira a descrição">
             </div>
             <div class="linha2">
                 <label for="panexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
-                <input type="file" id="pArquivo" name="pArquivo">
+                <input id="psArquivo" type="file" name="pArquivo">
             </div>
             <div class="linha2">
                 <label for="pSituação">Situação</label> <!--SITUAÇÃO-->
-                <select name="pSituação" id="pSituação">
+                <select id="psSituacao" name="pSituação" >
                     <option value="cPago">Pago</option>
                     <option value="cPendente">Pendente</option>
                     <option value="cAtrasado">Atrasado</option>
@@ -155,7 +157,7 @@
         <div class="div3">
         </div>
         <div class="pcadastrar"> <!--CADASTRAR C. PARA PAGAR-->
-            <input type="button" value="Cadastrar" onclick="null">
+            <button id="pregCadastrar">Cadastrar</button>
         </div>
     </div>
   
@@ -173,6 +175,7 @@
         </div>
         <!-- Copyright -->
       </footer>
+      <script src="js/apagar.js"></script>
 </body>
 
 </html>
