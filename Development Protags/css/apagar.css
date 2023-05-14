@@ -68,7 +68,7 @@ body {
     padding-right: 200px;
 }
 
-.linha1, .linha2, .linha3 {
+.linha1, .linha2 {
     display: flexbox;
     padding: 0.5rem;
     align-items: center;
@@ -122,6 +122,13 @@ select {
     text-align: center;
     width: 8vw;
     height: 5vh;
+}
+
+button {
+    width: 10rem;
+    height: 2.3rem;
+    font-size: 20px;
+    border: 1px solid gray;
 }
 
 

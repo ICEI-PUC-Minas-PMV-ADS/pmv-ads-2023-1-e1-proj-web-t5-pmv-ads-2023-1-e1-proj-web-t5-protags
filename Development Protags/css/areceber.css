@@ -39,7 +39,7 @@ body {
 
 .titulo {
     background-color: #47141E;
-    width: 11.4rem;
+    width: 11.3rem;
     height: 2.3rem;
     font-size: 20px;
     margin-left: 1%;
@@ -68,7 +68,7 @@ body {
     padding-right: 200px;
 }
 
-.linha4, .linha5, .linha6 {
+.linha3, .linha4 {
     display: flexbox;
     padding: 0.5rem;
     align-items: center;
@@ -77,7 +77,7 @@ body {
     margin: 1rem 0;
 }
 
-.linha4 label, .linha5 label {
+.linha3 label, .linha4 label {
     display: flexbox;
     margin-bottom: 5px;
 }
@@ -90,7 +90,7 @@ body {
     align-items: flex-end;
 }
 
-.linha5 input[type=file] {
+.linha4 input[type=file] {
     background-color: white;
     border: 2px solid gray;
     border-radius: 5px;
@@ -124,13 +124,20 @@ select {
     height: 5vh;
 }
 
+button {
+    width: 10rem;
+    height: 2.3rem;
+    font-size: 20px;
+    border: 1px solid gray;
+}
+
 
 @media only screen and (max-width: 768px){
     .conteudo, .div4, .div5, .div6{
         flex-direction: column;
         padding-bottom: 20px;
     }
-    .linha5 input[type=file] {
+    .linha4 input[type=file] {
         background-color: white;
         border: 2px solid gray;
         border-radius: 5px;
