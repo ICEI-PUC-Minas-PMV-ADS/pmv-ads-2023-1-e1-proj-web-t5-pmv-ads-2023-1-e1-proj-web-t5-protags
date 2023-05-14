@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/Development Protags/css/areceber.css">
     <link rel ="icon" href="./images/favicon.ico">
     <title>Contas a receber</title>
+    <title>Contas a Receber</title>
 </head>
 
 <body>
@@ -91,12 +92,12 @@
     </header>
 
 
-    <!-- O QUE PRECISA SER DESENVOLVIDO -->
+    <!-- CONTEUDO DA PÁGINA -->
 
     <div class="conteudo">
 
         <!--ELEMENTOS DA LINHA 1-->
-        <div class="titulo">Contas à receber</div>
+        <div class="titulo">Contas à Receber</div>
         <div class="div4">
             <div class="linha4"> <!--ENTRADA DO NÚMERO DA CONTA-->
                 <label for="rconta">Conta</label>
@@ -126,39 +127,40 @@
         <div class="div5">
             <div class="linha5"> <!--ENTRADA DO PAGAR PARA-->
                 <label for="rpagarPara">Pagar para</label>
-                <input type="text" placeholder="Insira um nome" style="width: 30vw;">
+                <input type="text" placeholder="Insira um nome">
             </div>
-            <div class="linha5"> <!--ENTRADA DA DESCRIÇÃO-->
-                <label for="rDescricao">Descrição</label>
-                <input type="text" placeholder="Insira a descrição" style="width: 30vw;">
-            </div>
-        </div>
-
-        <!--ELEMENTOS DA LINHA 3-->
-        <div class="div6">
-            <div class="linha6"> <!--SELECIONADOR DE DATA-->
+            <div class="linha5"> <!--SELECIONADOR DE DATA-->
                 <label for="rcondicaoPagamento">Condição de Pagamento</label>
                 <select name="rcondicaoPagamento" id="rcondicaoPagamento">
                     <option value="1">1 dia</option>
                 </select>
             </div>
-            <div class="linha6">
-                <label for="rSituação">Situação</label> <!--SITUAÇÃO-->
-                <select name="rSituação" id="rSituação">
-                    <option value="rPago">Pago</option>
-                    <option value="rPendente">Pendente</option>
-                    <option value="rAtrasado">Atrasado</option>
-                </select>
+            <div class="linha5"> <!--ENTRADA DA DESCRIÇÃO-->
+                <label for="rDescricao">Descrição</label>
+                <input type="text" placeholder="Insira a descrição">
             </div>
-            <div class="linha6">
+            <div class="linha5">
                 <label for="ranexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
                 <input type="file" id="rArquivo" name="rArquivo">
             </div>
+            <div class="linha5">
+                <label for="rSituação">Situação</label> <!--SITUAÇÃO-->
+                <select name="rSituação" id="rSituação">
+                    <option value="cPago">Pago</option>
+                    <option value="cPendente">Pendente</option>
+                    <option value="cAtrasado">Atrasado</option>
+                </select>
+            </div>
+        </div>
+
+        <!--ELEMENTOS DA LINHA 3-->
+        <div class="div6">
         </div>
         <div class="rcadastrar"> <!--CADASTRAR C. PARA PAGAR-->
             <input type="button" value="Cadastrar" onclick="null">
         </div>
     </div>
+  
 
 
 
