@@ -42,9 +42,10 @@
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: relative;
-    margin-top: 32%;
     width: 100%;
+    margin-bottom: 0;
+    position: relative;
+    margin-top: auto;
 }
 
 /* BODY */
@@ -121,10 +122,6 @@
 
 #titlerow {
     background-color: #47141E;
-}
-
-.crudBtn {
-    
 }
 
 .editarIcon {

@@ -14,7 +14,7 @@ if (localStorage.getItem('token') === null) {
         let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
 
         // Verifica cada array do localStorage e os exibe na tela
-        listEv.forEach(function (evento, i) {
+        listEv.forEach(function (evento, index) {
             const cardContainer = document.querySelector('tbody');
             const eventId = evento.id;
             const cardHTML = document.createElement('tr');
@@ -29,11 +29,7 @@ if (localStorage.getItem('token') === null) {
                         <br>
                         <br>
                         <div class="crudBtn">
-<<<<<<< HEAD
-                            <button type="button" data-toggle="modal" data-target="#sideModalTLInfo" onclick="abrirModal()" id="editarIcon-${i}">
-=======
                             <button type="button" data-toggle="modal" data-target="#sideModalTLInfo" id="editarIcon-${index}">
->>>>>>> lucas
                                 <img src="./images/editar.png" 
                                     class="editarIcon"
                                 >
@@ -48,7 +44,7 @@ if (localStorage.getItem('token') === null) {
 
             // Variáveis para Editar e Ecluir evento / Update && Delete (c.r.U.D)
 
-            const editar = document.getElementById('editarIcon-' + i);
+            const editar = document.getElementById('editarIcon-' + index);
             const excluir = document.getElementById('deleteIcon');
             const adicionar = document.getElementById('botaoAdicionar');
             // Evento de click adicionado no botão de Excluir 
@@ -96,31 +92,6 @@ if (localStorage.getItem('token') === null) {
             quemCad.value = eventoEditado[0].quemEv;
             descricaoCad.value = eventoEditado[0].descEv;
 
-<<<<<<< HEAD
-            // Procura o objeto existente no array pelo ID
-            const eventoExistente = listEv.filter(ev => ev.id === evento.id);
-
-            // Atualiza as propriedades do objeto existente com as novas informações
-            eventoExistente.dataEv = dataCad.value;
-            eventoExistente.horarioEv = horarioCad.value;
-            eventoExistente.contatoEv = contatoCad.value;
-            eventoExistente.quemEv = quemCad.value;
-            eventoExistente.descEv = descricaoCad.value;
-
-            // Atualiza o localStorage com o array atualizado (não está substituindo)
-            listEv = listEv.filter(ev => ev.id === evento.id);
-            localStorage.setItem('listEv', JSON.stringify(eventoExistente));
-
-            localStorage.removeItem('listEv, evento.id', JSON.stringify(id));
-            const cardToRemove = document.getElementById(eventId);
-            cardToRemove.parentNode.removeChild(cardToRemove);
-
-            // Fecha o modal    
-            sideModalTLInfo.style.display = 'none';
-            sideModalTLInfo.classList.remove('show');
-            document.body.classList.remove('modal-open');
-        });
-=======
             botaoModal.innerHTML = `<button id="botaoAtualizar" class="button-cadastrar-ev">Atualizar</button>`;
             botaoModal.querySelector('#botaoAtualizar').addEventListener('click', () => {
                 editEvento(listEv, eventoEditado[0], eventId);
@@ -133,7 +104,6 @@ if (localStorage.getItem('token') === null) {
             document.querySelector('#descricaoCad').value = ''
         }       
         //REMOVE O BOTÃO DE ATUALIZAR APÓS CLICAR NO BOTÃO DE ATUALIZAR
->>>>>>> lucas
     }
 }
 
@@ -167,6 +137,7 @@ function editEvento(listEv, eventoEditado, eventId){
 }
 // Função ativada pelo botão de cadastrar / CREATE (C.r.u.d)
 function cadEvento() {
+
     const newEvent = {
         dataEv: dataCad.value,
         horarioEv: horarioCad.value,
@@ -233,7 +204,6 @@ function cadEvento() {
     // Recarrega a página para atualizar as informações
     location.reload();
 }
-
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {
