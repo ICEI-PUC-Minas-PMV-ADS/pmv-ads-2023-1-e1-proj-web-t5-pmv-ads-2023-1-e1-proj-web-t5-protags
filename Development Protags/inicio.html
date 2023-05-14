@@ -92,11 +92,20 @@
     </div>
     </nav>
 
+        <!-- Botão Editar Evento -->
+
+
+    <div class="">
+        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo2"
+            id="modalBtn2" hidden>Editar Evento<i class="far fa-eye ml-1"></i></a>
+    </div>
+
+    
     <!-- Botão Criar Evento -->
+
     <div class="">
         <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo"
-            id="modalBtn">Criar Evento
-            <i class="far fa-eye ml-1" id="buttonCriarEv"></i></a>
+            id="modalBtn">Criar Evento<i class="far fa-eye ml-1"></i></a>
     </div>
 
 
@@ -106,51 +115,40 @@
     <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
-
             <div class="modal-content text-center">
                 <div class="modal-header">
-
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
                     </button>
                 </div>
-
                 <div class="row">
                     <div class="col" id="col-input">
                         <h5 class="text-ev" id="dataexib">Data</h5>
                         <input type="date" class="form-control" placeholder="Data" id="dataCad">
                     </div>
                 </div>
-
                 <br>
-
                 <div class="row">
                     <div class="col">
                         <h5 class="text-ev">Horário</h5>
                         <input type="time" class="form-control" placeholder="Horário" id="horarioCad">
                     </div>
                 </div>
-
                 <br>
-
                 <div class="row">
                     <div class="col">
                         <h5 class="text-ev">Meio de contato</h5>
                         <input type="contact" class="form-control" placeholder="Ex: Teams" id="contatoCad">
                     </div>
                 </div>
-
                 <br>
-
                 <div class="row">
                     <div class="col">
                         <h5 class="text-ev">Com quem</h5>
                         <input type="contact" class="form-control" placeholder="Ex: Jose da Silva" id="quemCad">
                     </div>
                 </div>
-
                 <br>
-
                 <div class="row">
                     <div class="col">
                         <h5 class="text-ev text-justify"><label for="descricao">Descrição</label></h5>
@@ -159,24 +157,17 @@
                             placeholder="Ex: Alinhamento sobre projeto"></textarea>
                     </div>
                 </div>
-
                 <br>
-
                 <div class="row">
                     <div class="col">
-                        <button onclick="cadEvento()" type="submit" class="button-cadastrar-ev"
-                            id="alsoEditEvento">Cadastrar</button>
+                        <button onclick="cadEvento()" type="submit" class="button-cadastrar-ev" id="alsoEditEvento">Cadastrar</button>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 
-
-
-
+    
 
     <!-- VIEW EVENTOS -->
 
