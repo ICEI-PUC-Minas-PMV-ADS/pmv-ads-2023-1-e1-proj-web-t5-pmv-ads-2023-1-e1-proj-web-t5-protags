@@ -81,7 +81,7 @@ if (localStorage.getItem('token') === null) {
         sideModalTLInfo.style.display = 'block';
         document.body.classList.add('modal-open');
 
-        // Salvar novas informações (UPDATE)
+        // Salvar novas informações (UPDATE) / AINDA EXISTEM BUGS
         const btnEditarEvento = document.getElementById('alsoEditEvento');
 
         btnEditarEvento.addEventListener('click', () => {

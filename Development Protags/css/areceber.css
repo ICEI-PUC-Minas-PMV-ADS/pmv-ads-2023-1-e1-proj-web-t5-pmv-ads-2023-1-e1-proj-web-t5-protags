@@ -9,6 +9,10 @@ header {
     background-color: #47141e;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 #dropdownMenuButton {
     background-color: #47141E;
     border-color: #47141E;
@@ -35,10 +39,15 @@ header {
 
 .titulo {
     background-color: #47141E;
-    width: 14rem;
-    font-size: 30px;
+    width: 11.4rem;
+    height: 2.3rem;
+    font-size: 20px;
+    margin-left: 1%;
+    padding-left: 0.7%;
+    padding-top: 0.2%;
     color: #fff;
-    border-radius: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 
 .conteudo {
@@ -46,7 +55,7 @@ header {
     flex-direction: column;
     align-content: center;
     justify-content: space-around;
-    min-height: 38rem;
+    min-height: 58vh;
 }
 
 .div4, .div5, .div6, .rcadastrar, .titulo {
@@ -54,17 +63,23 @@ header {
     justify-content:space-between;
 }
 
-.div5 {
-    gap: 100px;
+.div4, .div5, .div6 {
+    padding-left: 180px;
+    padding-right: 200px;
 }
 
 .linha4, .linha5, .linha6 {
-    display: flex;
+    display: flexbox;
     padding: 0.5rem;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin: 1rem 0;
+}
+
+.linha4 label, .linha5 label {
+    display: flexbox;
+    margin-bottom: 5px;
 }
 
 .rcadastrar {
@@ -75,49 +90,76 @@ header {
     align-items: flex-end;
 }
 
-.linha6 input[type=file] {
+.linha5 input[type=file] {
     background-color: white;
     border: 2px solid gray;
-    padding: 10px;
     border-radius: 5px;
+    padding-top: 2px;
   }
 
-@media only screen and (max-width: 768px){
-    .conteudo, .div4, .div5, .div6{
-        flex-direction: column;
-        padding: -100px;
-    }
-    #footer {
-        position: relative;
-    }
-    .rcadastrar {
-        position: absolute;
-        top: 90rem;
-    }
-}
-
 label {
-    font-size: 2rem;
+    font-size: 3vh;
     padding-right: 0.5rem;
+    white-space: nowrap;
     text-align: center;
 }
 
 input {
-    font-size: 1.5rem;
-    border-radius:0.5rem;
-    border-width: 0.2rem;
+    font-size: 2vh;
+    border-radius:0.5vh;
+    border-width: 0.2vh;
     border-color: gray;
     width: 15vw;
-    height: 4rem;
+    height: 5vh;
     padding-left: 0.5rem;
     align-content: center;
 }
 
 select {
-    font-size: 1.5rem;
+    font-size: 3vh;
     align-items: center;
     border-radius: .3rem;
     text-align: center;
-    width: 8rem;
-    height: 4rem;
+    width: 8vw;
+    height: 5vh;
+}
+
+
+@media only screen and (max-width: 768px){
+    .conteudo, .div4, .div5, .div6{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .linha5 input[type=file] {
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 5px;
+        padding-top: 5px;
+      }
+    .div4, .div5, .div6{
+        display: flex;
+        padding-left: 9rem;
+    }
+    #footer {
+        position: relative;
+    }
+    .rcadastrar {
+        position: relative;
+        top: 20px;
+        left: 280px;
+    }
+    label {
+        font-size: 1.2rem;
+    }
+
+    input {
+        width: 150px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    select {
+        width: 150px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
