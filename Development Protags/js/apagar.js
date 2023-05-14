@@ -33,7 +33,7 @@ btnCadastro.addEventListener('click', (e) => {
     alert("Por favor, preencha todos os campos.");
   }
   else {
-  itens.push({
+  items.push({
       'conta': psConta.value, 
       'valor': psValor.value, 
       'parcelas': psParcelas.value, 
