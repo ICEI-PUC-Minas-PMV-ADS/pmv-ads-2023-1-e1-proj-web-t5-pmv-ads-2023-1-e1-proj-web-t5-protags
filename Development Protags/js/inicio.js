@@ -121,12 +121,6 @@ const descricaoCad = document.querySelector('#descricaoCad')
 
 // Função ativada pelo botão de cadastrar / CREATE (Crud)
 function cadEvento() {
-
-    if (dataCad || horarioCad || contatoCad || quemCad || descricaoCad === '') {
-
-        alert('Preencha todos os campos corretamente')
-    } else {
-
     const newEvent = {
         dataEv: dataCad.value,
         horarioEv: horarioCad.value,
@@ -192,7 +186,7 @@ function cadEvento() {
     // Recarrega a página para atualizar as informações
     location.reload();
 }
-}
+
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {
