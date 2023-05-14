@@ -123,52 +123,36 @@
     background-color: #47141E;
 }
 
-.btn-outline-success {
-    background-color: #47141E;
-    color: #fff;
-}
-
-.btn-outline-success:hover {
-    background-color: #fff;
-    color: #000;
-    border-color: #000;
-}
-
 .crudBtn {
-   display: flex;
-   justify-content: flex-end;
+    
 }
 
-#concluidoicon {
+.editarIcon {
     background-color: #fff;
     width: 25px;
     height: 25px;
+    border: none;
 }
 
-#concluidoicon:hover {
-    background-color: #2BC48A;
-}
-
-#editaricon {
-    background-color: #fff;
-    width: 25px;
-    height: 25px;
-}
-
-#editaricon:hover {
+.editarIcon:hover {
     background-color: #F0DB4F;
 }
 
-#deleteicon {
+.deleteIcon {
     background-color: #fff;
     width: 25px;
     height: 25px;
 }
 
-#deleteicon:hover {
+.deleteIcon:hover {
     background-color: #CF3700;
 }
 
 .logout {
     --bs-dropdown-min-width: 5.5rem;
 }
+
+
+
+
+

@@ -12,7 +12,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/Development Protags/css/inicio.css">
-    <link rel ="icon" href="./images/favicon.ico">
+    <link rel="icon" href="./images/favicon.ico">
     <title>Inicio</title>
 </head>
 
@@ -31,7 +31,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 pt-3">
                     <li class="nav-item">
@@ -94,11 +94,14 @@
 
     <!-- Botão Criar Evento -->
     <div class="">
-        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo" id="modalBtn">Criar Evento
+        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo"
+            id="modalBtn">Criar Evento
             <i class="far fa-eye ml-1" id="buttonCriarEv"></i></a>
     </div>
 
+
     <!-- Modal Criar Evento -->
+
 
     <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
@@ -141,7 +144,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <h5 class="text-ev">Quem</h5>
+                        <h5 class="text-ev">Com quem</h5>
                         <input type="contact" class="form-control" placeholder="Ex: Jose da Silva" id="quemCad">
                     </div>
                 </div>
@@ -161,51 +164,23 @@
 
                 <div class="row">
                     <div class="col">
-                        <button onclick="cadEvento()" type="submit" class="button-cadastrar-ev">Cadastrar</button>
+                        <button onclick="cadEvento()" type="submit" class="button-cadastrar-ev"
+                            id="alsoEditEvento">Cadastrar</button>
                     </div>
                 </div>
 
             </div>
-            
+
         </div>
     </div>
-   
-    
+
+
+
+
 
     <!-- VIEW EVENTOS -->
 
     <div class="col ps-3 w-100">
-        <div class="row pb-3">
-            <div class="card px-0">
-                <div class="card-header text-center">
-                    <h6 class="text-black card-title">Filtros de pesquisa</h6>
-                </div>
-                <div class="card-body">
-                    <div class="row text-center">
-                        <div class="col-xl-1"></div>
-                        <div class="col-2 p-0">
-                            <label class="pt-2">Status</label>
-                        </div>
-                        <div class="col-6 m-1 p-0">
-                            <select class="form-select">
-                                <option value="sem"> </option>
-                                <option id="todos">Todos</option>
-                                <option id="pendentes">Pendentes</option>
-                                <option id="concluidos">Concluídos</option>
-
-                            </select>
-                        </div>
-                        <!--Ainda precisa fazer a pesquisa funcionar IMPORTANTE-->
-                        <div class="col-1 m-1 p-0">
-                            <button class="btn btn-outline-success" id="pesquisar">Pesquisar</button>
-                        </div>
-
-                        <div class="col-xl-3"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="row">
             <div class="card px-0 text-center">
                 <div class="card-header">
@@ -223,9 +198,8 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
-    </div>
+
+
 
 
     <!-- RODAPÉ DA PÁGINA -->
