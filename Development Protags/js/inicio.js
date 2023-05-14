@@ -7,7 +7,7 @@ if (localStorage.getItem('token') === null) {
 
 } else {
 
-    // Faz com que os Cards de eventos criados sejam exibidos na página ao carregar (onload) / READ (cRud)
+    // Faz com que os Cards de eventos criados sejam exibidos na página ao carregar (onload) / READ (c.R.u.d)
     window.onload = function () {
 
         // Cria um array com as informações dos inputs e salva no localStorage
@@ -42,7 +42,7 @@ if (localStorage.getItem('token') === null) {
             `;
             cardContainer.insertAdjacentElement('afterbegin', cardHTML)
 
-            // Variáveis para Editar e Ecluir evento / Update && Delete (crUD)
+            // Variáveis para Editar e Ecluir evento / Update && Delete (c.r.U.D)
 
             const editar = document.getElementById('editarIcon-' + i);
             const excluir = document.getElementById('deleteIcon');
@@ -65,10 +65,11 @@ if (localStorage.getItem('token') === null) {
     }
 
 
-    // Função para editar o evento / UPDATE (crUd)
+
+    // Função para editar o evento / UPDATE (c.r.U.d)
     function abrirModal(eventoEditado) {
 
-        // Preencher os campos do modal com dados recuperados do localStorage com posição 0 no array
+        // Preencher os campos do modal com dados recuperados do localStorage com posição 0 no array / FALTA RECUPERAR PELO ID
         dataCad.value = eventoEditado[0].dataEv;
         horarioCad.value = eventoEditado[0].horarioEv;
         contatoCad.value = eventoEditado[0].contatoEv;
@@ -76,18 +77,17 @@ if (localStorage.getItem('token') === null) {
         descricaoCad.value = eventoEditado[0].descEv;
 
         // Abrir o modal
-        let sideModalTLInfo = document.getElementById('sideModalTLInfo');
+        let sideModalTLInfo = document.getElementById('sideModalTLInfo2');
         sideModalTLInfo.classList.add('show');
         sideModalTLInfo.style.display = 'block';
         document.body.classList.add('modal-open');
 
-        // Salvar novas informações (UPDATE)
+        // Salvar novas informações (UPDATE) / AINDA EXISTEM BUGS
         const btnEditarEvento = document.getElementById('alsoEditEvento');
-
         btnEditarEvento.addEventListener('click', () => {
 
             // Procura o objeto existente no array pelo ID
-            const eventoExistente = listEv.find(ev => ev.id === evento.id);
+            const eventoExistente = listEv.filter(ev => ev.id === evento.id);
 
             // Atualiza as propriedades do objeto existente com as novas informações
             eventoExistente.dataEv = dataCad.value;
@@ -97,19 +97,22 @@ if (localStorage.getItem('token') === null) {
             eventoExistente.descEv = descricaoCad.value;
 
             // Atualiza o localStorage com o array atualizado (não está substituindo)
+            listEv = listEv.filter(ev => ev.id === evento.id);
             localStorage.setItem('listEv', JSON.stringify(eventoExistente));
 
-            localStorage.removeItem('listEv', JSON.stringify(id));
+            localStorage.removeItem('listEv, evento.id', JSON.stringify(id));
             const cardToRemove = document.getElementById(eventId);
             cardToRemove.parentNode.removeChild(cardToRemove);
 
-            // Fecha o modal
+            // Fecha o modal    
             sideModalTLInfo.style.display = 'none';
             sideModalTLInfo.classList.remove('show');
             document.body.classList.remove('modal-open');
         });
     }
 }
+
+
 
 // Variáveis para cadastrar evento
 const dataCad = document.querySelector('#dataCad')
@@ -119,7 +122,7 @@ const quemCad = document.querySelector('#quemCad')
 const descricaoCad = document.querySelector('#descricaoCad')
 
 
-// Função ativada pelo botão de cadastrar / CREATE (Crud)
+// Função ativada pelo botão de cadastrar / CREATE (C.r.u.d)
 function cadEvento() {
     const newEvent = {
         dataEv: dataCad.value,
@@ -135,6 +138,7 @@ function cadEvento() {
 
     // Define o ID do novo evento com base no tamanho do array listEv
     newEvent.id = listEv.length + Math.random();
+    //Salva a lista no localStorage
     localStorage.setItem('listEv', JSON.stringify(listEv))
     alert('Evento cadastrado com sucesso!')
     const cardContainer = document.querySelector('tbody');
