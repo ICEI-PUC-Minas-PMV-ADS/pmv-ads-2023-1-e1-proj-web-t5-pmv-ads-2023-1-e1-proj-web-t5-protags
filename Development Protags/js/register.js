@@ -105,9 +105,8 @@ function cadastrar() {
     if (validNome === 'true' && validUsuario === 'true' && validSenha === 'true' && validConfirmSenha === 'true') {
 
         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
-
+        
         listaUser.push({
-
             nomeCad: nome.value,
             usuarioCad: usuario.value,
             senhaCad: senha.value,

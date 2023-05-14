@@ -14,7 +14,7 @@ if (localStorage.getItem('token') === null) {
         let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
 
         // Verifica cada array do localStorage e os exibe na tela
-        listEv.forEach(function (evento, index) {
+        listEv.forEach(function (evento, i) {
             const cardContainer = document.querySelector('tbody');
             const eventId = evento.id;
             const cardHTML = document.createElement('tr');
@@ -29,7 +29,7 @@ if (localStorage.getItem('token') === null) {
                         <br>
                         <br>
                         <div class="crudBtn">
-                            <button type="button" data-toggle="modal" data-target="#sideModalTLInfo" onclick="abrirModal()" id="editarIcon-${index}">
+                            <button type="button" data-toggle="modal" data-target="#sideModalTLInfo" onclick="abrirModal()" id="editarIcon-${i}">
                                 <img src="./images/editar.png" 
                                     class="editarIcon"
                                 >
@@ -44,7 +44,7 @@ if (localStorage.getItem('token') === null) {
 
             // Variáveis para Editar e Ecluir evento / Update && Delete (crUD)
 
-            const editar = document.getElementById('editarIcon-' + index);
+            const editar = document.getElementById('editarIcon-' + i);
             const excluir = document.getElementById('deleteIcon');
 
             // Evento de click adicionado no botão de Excluir 
@@ -97,7 +97,11 @@ if (localStorage.getItem('token') === null) {
             eventoExistente.descEv = descricaoCad.value;
 
             // Atualiza o localStorage com o array atualizado (não está substituindo)
-            localStorage.setItem('listEv', JSON.stringify(listEv));
+            localStorage.setItem('listEv', JSON.stringify(eventoExistente));
+
+            localStorage.removeItem('listEv', JSON.stringify(id));
+            const cardToRemove = document.getElementById(eventId);
+            cardToRemove.parentNode.removeChild(cardToRemove);
 
             // Fecha o modal
             sideModalTLInfo.style.display = 'none';
@@ -117,6 +121,11 @@ const descricaoCad = document.querySelector('#descricaoCad')
 
 // Função ativada pelo botão de cadastrar / CREATE (Crud)
 function cadEvento() {
+
+    if (dataCad || horarioCad || contatoCad || quemCad || descricaoCad === '') {
+
+        alert('Preencha todos os campos corretamente')
+    } else {
 
     const newEvent = {
         dataEv: dataCad.value,
@@ -182,6 +191,7 @@ function cadEvento() {
 
     // Recarrega a página para atualizar as informações
     location.reload();
+}
 }
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
