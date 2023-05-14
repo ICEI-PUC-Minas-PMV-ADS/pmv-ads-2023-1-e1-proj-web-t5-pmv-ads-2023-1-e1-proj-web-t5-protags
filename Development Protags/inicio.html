@@ -11,7 +11,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/Development Protags/css/inicio.css">
+    <link rel="stylesheet" href="./css/inicio.css">
     <link rel="icon" href="./images/favicon.ico">
     <title>Inicio</title>
 </head>
@@ -103,9 +103,8 @@
     
     <!-- Botão Criar Evento -->
 
-    <div class="">
-        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo"
-            id="modalBtn">Criar Evento<i class="far fa-eye ml-1"></i></a>
+    <div id="botaoAdicionar" class="">
+        
     </div>
 
 
@@ -115,7 +114,7 @@
     <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
-            <div class="modal-content text-center">
+            <div id="modal-content" class="modal-content text-center">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
@@ -159,7 +158,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col">
+                    <div id="botao-modal" class="col ">
                         <button onclick="cadEvento()" type="submit" class="button-cadastrar-ev" id="alsoEditEvento">Cadastrar</button>
                     </div>
                 </div>
