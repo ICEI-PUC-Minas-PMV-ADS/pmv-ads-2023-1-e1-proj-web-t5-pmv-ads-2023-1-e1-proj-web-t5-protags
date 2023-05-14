@@ -87,7 +87,7 @@ form.addEventListener('submit', function (e) {
         return;
     }
 
-    if (!emailRegex.test(email.value.trim())) {
+    if (email.value.trim() !== '' && !emailRegex.test(email.value.trim())) {
         alert('Email inválido');
         return;
     }
@@ -103,6 +103,19 @@ form.addEventListener('submit', function (e) {
         alterarSenha: mudarSenha.value.trim(),
         confirmSenha: confirmPassword.value.trim() || null
     };
+
+    document.querySelector('#nomeEmpresa').value = '';
+    document.querySelector('#cnpj').value = '';
+    document.querySelector('#newUser').value = '';
+    document.querySelector('#cadastrarSenha').value = '';
+    document.querySelector('#excluir').value = '';
+    document.querySelector('#password').value = '';
+    document.querySelector('#email').value = '';
+    document.querySelector('#mudarSenha').value = '';
+    document.querySelector('#confirmPassword').value = '';
+
+
+
 
     localStorage.setItem('user', JSON.stringify(user));
 
