@@ -115,3 +115,23 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
 | Passo 3 | Clicar no tipo de conta desejada |
 | Resultado | O sistema apenas demonstra as contas com os dados desejados. |
 | Caso especial | Não se aplica. |
+
+| Caso de teste 11 | Gerar CSV/PDF do dashboard de contas a pagar/receber |
+| ---------------- | ------------------------------------------------ |
+| Objetivo do teste | Verificar se o sisteme gera CSVs e PDFs prontos para o usuário baixar no seu computador. |
+| Pré condição de teste | O usuário já possui uma conta de usuário cadastrada no sistema; O usuário já registrou uma conta a pagar/receber no sistema; |
+| Passo 1 | Acessar a página do dashboard |
+| Passo 2 | Clicar no botão "Gerar CSV" ou "Gerar PDF" |
+| Resultado | Após o usuário clicar no botão "Gerar CSV" ou "Gerar pdf", o sistema automáticamente baixa uma cópida do dashboard em formato desejado no computador do usuário. |
+| Caso especial | Não se aplica. |
+
+| Caso de teste 12 | Editar contas a pagar/receber |
+| ---------------- | ----------------------------- |
+| Objetivo do teste | Verificar se o sistema consegue editar contas já registradas no dashboard. |
+| Pré condição de teste | O usuário já possui uma conta de usuário cadastrada no sistema; O usuário já registrou uma conta a pagar/receber no sistema; |
+| Passo 1 | Acessar a página do dashboard |
+| Passo 2 | Clicar no dado para ser editado |
+| Passo 3 | Inserir os novos dados desejados |
+| Passo 4 | Apertar a tecla "Enter" |
+| Resultado | Após o usuário apertar a tecla "Enter", o valor novo é colocado no lugar do valor anterior. |
+| Caso especial | Não se aplica. |
