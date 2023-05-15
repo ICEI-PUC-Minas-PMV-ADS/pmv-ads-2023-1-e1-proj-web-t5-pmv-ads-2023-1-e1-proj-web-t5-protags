@@ -7,9 +7,9 @@ if (localStorage.getItem('token') === null) {
 
 } else {
 
-    // Faz com que os Cards de eventos criados sejam exibidos na página ao carregar (onload) / READ (cRud)
+    // Faz com que os Cards de eventos criados sejam exibidos na página ao carregar (onload) / READ (c.R.u.d)
     window.onload = function () {
-
+        let metodo = '';
         // Cria um array com as informações dos inputs e salva no localStorage
         let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
 
@@ -29,7 +29,7 @@ if (localStorage.getItem('token') === null) {
                         <br>
                         <br>
                         <div class="crudBtn">
-                            <button type="button" data-toggle="modal" data-target="#sideModalTLInfo" onclick="abrirModal()" id="editarIcon-${index}">
+                            <button type="button" data-toggle="modal" data-target="#sideModalTLInfo" id="editarIcon-${index}">
                                 <img src="./images/editar.png" 
                                     class="editarIcon"
                                 >
@@ -42,12 +42,16 @@ if (localStorage.getItem('token') === null) {
             `;
             cardContainer.insertAdjacentElement('afterbegin', cardHTML)
 
-            // Variáveis para Editar e Ecluir evento / Update && Delete (crUD)
+            // Variáveis para Editar e Ecluir evento / Update && Delete (c.r.U.D)
 
             const editar = document.getElementById('editarIcon-' + index);
             const excluir = document.getElementById('deleteIcon');
-
+            const adicionar = document.getElementById('botaoAdicionar');
             // Evento de click adicionado no botão de Excluir 
+
+            adicionar.innerHTML = `
+            <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo" id="modalBtn">Criar Evento<i class="far fa-eye ml-1"></i></a> 
+            `
 
             excluir.addEventListener('click', () => {
                 listEv = listEv.filter(ev => ev.id !== evento.id);
@@ -58,52 +62,48 @@ if (localStorage.getItem('token') === null) {
 
             // Evento de click adicionado no botão de Editar 
             editar.addEventListener('click', () => {
+                metodo = 'editar';
                 eventoEditado = listEv.filter(ev => ev.id === evento.id);
-                abrirModal(eventoEditado);
+                abrirModal(listEv, eventoEditado, eventId, metodo);
             });
+
+            adicionar.addEventListener('click', () => {
+                metodo = 'adicionar';
+                abrirModal(metodo);
+            })
         })
     }
 
-
-    // Função para editar o evento / UPDATE (crUd)
-    function abrirModal(eventoEditado) {
-
-        // Preencher os campos do modal com dados recuperados do localStorage com posição 0 no array
-        dataCad.value = eventoEditado[0].dataEv;
-        horarioCad.value = eventoEditado[0].horarioEv;
-        contatoCad.value = eventoEditado[0].contatoEv;
-        quemCad.value = eventoEditado[0].quemEv;
-        descricaoCad.value = eventoEditado[0].descEv;
-
+    // Função para editar o evento / UPDATE (c.r.U.d)
+    function abrirModal(listEv, eventoEditado, eventId, metodo) {
+        
         // Abrir o modal
         let sideModalTLInfo = document.getElementById('sideModalTLInfo');
         sideModalTLInfo.classList.add('show');
         sideModalTLInfo.style.display = 'block';
         document.body.classList.add('modal-open');
 
-        // Salvar novas informações (UPDATE)
-        const btnEditarEvento = document.getElementById('alsoEditEvento');
+        let botaoModal = document.getElementById('botao-modal');
+        // Preencher os campos do modal com dados recuperados do localStorage com posição 0 no array / FALTA RECUPERAR PELO ID
+        if(metodo == 'editar'){
+            dataCad.value = eventoEditado[0].dataEv;
+            horarioCad.value = eventoEditado[0].horarioEv;
+            contatoCad.value = eventoEditado[0].contatoEv;
+            quemCad.value = eventoEditado[0].quemEv;
+            descricaoCad.value = eventoEditado[0].descEv;
 
-        btnEditarEvento.addEventListener('click', () => {
-
-            // Procura o objeto existente no array pelo ID
-            const eventoExistente = listEv.find(ev => ev.id === evento.id);
-
-            // Atualiza as propriedades do objeto existente com as novas informações
-            eventoExistente.dataEv = dataCad.value;
-            eventoExistente.horarioEv = horarioCad.value;
-            eventoExistente.contatoEv = contatoCad.value;
-            eventoExistente.quemEv = quemCad.value;
-            eventoExistente.descEv = descricaoCad.value;
-
-            // Atualiza o localStorage com o array atualizado (não está substituindo)
-            localStorage.setItem('listEv', JSON.stringify(listEv));
-
-            // Fecha o modal
-            sideModalTLInfo.style.display = 'none';
-            sideModalTLInfo.classList.remove('show');
-            document.body.classList.remove('modal-open');
-        });
+            botaoModal.innerHTML = `<button id="botaoAtualizar" class="button-cadastrar-ev">Atualizar</button>`;
+            botaoModal.querySelector('#botaoAtualizar').addEventListener('click', () => {
+                editEvento(listEv, eventoEditado[0], eventId);
+            });
+        }else{
+            document.querySelector('#dataCad').value = '';
+            document.querySelector('#horarioCad').value = '';
+            document.querySelector('#quemCad').value = '';
+            document.querySelector('#contatoCad').value = '';
+            document.querySelector('#descricaoCad').value = ''
+        }       
+        //REMOVE O BOTÃO DE ATUALIZAR APÓS CLICAR NO BOTÃO DE ATUALIZAR
     }
 }
 
@@ -114,8 +114,28 @@ const contatoCad = document.querySelector('#contatoCad')
 const quemCad = document.querySelector('#quemCad')
 const descricaoCad = document.querySelector('#descricaoCad')
 
+function editEvento(listEv, eventoEditado, eventId){
+    eventoEditado['dataEv'] = dataCad.value;
+    eventoEditado['horarioEv'] = horarioCad.value;
+    eventoEditado['contatoEv'] = contatoCad.value;
+    eventoEditado['quemEv'] = quemCad.value;
+    eventoEditado['descEv'] = descricaoCad.value;
 
-// Função ativada pelo botão de cadastrar / CREATE (Crud)
+    for (let i = 0; i < listEv.length; i++) {
+        if (listEv[i].id === eventId) {
+            listEv[i] = eventoEditado;
+            break;
+        }
+    }
+
+    localStorage.setItem('listEv', JSON.stringify(listEv));
+    alert('Evento cadastrado com sucesso!')   
+    sideModalTLInfo.style.display = 'none';
+    sideModalTLInfo.classList.remove('show');
+    document.body.classList.remove('modal-open');
+    location.reload();
+}
+// Função ativada pelo botão de cadastrar / CREATE (C.r.u.d)
 function cadEvento() {
 
     const newEvent = {
@@ -132,6 +152,7 @@ function cadEvento() {
 
     // Define o ID do novo evento com base no tamanho do array listEv
     newEvent.id = listEv.length + Math.random();
+    //Salva a lista no localStorage
     localStorage.setItem('listEv', JSON.stringify(listEv))
     alert('Evento cadastrado com sucesso!')
     const cardContainer = document.querySelector('tbody');
