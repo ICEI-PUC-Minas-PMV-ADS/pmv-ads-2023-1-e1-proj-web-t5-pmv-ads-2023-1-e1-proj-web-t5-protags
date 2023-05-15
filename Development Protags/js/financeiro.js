@@ -17,10 +17,10 @@ function inicializarMain(){
     
     let resultInfo = parseInt(entrada) - parseInt(saida)
     if (resultInfo > 0)
-        resultInfo1.innerHTML = `Receitas maiores que despesas ${resultInfo}`,
+        resultInfo1.innerHTML = `Receitas maiores que despesas`,
         resultInfo2.innerHTML = `Saldo disponivel: R$ ${resultInfo}`
     else {
-        resultInfo1.innerHTML = `Despesas maiores que receitas ${resultInfo}`
+        resultInfo1.innerHTML = `Despesas maiores que receitas`
         resultInfo2.innerHTML = `Saldo disponivel: (-) R$ ${resultInfo}`
     }
 
