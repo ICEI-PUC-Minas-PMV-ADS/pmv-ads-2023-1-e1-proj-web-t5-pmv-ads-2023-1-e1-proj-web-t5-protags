@@ -10,8 +10,16 @@ if (localStorage.getItem('token') === null) {
     // Faz com que os Cards de eventos criados sejam exibidos na página ao carregar (onload) / READ (c.R.u.d)
     window.onload = function () {
         let metodo = '';
+        
         // Cria um array com as informações dos inputs e salva no localStorage
         let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
+
+        const adicionar = document.getElementById('botaoAdicionar');
+            // Evento de click adicionado no botão de Excluir 
+
+            adicionar.innerHTML = `
+            <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo" id="modalBtn">Criar Evento<i class="far fa-eye ml-1"></i></a> 
+            `
 
         // Verifica cada array do localStorage e os exibe na tela
         listEv.forEach(function (evento, index) {
@@ -20,6 +28,7 @@ if (localStorage.getItem('token') === null) {
             const cardHTML = document.createElement('tr');
             cardHTML.setAttribute('class', 'mb-0 pb-0')
             cardHTML.innerHTML = `
+            
             <td id="${evento.id}">
                 <div class="col-12 mb-2 pt-2" id="card-view">
                     <div class="col-12 mb-2 pt-2">
@@ -46,12 +55,6 @@ if (localStorage.getItem('token') === null) {
 
             const editar = document.getElementById('editarIcon-' + index);
             const excluir = document.getElementById('deleteIcon');
-            const adicionar = document.getElementById('botaoAdicionar');
-            // Evento de click adicionado no botão de Excluir 
-
-            adicionar.innerHTML = `
-            <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo" id="modalBtn">Criar Evento<i class="far fa-eye ml-1"></i></a> 
-            `
 
             excluir.addEventListener('click', () => {
                 listEv = listEv.filter(ev => ev.id !== evento.id);
