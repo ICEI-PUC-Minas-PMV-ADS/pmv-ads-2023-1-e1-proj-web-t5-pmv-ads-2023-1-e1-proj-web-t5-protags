@@ -30,7 +30,6 @@
 .logopng {
     width: 10rem;
     margin-left: 10px;
-
 }
 
 .texto {
@@ -42,17 +41,15 @@
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    margin-bottom: 0;
-    position: relative;
-    margin-top: auto;
 }
 
 /* BODY */
 
 .conteudo {
     min-height: 83vh;
-
 }
 
 /* CRIAR EVENTO */
@@ -70,17 +67,14 @@
     border-style: solid 2px;
     border-color: #47141E;
     color: #000;
-
 }
 
 #title-criarevento {
     margin: auto;
-
 }
 
 .form-control {
     display: block;
-
     justify-content: center;
     align-items: center;
 }
