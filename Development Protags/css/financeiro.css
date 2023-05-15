@@ -44,6 +44,8 @@ header {
 main { width: 50%; float: left;}
 aside { width: 48%; float: right;}
 
+
+
     /* Box para Entradas e Saidas */
 .entrada_saida {
     width: 48%;
