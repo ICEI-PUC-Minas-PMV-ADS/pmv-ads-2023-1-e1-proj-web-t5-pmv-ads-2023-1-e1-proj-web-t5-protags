@@ -12,6 +12,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/Development Protags/css/register.css">
+  <link rel ="icon" href="./images/favicon.ico">
   <title>Página de Registro</title>
 </head>
 
@@ -19,7 +20,7 @@
   <div class="logo">
     <a href="homepage.html"><img class="img-log" src="/Development Protags/images/Protags.png"></a>
   </div>
-  <div class="card pt-5">
+  <div class="card pt-5" id="cardregister">
     <div class="card-body">
       <div class="formregister">
         <h5 class="card-title text-center">Registrar</h5>
@@ -50,18 +51,19 @@
           
             <br>
 
-            <button onclick="cadastrar()" type="submit" class="button p-3 pt-2 pb-2" id="butt">Cadastrar</button>
+            <button onclick="cadastrar()" type="submit" class="button p-3 pt-1 pb-1" id="butt">Cadastrar</button>
         </form>
+        <div class="row text-center" id="naotem">
+          <div class="mb-0">
+            <p class="mt-3 text-center">Já tem uma conta? <a href="login.html" class="entrar">Entrar</a></p>
+          </div>
       </div>
 
     </div>
 
   </div>
   
-  <div class="row text-center" id="naotem">
-    <div class="mb-0">
-      <p class="mt-3 text-center">Já tem uma conta? <a href="login.html">Entrar</a></p>
-    </div>
+  
   </div>
 
 

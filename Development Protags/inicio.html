@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,8 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/Development Protags/css/inicio.css">
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="icon" href="./images/favicon.ico">
     <title>Inicio</title>
 </head>
 
@@ -84,194 +85,116 @@
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Usuário
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton">
                     <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
                 </div>
             </div>
     </div>
     </nav>
 
+        <!-- Botão Editar Evento -->
 
 
-    <!-- CARD CRIAR EVENTO -->
+    <div class="">
+        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo2"
+            id="modalBtn2" hidden>Editar Evento<i class="far fa-eye ml-1"></i></a>
+    </div>
 
-    <div class="container-fluid create-ev" id="create-ev">
-        <div class="conteudo">
-            <div class="row text-center">
-                <div class="col-xl-2 col-12 p-0">
-                    <div class="book">
-                        <div class="card-evento">
+    
+    <!-- Botão Criar Evento -->
 
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="text-ev">Data</h5>
-                                    <input type="date" class="form-control" placeholder="Data" id="dataCad">
-                                </div>
-                            </div>
+    <div id="botaoAdicionar" class="">
+        
+    </div>
 
-                            <br>
 
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="text-ev">Horário</h5>
-                                    <input type="time" class="form-control" placeholder="Horário" id="horarioCad">
-                                </div>
-                            </div>
+    <!-- Modal Criar Evento -->
 
-                            <br>
 
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="text-ev">Meio de contato</h5>
-                                    <input type="contact" class="form-control" placeholder="Ex: Teams" id="contatoCad">
-                                </div>
-                            </div>
-
-                            <br>
-
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="text-ev text-justify"><label for="descricao">Descrição</label></h5>
-                                    <textarea class="form-control" id="descricaoCad" name="descricao" rows="5"
-                                        style="height: 100px; resize: vertical;"
-                                        placeholder="Ex: Alinhamento sobre projeto"></textarea>
-                                </div>
-                            </div>
-
-                            <br>
-
-                            <div class="row text-center">
-                                <div class="col">
-                                    <button onclick="cadEvento()" type="submit" class="button-cadastrar-ev">Cadastrar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cover">
-                            <h3 class="criar-evento">Criar evento</h3>
-                        </div>
+    <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
+            <div id="modal-content" class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col" id="col-input">
+                        <h5 class="text-ev" id="dataexib">Data</h5>
+                        <input type="date" class="form-control" placeholder="Data" id="dataCad">
                     </div>
                 </div>
-
-
-                <!-- VIEW EVENTOS -->
-
-                <div class="col ps-3 w-100">
-                    <div class="row pb-3">
-                        <div class="card px-0">
-                            <div class="card-header text-center">
-                                <h6 class="text-black card-title">Filtros de pesquisa</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="row text-center">
-                                    <div class="col-xl-1"></div>
-                                    <div class="col-2 p-0">
-                                        <label class="pt-2">Status</label>
-                                    </div>
-                                    <div class="col-6 m-1 p-0">
-                                        <select class="form-select">
-                                            <option value="sem"> </option>
-                                            <option id="todos">Todos</option>
-                                            <option id="pendentes">Pendentes</option>
-                                            <option id="concluidos">Concluídos</option>
-
-                                        </select>
-                                    </div>
-                                    <div class="col-1 m-1 p-0">
-                                        <button class="btn btn-outline-success" id="pesquisar">Pesquisar</button>
-                                    </div>
-                                    <div class="col-xl-3"></div>
-                                </div>
-                            </div>
-                        </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-ev">Horário</h5>
+                        <input type="time" class="form-control" placeholder="Horário" id="horarioCad">
                     </div>
-                    <div class="row">
-                        <div class="card px-0 text-center">
-                            <div class="card-header">
-                                <h6 class="text-black card-title">Acompanhar eventos</h6>
-                            </div>
-                            <div class="card-body align-self-center col-6" id="body-card">
-                                <table class="table table-hover">
-                                    <thead class="table table-light">
-                                    </thead>
-                                    <tbody>
-                                        <tr class="mb-0 pb-0">
-                                            <div class="col-12 mb-2 pt-2" id="card-view">
-                                                <h4 class="text-center">Ref: Data às Ref: Horário </h4>
-                                                <p class="text-center">Ref: Meio de contato com Ref: Quem</p>
-                                                <p class="text-center">Ref: Descrição</p>
-                                                <div>
-                                                    <input class="form-check-input concl-check" type="checkbox"
-                                                        id="checkboxNoLabel" value="" aria-label=""> Concluído</input>
-                                                </div>
-                                        </tr>
-                                        <tr class="mb-0 pb-0">
-                                            <div class="col-12 mb-2 pt-2" id="card-view">
-                                                <h4 class="text-center">Ref: Data às Ref: Horário </h4>
-                                                <p class="text-center">Ref: Meio de contato com Ref: Quem</p>
-                                                <p class="text-center">Ref: Descrição</p>
-                                                <div>
-                                                    <input class="form-check-input concl-check" type="checkbox"
-                                                        id="checkboxNoLabel" value="" aria-label=""> Concluído</input>
-                                                </div>
-                                        </tr>
-                                        <tr class="mb-0 pb-0">
-                                            <div class="col-12 mb-2 pt-2" id="card-view">
-                                                <h4 class="text-center">Ref: Data às Ref: Horário </h4>
-                                                <p class="text-center">Ref: Meio de contato com Ref: Quem</p>
-                                                <p class="text-center">Ref: Descrição</p>
-                                                <div>
-                                                    <input onclick="validcheck(checkbconcl)" class="form-check-input concl-check" type="checkbox"
-                                                        id="checkboxNoLabel" value="" aria-label=""> Concluído</input>
-                                                </div>
-                                        </tr>
-                                        <tr class="mb-0 pb-0">
-                                            <div class="col-12 mb-2 pt-2" id="card-view">
-                                                <h4 class="text-center">Ref: Data às Ref: Horário </h4>
-                                                <p class="text-center">Ref: Meio de contato com Ref: Quem</p>
-                                                <p class="text-center">Ref: Descrição</p>
-                                                <div>
-                                                    <input class="form-check-input concl-check" type="checkbox"
-                                                        id="checkboxNoLabel" value="" aria-label=""> Concluído</input>
-                                                </div>
-                                        </tr>
-
-
-                                        <!--PÁGINAS-->
-
-                                        </tr>
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination">
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                        <span aria-hidden="true">&laquo;</span>
-                                                        <span class="sr-only"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Next">
-                                                        <span aria-hidden="true">&raquo;</span>
-                                                        <span class="sr-only"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-ev">Meio de contato</h5>
+                        <input type="contact" class="form-control" placeholder="Ex: Teams" id="contatoCad">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-ev">Com quem</h5>
+                        <input type="contact" class="form-control" placeholder="Ex: Jose da Silva" id="quemCad">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-ev text-justify"><label for="descricao">Descrição</label></h5>
+                        <textarea class="form-control" id="descricaoCad" name="descricao" rows="5"
+                            style="height: 100px; resize: vertical;"
+                            placeholder="Ex: Alinhamento sobre projeto"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div id="botao-modal" class="col ">
+                        <button onclick="cadEvento()" type="submit" class="button-cadastrar-ev" id="alsoEditEvento">Cadastrar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    
+
+    <!-- VIEW EVENTOS -->
+
+    <div class="col ps-3 w-100">
+        <div class="row">
+            <div class="card px-0 text-center" id="cardEventosExib">
+                <div class="card-header">
+                    <h6 class="text-black card-title">Acompanhar eventos</h6>
+                </div>
+                <div class="card-body align-self-center col-6" id="body-card">
+                    <table class="table table-hover" id="exibirEventos">
+                        <thead class=" table table-light">
+                        </thead>
+                        <tbody>
+                            <!--Estrutura do Card de exibição dos eventos-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- RODAPÉ DA PÁGINA -->
 
-    <footer class="bg-light text-center text-lg-start">
+    
 
         <!-- Copyright -->
 
@@ -280,15 +203,19 @@
             <a class="text-light" href="homepage.html">Protags</a>
         </div>
 
-    </footer>
 
 
 
 
 
 
+    <!--Script Página inicial-->
 
     <script src="./js/inicio.js"></script>
+
+
+    <!--Script BootStrap-->
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

@@ -6,7 +6,6 @@ function login() {
   let senha = document.querySelector('#senha')
   let labelSenha = document.querySelector('#labelSenha')
 
-
   let listaUser = []
 
   let userValid = {
@@ -18,6 +17,7 @@ function login() {
   listaUser = JSON.parse(localStorage.getItem('listaUser'))
 
   listaUser.forEach((item) => {
+    
     if (usuario.value === item.usuarioCad && senha.value === item.senhaCad) {
 
       userValid = {
@@ -30,7 +30,7 @@ function login() {
     }
   })
 
-  if (usuario.value === "" || senha.value === "") {
+  if (usuario.value === '' || senha.value === '') {
 
     alert('Os campos não foram preenchidos')
 
@@ -50,12 +50,9 @@ function login() {
   else {
 
     alert('Usuário ou senha incorretos')
-    
+
     labelUsuario.setAttribute('style', 'color: red')
     labelSenha.setAttribute('style', 'color: red')
 
-
-    
   }
-
 }

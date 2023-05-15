@@ -1,18 +1,22 @@
 body {
-    background-color: #fff;
-    font-family:sans-serif;
+  background-color: #fff;
+  font-family: sans-serif;
 }
 
 .logo {
-    background-color: #47141e;
-    margin: -1rem;
+  background-color: #47141e;
+  margin: -1rem;
 }
 
 .img-log {
-    width: 23rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 17rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cardregister {
+  height: 100%;
 }
 
 .card-body {
@@ -21,34 +25,34 @@ body {
   align-items: center;
   width: 100%;
 }
-  
-  .login-form {
-    max-width: 400px;
-  }
 
-  #butt {
-    position: relative;
-    margin: auto;
-  }
-  
-  .card-body {
-    width:400px;
-    height:400px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin:auto;
-    border:solid 1px;
-    box-shadow: 10px 10px 10px 5px black; 
-    background-color: #47141e;
-    color: #fff;
-    border-radius:50px;
-  }
+.login-form {
+  max-width: 300px;
+}
 
-  .form-group {
-    margin-top: 5px;
-  }
+#butt {
+  position: relative;
+  margin: auto;
+}
+
+.card-body {
+  width: 400px;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  border: solid 1px;
+  box-shadow: 10px 10px 10px 5px black;
+  background-color: #47141e;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.form-group {
+  margin-top: 5px;
+}
 
 .form-check {
   height: 80px;
@@ -62,43 +66,46 @@ body {
   margin-top: 1;
 }
 
-  .button {
-    display:flex;
-    justify-content: center; 
-    margin:auto;
-    margin-top:50px;
-    border-radius:10px; 
-  }
+.button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+}
 
-  .button:hover {
-    background-color: #47141e;
-    color: #fff;
- }
+.button:hover {
+  background-color: #47141e;
+  color: #fff;
+}
 
- #naotem {
+#naotem {
   justify-content: center;
 }
 
- #footer {
-  min-height: 8vh;
+.entrar {
+  color: #77c1f9;
+}
+
+#footer {
+  min-height: 5vh;
   background-color: #47141E;
   color: #fff;
   text-emphasis-color: #fff;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  margin-top: 187px;
   width: 100%;
 }
 
 #msgError {
-color: #ff0000;
-background-color: none;
-padding: 10px;
-border-radius: 5px;
-display: none;
-height: 30px;
-justify-content: center;
-text-align: center;
-align-items: center;
-font-size: medium;
+  color: #ff0000;
+  background-color: none;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  height: 30px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: medium;
 }
-

@@ -9,11 +9,9 @@ let usuario = document.querySelector('#usuario')
 let labelUsuario = document.querySelector('#labelUsuario')
 let validUsuario = 'false'
 
-
 let senha = document.querySelector('#senha')
 let labelSenha = document.querySelector('#labelSenha')
 let validSenha = 'false'
-
 
 let confirmSenha = document.querySelector('#confirmSenha')
 let labelConfirmSenha = document.querySelector('#labelConfirmSenha')
@@ -22,12 +20,11 @@ let validConfirmSenha = 'false'
 let msgError = document.querySelector("#msgError")
 
 
-
 //Eventos de validação de campos preenchidos
 
 nome.addEventListener('keyup', () => {
 
-    if (nome.value.length <= 4) {
+    if (nome.value.length <= 3) {
 
         labelNome.setAttribute('style', 'color: red')
         nome.setAttribute('style', 'border: solid 3px red')
@@ -105,14 +102,11 @@ confirmSenha.addEventListener('keyup', () => {
 
 function cadastrar() {
 
-    console.log(validNome, validUsuario, validSenha, validConfirmSenha)
-
     if (validNome === 'true' && validUsuario === 'true' && validSenha === 'true' && validConfirmSenha === 'true') {
 
         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
-
+        
         listaUser.push({
-
             nomeCad: nome.value,
             usuarioCad: usuario.value,
             senhaCad: senha.value,
