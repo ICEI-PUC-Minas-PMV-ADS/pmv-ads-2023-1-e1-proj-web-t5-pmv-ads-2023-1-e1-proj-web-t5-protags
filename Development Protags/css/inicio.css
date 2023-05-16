@@ -10,6 +10,10 @@
     font-family: sans-serif;
 }
 
+.row {
+    --bs-gutter-x: 0rem;
+}
+
 .navbar-toggler-icon {
     filter: brightness(0) invert(1);
     background-color: transparent;
@@ -18,7 +22,7 @@
 
 .header {
     min-height: 12vh;
-    width: 100vw;
+    width: 100vw !important;
     background-color: #47141e;
 }
 
@@ -140,7 +144,7 @@
 }
 
 .logout {
-    --bs-dropdown-min-width: 5.5rem;
+    --bs-dropdown-min-width: 5.4rem;
 }
 
 

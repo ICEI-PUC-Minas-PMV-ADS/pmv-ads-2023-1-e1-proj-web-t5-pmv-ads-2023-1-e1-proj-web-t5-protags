@@ -23,6 +23,8 @@ if (localStorage.getItem('token') === null) {
 
         // Verifica cada array do localStorage e os exibe na tela
         listEv.forEach(function (evento, index) {
+
+            // Cria a estrutura do Card para ser renderizado na tela
             const cardContainer = document.querySelector('tbody');
             const eventId = evento.id;
             const cardHTML = document.createElement('tr');
@@ -87,6 +89,7 @@ if (localStorage.getItem('token') === null) {
         document.body.classList.add('modal-open');
 
         let botaoModal = document.getElementById('botao-modal');
+
         // Preencher os campos do modal com dados recuperados do localStorage com posição 0 no array / FALTA RECUPERAR PELO ID
         if(metodo == 'editar'){
             dataCad.value = eventoEditado[0].dataEv;
@@ -95,6 +98,7 @@ if (localStorage.getItem('token') === null) {
             quemCad.value = eventoEditado[0].quemEv;
             descricaoCad.value = eventoEditado[0].descEv;
 
+            // Alterar botão Cadastrar para Atualizar e adicionando evento de Click para ativar a função
             botaoModal.innerHTML = `<button id="botaoAtualizar" class="button-cadastrar-ev">Atualizar</button>`;
             botaoModal.querySelector('#botaoAtualizar').addEventListener('click', () => {
                 editEvento(listEv, eventoEditado[0], eventId);
@@ -106,7 +110,6 @@ if (localStorage.getItem('token') === null) {
             document.querySelector('#contatoCad').value = '';
             document.querySelector('#descricaoCad').value = ''
         }       
-        //REMOVE O BOTÃO DE ATUALIZAR APÓS CLICAR NO BOTÃO DE ATUALIZAR
     }
 }
 
@@ -138,6 +141,7 @@ function editEvento(listEv, eventoEditado, eventId){
     document.body.classList.remove('modal-open');
     location.reload();
 }
+
 // Função ativada pelo botão de cadastrar / CREATE (C.r.u.d)
 function cadEvento() {
 
@@ -153,8 +157,9 @@ function cadEvento() {
     let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
     listEv.push(newEvent)
 
-    // Define o ID do novo evento com base no tamanho do array listEv
+    // Define o ID do novo evento com base no tamanho do array listEv + número aleatório
     newEvent.id = listEv.length + Math.random();
+
     //Salva a lista no localStorage
     localStorage.setItem('listEv', JSON.stringify(listEv))
     alert('Evento cadastrado com sucesso!')
@@ -213,6 +218,3 @@ function logout() {
     localStorage.removeItem('token')
     window.location.href = 'login.html'
 }
-
-
-
