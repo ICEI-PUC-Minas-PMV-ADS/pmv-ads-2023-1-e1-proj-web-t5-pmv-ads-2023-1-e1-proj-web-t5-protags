@@ -147,7 +147,10 @@
     --bs-dropdown-min-width: 5.4rem;
 }
 
-
+#botaoAdicionar {
+    border: none;
+    padding: 0
+}
 
 
 
