@@ -18,7 +18,9 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="/Development Protags/css/financeiro.css">
+    <link rel="stylesheet" href="./css/template.css">
+    <link rel="stylesheet" href="./css/financeiro.css">
+    <link rel="icon" href="./images/favicon.ico">
     <title>Financeiro</title>
 </head>
 
@@ -29,8 +31,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-3">
             <div class="container-fluid">
-                <img src="/Development Protags/images/Protags.png" alt="logo" class="logopng"></img>
-
+                <a href="./inicio.html"><img src="./images/Protags.png" alt="logo" class="logopng"></img></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +41,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 pt-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="inicio.html">
+                            <a class="nav-link active" aria-current="page" href="./inicio.html">
                                 <p class="texto pt-5">Inicio</p>
                             </a>
                         </li>
@@ -51,8 +52,8 @@
                                 Contas
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="apagar.html">A Pagar</a>
-                                <a class="dropdown-item" href="areceber.html">A Receber</a>
+                                <a class="dropdown-item" href="./apagar.html">A Pagar</a>
+                                <a class="dropdown-item" href="./areceber.html">A Receber</a>
                             </div>
                         </div>
 
@@ -63,26 +64,35 @@
                                 Pagamentos
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="arealizar.html">A Realizar</a>
-                                <a class="dropdown-item" href="realizados.html">Realizados</a>
+                                <a class="dropdown-item" href="./arealizar.html">A Realizar</a>
+                                <a class="dropdown-item" href="./realizados.html">Realizados</a>
                             </div>
                         </div>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="desempenho.html">
+                            <a class="nav-link active" href="./desempenho.html">
                                 <p class="texto pt-5">Desempenho</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="financeiro.html">
+                            <a class="nav-link active" href="./financeiro.html">
                                 <p class="texto pt-5">Financeiro</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="configurações.html">
+                            <a class="nav-link active" href="./configurações.html">
                                 <p class="texto pt-5">Configurações</p>
                             </a>
                         </li>
+                        </div>
+                            <div class="dropdown pt-5">
+                            <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Usuário
+                            </button>
+                            <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton">
+                            <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -96,27 +106,27 @@
         <section>
             <div class="entrada_saida">
                 <h2> Entradas </h2>
-                    <p class="box_green"> R$ 479,90 </p>
+                    <p class="box_green" id="entrada"> R$ 479,00 </p>
                 <h2> A receber </h2>
-                    <p class="box_green"> R$ 11.570,90 </p>
+                    <p class="box_green" id="aReceber"> R$ 570,00 </p>
             </div>
             <div class="entrada_saida">
                 <h3> Saidas </h3>
-                    <p class="box_red"> R$ 750,00 </p>
+                    <p class="box_red" id="saida"> R$ 750,00 </p>
                 <h3> A pagar</h3>
-                    <p class="box_red"> R$ 980,00 </p>
+                    <p class="box_red" id="aPagar"> R$ 980,00 </p>
             </div>
         </section>
         <section>
             <div class="informativos">
                 <h4> Informativo 1 </h4>
-                    <p class="period_info_1"> Periodo: 04/04/2023 até 14/04/2023 </p>
-                    <p class="result_info_1"> Despesas maiores que receitas</p>    
+                    <p class="period_info_1"id="period_info_1"> Periodo: 04/04/2023 até 14/04/2023 </p>
+                    <p class="result_info_1" id="resultInfo1"> Despesas maiores que receitas</p>    
             </div>
             <div class="informativos">
                 <h4> Informativo 2 </h4>
-                    <p class="period_info_2"> Periodo: 04/04/2023 até 14/04/2023 </p>
-                    <p class="result_info_2"> Saldo disponivel: (-) R$ 270,10 </p>
+                    <p class="period_info_2" id="period_info_2"> Periodo: 04/04/2023 até 14/04/2023 </p>
+                    <p class="result_info_2" id="resultInfo2"> Saldo disponivel: (-) R$ 270,10 </p>
             </div>
         </section>
     </main>
@@ -126,38 +136,39 @@
                 <h5>Inicio</h5>
                 <h5>Fim</h5>
                 <h5></h5>
-                    <p class="box_empty"> 04/04/2023 </p>
-                    <p class="box_empty"> 14/04/2023 </p>
-                    <p class="box_red_full">Pesquisar </p>      
-                <h6>Movimentação entre 04/04/2023 a 14/04/2023</h6>          
+                    <p class="box_empty"> <input type="date" name="dataInicio" id="dataInicio"> </p>
+                    <p class="box_empty"> <input type="date" name="dataFim" id="dataFim"> </p>
+                    <p class="box_red_full"> <input type="button" value="Filtrar" onclick="Filtrar()" id="Filtrar"> </p>      
+                <h6 id="resultFiltro">Movimentação entre 05/05/2023 a 14/05/2023</h6>          
             </div>
 
-            <div class="caixa">
-                <div class="grafico">
-                    <div class="escala">
-                        <div>1050</div>
-                        <div>900</div>
-                        <div>750</div>
-                        <div>600</div>
-                        <div>450</div>
-                        <div>300</div>
-                        <div>150</div>
-                        <div>0</div>
-                    </div>
-                
-                    <div class="barras">
-                        <div class="barGreen"></div>
-                        <div class="barRed"></div>
-                    </div>
-                      
-                    <div class="rotulos">
-                        <div>Entrada</div>
-                        <div>Saida</div>
-                    </div>
+        <div class="caixa">
+            <div class="grafico">
+                <div class="escala">
+                    <div>1050</div>
+                    <div>900</div>
+                    <div>750</div>
+                    <div>600</div>
+                    <div>450</div>
+                    <div>300</div>
+                    <div>150</div>
+                    <div>0</div>
+                </div>
+
+                <div class="barras">
+                    <div class="barGreen"></div>
+                    <div class="barRed"></div>
+                </div>
+
+                <div class="rotulos">
+                    <div>Entrada</div>
+                    <div>Saida</div> 
                 </div>
             </div>
+        </div>
     </aside>
 
+    <script src="./js/financeiro.js"></script>
 
 
 
@@ -167,7 +178,7 @@
         <!-- Copyright -->
         <div class="text-center p-3" id="footer">
           © 2023
-          <a class="text-light" href="homepage.html">Protags</a>
+          <a class="text-light" href="/index.html">Protags</a>
         </div>
         <!-- Copyright -->
       </footer>

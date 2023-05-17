@@ -44,6 +44,8 @@ header {
 main { width: 50%; float: left;}
 aside { width: 48%; float: right;}
 
+
+
     /* Box para Entradas e Saidas */
 .entrada_saida {
     width: 48%;
@@ -119,9 +121,16 @@ h5 {
     margin: 5px 0px 5px 0px;
     padding: 0px;
 }
+#dataFim, #dataInicio {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    text-align: center;
+}
 .box_empty, .box_red_full {
     width: 32%;
-    font-size: 15px;
     height: 30px;
     border-radius: 7px;
     border: 3px solid black ;
@@ -131,6 +140,12 @@ h5 {
 }
 .box_red_full {
     border: 3px solid black;
+    background-color: rgb(199, 35, 35);
+    color: #ffffff;
+}
+#Filtrar {
+    width: 100%;
+    border: none;
     background-color: rgb(199, 35, 35);
     color: #ffffff;
 }
@@ -218,3 +233,5 @@ h6 {
     text-align:center;
   }
 /* Fim - Grafico*/
+
+
