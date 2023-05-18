@@ -67,3 +67,65 @@
     /* color: gray; */
     font-size: small;
 }
+
+
+/* GRÁFICO */
+
+#grafico {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+}
+
+#paiDoGrafico {
+
+}
+
+#infosGrafico {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+
+}
+
+#objetivos{
+    display: flex;
+    justify-content: center;
+}
+
+.objetivo{
+}
+
+.vendido{
+}
+
+.definirMeta {
+    display: flex;
+    justify-content: end;
+}
+
+#tituloMeta {
+    text-align: center;
+}
+
+.valorMetaCumprida {
+    text-align: center;
+}
+
+#valoresMeta {
+    text-align: center;
+}
+
+.valoresMetas{
+    text-align: center;
+}
+
+.valorMetaCumprida {
+    text-align: center;
+}
+
+.informativoMetas {
+    text-align: center;
+}

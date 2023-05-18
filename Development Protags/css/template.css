@@ -26,7 +26,7 @@ header {
 
 
 .conteudo {
-    min-height: 78vh;
+    min-height: 30vh;
 }
 
 #footer {
@@ -34,7 +34,7 @@ header {
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: fixed;
+   /* position: fixed; */
     bottom: 0;
     width: 100%;
   }
