@@ -1,6 +1,19 @@
+/* TEMPLATE PADRÃO */
+
 * {
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
+}
+
+.body {
+    font-family: sans-serif;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+    background-color: transparent;
+    color: transparent;
 }
 
 .header {
@@ -8,44 +21,41 @@
     background-color: #47141e;
 }
 
-body {
-    font-family: sans-serif;
-}
-
 #dropdownMenuButton {
+    width: fit-content;
     background-color: #47141E;
     border-color: #47141E;
 }
 
-#footer {
-    height: 8vh;
-    background-color: #47141E;
-    color: #fff;
-    text-emphasis-color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
 .logopng {
     width: 10rem;
+    margin-left: 10px;
 }
-
 
 .texto {
     margin-bottom: 0;
 }
 
+#footer {
+    min-height: 5vh;
+    background-color: #47141E;
+    color: #fff;
+    text-emphasis-color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
 .titulo {
     background-color: #47141E;
-    width: 11.8rem;
-    height: 2.3rem;
-    font-size: 20px;
+    width: 10rem;
+    height: 2.5rem;
     margin-left: 1%;
-    padding-left: 0.7%;
-    padding-top: 0.2%;
+    margin-bottom: 3rem;
+    padding-left: 1%;
+    padding-top: 0.6%;
     color: #fff;
-    border: 1px solid gray;
     border-radius: 5px;
 }
 
@@ -169,6 +179,7 @@ button {
         font-size: 1rem;
     }
 }
+
 
 #dropMenuBtn {
     --bs-dropdown-min-width: 5.4rem;
