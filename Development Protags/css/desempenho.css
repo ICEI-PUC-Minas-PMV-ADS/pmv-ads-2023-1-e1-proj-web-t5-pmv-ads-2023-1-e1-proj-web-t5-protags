@@ -72,38 +72,70 @@
 /* GRÁFICO */
 
 #grafico {
-    -webkit-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
     border-radius: 20px;
 }
 
-#paiDoGrafico {
-
-}
+#paiDoGrafico {}
 
 #infosGrafico {
-    -webkit-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
     border-radius: 20px;
 
 }
 
-#objetivos{
+#objetivos {
     display: flex;
     justify-content: center;
 }
 
-.objetivo{
-}
+.objetivo {}
 
-.vendido{
-}
+.vendido {}
 
 .definirMeta {
     display: flex;
     justify-content: end;
+}
+
+
+#definirMetasBtn {
+    background-color: #47141e;
+    position: relative;
+    margin-left: 55%;
+}
+
+#definirMetasBtn:hover {
+    background-color: #fff;
+    border-style: solid 2px;
+    border-color: #000;
+    color: #000;
+}
+
+#salvarMeta {
+    background-color: #47141e;
+}
+
+#salvarMeta:hover {
+    background-color: #fff;
+    border-style: solid 2px;
+    border-color: #000;
+    color: #000;
+}
+
+#cancelarMeta {
+    background-color: #47141e;
+}
+
+#cancelarMeta:hover {
+    background-color: #fff;
+    border-style: solid 2px;
+    border-color: #000;
+    color: #000;
 }
 
 #tituloMeta {
@@ -118,7 +150,7 @@
     text-align: center;
 }
 
-.valoresMetas{
+.valoresMetas {
     text-align: center;
 }
 
@@ -128,4 +160,8 @@
 
 .informativoMetas {
     text-align: center;
+}
+
+.logout{
+    --bs-dropdown-min-width: 5.4rem;
 }
