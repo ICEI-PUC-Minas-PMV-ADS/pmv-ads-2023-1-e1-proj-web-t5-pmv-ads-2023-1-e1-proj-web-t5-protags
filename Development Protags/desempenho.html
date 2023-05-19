@@ -78,19 +78,19 @@
                                 <p class="texto pt-5">Configurações</p>
                             </a>
                         </li>
-                    </div>
                 </div>
-            </nav>
-            <div class="dropdown pt-5">
-                <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Usuário
-                </button>
-                <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton">
-                    <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
-                </div>
-                </ul>
             </div>
+        </nav>
+        <div class="dropdown pt-5">
+            <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Usuário
+            </button>
+            <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton">
+                <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
+            </div>
+            </ul>
+        </div>
     </header>
 
 
@@ -145,24 +145,77 @@
 
 
     <!-- PAI DO CONTAINER -->
-    <div class="container-fluid" id="paiDoGrafico">
-
-
+    <div class="container" id="paiDoGrafico">
 
         <!--DIV DO GRÁFICO-->
-        <div class="row">
-
-            <div class="col col-sm-7 ms-5 mt-5 mb-5" id="grafico">
-
-                <canvas id="myChart"></canvas>
+        <div class="row" id="grafico">
+            <div class="col col-sm-4 ms-5 mt-5 mb-5">
 
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+                <canvas id="myChart"></canvas>
+                <script>
+                    const ctx = document.getElementById('myChart');
+                    new Chart(ctx, {
+                        type: 'doughnut',
+                        data: data = {
+                            labels: [
+                                'Receitas Fixas',
+                                'Receitas Variáveis',
+                                'Despesas Fixas',
+                                'Despesas Variáveis'
+                            ],
+                            datasets: [{
+                                label: 'Dashboard Financeiro',
+                                data: [300, 50, 100, 150],
+                                backgroundColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(255, 205, 86)',
+                                    'rgb(75, 192, 192)'
+                                ],
+                                hoverOffset: 4
+                            }]
+                        }
+                    })
+                </script>
             </div>
+            <div class="col col-sm-7 ms-5 mt-5 mb-5">
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <canvas id="myChart2"></canvas>
+                <script>
+                    const ctx2 = document.getElementById('myChart2');
+                    new Chart(ctx2, {
+                        type: 'bar',
+                        data: data = {
+                            labels: [
+                                'Receitas Fixas',
+                                'Receitas Variáveis',
+                                'Despesas Fixas',
+                                'Despesas Variáveis'
+                            ],
+                            datasets: [{
+                                label: 'Dashboard Financeiro',
+                                data: [300, 50, 100, 150],
+                                backgroundColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(255, 205, 86)',
+                                    'rgb(75, 192, 192)'
+                                ],
+                                hoverOffset: 4
+                            }]
+                        }
+                    })
+                </script>
+                </div>
+        </div>
+       
+    </div>
+    </div>
 
 
 
-            <!--DIV DAS INFORMAÇÕES-->
+    <!--DIV DAS INFORMAÇÕES
             <div class="col col-sm-4 ms-5 mt-5 mb-5" id="infosGrafico">
 
                 <div class="evolucao">
@@ -178,13 +231,13 @@
                         <div class="metas">
                             <span class="objetivoMetas">
                                 <p><strong>OBJETIVO DO MÊS</strong></p>
-                                <!-- Button trigger modal -->
+                                Button trigger modal 
                                 <button type="button" class="btn btn-primary" data-toggle="modal"
                                     data-target="#exampleModal" id="definirMetasBtn">
                                     Definir metas
                                 </button>
 
-                                <!-- Modal -->
+                                Modal 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -238,9 +291,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div>-->
+
 
 
 
