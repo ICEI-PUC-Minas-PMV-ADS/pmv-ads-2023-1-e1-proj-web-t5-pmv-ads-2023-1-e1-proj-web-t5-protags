@@ -3,15 +3,12 @@ const rsValor = document.querySelector('#rsValor')
 const rsParcelas = document.querySelector('#rsParcelas')
 const rsDatadeEmissao = document.querySelector('#rsDatadeEmissao')
 const rsDatadeVenci = document.querySelector('#rsDatadeVenci')
-const rsPagarPara = document.querySelector('#rsPagarPara')
-const rsCondicaoPag = document.querySelector('#rsCondicaoPag')
+const rsreceberDe = document.querySelector('#rsreceberDe')
+const rsCondicaoRec = document.querySelector('#rsCondicaoRec')
 const rsDescricao = document.querySelector('#rsDescricao')
 const rsArquivo = document.querySelector('#rsArquivo')
 const rsSituacao = document.querySelector('#rsSituacao')
 const btnCadastro = document.querySelector('#rregCadastrar')
-
-let rLista = [0, 1]
-rsConta.value = rLista.length + 1
 
 let itens =[]
 
@@ -36,34 +33,36 @@ rsArquivo.addEventListener('change', () => {
 
 btnCadastro.addEventListener('click', (e) => {
   e.preventDefault(); 
- if ( rsValor.value == "" || rsParcelas.value == "" || rsDatadeEmissao.value == "" || rsDatadeVenci.value == "" || rsPagarPara.value == "" || rsSituacao == "" ) {
+ if ( rsValor.value == "" || rsParcelas.value == "" || rsDatadeEmissao.value == "" || rsDatadeVenci.value == "" || rsreceberDe.value == "" || rsSituacao == "" ) {
    rsValor.style.borderColor = 'red';
    rsDatadeEmissao.style.borderColor = 'red';
    rsDatadeVenci.style.borderColor = 'red';
-   rsPagarPara.style.borderColor = 'red';
+   rsreceberDe.style.borderColor = 'red';
    alert("Por favor, preencha todos os campos.");
  }
  else {
- items.push({
+ itens.push({
      'conta': rsConta.value, 
      'valor': rsValor.value, 
-     'parcelas': psParcelas.value, 
+     'parcelas': rsParcelas.value, 
      'datadeemissao': rsDatadeEmissao.value, 
      'datadevenci': rsDatadeVenci.value, 
-     'pagarpara': rsPagarPara.value, 
-     'condicaopag': rsCondicaoPag.value, 
+     'receberde': rsreceberDe.value, 
+     'condicaorec': rsCondicaoRec.value, 
      'descricao': rsDescricao.value, 
    })
 
-   items.forEach(item => {
-     localStorage.setItem("contasaReceber", JSON.stringify(items))
+   itens.forEach(item => {
+     localStorage.setItem("contasaReceber", JSON.stringify(itens))
    });
-   rsConta.value++
 
+   rsConta.value = itens.length.toString();
+   
+   console.log(itens)
    rsValor.style.borderColor = 'gray';
    rsDatadeEmissao.style.borderColor = 'gray';
    rsDatadeVenci.style.borderColor = 'gray';
-   rsPagarPara.style.borderColor = 'gray';
+   rsreceberDe.style.borderColor = 'gray';
    alert("Conta cadastrada com sucesso!");
  }
 })
