@@ -35,56 +35,38 @@ rsArquivo.addEventListener('change', () => {
 });
 
 btnCadastro.addEventListener('click', (e) => {
-  e.preventDefault();
+  e.preventDefault(); 
+ if ( rsValor.value == "" || rsParcelas.value == "" || rsDatadeEmissao.value == "" || rsDatadeVenci.value == "" || rsPagarPara.value == "" || rsSituacao == "" ) {
+   rsValor.style.borderColor = 'red';
+   rsDatadeEmissao.style.borderColor = 'red';
+   rsDatadeVenci.style.borderColor = 'red';
+   rsPagarPara.style.borderColor = 'red';
+   alert("Por favor, preencha todos os campos.");
+ }
+ else {
+ items.push({
+     'conta': rsConta.value, 
+     'valor': rsValor.value, 
+     'parcelas': psParcelas.value, 
+     'datadeemissao': rsDatadeEmissao.value, 
+     'datadevenci': rsDatadeVenci.value, 
+     'pagarpara': rsPagarPara.value, 
+     'condicaopag': rsCondicaoPag.value, 
+     'descricao': rsDescricao.value, 
+   })
 
-  if (rsValor.value === "" || rsParcelas.value === "" || rsDatadeEmissao.value === "" || rsDatadeVenci.value === "" || rsPagarPara.value === "" || rsSituacao === "") {
-    rsValor.style.borderColor = 'red';
-    rsDatadeEmissao.style.borderColor = 'red';
-    rsDatadeVenci.style.borderColor = 'red';
-    rsPagarPara.style.borderColor = 'red';
-    alert("Por favor, preencha todos os campos.");
-  } else {
-    let itemIndex = -1;
-    itens.forEach((item, index) => {
-      if (item.conta === rsConta.value) {
-        itemIndex = index;
-      }
-    });
+   items.forEach(item => {
+     localStorage.setItem("contasaReceber", JSON.stringify(items))
+   });
+   rsConta.value++
 
-    if (itemIndex !== -1) {
-      // Atualiza o valor existente
-      itens[itemIndex] = {
-        'conta': rsConta.value,
-        'valor': rsValor.value,
-        'parcelas': rsParcelas.value,
-        'datadeemissao': rsDatadeEmissao.value,
-        'datadevenci': rsDatadeVenci.value,
-        'pagarpara': rsPagarPara.value,
-        'condicaopag': rsCondicaoPag.value,
-        'descricao': rsDescricao.value,
-      };
-    } else {
-      // Adiciona um novo item
-      itens.push({
-        'conta': rsConta.value,
-        'valor': rsValor.value,
-        'parcelas': rsParcelas.value,
-        'datadeemissao': rsDatadeEmissao.value,
-        'datadevenci': rsDatadeVenci.value,
-        'pagarpara': rsPagarPara.value,
-        'condicaopag': rsCondicaoPag.value,
-        'descricao': rsDescricao.value,
-      });
-    }
-
-    localStorage.setItem("dbrcontas", JSON.stringify(itens));
-    rsValor.style.borderColor = 'gray';
-    rsDatadeEmissao.style.borderColor = 'gray';
-    rsDatadeVenci.style.borderColor = 'gray';
-    rsPagarPara.style.borderColor = 'gray';
-    alert("Conta cadastrada com sucesso!");
-  }
-});
+   rsValor.style.borderColor = 'gray';
+   rsDatadeEmissao.style.borderColor = 'gray';
+   rsDatadeVenci.style.borderColor = 'gray';
+   rsPagarPara.style.borderColor = 'gray';
+   alert("Conta cadastrada com sucesso!");
+ }
+})
 
 
 

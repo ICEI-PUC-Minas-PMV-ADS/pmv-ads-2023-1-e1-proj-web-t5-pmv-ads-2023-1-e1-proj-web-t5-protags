@@ -10,10 +10,9 @@ const psArquivo = document.querySelector('#psArquivo')
 const psSituacao = document.querySelector('#psSituacao')
 const btnCadastro = document.querySelector('#pregCadastrar')
 
-pLista = [0, 1, 2, 3]
-psConta.value = pLista.length + 1
-
 let items =[]
+
+let pLista = []
 
 psArquivo.addEventListener('change', () => {
   const reader = new FileReader()
@@ -25,55 +24,35 @@ psArquivo.addEventListener('change', () => {
 })
 
 btnCadastro.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  if (psValor.value === "" || psParcelas.value === "" || psDatadeEmissao.value === "" || psDatadeVenci.value === "" || psPagarPara.value === "" || psSituacao === "") {
+   e.preventDefault(); 
+  if ( psValor.value == "" || psParcelas.value == "" || psDatadeEmissao.value == "" || psDatadeVenci.value == "" || psPagarPara.value == "" || psSituacao == "" ) {
     psValor.style.borderColor = 'red';
     psDatadeEmissao.style.borderColor = 'red';
     psDatadeVenci.style.borderColor = 'red';
     psPagarPara.style.borderColor = 'red';
     alert("Por favor, preencha todos os campos.");
-  } else {
-    let itemIndex = -1;
-    items.forEach((item, index) => {
-      if (item.conta === psConta.value) {
-        itemIndex = index;
-      }
+  }
+  else {
+  items.push({
+      'conta': psConta.value, 
+      'valor': psValor.value, 
+      'parcelas': psParcelas.value, 
+      'datadeemissao': psDatadeEmissao.value, 
+      'datadevenci': psDatadeVenci.value, 
+      'pagarpara': psPagarPara.value, 
+      'condicaopag': psCondicaoPag.value, 
+      'descricao': psDescricao.value, 
+    })
+
+    items.forEach(item => {
+      localStorage.setItem("contasaPagar", JSON.stringify(items))
     });
+    psConta.value++
 
-    if (itemIndex !== -1) {
-      // Atualiza o valor existente
-      items[itemIndex] = {
-        'conta': psConta.value,
-        'valor': psValor.value,
-        'parcelas': psParcelas.value,
-        'datadeemissao': psDatadeEmissao.value,
-        'datadevenci': psDatadeVenci.value,
-        'pagarpara': psPagarPara.value,
-        'condicaopag': psCondicaoPag.value,
-        'descricao': psDescricao.value,
-      };
-    } else {
-      // Adiciona um novo item
-      items.push({
-        'conta': psConta.value,
-        'valor': psValor.value,
-        'parcelas': psParcelas.value,
-        'datadeemissao': psDatadeEmissao.value,
-        'datadevenci': psDatadeVenci.value,
-        'pagarpara': psPagarPara.value,
-        'condicaopag': psCondicaoPag.value,
-        'descricao': psDescricao.value,
-      });
-    }
-
-    localStorage.setItem("dbpcontas", JSON.stringify(items));
     psValor.style.borderColor = 'gray';
     psDatadeEmissao.style.borderColor = 'gray';
     psDatadeVenci.style.borderColor = 'gray';
     psPagarPara.style.borderColor = 'gray';
     alert("Conta cadastrada com sucesso!");
   }
-});
-
-
+})

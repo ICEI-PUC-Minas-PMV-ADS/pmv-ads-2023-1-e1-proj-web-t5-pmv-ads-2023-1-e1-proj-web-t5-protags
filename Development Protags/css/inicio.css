@@ -152,6 +152,10 @@
 .crudBtn {
     padding-bottom: 20px;
 }
+#botaoAdicionar {
+    border: none;
+    padding: 0
+}
 
 
 

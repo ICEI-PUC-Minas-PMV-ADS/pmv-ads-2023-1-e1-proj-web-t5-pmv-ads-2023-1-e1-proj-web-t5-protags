@@ -92,8 +92,8 @@ body {
   background-color: #47141E;
   color: #fff;
   text-emphasis-color: #fff;
-  position: relative;
-  margin-top: 187px;
+  position: fixed;
+  bottom: 0;
   width: 100%;
 }
 

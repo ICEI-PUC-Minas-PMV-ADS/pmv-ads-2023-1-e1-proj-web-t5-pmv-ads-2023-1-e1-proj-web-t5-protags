@@ -20,8 +20,7 @@
 
      <!-- MENU DE NAVEGAÇÃO -->
 
-
-     <div class="header">
+    <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <a href="./inicio.html"><img src="./images/Protags.png" alt="logo" class="logopng"></img></a>
             <button class="navbar-toggler me-2 transparent" type="button" data-toggle="collapse"
@@ -60,6 +59,12 @@
                             <a class="dropdown-item" href="./realizados.html">Realizados</a>
                         </div>
                     </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link active text-white ps-0" href="./desempenho.html">
+                            <p class="texto pt-5">Desempenho</p>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active text-white ps-0" href="./financeiro.html">
                             <p class="texto pt-5">Financeiro</p>
@@ -73,15 +78,13 @@
                 </ul>
             </div>
             <div class="dropdown pt-5">
-                <button class="btn btn-secondary dropdown-toggle ps-0 pt-0 pb-0 text-center" type="button"
-                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Usuário
                 </button>
-                <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton" id="dropMenuBtn">
-                    <a class="dropdown-item" href="./perfil.html" id="">Perfil</a>
+                <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton">
                     <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
                 </div>
-
             </div>
     </div>
     </nav>
@@ -153,8 +156,8 @@
                 <label for="pSituação">Situação</label> <!--SITUAÇÃO-->
                 <select id="psSituacao" name="pSituação" >
                     <option value="cPago">Pago</option>
-                    <option value="cPendente">Pendente</option>
-                    <option value="cAtrasado">Atrasado</option>
+                    <option value="cAPagar">A Pagar</option>
+                    <option value="cpagoParcialmente">Pago Parcialmente</option>
                 </select>
             </div>
         </div>
