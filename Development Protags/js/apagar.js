@@ -12,8 +12,6 @@ const btnCadastro = document.querySelector('#pregCadastrar')
 
 let items =[]
 
-let pLista = []
-
 psArquivo.addEventListener('change', () => {
   const reader = new FileReader()
 
@@ -46,8 +44,9 @@ btnCadastro.addEventListener('click', (e) => {
 
     items.forEach(item => {
       localStorage.setItem("contasaPagar", JSON.stringify(items))
-    });
-    psConta.value++
+    }); 
+
+    psConta.value = items.length.toString();
 
     psValor.style.borderColor = 'gray';
     psDatadeEmissao.style.borderColor = 'gray';

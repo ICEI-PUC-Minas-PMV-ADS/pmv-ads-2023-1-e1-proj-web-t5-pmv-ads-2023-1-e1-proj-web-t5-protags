@@ -10,9 +10,6 @@ const rsArquivo = document.querySelector('#rsArquivo')
 const rsSituacao = document.querySelector('#rsSituacao')
 const btnCadastro = document.querySelector('#rregCadastrar')
 
-let rLista = [0, 1]
-rsConta.value = rLista.length + 1
-
 let itens =[]
 
 rsArquivo.addEventListener('change', () => {
@@ -44,7 +41,7 @@ btnCadastro.addEventListener('click', (e) => {
    alert("Por favor, preencha todos os campos.");
  }
  else {
- items.push({
+ itens.push({
      'conta': rsConta.value, 
      'valor': rsValor.value, 
      'parcelas': psParcelas.value, 
@@ -55,10 +52,11 @@ btnCadastro.addEventListener('click', (e) => {
      'descricao': rsDescricao.value, 
    })
 
-   items.forEach(item => {
-     localStorage.setItem("contasaReceber", JSON.stringify(items))
+   itens.forEach(item => {
+     localStorage.setItem("contasaReceber", JSON.stringify(itens))
    });
-   rsConta.value++
+
+   rsConta.value = itens.length.toString();
 
    rsValor.style.borderColor = 'gray';
    rsDatadeEmissao.style.borderColor = 'gray';
