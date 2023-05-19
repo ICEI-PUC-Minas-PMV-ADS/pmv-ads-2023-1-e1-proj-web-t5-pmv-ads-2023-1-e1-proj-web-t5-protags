@@ -115,10 +115,25 @@ form.addEventListener('submit', function (e) {
     document.querySelector('#confirmPassword').value = '';
 
 
-
-
     localStorage.setItem('user', JSON.stringify(user));
 
     alert('Configurações salvas com sucesso!');
 }
-);
+)
+
+function logout() {
+    localStorage.removeItem('token')
+    window.location.href = 'login.html'
+}
+
+if (localStorage.getItem('token') === null) {
+
+    alert('Você precisa estar logado para acessar essa página')
+    window.location.href = 'login.html'
+
+} else {
+    window.onload = function () {
+    }
+
+}
+

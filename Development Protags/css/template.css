@@ -3,9 +3,8 @@
     margin: 0;
 }
 
-header {
-    display: flex;
-    min-height: 10vh;
+.header {
+    min-height: 12vh;
     background-color: #47141e;
 }
 
@@ -26,7 +25,7 @@ header {
 
 
 .conteudo {
-    min-height: 78vh;
+    min-height: 30vh;
 }
 
 #footer {
@@ -34,7 +33,11 @@ header {
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: fixed;
-    bottom: 0;
+    position: absolute; 
+    margin-top: 5%;
     width: 100%;
   }
+
+  #dropMenuBtn {
+    --bs-dropdown-min-width: 5.4rem;
+}
