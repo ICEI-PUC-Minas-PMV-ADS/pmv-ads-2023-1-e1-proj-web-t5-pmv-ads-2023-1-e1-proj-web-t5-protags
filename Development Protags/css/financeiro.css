@@ -35,7 +35,8 @@ header {
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: absolute;
+    position: relative;
+    top: 5%;
     bottom: 0;
     width: 100%;
 }
@@ -235,4 +236,27 @@ h6 {
   }
 /* Fim - Grafico*/
 
+#containerMovimentacoes {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+}
 
+/* GRÁFICOS LUCAS */
+
+#grafico {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+}
+
+
+#infosGrafico {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+
+}

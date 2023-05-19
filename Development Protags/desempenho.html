@@ -144,74 +144,7 @@
     <!--TESTES LUCAS GRÁFICO-->
 
 
-    <!-- PAI DO CONTAINER -->
-    <div class="container" id="paiDoGrafico">
-
-        <!--DIV DO GRÁFICO-->
-        <div class="row" id="grafico">
-            <div class="col col-sm-4 ms-5 mt-5 mb-5">
-
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                <canvas id="myChart"></canvas>
-                <script>
-                    const ctx = document.getElementById('myChart');
-                    new Chart(ctx, {
-                        type: 'doughnut',
-                        data: data = {
-                            labels: [
-                                'Receitas Fixas',
-                                'Receitas Variáveis',
-                                'Despesas Fixas',
-                                'Despesas Variáveis'
-                            ],
-                            datasets: [{
-                                label: 'Dashboard Financeiro',
-                                data: [300, 50, 100, 150],
-                                backgroundColor: [
-                                    'rgb(255, 99, 132)',
-                                    'rgb(54, 162, 235)',
-                                    'rgb(255, 205, 86)',
-                                    'rgb(75, 192, 192)'
-                                ],
-                                hoverOffset: 4
-                            }]
-                        }
-                    })
-                </script>
-            </div>
-            <div class="col col-sm-7 ms-5 mt-5 mb-5">
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                <canvas id="myChart2"></canvas>
-                <script>
-                    const ctx2 = document.getElementById('myChart2');
-                    new Chart(ctx2, {
-                        type: 'bar',
-                        data: data = {
-                            labels: [
-                                'Receitas Fixas',
-                                'Receitas Variáveis',
-                                'Despesas Fixas',
-                                'Despesas Variáveis'
-                            ],
-                            datasets: [{
-                                label: 'Dashboard Financeiro',
-                                data: [300, 50, 100, 150],
-                                backgroundColor: [
-                                    'rgb(255, 99, 132)',
-                                    'rgb(54, 162, 235)',
-                                    'rgb(255, 205, 86)',
-                                    'rgb(75, 192, 192)'
-                                ],
-                                hoverOffset: 4
-                            }]
-                        }
-                    })
-                </script>
-                </div>
-        </div>
-       
-    </div>
-    </div>
+   
 
 
 
