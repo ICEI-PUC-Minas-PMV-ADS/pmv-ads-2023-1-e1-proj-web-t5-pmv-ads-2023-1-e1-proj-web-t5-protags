@@ -52,7 +52,7 @@
                     <div class="dropdown pt-5">
                         <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pagamentos
+                            Recebimentos
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="./arealizar.html">A Realizar</a>
@@ -129,12 +129,12 @@
         <!--ELEMENTOS DA LINHA 2-->
         <div class="div5">
             <div class="linha4"> <!--ENTRADA DO PAGAR PARA-->
-                <label for="rpagarPara">Receber de</label>
-                <input id="rsPagarPara" type="text" placeholder="Insira um nome">
+                <label for="rreceberDe">Receber de</label>
+                <input id="rsreceberDe" type="text" placeholder="Insira um nome">
             </div>
             <div class="linha4"> <!--SELECIONADOR DE DATA-->
-                <label for="rcondicaoPagamento">Condição de Recebimento</label>
-                <select id="rsCondicaoPag" name="rcondicaoPagamento">
+                <label for="rcondicaoRecebimento">Condição de Recebimento</label>
+                <select id="rsCondicaoRec" name="rcondicaoRecebimento">
                     <option value="15d">15 Dias</option>
                     <option value="30d">30 Dias</option>
                     <option value="45d">45 Dias</option>
@@ -155,8 +155,8 @@
                 <label for="rSituação">Situação</label> <!--SITUAÇÃO-->
                 <select id="rsSituacao" name="rSituacao">
                     <option value="cRecebido">Recebido</option>
-                    <option value="cPendente">A Receber</option>
-                    <option value="cAtrasado">Recebido Parcialmente</option>
+                    <option value="caReceber">A Receber</option>
+                    <option value="crecebidoParci">Recebido Parcialmente</option>
                 </select>
             </div>
         </div>
