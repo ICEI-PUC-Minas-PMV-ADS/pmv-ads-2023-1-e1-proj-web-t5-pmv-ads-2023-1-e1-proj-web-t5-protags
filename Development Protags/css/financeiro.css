@@ -39,12 +39,15 @@ header {
     bottom: 0;
     width: 100%;
 }
+.logout {
+    --bs-dropdown-min-width: 5.5rem;
+}
+
+
 
 *{box-sizing: border-box;}
 main { width: 50%; float: left;}
 aside { width: 48%; float: right;}
-
-
 
     /* Box para Entradas e Saidas */
 .entrada_saida {
@@ -94,9 +97,7 @@ h4 {
 .period_info_1, .period_info_2, .result_info_1, .result_info_2 {
     font-size: 15px;
 }
-.result_info_1 {
-    color: red;
-}
+
 /*Fim - Informativos*/
 
 /* Inicio - Movimentações Recentes */
@@ -133,7 +134,7 @@ h5 {
     width: 32%;
     height: 30px;
     border-radius: 7px;
-    border: 3px solid black ;
+    border: 3px solid #000000 ;
 }
 .box_empty {
     border-radius: 7px;
