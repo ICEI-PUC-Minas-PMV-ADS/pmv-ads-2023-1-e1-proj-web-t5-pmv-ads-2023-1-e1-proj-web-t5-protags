@@ -18,78 +18,73 @@
 
 <body>
 
-   <!-- MENU DE NAVEGAÇÃO -->
-
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-3">
-            <div class="container-fluid">
-                <a href="./inicio.html"><img src="./images/Protags.png" alt="logo" class="logopng"></img></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 pt-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./inicio.html">
-                                <p class="texto pt-5">Inicio</p>
-                            </a>
-                        </li>
-
-                <div class="dropdown pt-5">
-                    <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contas
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="./apagar.html">A Pagar</a>
-                        <a class="dropdown-item" href="./areceber.html">A Receber</a>
-                    </div>
-                </div>
+     <!-- MENU DE NAVEGAÇÃO -->
 
 
-                <div class="dropdown pt-5">
-                    <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pagamentos
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="./arealizar.html">A Realizar</a>
-                        <a class="dropdown-item" href="./realizados.html">Realizados</a>
-                    </div>
-                </div>
-
-                <li class="nav-item">
-                    <a class="nav-link active text-white ps-0" href="./desempenho.html">
-                        <p class="texto pt-5">Desempenho</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white ps-0" href="./financeiro.html">
-                        <p class="texto pt-5">Financeiro</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white ps-0" href="./configurações.html">
-                        <p class="texto pt-5">Configurações</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="dropdown pt-5">
-            <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Usuário
+     <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a href="./inicio.html"><img src="./images/Protags.png" alt="logo" class="logopng"></img></a>
+            <button class="navbar-toggler me-2 transparent" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton">
-                <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 pt-3">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white ps-0" aria-current="page" href="./inicio.html">
+                            <p class="texto pt-5">Inicio</p>
+                        </a>
+                    </li>
+
+                    <div class="dropdown pt-5">
+                        <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contas
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="./apagar.html">A Pagar</a>
+                            <a class="dropdown-item" href="./areceber.html">A Receber</a>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown pt-5">
+                        <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pagamentos
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="./arealizar.html">A Realizar</a>
+                            <a class="dropdown-item" href="./realizados.html">Realizados</a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white ps-0" href="./financeiro.html">
+                            <p class="texto pt-5">Financeiro</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white ps-0" href="./configurações.html">
+                            <p class="texto pt-5">Configurações</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
+            <div class="dropdown pt-5">
+                <button class="btn btn-secondary dropdown-toggle ps-0 pt-0 pb-0 text-center" type="button"
+                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Usuário
+                </button>
+                <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton" id="dropMenuBtn">
+                    <a class="dropdown-item" href="./perfil.html" id="">Perfil</a>
+                    <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
+                </div>
+
+            </div>
     </div>
-</nav>
-</header>
+    </nav>
 
     <!-- CONTEUDO DA PÁGINA -->
 

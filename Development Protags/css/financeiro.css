@@ -3,9 +3,8 @@
     margin: 0;
 }
 
-header {
-    display: flex;
-    min-height: 10vh;
+.header {
+    min-height: 12vh;
     background-color: #47141e;
     
 }
@@ -259,4 +258,8 @@ h6 {
     box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
     border-radius: 20px;
 
+}
+
+#dropMenuBtn {
+    --bs-dropdown-min-width: 5.4rem;
 }

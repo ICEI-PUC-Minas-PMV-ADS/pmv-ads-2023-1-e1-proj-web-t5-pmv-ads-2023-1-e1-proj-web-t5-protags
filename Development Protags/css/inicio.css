@@ -145,7 +145,7 @@
     background-color: #CF3700;
 }
 
-.logout {
+#dropMenuBtn {
     --bs-dropdown-min-width: 5.4rem;
 }
 

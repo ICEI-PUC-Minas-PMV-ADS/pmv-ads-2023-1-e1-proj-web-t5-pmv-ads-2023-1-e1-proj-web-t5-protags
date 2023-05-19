@@ -3,9 +3,8 @@
     margin: 0;
 }
 
-header {
-    display: flex;
-    min-height: 10vh;
+.header {
+    min-height: 12vh;
     background-color: #47141e;
 
 }
@@ -153,4 +152,8 @@ display: inline-block;
 
 .dp-menu ul ul li a {
     display: block;
+    }
+
+    #dropMenuBtn {
+        --bs-dropdown-min-width: 5.4rem;
     }

@@ -3,9 +3,8 @@
     margin: 0;
 }
 
-header {
-    display: flex;
-    min-height: 10vh;
+.header {
+    min-height: 12vh;
     background-color: #47141e;
 }
 
@@ -38,3 +37,7 @@ header {
     margin-top: 5%;
     width: 100%;
   }
+
+  #dropMenuBtn {
+    --bs-dropdown-min-width: 5.4rem;
+}
