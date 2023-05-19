@@ -91,7 +91,7 @@
     <!-- O QUE PRECISA SER DESENVOLVIDO -->
 
     <!--GRAFICO TIAGO-->
-    
+
     <h1 class="text-center pt-4">Movimentações Financeiras</h1>
     <div class="container-fluid mt-5 col-sm-9 ps-5 pe-5 pt-5 pb-5" id="containerMovimentacoes">
         <div class="row">
@@ -134,7 +134,8 @@
                     <div class="boxPesquisaGrafico">
                         <p class="box_empty"> <input type="date" name="dataInicio" id="dataInicio"> </p>
                         <p class="box_empty"> <input type="date" name="dataFim" id="dataFim"> </p>
-                        <p class="box_red_full"> <input type="button" value=" Filtrar " onclick="Filtrar()" id="Filtrar"></p>
+                        <p class="box_red_full"> <input type="button" value=" Filtrar " onclick="Filtrar()"
+                                id="Filtrar"></p>
                     </div>
                 </div>
                 <div class="resultFiltro">Movimentação entre 05/05/2023 a 14/05/2023</div>
@@ -222,23 +223,37 @@
                     <canvas id="myChart2"></canvas>
                 </div>
                 <script>
+
+                    const contasaPagar = JSON.parse(localStorage.getItem('contasaPagar'));
+
+                    // Cria um array para armazenar os valores convertidos
+                    const valores = [];
+
+                    // Itera sobre cada objeto dentro do array contasaPagar
+                    for (const conta of contasaPagar) {
+                        // Recupera o valor do objeto e remove o símbolo "R$" e quaisquer caracteres não numéricos
+                        const valorNumerico = parseFloat(conta.valor.replace(/[^0-9.,]+/g, "").replace(",", "."));
+
+                        // Adiciona o valor convertido ao array de valores
+                        valores.push(valorNumerico);
+                    }
+
+                    // Calcula a soma dos valores usando reduce()
+                    const total = valores.reduce((acc, curr) => acc + curr, 0);
+
                     const ctx2 = document.getElementById('myChart2');
                     new Chart(ctx2, {
                         type: 'bar',
                         data: data = {
                             labels: [
-                                'Receitas Fixas',
-                                'Receitas Variáveis',
-                                'Despesas Fixas',
-                                'Despesas Variáveis'
+                                'Despesas',
+                                'Receitas'
                             ],
                             datasets: [{
-                                label: 'Dashboard Financeiro',
-                                data: [300, 50, 100, 150],
+                                label: 'Movimentações financeiras',
+                                data: [total],
                                 backgroundColor: [
                                     'rgb(255, 99, 132)',
-                                    'rgb(54, 162, 235)',
-                                    'rgb(255, 205, 86)',
                                     'rgb(75, 192, 192)'
                                 ],
                                 hoverOffset: 4
