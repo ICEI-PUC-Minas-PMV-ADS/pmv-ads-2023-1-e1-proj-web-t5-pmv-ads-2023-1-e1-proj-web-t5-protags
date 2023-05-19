@@ -46,39 +46,44 @@ header {
 
 
 
-*{box-sizing: border-box;}
+/* *{box-sizing: border-box;}
 main { width: 50%; float: left;}
 aside { width: 48%; float: right;}
-
+*/
     /* Box para Entradas e Saidas */
-.entrada_saida {
-    width: 48%;
-    display: inline-block;
-    padding: none;
-    margin: none;
-    text-align: center;
+
+.containerEntradaSaida{
+    background-color: lightcyan;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10%;
 }
 h2, h3 {
-    font-size: 20px;
+    font-size: 15px;
+    text-align: center;
 }
-h3 {
-    margin-left: 30px;
+.entradaBox{
+    width: 40%;
+    background-color: lightgray;
+}
+.saidaBox{
+    width: 40%;
+    background-color: lightgreen;
 }
 .box_green {
-    width: 80%;
+    text-align: center;
     font-size: small;
-    display: inline-table;
     border-radius: 7px;
     border: 3px solid rgb(50, 190, 50);
 }
 .box_red {
-    width: 80%;
-    margin-left: 30px;
+    text-align: center;
     font-size: small;
-    display: inline-table;
     border-radius: 7px;
     border: 3px solid rgb(199, 35, 35);
 }
+
     /* Fim - Box para Entradas e Saidas */
 
     /* Inicio - Informativos */
@@ -98,13 +103,11 @@ h4 {
 .period_info_1, .period_info_2, .result_info_1, .result_info_2 {
     font-size: 15px;
 }
+    /*Fim - Informativos*/
 
-/*Fim - Informativos*/
+    /* Inicio - Movimentações Recentes */
 
-/* Inicio - Movimentações Recentes */
-
-aside {
-
+#graficoContainer{
     margin: 4px;
     border: 4px solid black;
     border-radius: 7px;
@@ -112,14 +115,49 @@ aside {
 .Movimentações_Recentes {
     width: 100%;
     font-size: larger;
+    text-align: center;
+    margin-bottom: 5px;
     border-bottom: 4px solid black;
 }
-h5, .box_empty, .box_red_full {
-    display: inline-block;
-    width: 32%;
+.pesquisaGrafico {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.tituloPesquisaGrafico {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10%;
+}
+.boxPesquisaGrafico {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2%;
+}
+
+h5 {
+    text-align: center;
+    margin-left: 5%;
+}
+.box_empty .box_red_full {
+    border-radius: 7px;
+    border: 3px solid #000000 ;
+}
+#dataFim, #dataInicio {
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 4px;
+    font-size: 14px;
     text-align: center;
 }
-h5 {
+#Filtrar {
+    border: 3px solid black;
+    background-color: rgb(199, 35, 35);
+    color: #ffffff;
+}
+/*h5 {
     margin: 5px 0px 5px 0px;
     padding: 0px;
 }
@@ -154,10 +192,18 @@ h5 {
 h6 {
     font-size: 12px;
     text-align: center;
-}
-/* Fim - Movimentações Recentes  */
+}*/
+    /* Fim - Movimentações Recentes  */
 
-/* Inicio - Grafico*/
+    /* Inicio - Grafico Tiago*/
+
+.resultFiltro{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .caixa {
     font-size: 14px;
     font-weight: 400;
@@ -175,7 +221,6 @@ h6 {
   .caixa > div{
     padding:15px 30px 15px 3px;
 }
-
 .grafico{
     display:grid;
     grid-template-columns:40px 1fr;
@@ -200,7 +245,6 @@ h6 {
       margin-left: 5px;
       border-top: 1px solid #333;
   }
-  
   .barras, .rotulos{
     display:flex;
     flex-direction: row;
@@ -234,7 +278,7 @@ h6 {
     padding:10px;
     text-align:center;
   }
-/* Fim - Grafico*/
+    /* Fim - Grafico Tiago*/
 
 #containerMovimentacoes {
     -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
@@ -243,7 +287,7 @@ h6 {
     border-radius: 20px;
 }
 
-/* GRÁFICOS LUCAS */
+    /* GRÁFICOS LUCAS */
 
 #grafico {
     -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);

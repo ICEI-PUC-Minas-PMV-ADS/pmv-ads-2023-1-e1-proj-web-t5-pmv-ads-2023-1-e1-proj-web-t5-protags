@@ -100,21 +100,20 @@
     <div class="container-fluid mt-5 col-sm-9 ps-5 pe-5 pt-5 pb-5" id="containerMovimentacoes">
         <div class="row">
             <div class="col">
-
-
-                <div class="entrada_saida">
-                    <h2> Entradas </h2>
-                    <p class="box_green" id="entrada"> R$ 479,00 </p>
-                    <h2> A receber </h2>
-                    <p class="box_green" id="aReceber"> R$ 570,00 </p>
+                <div class="containerEntradaSaida">
+                    <div class="entradaBox">
+                        <h2> Entradas </h2>
+                        <p class="box_green" id="entrada"> R$ 479,00 </p>
+                        <h2> A receber </h2>
+                        <p class="box_green" id="aReceber"> R$ 570,00 </p>
+                    </div>
+                    <div class="saidaBox">
+                        <h3> Saidas </h3>
+                        <p class="box_red" id="saida"> R$ 750,00 </p>
+                        <h3> A pagar</h3>
+                        <p class="box_red" id="aPagar"> R$ 980,00 </p>
+                    </div>
                 </div>
-                <div class="entrada_saida">
-                    <h3> Saidas </h3>
-                    <p class="box_red" id="saida"> R$ 750,00 </p>
-                    <h3> A pagar</h3>
-                    <p class="box_red" id="aPagar"> R$ 980,00 </p>
-                </div>
-
 
                 <div class="informativos">
                     <h4> Informativo 1 </h4>
@@ -128,18 +127,21 @@
                 </div>
 
             </div>
-            <div class="col">
-                <div class="Movimentações_Recentes">Movimentações_Recentes</div>
-                <div class="pesquisa_grafico">
-                    <h5>Inicio</h5>
-                    <h5>Fim</h5>
-                    <h5></h5>
-                    <p class="box_empty"> <input type="date" name="dataInicio" id="dataInicio"> </p>
-                    <p class="box_empty"> <input type="date" name="dataFim" id="dataFim"> </p>
-                    <p class="box_red_full"> <input type="button" value="Filtrar" onclick="Filtrar()" id="Filtrar">
-                    </p>
-                    <h6 id="resultFiltro">Movimentação entre 05/05/2023 a 14/05/2023</h6>
+            <div class="col" id="graficoContainer">
+                <div class="Movimentações_Recentes">Movimentações Recentes</div>
+                <div class="pesquisaGrafico">
+                    <div class="tituloPesquisaGrafico">
+                        <h5>Inicio</h5>
+                        <h5>Fim</h5>
+                        <h5></h5>
+                    </div>
+                    <div class="boxPesquisaGrafico">
+                        <p class="box_empty"> <input type="date" name="dataInicio" id="dataInicio"> </p>
+                        <p class="box_empty"> <input type="date" name="dataFim" id="dataFim"> </p>
+                        <p class="box_red_full"> <input type="button" value=" Filtrar " onclick="Filtrar()" id="Filtrar"></p>
+                    </div>
                 </div>
+                <div class="resultFiltro">Movimentação entre 05/05/2023 a 14/05/2023</div>
 
                 <div class="caixa">
                     <div class="grafico">
@@ -166,7 +168,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
