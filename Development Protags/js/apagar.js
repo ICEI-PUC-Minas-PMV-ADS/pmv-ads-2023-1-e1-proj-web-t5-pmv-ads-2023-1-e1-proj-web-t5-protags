@@ -10,7 +10,7 @@ const psArquivo = document.querySelector('#psArquivo')
 const psSituacao = document.querySelector('#psSituacao')
 const btnCadastro = document.querySelector('#pregCadastrar')
 
-let items =[]
+let contasAPagar =[]
 
 psArquivo.addEventListener('change', () => {
   const reader = new FileReader()
@@ -31,7 +31,7 @@ btnCadastro.addEventListener('click', (e) => {
     alert("Por favor, preencha todos os campos.");
   }
   else {
-  items.push({
+  contasAPagar.push({
       'conta': psConta.value, 
       'valor': psValor.value, 
       'parcelas': psParcelas.value, 
@@ -42,11 +42,8 @@ btnCadastro.addEventListener('click', (e) => {
       'descricao': psDescricao.value, 
     })
 
-    items.forEach(item => {
-      localStorage.setItem("contasaPagar", JSON.stringify(items))
-    }); 
-
-    psConta.value = items.length.toString();
+    console.log(contasAPagar);
+    psConta.value = contasAPagar.length.toString();
 
     psValor.style.borderColor = 'gray';
     psDatadeEmissao.style.borderColor = 'gray';
