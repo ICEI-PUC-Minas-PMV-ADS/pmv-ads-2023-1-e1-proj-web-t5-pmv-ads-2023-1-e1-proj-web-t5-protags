@@ -174,7 +174,7 @@
     <!--GRAFICOS LUCAS-->
 
     <!-- PAI DO CONTAINER -->
-    <h1 class="text-center pt-5">Dashboard geral</h1>
+    <h1 class="text-center pt-5">Movimentações por Categorias</h1>
 
     <div class="container pt-5 col-sm-10" id="paiDoGrafico">
 
@@ -187,84 +187,22 @@
                     <canvas id="myChart"></canvas>
                 </div>
                 <script>
-                    const ctx = document.getElementById('myChart');
-                    new Chart(ctx, {
-                        type: 'doughnut',
-                        data: data = {
-                            labels: [
-                                'Receitas Fixas',
-                                'Receitas Variáveis',
-                                'Despesas Fixas',
-                                'Despesas Variáveis'
-                            ],
-                            datasets: [{
-                                label: 'Dashboard Financeiro',
-                                data: [300, 50, 100, 150],
-                                backgroundColor: [
-                                    'rgb(255, 99, 132)',
-                                    'rgb(54, 162, 235)',
-                                    'rgb(255, 205, 86)',
-                                    'rgb(75, 192, 192)'
-                                ],
-                                hoverOffset: 4
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio: false
-                        }
-                    });
+                                              // GRÁFICO DE CATEGORIAS RECEITAS
+
                 </script>
             </div>
             <!-- -->
             <div class="col-lg-6 col-md-12 mb-4">
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                 <div class="chart-container" style="position: relative; height: 400px; width: 100%;">
-                    <canvas id="myChart2"></canvas>
+                    <canvas id="myChart2">
+                        <script>
+                          
+                          // GRÁFICO DE CATEGORIAS DESPESAS
+                       
+                        </script>
+                    </canvas>
                 </div>
-                <script>
-
-                    const contasaPagar = JSON.parse(localStorage.getItem('contasaPagar'));
-
-                    // Cria um array para armazenar os valores convertidos
-                    const valores = [];
-
-                    // Itera sobre cada objeto dentro do array contasaPagar
-                    for (const conta of contasaPagar) {
-                        // Recupera o valor do objeto e remove o símbolo "R$" e quaisquer caracteres não numéricos
-                        const valorNumerico = parseFloat(conta.valor.replace(/[^0-9.,]+/g, "").replace(",", "."));
-
-                        // Adiciona o valor convertido ao array de valores
-                        valores.push(valorNumerico);
-                    }
-
-                    // Calcula a soma dos valores usando reduce()
-                    const total = valores.reduce((acc, curr) => acc + curr, 0);
-
-                    const ctx2 = document.getElementById('myChart2');
-                    new Chart(ctx2, {
-                        type: 'bar',
-                        data: data = {
-                            labels: [
-                                'Despesas',
-                                'Receitas'
-                            ],
-                            datasets: [{
-                                label: 'Movimentações financeiras',
-                                data: [total],
-                                backgroundColor: [
-                                    'rgb(255, 99, 132)',
-                                    'rgb(75, 192, 192)'
-                                ],
-                                hoverOffset: 4
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio: false
-                        }
-                    });
-                </script>
             </div>
         </div>
     </div>
