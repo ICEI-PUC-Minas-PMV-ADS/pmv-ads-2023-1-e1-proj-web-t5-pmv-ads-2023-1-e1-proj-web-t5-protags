@@ -76,4 +76,64 @@ function Filtrar() {
         resultFiltro.innerHTML = `Movimentação entre  ${dataInicFim}.`;
     }
 }
+    // GRÁFICO DE ENTRADAS
 
+    let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: [
+                ...contasAReceber.map(conta => conta.categoria) // Adiciona as categorias existentes
+            ],
+            datasets: [{
+                label: 'Entradas',
+                data: [
+                    ...contasAReceber.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))) // Adiciona os valores existentes
+                ],
+                backgroundColor: [
+                    'rgb(75, 192, 192)',
+                    ...Array(contasAReceber.length).fill('rgb(75, 192, 192)') // Adiciona cores para as novas categorias
+                ],
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+    
+    
+            // GRÁFICO DE SAÍDAS
+    
+                        let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+    
+                        const ctx2 = document.getElementById('myChart2');
+                        new Chart(ctx2, {
+                            type: 'bar',
+                            data: {
+                                labels: [
+                                    ...contasAPagar.map(conta => conta.categoria) // Adiciona as categorias existentes
+                                ],
+                                datasets: [{
+                                    label: 'Saídas',
+                                    data: [
+                        
+                                        ...contasAPagar.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))) // Adiciona os valores existentes
+                                    ],
+                                    backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        ...Array(contasAPagar.length).fill('rgb(255, 99, 132)') // Adiciona cores para as novas categorias
+                                    ],
+                                    hoverOffset: 4
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false
+                            }
+                        });
+    
+    
