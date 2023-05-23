@@ -138,37 +138,15 @@
                                 id="Filtrar"></p>
                     </div>
                 </div>
-                <div class="resultFiltro">Movimentação entre 05/05/2023 a 14/05/2023</div>
+                <div class="resultFiltro" id="resultFiltro">Movimentação entre 05/05/2023 a 14/05/2023</div>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                     <div class="chart-container3" style="position: relative; height: 65%; width: 100%;">
                         <canvas id="myChart3"></canvas>
                     </div>
-                        <script>
+                    <script>
+                                                //GRAFICO TIAGO
 
-                            const ctx3 = document.getElementById('myChart3');
-                            new Chart(ctx3, {
-                                type: 'bar',
-                                data: data = {
-                                    labels: [
-                                        'Despesas',
-                                        'Receitas'
-                                    ],
-                                    datasets: [{
-                                        label: 'Movimentações financeiras',
-                                        data: [15 , 25],
-                                        backgroundColor: [
-                                            'rgb(255, 99, 132)',
-                                            'rgb(75, 192, 192)'
-                                        ],
-                                        hoverOffset: 4
-                                    }]
-                                },
-                                options: {
-                                    responsive: true,
-                                    maintainAspectRatio: false
-                                }
-                            });
-                        </script>
+                    </script>
                 </div>
             </div>
         </div>

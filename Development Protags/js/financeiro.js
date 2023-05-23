@@ -75,6 +75,39 @@ function Filtrar() {
         resultFiltro.innerHTML = `Movimentação entre  ${dataInicFim}.`;
     }
 }
+
+
+    // Grafico Tiago
+
+    const ctx3 = document.getElementById('myChart3');
+    new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: [
+                'Despesas',
+                'Receitas'
+            ],
+            datasets: [{
+                label: 'Movimentações financeiras',
+                data: [15,5
+                //    ...contasAReceber.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))), // Adiciona os valores existentes
+                //    ...contasAPagar.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))) // Adiciona os valores existentes
+                ],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(75, 192, 192)'
+                ],
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+
+
     // GRÁFICO DE ENTRADAS
 
     let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
