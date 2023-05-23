@@ -41,7 +41,7 @@ if (localStorage.getItem('token') === null) {
 
     window.onload = function(){
 
-        entrada.innerHTML = "R$ " + `${entradaBase}`;
+        entrada.innerHTML = "R$ " + parseFloat(entradaBase) ;
         aReceber.innerHTML = "R$ " + parseFloat(aReceberBase) ;
         saida.innerHTML = "R$ " + parseFloat(saidaBase) ;
         aPagar.innerHTML = "R$ " + parseFloat(aPagarBase) ;   
