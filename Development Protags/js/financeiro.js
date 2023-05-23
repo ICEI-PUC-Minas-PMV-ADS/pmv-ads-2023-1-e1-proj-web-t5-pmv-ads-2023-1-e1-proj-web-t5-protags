@@ -16,7 +16,6 @@ entradaSaidaArray.push(entradaBase)
 entradaSaidaArray.push(aReceberBase)
 entradaSaidaArray.push(saidaBase)
 entradaSaidaArray.push(aPagarBase)
-console.log = entradaSaidaArray
 // Variáveis do formulário
 
 var data = new Date();
