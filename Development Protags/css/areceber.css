@@ -184,3 +184,31 @@ button {
 #dropMenuBtn {
     --bs-dropdown-min-width: 5.4rem;
 }
+
+.div4 {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+    width: 80%;
+    justify-content: center;
+    align-self: center;
+}
+
+.div5 {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+    width: 80%;
+    justify-content: center;
+    align-self: center;
+}
+
+#psCategoria {
+    font-size:medium;
+}
+
+#rsConta {
+    width: 70px;
+}
