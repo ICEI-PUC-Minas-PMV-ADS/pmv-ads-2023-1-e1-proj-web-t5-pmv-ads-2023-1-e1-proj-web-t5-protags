@@ -19,6 +19,12 @@ let LabelmudarSenha = document.querySelector("#LabelmudarSenha")
 let confirmPassword = document.querySelector("#confirmPassword")
 let LabelconfirmPassword = document.querySelector("#LabelconfirmPassword")
 
+let alterarnome = document.querySelector("#alterarnome")
+let Labelalterarnome = document.querySelector("#Labelalterarnome")
+
+let alterarusuario = document.querySelector("#alterarusuario")
+let Labelalterarusuario = document.querySelector("#Labelalterarusuario")
+
 mudarSenha.addEventListener('keyup', () => {
 
     if (mudarSenha.value.length < 5) {
@@ -93,7 +99,7 @@ form.addEventListener('submit', function (e) {
     }
 
     const user = {
-        novoNome: nomeEmpresa.value.trim(),
+        novoNomeEmpresa: nomeEmpresa.value.trim(),
         novoCNPJ: cnpj.value.trim(),
         novoUser: newUser.value.trim(),
         novaSenha: cadastrarSenha.value.trim(),
@@ -101,6 +107,8 @@ form.addEventListener('submit', function (e) {
         senhaadmim: password.value.trim(),
         novoEmail: email.value.trim(),
         alterarSenha: mudarSenha.value.trim(),
+        novoNomeUsuario: alterarnome.value.trim(),
+        novoUsuario: alterarusuario.value.trim(),
         confirmSenha: confirmPassword.value.trim() || null
     };
 
@@ -113,11 +121,14 @@ form.addEventListener('submit', function (e) {
     document.querySelector('#email').value = '';
     document.querySelector('#mudarSenha').value = '';
     document.querySelector('#confirmPassword').value = '';
+    document.querySelector('#alterarnome').value = '';
+    document.querySelector('#alterarusuario').value = '';
 
 
     localStorage.setItem('user', JSON.stringify(user));
 
     alert('Configurações salvas com sucesso!');
+    window.location.href = 'perfil.html';
 }
 )
 
