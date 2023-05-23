@@ -105,7 +105,6 @@ new Chart(ctx, {
             ],
             backgroundColor: [
                 'rgb(75, 192, 192)',
-                ...Array(contasAReceber.length).fill('rgb(75, 192, 192)') // Adiciona cores para as novas categorias
             ],
             hoverOffset: 4
         }]
@@ -136,7 +135,6 @@ new Chart(ctx, {
                                 ],
                                 backgroundColor: [
                                     'rgb(255, 99, 132)',
-                                    ...Array(contasAPagar.length).fill('rgb(255, 99, 132)') // Adiciona cores para as novas categorias
                                 ],
                                 hoverOffset: 4
                             }]
