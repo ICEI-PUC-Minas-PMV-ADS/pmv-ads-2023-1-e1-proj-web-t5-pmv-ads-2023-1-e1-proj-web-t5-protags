@@ -139,30 +139,36 @@
                     </div>
                 </div>
                 <div class="resultFiltro">Movimentação entre 05/05/2023 a 14/05/2023</div>
-
-                <div class="caixa">
-                    <div class="grafico">
-                        <div class="escala">
-                            <div id="escala7"></div>
-                            <div id="escala6"></div>
-                            <div id="escala5"></div>
-                            <div id="escala4"></div>
-                            <div id="escala3"></div>
-                            <div id="escala2"></div>
-                            <div id="escala1"></div>
-                            <div id="escala0"></div>
-                        </div>
-
-                        <div class="barras">
-                            <div class="barGreen" id="barGreen"></div>
-                            <div class="barRed" id="barRed"></div>
-                        </div>
-
-                        <div class="rotulos">
-                            <div>Entrada</div>
-                            <div>Saida</div>
-                        </div>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <div class="chart-container3" style="position: relative; height: 65%; width: 100%;">
+                        <canvas id="myChart3"></canvas>
                     </div>
+                        <script>
+
+                            const ctx3 = document.getElementById('myChart3');
+                            new Chart(ctx3, {
+                                type: 'bar',
+                                data: data = {
+                                    labels: [
+                                        'Despesas',
+                                        'Receitas'
+                                    ],
+                                    datasets: [{
+                                        label: 'Movimentações financeiras',
+                                        data: [15 , 25],
+                                        backgroundColor: [
+                                            'rgb(255, 99, 132)',
+                                            'rgb(75, 192, 192)'
+                                        ],
+                                        hoverOffset: 4
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false
+                                }
+                            });
+                        </script>
                 </div>
             </div>
         </div>
