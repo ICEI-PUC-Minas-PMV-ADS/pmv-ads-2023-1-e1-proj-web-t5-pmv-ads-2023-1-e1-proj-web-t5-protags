@@ -149,18 +149,19 @@
                             const dataBar = localStorage.getItem('valorEntrada')
 
                             const contasaPagar2 = JSON.parse(localStorage.getItem('contasaPagar'));
-                                // Cria um array para armazenar os valores convertidos
+
+                            // Cria um array para armazenar os valores convertidos
                             const valores2 = [];
                                 // Itera sobre cada objeto dentro do array contasaPagar
-                            //for (const conta of contasaPagar) {
+                            for (const conta2 of contasaPagar2) {
                                 // Recupera o valor do objeto e remove o símbolo "R$" e quaisquer caracteres não numéricos
-                            //const valorNumerico2 = parseFloat(contasaPagar2.valor.replace(/[^0-9.,]+/g, "").replace(",", "."));
-
+                            const valorNumerico2 = parseFloat(conta2.valor.replace(/[^0-9.,]+/g, "").replace(",", "."));
                                 // Adiciona o valor convertido ao array de valores
-                            //valores2.push(valorNumerico2);
-                            //}
+                            valores2.push(valorNumerico2);
+                            }
                                 // Calcula a soma dos valores usando reduce()
-                            //const total2 = valores2.reduce((acc, curr) => acc + curr, 0);
+                            const total2 = valores2.reduce((acc, curr) => acc + curr, 0);
+
 
                             const ctx3 = document.getElementById('myChart3');
                             new Chart(ctx3, {
@@ -172,7 +173,7 @@
                                     ],
                                     datasets: [{
                                         label: 'Movimentações financeiras',
-                                        data: dataBar.split(','),
+                                        data: [total2],
                                         backgroundColor: [
                                             'rgb(255, 99, 132)',
                                             'rgb(75, 192, 192)'
