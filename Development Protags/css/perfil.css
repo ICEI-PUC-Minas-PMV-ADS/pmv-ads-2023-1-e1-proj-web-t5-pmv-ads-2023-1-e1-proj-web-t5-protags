@@ -67,3 +67,57 @@
     /* color: gray; */
     font-size: small;
 }
+
+
+/* GRÁFICO */
+
+
+
+#objetivos {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+#cancelarMeta {
+    background-color: #47141e;
+}
+
+#cancelarMeta:hover {
+    background-color: #fff;
+    border-style: solid 2px;
+    border-color: #000;
+    color: #000;
+}
+
+#tituloMeta {
+    text-align: center;
+}
+
+.valorMetaCumprida {
+    text-align: center;
+}
+
+#valoresMeta {
+    text-align: center;
+}
+
+.valoresMetas {
+    text-align: center;
+}
+
+.valorMetaCumprida {
+    text-align: center;
+}
+
+.informativoMetas {
+    text-align: center;
+}
+
+.logout{
+    --bs-dropdown-min-width: 5.4rem;
+}

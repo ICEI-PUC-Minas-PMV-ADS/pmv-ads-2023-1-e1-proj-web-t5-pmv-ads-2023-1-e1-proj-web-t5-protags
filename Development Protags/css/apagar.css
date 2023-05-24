@@ -1,52 +1,60 @@
 * {
     padding: 0;
     margin: 0;
-}
-
-header {
-    display: flex;
-    min-height: 10vh;
-    background-color: #47141e;
+    font-family: sans-serif;
 }
 
 body {
     font-family: sans-serif;
 }
 
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+    background-color: transparent;
+    color: transparent;
+}
+
+.header {
+    height: 11rem;
+    min-height: 12vh;
+    width: 100vw !important;
+    background-color: #47141e;
+}
+
 #dropdownMenuButton {
+    width: fit-content;
     background-color: #47141E;
     border-color: #47141E;
 }
 
-#footer {
-    height: 8vh;
-    background-color: #47141E;
-    color: #fff;
-    text-emphasis-color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
 .logopng {
     width: 10rem;
+    margin-left: 10px;
 }
-
 
 .texto {
     margin-bottom: 0;
 }
 
+#footer {
+    min-height: 5vh;
+    background-color: #47141E;
+    color: #fff;
+    text-emphasis-color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
 .titulo {
     background-color: #47141E;
-    width: 10rem;
-    height: 2.3rem;
-    font-size: 20px;
+    width: 8.5rem;
+    height: 2.5rem;
     margin-left: 1%;
-    padding-left: 0.7%;
-    padding-top: 0.2%;
+    margin-bottom: 3rem;
+    padding-left: 1%;
+    padding-top: 0.6%;
     color: #fff;
-    border: 1px solid gray;
     border-radius: 5px;
 }
 
@@ -169,4 +177,36 @@ button {
         height: 40px;
         font-size: 1rem;
     }
+}
+
+#dropMenuBtn {
+    --bs-dropdown-min-width: 5.4rem;
+}
+
+.div1 {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+    width: 80%;
+    justify-content: center;
+    align-self: center;
+}
+
+.div2 {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+    width: 80%;
+    justify-content: center;
+    align-self: center;
+}
+
+#psCategoria {
+    font-size:medium;
+}
+
+#psConta {
+    width: 70px;
 }

@@ -3,9 +3,8 @@
     margin: 0;
 }
 
-header {
-    display: flex;
-    min-height: 10vh;
+.header {
+    min-height: 12vh;
     background-color: #47141e;
     
 }
@@ -35,46 +34,52 @@ header {
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: absolute;
+    position: relative;
+    top: 5%;
     bottom: 0;
     width: 100%;
 }
+.logout {
+    --bs-dropdown-min-width: 5.5rem;
+}
 
-*{box-sizing: border-box;}
+
+
+/* *{box-sizing: border-box;}
 main { width: 50%; float: left;}
 aside { width: 48%; float: right;}
-
-
-
+*/
     /* Box para Entradas e Saidas */
-.entrada_saida {
-    width: 48%;
-    display: inline-block;
-    padding: none;
-    margin: none;
-    text-align: center;
+
+.containerEntradaSaida{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10%;
 }
 h2, h3 {
-    font-size: 20px;
+    font-size: 15px;
+    text-align: center;
 }
-h3 {
-    margin-left: 30px;
+.entradaBox{
+    width: 40%;
+}
+.saidaBox{
+    width: 40%;
 }
 .box_green {
-    width: 80%;
+    text-align: center;
     font-size: small;
-    display: inline-table;
     border-radius: 7px;
     border: 3px solid rgb(50, 190, 50);
 }
 .box_red {
-    width: 80%;
-    margin-left: 30px;
+    text-align: center;
     font-size: small;
-    display: inline-table;
     border-radius: 7px;
     border: 3px solid rgb(199, 35, 35);
 }
+
     /* Fim - Box para Entradas e Saidas */
 
     /* Inicio - Informativos */
@@ -94,15 +99,11 @@ h4 {
 .period_info_1, .period_info_2, .result_info_1, .result_info_2 {
     font-size: 15px;
 }
-.result_info_1 {
-    color: red;
-}
-/*Fim - Informativos*/
+    /*Fim - Informativos*/
 
-/* Inicio - Movimentações Recentes */
+    /* Inicio - Movimentações Recentes */
 
-aside {
-
+#graficoContainer{
     margin: 4px;
     border: 4px solid black;
     border-radius: 7px;
@@ -110,128 +111,82 @@ aside {
 .Movimentações_Recentes {
     width: 100%;
     font-size: larger;
+    text-align: center;
+    margin-bottom: 5px;
     border-bottom: 4px solid black;
 }
-h5, .box_empty, .box_red_full {
-    display: inline-block;
-    width: 32%;
-    text-align: center;
+.pesquisaGrafico {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.tituloPesquisaGrafico {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10%;
+}
+.boxPesquisaGrafico {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2%;
 }
 h5 {
-    margin: 5px 0px 5px 0px;
-    padding: 0px;
+    text-align: center;
+    margin-left: 5%;
+}
+.box_empty .box_red_full {
+    border-radius: 7px;
+    border: 3px solid #000000 ;
 }
 #dataFim, #dataInicio {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 4px;
-    font-size: 15px;
-    text-align: center;
-}
-.box_empty, .box_red_full {
-    width: 32%;
     height: 30px;
-    border-radius: 7px;
-    border: 3px solid black ;
-}
-.box_empty {
-    border-radius: 7px;
-}
-.box_red_full {
     border: 3px solid black;
-    background-color: rgb(199, 35, 35);
-    color: #ffffff;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
 }
 #Filtrar {
-    width: 100%;
-    border: none;
+    border: 3px solid black;
     background-color: rgb(199, 35, 35);
     color: #ffffff;
 }
-h6 {
-    font-size: 12px;
+.resultFiltro{
+    display: flex;
+    justify-content: center;
     text-align: center;
-}
-/* Fim - Movimentações Recentes  */
-
-/* Inicio - Grafico*/
-.caixa {
+    margin-bottom: 0px;
     font-size: 14px;
-    font-weight: 400;
-    background-color: #fff;
 }
-  .caixa {
-    width:98%;
-    height:255px;
-    margin: 0px 0px 1% 1%;
-    display:grid;
-    grid-template-columns:auto;
-    grid-template-rows:auto auto 1fr auto;
-    border: 3px solid black;
-}
-  .caixa > div{
-    padding:15px 30px 15px 3px;
-}
-
-.grafico{
-    display:grid;
-    grid-template-columns:40px 1fr;
-    grid-template-rows:200px auto;
-  }
-  .escala{
-    display:flex;
-    flex-direction:column;
-    font-size:12px;
-    border-right:2px solid black;
-    line-height: 0px;
-  }
-  .escala > div{
-    flex-grow:1;
-    text-align:right;
-  }  
-  .escala > div:after{
-      content: '';
-      display: inline-block;
-      vertical-align: top;
-      width: 5px;
-      margin-left: 5px;
-      border-top: 1px solid #333;
-  }
-  
-  .barras, .rotulos{
-    display:flex;
-    flex-direction: row;
-    width:100%;
-    height:100%;
-    gap:30%;
-    align-items: end;
-  }
-  .rotulos{
-    grid-column:2;
-    border-top: 2px solid black;
-    gap: 0px;
-  }
-  .barGreen, .barRed {
-    flex-grow:1;
-    flex-basis:100%;
-  }
-  .barGreen{
-    background-color:rgb(50, 190, 50);
-    height: 40%;
-    margin-left: 15%;
-  }
-  .barRed{
-    background-color:rgb(199, 35, 35);
-    height: 75%;
-    margin-right: 15%;
-  }
-  .rotulos > div{
-    flex-grow:1;
-    flex-basis:100%;
-    padding:10px;
-    text-align:center;
-  }
-/* Fim - Grafico*/
+    /* Fim - Movimentações Recentes  */
 
 
+#containerMovimentacoes {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+}
+
+    /* GRÁFICOS LUCAS */
+
+#grafico {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+}
+
+
+#infosGrafico {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+
+}
+
+#dropMenuBtn {
+    --bs-dropdown-min-width: 5.4rem;
+}

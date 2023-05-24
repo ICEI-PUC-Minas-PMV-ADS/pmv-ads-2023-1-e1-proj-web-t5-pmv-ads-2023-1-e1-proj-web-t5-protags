@@ -8,8 +8,7 @@
 }
 
 .header {
-    display: flex;
-    min-height: 10vh;
+    min-height: 12vh;
     background-color: #47141e;
 }
 
@@ -109,4 +108,8 @@ button {
     position: relative;
     margin-top: 187px;
     width: 100%;
+}
+
+#dropMenuBtn {
+    --bs-dropdown-min-width: 5.4rem;
 }

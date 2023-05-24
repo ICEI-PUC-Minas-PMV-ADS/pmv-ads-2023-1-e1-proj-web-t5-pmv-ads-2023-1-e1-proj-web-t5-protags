@@ -4,8 +4,7 @@
 }
 
 header {
-    display: flex;
-    min-height: 10vh;
+    min-height: 12vh;
     background-color: #47141e;
 }
 
@@ -166,4 +165,8 @@ display: inline-block;
     height: 30px;
     width: 30px;
     border-radius: 20px;
+}
+
+#dropMenuBtn {
+    --bs-dropdown-min-width: 5.4rem;
 }
