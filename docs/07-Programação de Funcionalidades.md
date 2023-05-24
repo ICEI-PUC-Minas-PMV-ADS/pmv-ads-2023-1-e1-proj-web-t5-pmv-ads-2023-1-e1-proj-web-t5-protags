@@ -180,6 +180,7 @@ O gráfico é atualizado de forma dinâmica, recuperando os dados armazenados no
 - financeiro.html
 - financeiro.css
 - financeiro.js
+- chart.js
 
 <u>**Armazenamento de dados**</u>
 
