@@ -152,7 +152,7 @@ Nesta tela é possível:
 4. Clique em Criar Evento.
 5. Registre as informações necessárias para cadastrar o evento.
 
-![Movimentações Financeiras](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/assets/128004411/d20c1d5c-f43f-4b53-9efe-0f790a5b4663)
+![Movimentações Financeiras2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/assets/128004411/8378aeff-9752-4d50-b64b-7e4ba1c00d9d)
 - **Controle de saldo de Entradas e Saidas com Gráfico de Receitas e Despesas**
 
 Controle de Saldos e Grafico estão localizados na tela "Financeiro". 
@@ -173,8 +173,6 @@ O controle de saldos e o gráfico é atualizado de forma dinâmica, recuperando 
 
 <u>**Requisitos atendidos**</u>
 
-<li>|RF-004| O site deve conter um gráfico de monitoramento de despesas por categoria</li>
-<li>|RF-005| O site deve conter um gráfico de monitoramento de despesas por categoria</li>
 <li>|RF-006| O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários</li>
 <li>|RF-007| O site deve mostrar qual parte da renda líquida está livre para reinvestimentos</li>
 <li>|RF-012| O site deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes</li>
