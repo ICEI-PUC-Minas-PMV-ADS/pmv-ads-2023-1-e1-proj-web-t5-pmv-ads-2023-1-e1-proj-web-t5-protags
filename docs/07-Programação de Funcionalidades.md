@@ -196,8 +196,48 @@ O gráfico é atualizado de forma dinâmica, recuperando os dados armazenados no
 6. Navegue pelo menu até Financeiro.
 
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/assets/128004411/a9214049-0a00-4033-88a5-f7d339d65bb3)
-Lançamento de Contas a Pagar e a Receber
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/blob/main/docs/img/Contas%20a%20pagar%20Atualizado.png)
+- **Lançamento de Contas a Pagar e a Receber**
+
+Essa página é onde o usuário pode registrar novas contas a pagar e a receber no sistema.
+
+<br>
+
+<u>**Desenvolvendor da(s) funcionalidade(s)**</u>
+
+<li>Vinícius Nogueira</li>
+
+<br>
+
+<u>**Requisitos atendidos**</u>
+
+<li> |RF-004|O site deve ser acessível para qualquer pessoa independente do nível financeiro ou tecnológico em que se encontra</li>
+<li> |RF-009|O site deve conter a capacidade de registrar e controlar contas a receber, com recursos de categorização e controle de prazos de recebimento</li>
+<li> |RF-011|O site deve conter a capacidade de registrar e controlar contas a pagar, com recursos de categorização e controle de prazos de pagamento</li>
+<li> |RF-015|O Site deve ter uma interface organizada e de fácil usabilidade</li>
+<li> |RNF-004|O sistema deve ser responsivo para rodar em um dispositivos móvel</li>
+
+<br>
+
+<u>**Artefatos da funcionalidade**</u>
+
+- apagar.html
+- apagar.css
+- apagar.js
+- areceber.html
+- areceber.css
+- areceber.js
+
+<u>**Armazenamento de dados<**/u>
+
+- Web Local Storage
+  
+ <u>**Instruções de acesso**</u>
+  
+1. Abra um navegador de Internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/
+2. Clique em Registrar (Caso ainda não tenha uma conta).
+3. Entre na sua conta.
+4. Navegue pelo menu até em contas.
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/assets/128004411/5e96028f-ad21-479d-9c4d-06b43f1b307e)
 Relatorio de Desempenho
