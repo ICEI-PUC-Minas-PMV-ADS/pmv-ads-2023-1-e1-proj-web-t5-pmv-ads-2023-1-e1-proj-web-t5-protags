@@ -152,6 +152,55 @@ Nesta tela é possível:
 4. Clique em Criar Evento.
 5. Registre as informações necessárias para cadastrar o evento.
 
+![Movimentações Financeiras](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/assets/128004411/d20c1d5c-f43f-4b53-9efe-0f790a5b4663)
+- **Controle de saldo de Entradas e Saidas com Gráfico de Receitas e Despesas**
+
+Controle de Saldos e Grafico estão localizados na tela "Financeiro". 
+<br>A esquerda é possivel visualizar, os valores de Entradas e Saidas, e de valoresa receber e a pagar, junto de dois informativos sobre o seu estado financeiro nas datas filtradas.
+<br>A direita é possivel visualizar, uma opção de filtrar a data do seu grafico e um grafico demonstrando: "Receitas" e "Despesas".
+
+<br>
+
+O controle de saldos e o gráfico é atualizado de forma dinâmica, recuperando os dados armazenados no Local Storage a partir da tela de Cadastro de Contas à Pagar e à Receber.
+
+<br>
+
+<u>**Desenvolvedor da(s) funcionalidade(s)**</u>
+
+<li>Tiago Henrique</li>
+
+<br>
+
+<u>**Requisitos atendidos**</u>
+
+<li>|RF-004| O site deve conter um gráfico de monitoramento de despesas por categoria</li>
+<li>|RF-005| O site deve conter um gráfico de monitoramento de despesas por categoria</li>
+<li>|RF-006| O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários</li>
+<li>|RF-007| O site deve mostrar qual parte da renda líquida está livre para reinvestimentos</li>
+<li>|RF-012| O site deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes</li>
+
+<br>
+
+<u>**Artefatos da funcionalidade**</u>
+
+- financeiro.html
+- financeiro.css
+- financeiro.js
+- chart.js
+
+<u>**Armazenamento de dados**</u>
+
+- Web Local Storage
+
+<u>**Instruções de acesso**</u>
+
+1. Abra um navegador de Internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/
+2. Clique em Registrar (Caso ainda não tenha uma conta).
+3. Entre na sua conta.
+4. Navegue pelo menu até Contas.
+5. Registre as informações necessárias para cadastrar a conta.
+6. Navegue pelo menu até Financeiro.
+
 ![image](/docs/img/financeiro_7.png)
 - **Gráfico de movimentações por categoria**
 
@@ -239,11 +288,6 @@ Essa página é onde o usuário pode registrar novas contas a pagar e a receber 
 3. Entre na sua conta.
 4. Navegue pelo menu até em contas.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/assets/128004411/5e96028f-ad21-479d-9c4d-06b43f1b307e)
-Relatorio de Desempenho
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/assets/128004411/94afb038-5b8e-4c12-b150-b1a2bb2f4230)
-Relatorio Financeiro
 
 ![image](/docs/img/paginaconfig.png)
 - **Tela de Configurações**
