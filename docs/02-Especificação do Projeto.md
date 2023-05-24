@@ -103,23 +103,24 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O site deve permitir o cadastro de usuário|  ALTA |
-|RF-002| O site deve permitir o login do usuário |  ALTA |
-|RF-003| O site deve ser acessível para qualquer pessoa indepentende do nível financeiro ou tecnolócico em que se encontra |  ALTA |
-|RF-004| O site deve conter um gráfico de monitoramento de despesas por categoria|  ALTA |
-|RF-005| O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |  ALTA |
-|RF-006| O site deve mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
-|RF-007| O site deve exibir alertas financeiros para informar o usuário | ALTA |
-|RF-008| O site deve conter a capacidade de registrar e controlar contas a receber, com recursos de categorização e controle de prazos de recebimento |  ALTA |
-|RF-009| O site deve mostrar qual valor foi utilizado para reinvestimentos |  ALTA |
-|RF-010| O site deve conter a capacidade de registrar e controlar contas a pagar, com recursos de categorização e controle de prazos de pagamento |  ALTA |
-|RF-011 O site deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes |  ALTA |
-|RF-012| O site deve apresentar a relação entre produtos/serviços vendidos e o faturamento total obtido |  ALTA |
-|RF-013| Permitir que o usuário cadastre, visualize, altere e exclua informações | ALTA |
-|RF-014| O Site deve ter uma interface organizada e de fácil usabilidade |  MÉDIA |
-|RF-015| O Site deve permitir o usuário a exportação das informações |  BAIXA |
-|RF-016| Permitir que o anexe documentos/comprovantes de pagamento | BAIXA |
-|RF-017| O site deve conter um painel de compromissos diários | BAIXA |
+|RF-001| O site deve conter uma Home Page para receber o usuário |  ALTA |
+|RF-002| O site deve permitir o cadastro de usuário |  ALTA |
+|RF-003| O site deve permitir o login do usuário |  ALTA |
+|RF-004| O site deve ser acessível para qualquer pessoa indepentende do nível financeiro ou tecnolócico em que se encontra |  ALTA |
+|RF-005| O site deve conter um gráfico de monitoramento de despesas por categoria|  ALTA |
+|RF-006| O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |  ALTA |
+|RF-007| O site deve mostrar qual parte da renda líquida está livre para reinvestimentos | ALTA |
+|RF-008| O site deve exibir alertas financeiros para informar o usuário | ALTA |
+|RF-009| O site deve conter a capacidade de registrar e controlar contas a receber, com recursos de categorização e controle de prazos de recebimento |  ALTA |
+|RF-010| O site deve mostrar qual valor foi utilizado para reinvestimentos |  ALTA |
+|RF-011| O site deve conter a capacidade de registrar e controlar contas a pagar, com recursos de categorização e controle de prazos de pagamento |  ALTA |
+|RF-012| O site deve ter uma página mostrando quais gastos fixos foram quitados e quais estão pendentes |  ALTA |
+|RF-013| O site deve apresentar a relação entre produtos/serviços vendidos e o faturamento total obtido |  ALTA |
+|RF-014| Permitir que o usuário cadastre, visualize, altere e exclua informações | ALTA |
+|RF-015| O Site deve ter uma interface organizada e de fácil usabilidade |  MÉDIA |
+|RF-016| O Site deve permitir o usuário a exportação das informações |  BAIXA |
+|RF-017| Permitir que o anexe documentos/comprovantes de pagamento | BAIXA |
+|RF-018| O site deve conter um painel de compromissos diários | BAIXA |
 
 
 
