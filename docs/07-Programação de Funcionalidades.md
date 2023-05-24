@@ -205,3 +205,89 @@ Relatorio de Desempenho
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/assets/128004411/94afb038-5b8e-4c12-b150-b1a2bb2f4230)
 Relatorio Financeiro
 
+![image](/docs/img/paginaconfig.png)
+- **Tela de Configurações**
+
+Nessa tela é onde o usuário pode mudar as informações que adicionou ao se cadastrar, e pode adicionar mais informações que não foram pedidas na página de cadastrar. 
+
+<br>
+
+<u>**Desenvolvedor da(s) funcionalidade(s)**</u>
+
+<li>Aline Azedias</li>
+
+<br>
+
+<u>**Requisitos atendidos**</u>
+
+<li> |RF-004|O site deve ser acessível para qualquer pessoa independente do nível financeiro ou tecnológico em que se encontra</li>
+<li> |RF-014|Permitir que o usuário cadastre, visualize, altere e exclua informações</li>
+<li> |RF-015|O Site deve ter uma interface organizada e de fácil usabilidade</li>
+<li> |RF-016|O Site deve permitir o usuário a exportação das informações</li>
+<li> |RNF-004|O sistema deve ser responsivo para rodar em um dispositivos móvel</li>
+
+
+<br>
+
+<u>**Artefatos da funcionalidade**</u>
+
+- configurações.html
+- configuracoes.css
+- configuracoes.js
+
+<u>**Armazenamento de dados**</u>
+
+- Web Local Storage
+
+<u>**Instruções de acesso**</u>
+
+1. Abra um navegador de Internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/
+2. Altere ou adicione as informações que desejar
+3.	Clique em salvar.
+
+![image](/docs/img/paginaperfil.png)
+- **Tela de Perfil**
+
+Nessa tela, são exibidas as informações fornecidas pelo usuário na página de registro e configurações. Além disso, há a opção "Editar", na qual o usuário pode clicar para acessar diretamente a página de configurações e realizar alterações nas informações, caso necessário.
+
+<br>
+
+<u>**Desenvolvedor da(s) funcionalidade(s)**</u>
+
+<li>Aline Azedias</li>
+
+<br>
+
+<u>**Requisitos atendidos**</u>
+
+<li> |RF-004|O site deve ser acessível para qualquer pessoa independente do nível financeiro ou tecnológico em que se encontra</li>
+<li> |RF-014|Permitir que o usuário cadastre, visualize, altere e exclua informações</li>
+<li> |RF-015|O Site deve ter uma interface organizada e de fácil usabilidade</li>
+<li> |RF-016|O Site deve permitir o usuário a exportação das informações</li>
+<li> |RNF-004|O sistema deve ser responsivo para rodar em um dispositivos móvel</li>
+
+
+<br>
+
+<u>**Artefatos da funcionalidade**</u>
+
+- perfil.html
+- perfil.css
+- perfil.js
+
+<u>**Armazenamento de dados**</u>
+
+- Web Local Storage
+
+<u>**Instruções de acesso**</u>
+
+1. Abra um navegador de Internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t5-pmv-ads-2023-1-e1-proj-web-t5-protags/
+2. Altere ou adicione as informações que desejar
+3.	Visualize as informações do usuário.
+4.	Clique em editar, se necessário. 
+
+
+
+
+
+
