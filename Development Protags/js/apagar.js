@@ -10,9 +10,11 @@ const psArquivo = document.querySelector('#psArquivo')
 const psSituacao = document.querySelector('#psSituacao')
 const btnCadastro = document.querySelector('#pregCadastrar')
 
-let contasAPagar =[]
 
-psArquivo.addEventListener('change', () => {
+let categorias = document.querySelector('#psCategoria')
+let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar')) || [];
+
+psArquivo.addEventListener('change', () => {a
   const reader = new FileReader()
 
   reader.addEventListener('load', () => {
@@ -23,15 +25,17 @@ psArquivo.addEventListener('change', () => {
 
 btnCadastro.addEventListener('click', (e) => {
    e.preventDefault(); 
-  if ( psValor.value == "" || psParcelas.value == "" || psDatadeEmissao.value == "" || psDatadeVenci.value == "" || psPagarPara.value == "" || psSituacao == "" ) {
+  if ( psValor.value == "" || psParcelas.value == "" || psDatadeEmissao.value == "" || psDatadeVenci.value == "" || psPagarPara.value == "" || psSituacao == "" || categorias == '') {
     psValor.style.borderColor = 'red';
     psDatadeEmissao.style.borderColor = 'red';
     psDatadeVenci.style.borderColor = 'red';
     psPagarPara.style.borderColor = 'red';
+    categorias.style.borderColor = 'red'
     alert("Por favor, preencha todos os campos.");
   }
   else {
-  contasAPagar.push({
+
+    const contas = {
       'conta': psConta.value, 
       'valor': psValor.value, 
       'parcelas': psParcelas.value, 
@@ -40,7 +44,11 @@ btnCadastro.addEventListener('click', (e) => {
       'pagarpara': psPagarPara.value, 
       'condicaopag': psCondicaoPag.value, 
       'descricao': psDescricao.value, 
-    })
+      'categoria': categorias.value
+  }
+  contasAPagar.push(contas)
+
+    localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar))
 
     console.log(contasAPagar);
     psConta.value = contasAPagar.length.toString();

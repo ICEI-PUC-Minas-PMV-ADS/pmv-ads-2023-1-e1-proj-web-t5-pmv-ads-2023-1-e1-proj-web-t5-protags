@@ -18,7 +18,8 @@
 
 <body>
 
-     <!-- MENU DE NAVEGAÇÃO -->
+    <!-- MENU DE NAVEGAÇÃO -->
+
 
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -59,12 +60,6 @@
                             <a class="dropdown-item" href="./realizados.html">Realizados</a>
                         </div>
                     </div>
-
-                    <li class="nav-item">
-                        <a class="nav-link active text-white ps-0" href="./desempenho.html">
-                            <p class="texto pt-5">Desempenho</p>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link active text-white ps-0" href="./financeiro.html">
                             <p class="texto pt-5">Financeiro</p>
@@ -78,13 +73,15 @@
                 </ul>
             </div>
             <div class="dropdown pt-5">
-                <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle ps-0 pt-0 pb-0 text-center" type="button"
+                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Usuário
                 </button>
-                <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton" id="dropMenuBtn">
+                    <a class="dropdown-item" href="./perfil.html" id="">Perfil</a>
                     <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
                 </div>
+
             </div>
     </div>
     </nav>
@@ -94,6 +91,7 @@
 
     <div class="conteudo">
 
+            
         <!--ELEMENTOS DA LINHA 1-->
         <div class="titulo">Contas a Pagar</div>
         <div class="div1">
@@ -125,10 +123,14 @@
                 <label for="pdatadeVencimento">Data de Vencimento</label>
                 <input id="psDatadeVenci" type="date">
             </div>
+            <div class="linha1"> <!--SELECIONADOR DE CATEGORIAS-->
+                <label for="pcategoria">Categoria</label>
+                <input type="text" id="psCategoria" name="ppcategoria" placeholder="Ex: Impostos, Aluguel">
+            </div>
         </div>
 
         <!--ELEMENTOS DA LINHA 2-->
-        <div class="div2">
+        <div class="div2 mt-5">
             <div class="linha2"> <!--ENTRADA DO PAGAR PARA-->
                 <label for="ppagarPara">Pagar para</label>
                 <input id="psPagarPara" type="text" placeholder="Insira um nome">
