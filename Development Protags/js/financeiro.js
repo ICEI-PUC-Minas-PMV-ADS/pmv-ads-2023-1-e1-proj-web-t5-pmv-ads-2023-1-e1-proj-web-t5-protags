@@ -107,6 +107,12 @@ new Chart(ctx3, {
 });
 
 
+
+
+
+
+
+
 // GRÁFICOS LUCAS
 
 // Função para agrupar categorias e somar os valores correspondentes
@@ -123,6 +129,8 @@ function agruparCategorias(contas) {
     });
     return categoriasAgrupadas;
 }
+
+
 
 // GRÁFICO DE ENTRADAS
 let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
@@ -147,6 +155,8 @@ new Chart(ctx, {
         maintainAspectRatio: false
     }
 });
+
+
 
 // GRÁFICO DE SAÍDAS
 let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');

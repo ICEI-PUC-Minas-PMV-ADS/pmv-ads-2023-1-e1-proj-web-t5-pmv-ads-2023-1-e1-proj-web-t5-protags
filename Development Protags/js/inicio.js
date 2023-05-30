@@ -1,4 +1,14 @@
 
+//Função para formatar data para exibir EX: Terça-feira, 30 de Maio
+
+function formatarData(data) {
+    data.setDate(data.getDate() + 1);
+    const opcoes = { weekday: 'long', day: 'numeric', month: 'long' };
+    const dataFormatada = data.toLocaleDateString('pt-BR', opcoes);
+    const primeiraLetraMaiuscula = dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
+    return primeiraLetraMaiuscula;
+}
+
 // Não permite que o usuário entre no sistema sem estar logado
 if (localStorage.getItem('token') === null) {
 
@@ -10,14 +20,14 @@ if (localStorage.getItem('token') === null) {
     // Faz com que os Cards de eventos criados sejam exibidos na página ao carregar (onload) / READ (c.R.u.d)
     window.onload = function () {
         let metodo = '';
-        
+
         // Cria um array com as informações dos inputs e salva no localStorage
         let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
 
         const adicionar = document.getElementById('botaoAdicionar');
-            // Evento de click adicionado no botão de Excluir 
+        // Evento de click adicionado no botão de Excluir 
 
-            adicionar.innerHTML = `
+        adicionar.innerHTML = `
             <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo" id="modalBtn">Criar Evento<i class="far fa-eye ml-1"></i></a> 
             `
 
@@ -29,12 +39,15 @@ if (localStorage.getItem('token') === null) {
             const eventId = evento.id;
             const cardHTML = document.createElement('tr');
             cardHTML.setAttribute('class', 'mb-0 pb-0')
+
+            // Formata a data para exibição
+            const dataFormatada = formatarData(new Date(evento.dataEv));
+
             cardHTML.innerHTML = `
-            
             <td id="${evento.id}">
                 <div class="col-12 mb-2 pt-2" id="card-view">
                     <div class="col-12 mb-2 pt-2">
-                        <h4 class="text-center">${evento.dataEv} às ${evento.horarioEv}</h4 
+                        <h4 class="text-center">${dataFormatada} às ${evento.horarioEv}</h4 
                         <p class="text-center">${evento.contatoEv} com ${evento.quemEv}</p>
                         <p class="text-center">${evento.descEv} 
                         <br>
@@ -81,7 +94,7 @@ if (localStorage.getItem('token') === null) {
 
     // Função para editar o evento / UPDATE (c.r.U.d)
     function abrirModal(listEv, eventoEditado, eventId, metodo) {
-        
+
         // Abrir o modal
         let sideModalTLInfo = document.getElementById('sideModalTLInfo');
         sideModalTLInfo.classList.add('show');
@@ -91,7 +104,7 @@ if (localStorage.getItem('token') === null) {
         let botaoModal = document.getElementById('botao-modal');
 
         // Preencher os campos do modal com dados recuperados do localStorage com posição 0 no array / FALTA RECUPERAR PELO ID
-        if(metodo == 'editar'){
+        if (metodo == 'editar') {
             dataCad.value = eventoEditado[0].dataEv;
             horarioCad.value = eventoEditado[0].horarioEv;
             contatoCad.value = eventoEditado[0].contatoEv;
@@ -103,13 +116,13 @@ if (localStorage.getItem('token') === null) {
             botaoModal.querySelector('#botaoAtualizar').addEventListener('click', () => {
                 editEvento(listEv, eventoEditado[0], eventId);
             });
-        }else{
+        } else {
             document.querySelector('#dataCad').value = '';
             document.querySelector('#horarioCad').value = '';
             document.querySelector('#quemCad').value = '';
             document.querySelector('#contatoCad').value = '';
             document.querySelector('#descricaoCad').value = ''
-        }       
+        }
     }
 }
 
@@ -120,7 +133,7 @@ const contatoCad = document.querySelector('#contatoCad')
 const quemCad = document.querySelector('#quemCad')
 const descricaoCad = document.querySelector('#descricaoCad')
 
-function editEvento(listEv, eventoEditado, eventId){
+function editEvento(listEv, eventoEditado, eventId) {
     eventoEditado['dataEv'] = dataCad.value;
     eventoEditado['horarioEv'] = horarioCad.value;
     eventoEditado['contatoEv'] = contatoCad.value;
@@ -135,7 +148,7 @@ function editEvento(listEv, eventoEditado, eventId){
     }
 
     localStorage.setItem('listEv', JSON.stringify(listEv));
-    alert('Evento cadastrado com sucesso!')   
+    alert('Evento cadastrado com sucesso!')
     sideModalTLInfo.style.display = 'none';
     sideModalTLInfo.classList.remove('show');
     document.body.classList.remove('modal-open');
@@ -176,12 +189,15 @@ function cadEvento() {
     // Adiciona o ID único ao objeto de evento
     newEvent.id = eventId;
 
+    // Formata a data para exibição
+    const dataFormatada = formatarData(new Date(newEvent.dataEv));
+
     // Cria a estrutura do Card a ser exibido
     cardHTML.innerHTML = `
         <td id="${eventId}">
             <div class="col-12 mb-2 pt-2" id="card-view">
                 <div class="col-12 mb-2 pt-2">
-                    <h4 class="text-center">${newEvent.dataEv} às ${newEvent.horarioEv}</h4>
+                    <h4 class="text-center">${dataFormatada} às ${newEvent.horarioEv}</h4>
                     <p class="text-center">${newEvent.contatoEv} com ${newEvent.quemEv}</p>
                     <p class="text-center">${newEvent.descEv}</p>
                     <br>

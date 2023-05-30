@@ -140,16 +140,16 @@
                 </div>
                 <div class="resultFiltro" id="resultFiltro">Movimentação entre 05/05/2023 a 14/05/2023</div>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                    <div class="chart-container3" style="position: relative; height: 65%; width: 100%;">
-                        <canvas id="myChart3"></canvas>
-                    </div>
-                    <script>
+                <div class="chart-container3" style="position: relative; height: 65%; width: 100%;">
+                    <canvas id="myChart3"></canvas>
+                </div>
+                <script>
                                                 //GRAFICO TIAGO
 
-                    </script>
-                </div>
+                </script>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -161,6 +161,16 @@
     <h1 class="text-center pt-5">Movimentações por Categorias</h1>
 
     <div class="container pt-5 col-sm-10" id="paiDoGrafico">
+
+        <div class="filtro text-center pt-3 pb-3">
+
+            <label for="dataInicio"><h2><strong>Data de Início:</strong></h2></label>
+            <input type="date" id="dataInicio">
+            <label class="ms-3" for="dataFim"><h2><strong>Data de Término:</strong></h2></label>
+            <input type="date" id="dataFim">
+      
+            <button class="ms-1" onclick="atualizarGraficos()" id="btnFiltrar">Filtrar</button>
+        </div>
 
         <!--DIV DO GRÁFICO-->
         <div class="row" id="grafico">
@@ -181,9 +191,9 @@
                 <div class="chart-container" style="position: relative; height: 400px; width: 100%;">
                     <canvas id="myChart2">
                         <script>
-                          
+
                           // GRÁFICO DE CATEGORIAS DESPESAS
-                       
+
                         </script>
                     </canvas>
                 </div>
