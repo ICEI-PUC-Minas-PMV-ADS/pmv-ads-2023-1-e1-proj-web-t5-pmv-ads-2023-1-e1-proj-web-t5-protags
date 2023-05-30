@@ -1,13 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="icon" href="./images/favicon.ico">
+    <title>Inicio</title>
+</head>
+
+<body>
+
+
+    <!-- MENU DE NAVEGAÇÃO -->
+
+
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a href="./inicio.html"><img src="./images/Protags.png" alt="logo" class="logopng"></img></a>
+            <button class="navbar-toggler me-2 transparent" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 pt-3">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white ps-0" aria-current="page" href="./inicio.html">
+                            <p class="texto pt-5">Inicio</p>
+                        </a>
+                    </li>
+
+                    <div class="dropdown pt-5">
+                        <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contas
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="./apagar.html">A Pagar</a>
+                            <a class="dropdown-item" href="./areceber.html">A Receber</a>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown pt-5">
+                        <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pagamentos
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="./arealizar.html">A Realizar</a>
+                            <a class="dropdown-item" href="./realizados.html">Realizados</a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white ps-0" href="./financeiro.html">
+                            <p class="texto pt-5">Financeiro</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white ps-0" href="./configurações.html">
+                            <p class="texto pt-5">Configurações</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown pt-5">
+                <button class="btn btn-secondary dropdown-toggle ps-0 pt-0 pb-0 text-center" type="button"
+                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Usuário
+                </button>
+                <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton" id="dropMenuBtn">
+                    <a class="dropdown-item" href="./perfil.html" id="">Perfil</a>
+                    <a onclick="logout()" class="dropdown-item" href="" id="logout">Sair</a>
+                </div>
+
+            </div>
+    </div>
+    </nav>
+
+    <!-- Botão Editar Evento -->
+
+
+    <div class="">
+        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#sideModalTLInfo2"
+            id="modalBtn2" hidden>Editar Evento<i class="far fa-eye ml-1"></i></a>
+    </div>
+
+
+    <!-- Botão Criar Evento -->
+
+    <div id="botaoAdicionar" class="">
+
+    </div>
+
+
+    <!-- Modal Criar Evento -->
+
+
+    <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
+            <div id="modal-content" class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col" id="col-input">
+                        <h5 class="text-ev" id="dataexib">Data</h5>
+                        <input required type="date" class="form-control" placeholder="Data" id="dataCad">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-ev">Horário</h5>
+                        <input required type="time" class="form-control" placeholder="Horário" id="horarioCad">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-ev">Meio de contato</h5>
+                        <input type="contact" class="form-control" placeholder="Ex: Teams" id="contatoCad">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-ev">Com quem</h5>
+                        <input type="contact" class="form-control" placeholder="Ex: Jose da Silva" id="quemCad">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-ev text-justify"><label for="descricao">Descrição</label></h5>
+                        <textarea required class="form-control" id="descricaoCad" name="descricao" rows="5"
+                            style="height: 100px; resize: vertical;"
+                            placeholder="Ex: Alinhamento sobre projeto"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div id="botao-modal" class="col ">
+                        <button onclick="cadEvento()" type="submit" class="button-cadastrar-ev"
+                            id="alsoEditEvento">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- VIEW EVENTOS -->
+
+    <div class="col ps-3 w-100">
+        <div class="row">
+            <div class="card px-0 text-center" id="cardEventosExib">
+                <div class="card-header">
+                    <h6 class="text-black card-title">Acompanhar eventos</h6>
+                </div>
+                <div class="card-body align-self-center col-6" id="body-card">
+                    <table class="table table-hover" id="exibirEventos">
+                        <thead class=" table table-light">
+                        </thead>
+                        <tbody>
+                            <!--Estrutura do Card de exibição dos eventos-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- RODAPÉ DA PÁGINA -->
+
+
+
+    <!-- Copyright -->
+
+    <div class="text-center p-3" id="footer">
+        © 2023
+        <a class="text-light" href="/index.html">Protags</a>
+    </div>
+
+
+
+
+
+
+
+    <!--Script Página inicial-->
+
+    <script src="./js/inicio.js"></script>
+
+
+    <!--Script BootStrap-->
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -17,263 +221,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="/Development Protags/css/inicio.css">
-    <title>Inicio</title>
-</head>
-
-<body>
-
-
-
-
-    <!-- MENU DE NAVEGAÇÃO -->
-
-
-
-
-    <div class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-            <img src="/Development Protags/images/Protags.png" alt="logo" class="logopng"></img>
-            <button class="navbar-toggler me-5 transparent" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 pt-3">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="inicio.html">
-                            <p class="texto pt-5">Inicio</p>
-                        </a>
-                    </li>
-
-                    <div class="dropdown pt-5">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Contas
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="apagar.html">A Pagar</a>
-                            <a class="dropdown-item" href="areceber.html">A Receber</a>
-                        </div>
-                    </div>
-
-
-                    <div class="dropdown pt-5">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pagamentos
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="arealizar.html">A Realizar</a>
-                            <a class="dropdown-item" href="realizados.html">Realizados</a>
-                        </div>
-                    </div>
-
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" href="desempenho.html">
-                            <p class="texto pt-5">Desempenho</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" href="financeiro.html">
-                            <p class="texto pt-5">Financeiro</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" href="configurações.html">
-                            <p class="texto pt-5">Configurações</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-    </div>
-    </nav>
-
-
-
-    <!-- CARD CRIAR EVENTO -->
-
-    <div class="container-fluid create-ev" id="create-ev">
-        <div class="conteudo">
-            <div class="row text-center">
-                <div class="col-xl-2 col-12 p-0">
-                    <div class="book">
-                        <div class="card-evento">
-
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="text-ev">Data</h5>
-                                    <input type="date" class="form-control" placeholder="Data">
-                                </div>
-                            </div>
-
-                            <br>
-
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="text-ev">Horário</h5>
-                                    <input type="time" class="form-control" placeholder="Horário">
-                                </div>
-                            </div>
-
-                            <br>
-
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="text-ev">Meio de contato</h5>
-                                    <input type="contact" class="form-control" placeholder="Ex: Teams">
-                                </div>
-                            </div>
-
-                            <br>
-
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="text-ev text-justify"><label for="descricao">Descrição</label></h5>
-                                    <textarea class="form-control" id="descricao" name="descricao" rows="5"
-                                        style="height: 100px; resize: vertical;"
-                                        placeholder="Ex: Alinhamento sobre projeto"></textarea>
-                                </div>
-                            </div>
-
-                            <br>
-
-                            <div class="row text-center">
-                                <div class="col">
-                                    <button type="submit" class="button-cadastrar-ev">Cadastrar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cover">
-                            <h3 class="criar-evento">Criar evento</h3>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- VIEW EVENTOS -->
-
-                <div class="col ps-3">
-                    <div class="row pb-3">
-                        <div class="card px-0">
-                            <div class="card-header text-center">
-                                <h6 class="text-black card-title">Filtros de pesquisa</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="row text-center">
-                                    <div class="col-xl-1"></div>
-                                    <div class="col-2 p-0">
-                                        <label class="pt-2">Status</label>
-                                    </div>
-                                    <div class="col-6 m-1 p-0">
-                                        <select class="form-select">
-                                            <option value="sem"> </option>
-                                            <option>Realizados</option>
-                                            <option>Pendentes</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-1 m-1 p-0">
-                                        <button class="btn btn-outline-success">Pesquisar</button>
-                                    </div>
-                                    <div class="col-xl-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="card px-0 text-center">
-                            <div class="card-header">
-                                <h6 class="text-black card-title">Acompanhar eventos</h6>
-                            </div>
-                            <div class="card-body align-self-center col-6" id="body-card">
-                                <table class="table table-hover">
-                                    <thead class="table table-light">
-                                    </thead>
-                                    <tbody>
-                                        <tr class="mb-0 pb-0">
-                                            <div class="col-12 mb-2 pt-2" id="card-view">
-                                                <h4 class="text-center">Ref: Data às Ref: Horário </h4>
-                                                <p class="text-center">Ref: Meio de contato com Ref: Quem</p>
-                                                <p class="text-center">Ref: Descrição</p>
-                                                <div>
-                                                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
-                                                        value="" aria-label=""> Concluído</input>
-                                                </div>
-                                        </tr>
-                                        <tr class="mb-0 pb-0">
-                                            <div class="col-12 mb-2 pt-2" id="card-view">
-                                                <h4 class="text-center">Ref: Data às Ref: Horário </h4>
-                                                <p class="text-center">Ref: Meio de contato com Ref: Quem</p>
-                                                <p class="text-center">Ref: Descrição</p>
-                                                <div>
-                                                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
-                                                        value="" aria-label=""> Concluído</input>
-                                                </div>
-                                        </tr>
-                                        <tr class="mb-0 pb-0">
-                                            <div class="col-12 mb-2 pt-2" id="card-view">
-                                                <h4 class="text-center">Ref: Data às Ref: Horário </h4>
-                                                <p class="text-center">Ref: Meio de contato com Ref: Quem</p>
-                                                <p class="text-center">Ref: Descrição</p>
-                                                <div>
-                                                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
-                                                        value="" aria-label=""> Concluído</input>
-                                                </div>
-                                        </tr>
-                                        <tr class="mb-0 pb-0">
-                                            <div class="col-12 mb-2 pt-2" id="card-view">
-                                                <h4 class="text-center">Ref: Data às Ref: Horário </h4>
-                                                <p class="text-center">Ref: Meio de contato com Ref: Quem</p>
-                                                <p class="text-center">Ref: Descrição</p>
-                                                <div>
-                                                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
-                                                        value="" aria-label=""> Concluído</input>
-                                                </div>
-                                        </tr>
-
-                                        </tr>
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination">
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                        <span aria-hidden="true">&laquo;</span>
-                                                        <span class="sr-only"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Next">
-                                                        <span aria-hidden="true">&raquo;</span>
-                                                        <span class="sr-only"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- RODAPÉ DA PÁGINA -->
-
-    <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" id="footer">
-          © 2023
-          <a class="text-light" href="homepage.html">Protags</a>
-        </div>
-        <!-- Copyright -->
-      </footer>
 </body>
 
 </html>

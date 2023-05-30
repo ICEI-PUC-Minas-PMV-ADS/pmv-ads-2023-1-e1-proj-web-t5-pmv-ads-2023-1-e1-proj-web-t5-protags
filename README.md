@@ -1,7 +1,7 @@
 # Protags
 
 <div align="center">
-<img width="200px" height="200px" src="Protags.png">
+<img width="200px" height="200px" src="/Development Protags/images/Protags.png">
 </div>
 
 <div align="center">

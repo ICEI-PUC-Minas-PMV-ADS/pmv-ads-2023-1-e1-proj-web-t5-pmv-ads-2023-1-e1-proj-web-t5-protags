@@ -4,10 +4,12 @@
 }
 
 header {
-    display: flex;
-    min-height: 10vh;
+    min-height: 12vh;
     background-color: #47141e;
+}
 
+#nav-menu {
+    background-color: #47141e !important;
 }
 
 #dropdownMenuButton {
@@ -41,7 +43,6 @@ background-color: green;
 
 .logopng {
     width: 10rem;
-
 }
 
 
@@ -164,4 +165,8 @@ display: inline-block;
     height: 30px;
     width: 30px;
     border-radius: 20px;
+}
+
+#dropMenuBtn {
+    --bs-dropdown-min-width: 5.4rem;
 }
