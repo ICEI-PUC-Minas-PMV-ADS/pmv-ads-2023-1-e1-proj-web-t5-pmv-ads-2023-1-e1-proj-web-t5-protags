@@ -107,6 +107,7 @@ new Chart(ctx3, {
 });
 
 
+// GRÁFICOS LUCAS
 
 // Função para agrupar categorias e somar os valores correspondentes
 function agruparCategorias(contas) {
