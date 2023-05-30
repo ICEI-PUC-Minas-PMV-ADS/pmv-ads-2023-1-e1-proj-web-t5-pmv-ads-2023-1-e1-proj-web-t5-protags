@@ -45,12 +45,11 @@ if (localStorage.getItem('token') === null) {
 
             cardHTML.innerHTML = `
             <td id="${evento.id}">
-                <div class="col-12 mb-2 pt-2" id="card-view">
+                <div class="col-12 mb-2 pt-2 ps-4 pe-4" id="card-view">
                     <div class="col-12 mb-2 pt-2">
                         <h4 class="text-center">${dataFormatada} às ${evento.horarioEv}</h4 
                         <p class="text-center">${evento.contatoEv} com ${evento.quemEv}</p>
-                        <p class="text-center">${evento.descEv} 
-                        <br>
+                        <p class="text-center">${evento.descEv}
                         <br>
                         <div class="crudBtn">
                             <button type="button" data-toggle="modal" data-target="#sideModalTLInfo" id="editarIcon-${index}">
@@ -195,12 +194,11 @@ function cadEvento() {
     // Cria a estrutura do Card a ser exibido
     cardHTML.innerHTML = `
         <td id="${eventId}">
-            <div class="col-12 mb-2 pt-2" id="card-view">
+            <div class="col-12 mb-2 pt-2 ps-4 pe-4" id="card-view">
                 <div class="col-12 mb-2 pt-2">
                     <h4 class="text-center">${dataFormatada} às ${newEvent.horarioEv}</h4>
                     <p class="text-center">${newEvent.contatoEv} com ${newEvent.quemEv}</p>
                     <p class="text-center">${newEvent.descEv}</p>
-                    <br>
                     <br>
                     <div class="crudBtn"
                         <button type="button" data-toggle="modal" data-target="#sideModalTLInfo" onclick="openModal()" id="editarIcon">
