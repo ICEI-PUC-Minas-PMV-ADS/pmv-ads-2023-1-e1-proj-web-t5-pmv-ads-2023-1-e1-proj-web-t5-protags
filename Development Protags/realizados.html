@@ -19,10 +19,10 @@
 
 <body>
 
-      <!-- MENU DE NAVEGAÇÃO -->
+    <!-- MENU DE NAVEGAÇÃO -->
 
 
-      <div class="header">
+    <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <a href="./inicio.html"><img src="./images/Protags.png" alt="logo" class="logopng"></img></a>
             <button class="navbar-toggler me-2 transparent" type="button" data-toggle="collapse"
@@ -91,248 +91,101 @@
     <!-- O QUE PRECISA SER DESENVOLVIDO -->
 
 
-        <body>
-            <nav class="dp-menu">
-                <ul>
-                    <li><a href="#">Contas à pagar</a>
-                        <ul>
-                            <li><a href="#">Contas pagas</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contas à receber</a>
-                        <ul>
-                            <li><a href="#">Contas recebidas</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <span class="outterTableHeaderRight">
-
-
-                <a href="apagar.html" title="">
-                <a href="apagar.html" title="" id="btn_novo"><i
-                        class="dvm-circle"></i>CADASTRAR</a>&nbsp;
-
-            </span>
-
-            <td class="doublelineformat ">
-                <br>
-                <div style="padding-right:10px;">
-                <div style="padding-right:10px;">
-                    <input type="hidden" name="resetCurrentPage" value="<null>">
-                    <input type="hidden" name="clearFilter" value="false">
-                    <span id="filtrar" style="text-transform:none;"><a href="#" title="" id="btn_filtro"><i
-                                class="fas fa-filter w3darkgray"></i> Filtrar</a></span>
-                    <button type="button"><i class="far fa-file-code w3darkgray"></i> Gerar CSV</button>
-                    <button type="button"><i class="far fa-file-pdf w3darkgray"></i> Gerar PDF</button>
-                    <button type="button"><i class="far fa-file-code w3darkgray"></i> Gerar CSV</button>
-                    <button type="button"
-                        onclick="form.ACAO.value ='gerar';if (mensagemConfirmacao('0')) {form.action = '/Protags/financeiro/relatorio/ContaListagem?classe=PAGAR&amp;fromListagem=true'; submitForm()}"
-                        title="" id="btn_gerar"><i class="far fa-file-pdf w3darkgray"></i> Gerar PDF</button>
-
-
+    <body>
+        <nav class="dp-menu">
+            <ul>
+                <li><a href="#">Contas à pagar</a>
+                    <ul>
+                        <li><a href="#">Contas pagas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contas à receber</a>
+                    <ul>
+                        <li><a href="#">Contas recebidas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
                 </div>
                 <br>
-            </td>
+        </td>
 
-            </table>
-            <table class="table table-bordered">
-                <thead class="table-dark">
-                    <tr>
-                        <th>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </th>
-                        <th scope="col">CONTA</th>
-                        <th scope="col">VENCIMENTO</th>
-                        <th scope="col">PARCELA</th>
-                        <th scope="col">RECEBER DE</th>
-                        <th scope="col">DESCRIÇÃO</th>
-                        <th scope="col">COMPROVANTE</th>
-                        <th scope="col">DATA DE RECEBIMENTO</th>
-                        <th scope="col">VALOR</th>
-                        <th scope="col">SITUAÇÃO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </td>
-                        <th scope="row">01</th>
-                        <td>30/04/2023</td>
-                        <td>01/02</td>
-                        <td>Ana Paula</td>
-                        <td>Venda de películas</td>
-                        <td></td>
-                        <td></td>
-                        <td>R$580,00</td>
-                        <td><select name="acoes" class="selectAcoes" class="nullValue"></option>
-                        <td><select name="acoes" class="selectAcoes" onchange="javascript:fazerAcao(this);"
-                                style="width:210px;">
-                                <option value="<null>" class="nullValue"></option>
-                                <option value="3" class="opt">A PAGAR</option>
-                                <option value="4" class="opt">A RECEBER</option>
-                                <option value="6" class="opt">PAGO</option>
-                                <option value="0" class="opt">RECEBIDO</option>
-
-                            </select></td>
-                        </nav>
-
-                    </tr>
-                    <tr>
-                        <th>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </th>
-                        <th scope="row">02</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </td>
-                        <th scope="row">03</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <td>
+        </table>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>
+                        <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
+                    </th>
+                    <th scope="col">CONTA</th>
+                    <th scope="col">VENCIMENTO</th>
+                    <th scope="col">PARCELA</th>
+                    <th scope="col">RECEBER DE</th>
+                    <th scope="col">DESCRIÇÃO</th>
+                    <th scope="col">COMPROVANTE</th>
+                    <th scope="col">DATA DE RECEBIMENTO</th>
+                    <th scope="col">VALOR</th>
+                    <th scope="col">SITUAÇÃO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="trExibirRealizados">
+                   <!-- <td>
                         <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
                     </td>
-                    <th scope="row">04</th>
+                    <th scope="row">01</th>
+                    <td id="vencimento">30/04/2023</td>
+                    <td>01/02</td>
+                    <td>Ana Paula</td>
+                    <td>Venda de películas</td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </td>
-                        <th scope="row">05</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </td>
-                        <th scope="row">06</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </td>
-                        <th scope="row">07</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </td>
-                        <th scope="row">08</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </td>
-                        <th scope="row">09</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-                        </td>
-                        <th scope="row">10</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+                    <td id="reais">R$580,00</td>
+                    <td><select name="acoes" class="selectAcoes" class="nullValue"></option>
+                    <td><select name="acoes" class="selectAcoes" 
+                            style="width:210px;">
+                            <option value="<null>" class="nullValue"></option>
+                            <option value="3" class="opt">A PAGAR</option>
+                            <option value="4" class="opt">A RECEBER</option>
+                            <option value="6" class="opt">PAGO</option>
+                            <option value="0" class="opt">RECEBIDO</option>
+
+                        </select></td>
+                    </nav>
+-->
+                </tr>
+            </tbody>
+        </table>
 
 
-    </div>
-
-
-
-
-    <!-- RODAPÉ DA PÁGINA -->
-
-    <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" id="footer">
-            © 2023
-            <a class="text-light" href="/index.html">Protags</a>
         </div>
-        <!-- Copyright -->
-    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
+
+
+
+        <!-- RODAPÉ DA PÁGINA -->
+
+        <footer class="bg-light text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" id="footer">
+                © 2023
+                <a class="text-light" href="/index.html">Protags</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+        <script src="./js/realizados.js"></script>
+    </body>
 
 </html>
