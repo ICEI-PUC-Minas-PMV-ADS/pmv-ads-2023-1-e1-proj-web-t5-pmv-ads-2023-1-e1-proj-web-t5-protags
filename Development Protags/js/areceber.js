@@ -10,7 +10,9 @@ const rsArquivo = document.querySelector('#rsArquivo')
 const rsSituacao = document.querySelector('#rsSituacao')
 const btnCadastro = document.querySelector('#rregCadastrar')
 
-let contasAReceber =[]
+let categorias = document.querySelector('#psCategoria')
+let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber')) || [];
+
 
 rsArquivo.addEventListener('change', () => {
   const reader = new FileReader()
@@ -33,16 +35,17 @@ rsArquivo.addEventListener('change', () => {
 
 btnCadastro.addEventListener('click', (e) => {
   e.preventDefault(); 
- if ( rsValor.value == "" || rsParcelas.value == "" || rsDatadeEmissao.value == "" || rsDatadeVenci.value == "" || rsreceberDe.value == "" || rsSituacao == "" ) {
+ if ( rsValor.value == "" || rsParcelas.value == "" || rsDatadeEmissao.value == "" || rsDatadeVenci.value == "" || rsreceberDe.value == "" || rsSituacao == "" || categorias == '') {
    rsValor.style.borderColor = 'red';
    rsDatadeEmissao.style.borderColor = 'red';
    rsDatadeVenci.style.borderColor = 'red';
    rsreceberDe.style.borderColor = 'red';
+   categorias.style.borderColor = 'red'
    alert("Por favor, preencha todos os campos.");
  }
  else {
- contasAReceber.push({
-     'conta': rsConta.value, 
+  const contas = {
+    'conta': rsConta.value, 
      'valor': rsValor.value, 
      'parcelas': rsParcelas.value, 
      'datadeemissao': rsDatadeEmissao.value, 
@@ -50,7 +53,11 @@ btnCadastro.addEventListener('click', (e) => {
      'receberde': rsreceberDe.value, 
      'condicaorec': rsCondicaoRec.value, 
      'descricao': rsDescricao.value, 
-   })
+     'categoria': categorias.value
+   }
+
+   contasAReceber.push(contas)
+   localStorage.setItem('contasAReceber', JSON.stringify(contasAReceber))
 
    rsConta.value = contasAReceber.length.toString();
    
