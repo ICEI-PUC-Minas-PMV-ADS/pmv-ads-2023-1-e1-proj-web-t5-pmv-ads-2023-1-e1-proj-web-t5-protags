@@ -132,6 +132,19 @@ form.addEventListener('submit', function (e) {
 }
 )
 
+let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
+
+if (listaUser.length > 0) {
+    let ultimoUsuario = listaUser[listaUser.length - 1];
+
+    ultimoUsuario.nomeCad = user.novoNomeUsuario;
+    ultimoUsuario.usuarioCad = user.novoUsuario;
+    ultimoUsuario.senhaCad = user.confirmSenha;
+
+    localStorage.setItem('listaUser', JSON.stringify(listaUser));
+}
+
+
 function logout() {
     localStorage.removeItem('token')
     window.location.href = 'login.html'

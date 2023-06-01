@@ -19,4 +19,4 @@ document.getElementById('username').textContent = userPerfil.novoUsuario;
 document.getElementById('email').textContent = userPerfil.novoEmail;
 document.getElementById('password').textContent = userPerfil.alterarSenha;
 
-
+let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
