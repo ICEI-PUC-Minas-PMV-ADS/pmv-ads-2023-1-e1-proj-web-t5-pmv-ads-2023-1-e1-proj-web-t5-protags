@@ -131,12 +131,12 @@ function agruparCategorias(contas) {
 }
 
 
-
 // GRÁFICO DE ENTRADAS
-let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
-let categoriasValoresEntradas = agruparCategorias(contasAReceber);
-let labelsEntradas = Object.keys(categoriasValoresEntradas);
-let valoresEntradas = Object.values(categoriasValoresEntradas);
+const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+
+const categoriasValoresEntradas = agruparCategorias(contasAReceber);
+const labelsEntradas = Object.keys(categoriasValoresEntradas);
+const valoresEntradas = Object.values(categoriasValoresEntradas);
 
 const ctx = document.getElementById('myChart');
 new Chart(ctx, {
@@ -159,10 +159,13 @@ new Chart(ctx, {
 
 
 // GRÁFICO DE SAÍDAS
-let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
-let categoriasValoresSaidas = agruparCategorias(contasAPagar);
-let labelsSaidas = Object.keys(categoriasValoresSaidas);
-let valoresSaidas = Object.values(categoriasValoresSaidas);
+const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+
+const categoriasValoresSaidas = agruparCategorias(contasAPagar);
+const labelsSaidas = Object.keys(categoriasValoresSaidas);
+const valoresSaidas = Object.values(categoriasValoresSaidas);
+
+
 
 const ctx2 = document.getElementById('myChart2');
 new Chart(ctx2, {
@@ -182,5 +185,35 @@ new Chart(ctx2, {
     }
 });
 
+//const textDataFim = document.getElementById('dataFim')
+//document.getElementById('dataInicio').value
+//function filtrarData() {
+
+const txtDataInicio = '01-06-1900'
+var partesData = txtDataInicio.split("-");
+var dataInicio = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+
+
+const txtDataFim = '10-06-2023'
+var partesData2 = txtDataFim.split("-");
+var dataFim = new Date(partesData2[2], partesData2[1] - 1, partesData2[0]);
+
+let datas = []
+
+for (i = 0; i < contasAPagar.length; i++) {
+
+    var partesData = contasAPagar[i].datadevenci.split("-");
+    var dataAtual = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+   // console.log(dataAtual)
+
+    if (dataAtual >= dataInicio && dataAtual <= dataFim) {
+        console.log(dataAtual)
+        console.log('ok')
+        datas.push(contasAPagar[i].datadevenci)
+
+    }
+}
+      console.log(datas)
+//}
 
 
