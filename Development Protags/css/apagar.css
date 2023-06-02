@@ -210,3 +210,7 @@ button {
 #psConta {
     width: 70px;
 }
+
+.testediv {
+    justify-content: center;
+}
