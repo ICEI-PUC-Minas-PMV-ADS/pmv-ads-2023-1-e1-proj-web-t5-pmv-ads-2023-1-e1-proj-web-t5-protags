@@ -3,19 +3,57 @@ localStorage.setItem("valorAReceber", "250,10")
 localStorage.setItem("valorSaida", "450,20")
 localStorage.setItem("valorAPagar", "250,00")
 
+
+
+//var entradasPull = JSON.parse(localStorage.getItem('contasEntradas') || '[]');
+//var saidasPull = JSON.parse(localStorage.getItem('contasSaidas') || '[]');
+//var aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+
+/*var somaEntrada = 0;
+for (let i = 0; i < entradasPull.length; i++) {   
+    var entradasValor = entradasPull[i].valor;   
+    var entradasBRL = parseFloat(entradasValor.replace('R$', '').replace(',', '.'));   
+    somaEntrada += entradasBRL; 
+}*/
+/*var somaSaidas = 0;
+for (let i = 0; i < saidasPull.length; i++) {   
+    var saidasValor = saidasPull[i].valor;   
+    var saidasBRL = parseFloat(saidasValor.replace('R$', '').replace(',', '.'));   
+    somaSaidas += saidasBRL; 
+}*/
+/*var somaAReceber = 0;
+for (let i = 0; i < aReceberPull.length; i++) {   
+    var aReceberValor = aReceberPull[i].valor;   
+    var aReceberBRL = parseFloat(aReceberValor.replace('R$', '').replace(',', '.'));   
+    somaAReceber += aReceberBRL; 
+}*/
+
+var somaAPagar = 0;
+for (let i = 0; i < aPagarPull.length; i++) {   
+    var aPagarValor = aPagarPull[i].valor;   
+    var aPagarBRL = parseFloat(aPagarValor.replace('R$', '').replace(',', '.'));   
+    somaAPagar += aPagarBRL; 
+}
+
+
+
+
 var entradaLocalBase = localStorage.getItem("valorEntrada")
 var saidaLocalBase = localStorage.getItem("valorSaida")
 var aReceberLocalBase = localStorage.getItem("valorAReceber")
 var aPagarLocalBase = localStorage.getItem("valorAPagar")
-const entradaSaidaArray = []
+
 var entradaBase = parseFloat(entradaLocalBase.replace(",", ".")) ;
 var aReceberBase = parseFloat(aReceberLocalBase.replace(",", ".")) ;
 var saidaBase = parseFloat(saidaLocalBase.replace(".", ",")) ;
-var aPagarBase = parseFloat(aPagarLocalBase.replace(".", ",")) ; 
-entradaSaidaArray.push(entradaBase)
-entradaSaidaArray.push(aReceberBase)
-entradaSaidaArray.push(saidaBase)
-entradaSaidaArray.push(aPagarBase)
+
+//var entradasBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+//var saidasBase = somaSaidas.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+//var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+
+
 // Variáveis do formulário
 
 var data = new Date();
@@ -40,10 +78,10 @@ if (localStorage.getItem('token') === null) {
 
     window.onload = function(){
 
-        entrada.innerHTML = "R$ " + `${entradaBase}`;
-        aReceber.innerHTML = "R$ " + parseFloat(aReceberBase) ;
-        saida.innerHTML = "R$ " + parseFloat(saidaBase) ;
-        aPagar.innerHTML = "R$ " + parseFloat(aPagarBase) ;   
+        entrada.innerHTML = "R$ " + entradaBase;
+        aReceber.innerHTML = "R$ " + aReceberBase;
+        saida.innerHTML = "R$ " + saidaBase;
+        aPagar.innerHTML = "R$ " + aPagarBase;   
         
         let resultInfo = parseInt(entradaBase) - parseInt(saidaBase)
         if (resultInfo > 0){
@@ -79,23 +117,25 @@ function Filtrar() {
 
     // Grafico Tiago
 
+
     const ctx3 = document.getElementById('myChart3');
     new Chart(ctx3, {
         type: 'bar',
         data: {
             labels: [
-                'Despesas',
-                'Receitas'
+                'Receitas',
+                'Despesas'
+                
             ],
             datasets: [{
                 label: 'Movimentações financeiras',
-                data: [15,5
-                //    ...contasAReceber.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))), // Adiciona os valores existentes
-                //    ...contasAPagar.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))) // Adiciona os valores existentes
+                data: [1050.50,550//parseInt(aPagarBase)
+                
                 ],
                 backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(75, 192, 192)'
+                    'rgb(75, 192, 192)',
+                    'rgb(255, 99, 132)'
+                    
                 ],
                 hoverOffset: 4
             }]
