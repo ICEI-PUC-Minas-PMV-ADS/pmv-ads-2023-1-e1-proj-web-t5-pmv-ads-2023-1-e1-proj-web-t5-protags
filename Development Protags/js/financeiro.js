@@ -115,6 +115,31 @@ new Chart(ctx3, {
 
 // GRÁFICOS LUCAS
 
+var datas = []
+
+function filtroData() {
+    
+    var dataInicioTESTE = document.querySelector('#dataInicioTESTE').value
+    var dataFimTESTE = document.querySelector('#dataFimTESTE').value
+    
+    var partesData = dataInicioTESTE.split("-");
+    var dataInicio = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+    
+    var partesData2 = dataFimTESTE.split("-");
+    var dataFim = new Date(partesData2[2], partesData2[1] - 1, partesData2[0]);
+    
+
+    for (i = 0; i < contasAPagar.length; i++) {
+
+        var partesData = contasAPagar[i].datadevenci.split("-");
+        var dataAtual = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+
+        if (dataAtual >= dataInicio && dataAtual <= dataFim) {
+            datas.push(contasAPagar[i])
+        }
+    }
+}
+
 // Função para agrupar categorias e somar os valores correspondentes
 function agruparCategorias(contas) {
     const categoriasAgrupadas = {};
@@ -165,8 +190,6 @@ const categoriasValoresSaidas = agruparCategorias(contasAPagar);
 const labelsSaidas = Object.keys(categoriasValoresSaidas);
 const valoresSaidas = Object.values(categoriasValoresSaidas);
 
-
-
 const ctx2 = document.getElementById('myChart2');
 new Chart(ctx2, {
     type: 'bar',
@@ -185,35 +208,13 @@ new Chart(ctx2, {
     }
 });
 
-//const textDataFim = document.getElementById('dataFim')
-//document.getElementById('dataInicio').value
-//function filtrarData() {
-
-const txtDataInicio = '01-06-1900'
-var partesData = txtDataInicio.split("-");
-var dataInicio = new Date(partesData[2], partesData[1] - 1, partesData[0]);
 
 
-const txtDataFim = '10-06-2023'
-var partesData2 = txtDataFim.split("-");
-var dataFim = new Date(partesData2[2], partesData2[1] - 1, partesData2[0]);
 
-let datas = []
 
-for (i = 0; i < contasAPagar.length; i++) {
 
-    var partesData = contasAPagar[i].datadevenci.split("-");
-    var dataAtual = new Date(partesData[2], partesData[1] - 1, partesData[0]);
-   // console.log(dataAtual)
 
-    if (dataAtual >= dataInicio && dataAtual <= dataFim) {
-        console.log(dataAtual)
-        console.log('ok')
-        datas.push(contasAPagar[i].datadevenci)
 
-    }
-}
-      console.log(datas)
-//}
+
 
 
