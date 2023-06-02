@@ -60,3 +60,5 @@ btnCadastro.addEventListener('click', (e) => {
     alert("Conta cadastrada com sucesso!");
   }
 })
+
+
