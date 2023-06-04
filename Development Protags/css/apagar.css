@@ -23,6 +23,7 @@ body {
 
 #dropdownMenuButton {
     width: fit-content;
+    height: fit-content;
     background-color: #47141E;
     border-color: #47141E;
 }
@@ -52,8 +53,8 @@ body {
     height: 2.5rem;
     margin-left: 1%;
     margin-bottom: 3rem;
-    padding-left: 1%;
-    padding-top: 0.6%;
+    padding-left: 0.7rem;
+    padding-top: 0.5rem;
     color: #fff;
     border-radius: 5px;
 }
@@ -155,13 +156,17 @@ button {
         display: flex;
         padding-left: 20vw;
     }
-    #footer {
-        position: relative;
+    .titulo {
+        margin-top: 3px;
+
     }
     .pcadastrar {
         position: relative;
         top: 20px;
         left: 230px;
+    }
+    #footer {
+        position: relative;
     }
     label {
         font-size: 1.2rem;
@@ -177,10 +182,6 @@ button {
         height: 40px;
         font-size: 1rem;
     }
-}
-
-#dropMenuBtn {
-    --bs-dropdown-min-width: 5.4rem;
 }
 
 .div1 {

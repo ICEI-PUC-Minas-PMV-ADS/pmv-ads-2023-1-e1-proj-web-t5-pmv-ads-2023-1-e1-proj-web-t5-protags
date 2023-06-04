@@ -10,9 +10,13 @@ const psArquivo = document.querySelector('#psArquivo')
 const psSituacao = document.querySelector('#psSituacao')
 const btnCadastro = document.querySelector('#pregCadastrar')
 
-
 let categorias = document.querySelector('#psCategoria')
 let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar')) || [];
+
+function logout() {
+  localStorage.removeItem('token')
+  window.location.href = './login.html'
+}
 
 psArquivo.addEventListener('change', () => {a
   const reader = new FileReader()
