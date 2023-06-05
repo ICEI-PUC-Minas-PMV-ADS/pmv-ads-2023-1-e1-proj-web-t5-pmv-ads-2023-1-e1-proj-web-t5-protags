@@ -1,34 +1,29 @@
-localStorage.setItem("valorEntrada", "1050.50")
-localStorage.setItem("valorAReceber", "250,10")
-localStorage.setItem("valorSaida", "450,20")
-localStorage.setItem("valorAPagar", "250,00")
+// Modelo Padrão - Alterar depois com o certo
 
 
-
-//var entradasPull = JSON.parse(localStorage.getItem('contasEntradas') || '[]');
-//var saidasPull = JSON.parse(localStorage.getItem('contasSaidas') || '[]');
-//var aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+//var entradasPull = JSON.parse(localStorage.getItem('contasEntrada') || '[]');
+//var saidasPull = JSON.parse(localStorage.getItem('contasSaida') || '[]');
+var aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
 var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
 /*var somaEntrada = 0;
-for (let i = 0; i < entradasPull.length; i++) {   
-    var entradasValor = entradasPull[i].valor;   
-    var entradasBRL = parseFloat(entradasValor.replace('R$', '').replace(',', '.'));   
-    somaEntrada += entradasBRL; 
+for (let i = 0; i < entradaPull.length; i++) {   
+    var entradaValor = entradasPull[i].valor;   
+    var entradaBRL = parseFloat(entradasValor.replace('R$', '').replace(',', '.'));   
+    somaEntrada += entradaBRL; 
 }*/
-/*var somaSaidas = 0;
-for (let i = 0; i < saidasPull.length; i++) {   
-    var saidasValor = saidasPull[i].valor;   
-    var saidasBRL = parseFloat(saidasValor.replace('R$', '').replace(',', '.'));   
-    somaSaidas += saidasBRL; 
+/*var somaSaida = 0;
+for (let i = 0; i < saidaPull.length; i++) {   
+    var saidaValor = saidaPull[i].valor;   
+    var saidaBRL = parseFloat(saidaValor.replace('R$', '').replace(',', '.'));   
+    somaSaida += saidaBRL; 
 }*/
-/*var somaAReceber = 0;
+var somaAReceber = 0;
 for (let i = 0; i < aReceberPull.length; i++) {   
     var aReceberValor = aReceberPull[i].valor;   
     var aReceberBRL = parseFloat(aReceberValor.replace('R$', '').replace(',', '.'));   
     somaAReceber += aReceberBRL; 
-}*/
-
+}
 var somaAPagar = 0;
 for (let i = 0; i < aPagarPull.length; i++) {   
     var aPagarValor = aPagarPull[i].valor;   
@@ -37,20 +32,16 @@ for (let i = 0; i < aPagarPull.length; i++) {
 }
 
 
-
-
+localStorage.setItem("valorEntrada", "1050.50")
+localStorage.setItem("valorSaida", "450,20")
 var entradaLocalBase = localStorage.getItem("valorEntrada")
 var saidaLocalBase = localStorage.getItem("valorSaida")
-var aReceberLocalBase = localStorage.getItem("valorAReceber")
-var aPagarLocalBase = localStorage.getItem("valorAPagar")
-
 var entradaBase = parseFloat(entradaLocalBase.replace(",", ".")) ;
-var aReceberBase = parseFloat(aReceberLocalBase.replace(",", ".")) ;
 var saidaBase = parseFloat(saidaLocalBase.replace(".", ",")) ;
 
-//var entradasBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
-//var saidasBase = somaSaidas.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
-//var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+//var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+//var saidaBase = somaSaidas.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
 var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
 
 
