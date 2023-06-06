@@ -20,27 +20,27 @@ var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
 var somaEntrada = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
-    if (aReceberPull[i].situacao === "cRecebido") {   
-    var entradaValor = aReceberPull[i].valor;   
-    var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));   
-    somaEntrada += entradaBRL;
-    } 
+    if (aReceberPull[i].situacao === "cRecebido") {
+        var entradaValor = aReceberPull[i].valor;
+        var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
+        somaEntrada += entradaBRL;
+    }
 }
 var somaSaida = 0;
 for (let i = 0; i < aPagarPull.length; i++) {
-    if (aPagarPull[i].situacao === "cPago") {   
-    var saidaValor = aPagarPull[i].valor;   
-    var saidaBRL = parseFloat(saidaValor.replace('R$', '').replace(',', '.'));   
-    somaSaida += saidaBRL;
-    } 
+    if (aPagarPull[i].situacao === "cPago") {
+        var saidaValor = aPagarPull[i].valor;
+        var saidaBRL = parseFloat(saidaValor.replace('R$', '').replace(',', '.'));
+        somaSaida += saidaBRL;
+    }
 }
 var somaAReceber = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
-        if (aReceberPull[i].situacao === "caReceber") {
+    if (aReceberPull[i].situacao === "caReceber") {
         var aReceberValor = aReceberPull[i].valor;
         var aReceberBRL = parseFloat(aReceberValor.replace('R$', '').replace(',', '.'));
         somaAReceber += aReceberBRL;
-        }
+    }
 }
 var somaAPagar = 0;
 for (let i = 0; i < aPagarPull.length; i++) {
@@ -50,8 +50,8 @@ for (let i = 0; i < aPagarPull.length; i++) {
         somaAPagar += aPagarBRL;
     }
 }
-var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
-var saidaBase = somaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+var saidaBase = somaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
@@ -79,14 +79,17 @@ if (localStorage.getItem('token') === null) {
 
         let resultInfo = parseInt(entradaBase) - parseInt(saidaBase)
         if (resultInfo > 0) {
-            resultInfo1.innerHTML = `Receitas maiores que despesas`,
-                resultInfo2.innerHTML = `Saldo disponivel: R$ ${resultInfo}`,
-                resultInfo1.setAttribute('style', 'color: green'),
-                resultInfo2.setAttribute('style', 'color: green')
+            resultInfo1.innerHTML = `Receitas maiores que despesas`;
+            resultInfo2.innerHTML = `Saldo disponivel: R$ ${resultInfo}`;
+            resultInfo1.setAttribute('style', 'color: green');
+            resultInfo2.setAttribute('style', 'color: green');
+        } else if (resultInfo === 0) {
+            resultInfo1.innerHTML = `Contas zeradas ou iguais`;
+            resultInfo2.innerHTML = `Saldo disponivel: R$ ${resultInfo}`;
         } else {
-            resultInfo1.innerHTML = `Despesas maiores que receitas`,
-                resultInfo2.innerHTML = `Saldo disponivel: <b>(-)</b> R$ ${resultInfo}`,
-                resultInfo1.setAttribute('style', 'color: red')
+            resultInfo1.innerHTML = `Despesas maiores que receitas`;
+            resultInfo2.innerHTML = `Saldo disponivel: <b>(-)</b> R$ ${resultInfo}`;
+            resultInfo1.setAttribute('style', 'color: red');
         }
 
         period_info_1.innerHTML = `Periodo: ${FirstDay} até ${LastDay}`
