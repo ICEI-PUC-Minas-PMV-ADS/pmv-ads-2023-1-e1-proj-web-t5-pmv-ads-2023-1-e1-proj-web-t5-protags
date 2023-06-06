@@ -1,58 +1,61 @@
-// Modelo Padrão - Alterar depois com o certo
-
-
-//var entradasPull = JSON.parse(localStorage.getItem('contasEntrada') || '[]');
-//var saidasPull = JSON.parse(localStorage.getItem('contasSaida') || '[]');
-var aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
-var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
-
-/*var somaEntrada = 0;
-for (let i = 0; i < entradaPull.length; i++) {   
-    var entradaValor = entradasPull[i].valor;   
-    var entradaBRL = parseFloat(entradasValor.replace('R$', '').replace(',', '.'));   
-    somaEntrada += entradaBRL; 
-}*/
-/*var somaSaida = 0;
-for (let i = 0; i < saidaPull.length; i++) {   
-    var saidaValor = saidaPull[i].valor;   
-    var saidaBRL = parseFloat(saidaValor.replace('R$', '').replace(',', '.'));   
-    somaSaida += saidaBRL; 
-}*/
-var somaAReceber = 0;
-for (let i = 0; i < aReceberPull.length; i++) {   
-    var aReceberValor = aReceberPull[i].valor;   
-    var aReceberBRL = parseFloat(aReceberValor.replace('R$', '').replace(',', '.'));   
-    somaAReceber += aReceberBRL; 
-}
-var somaAPagar = 0;
-for (let i = 0; i < aPagarPull.length; i++) {   
-    var aPagarValor = aPagarPull[i].valor;   
-    var aPagarBRL = parseFloat(aPagarValor.replace('R$', '').replace(',', '.'));   
-    somaAPagar += aPagarBRL; 
-}
-
-
-localStorage.setItem("valorEntrada", "1050.50")
-localStorage.setItem("valorSaida", "450,20")
-var entradaLocalBase = localStorage.getItem("valorEntrada")
-var saidaLocalBase = localStorage.getItem("valorSaida")
-var entradaBase = parseFloat(entradaLocalBase.replace(",", ".")) ;
-var saidaBase = parseFloat(saidaLocalBase.replace(".", ",")) ;
-
-//var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
-//var saidaBase = somaSaidas.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
-var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
-var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
-
-
-// Variáveis do formulário
-
+// Data
 var data = new Date();
 var dia = String(data.getDate()).padStart(2, '0');
 var mes = String(data.getMonth() + 1).padStart(2, '0');
 var ano = data.getFullYear();
 var FirstDay = "01" + '/' + mes + '/' + ano;
-var LastDay = "31" + '/' + mes + '/' + ano;
+if (mes === "01" || mes === "03" || mes === "05" || mes === "07" || mes === "08" || mes === "10" || mes === "12") {
+    var LastDay = "31" + '/' + mes + '/' + ano;
+} else if (mes === "02") {
+    var LastDay = "28" + '/' + mes + '/' + ano;
+} else {
+    var LastDay = "30" + '/' + mes + '/' + ano;
+}
+
+
+// Modelo Padrão - Alterar depois com o certo
+
+var aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+
+var somaEntrada = 0;
+for (let i = 0; i < aReceberPull.length; i++) {
+    if (aReceberPull[i].situacao === "cRecebido") {   
+    var entradaValor = aReceberPull[i].valor;   
+    var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));   
+    somaEntrada += entradaBRL;
+    } 
+}
+var somaSaida = 0;
+for (let i = 0; i < aPagarPull.length; i++) {
+    if (aPagarPull[i].situacao === "cPago") {   
+    var saidaValor = aPagarPull[i].valor;   
+    var saidaBRL = parseFloat(saidaValor.replace('R$', '').replace(',', '.'));   
+    somaSaida += saidaBRL;
+    } 
+}
+var somaAReceber = 0;
+for (let i = 0; i < aReceberPull.length; i++) {
+        if (aReceberPull[i].situacao === "caReceber") {
+        var aReceberValor = aReceberPull[i].valor;
+        var aReceberBRL = parseFloat(aReceberValor.replace('R$', '').replace(',', '.'));
+        somaAReceber += aReceberBRL;
+        }
+}
+var somaAPagar = 0;
+for (let i = 0; i < aPagarPull.length; i++) {
+    if (aPagarPull[i].situacao === "cAPagar") {
+        var aPagarValor = aPagarPull[i].valor;
+        var aPagarBRL = parseFloat(aPagarValor.replace('R$', '').replace(',', '.'));
+        somaAPagar += aPagarBRL;
+    }
+}
+var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+var saidaBase = somaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {
@@ -72,8 +75,8 @@ if (localStorage.getItem('token') === null) {
         entrada.innerHTML = "R$ " + entradaBase;
         aReceber.innerHTML = "R$ " + aReceberBase;
         saida.innerHTML = "R$ " + saidaBase;
-        aPagar.innerHTML = "R$ " + aPagarBase;   
-        
+        aPagar.innerHTML = "R$ " + aPagarBase;
+
         let resultInfo = parseInt(entradaBase) - parseInt(saidaBase)
         if (resultInfo > 0) {
             resultInfo1.innerHTML = `Receitas maiores que despesas`,
@@ -109,33 +112,33 @@ function Filtrar() {
 // Grafico Tiago
 
 
-    const ctx3 = document.getElementById('myChart3');
-    new Chart(ctx3, {
-        type: 'bar',
-        data: {
-            labels: [
-                'Receitas',
-                'Despesas'
-                
+const ctx3 = document.getElementById('myChart3');
+new Chart(ctx3, {
+    type: 'bar',
+    data: {
+        labels: [
+            'Receitas',
+            'Despesas'
+
+        ],
+        datasets: [{
+            label: 'Movimentações financeiras',
+            data: [parseInt(entradaBase), parseInt(saidaBase)
+
             ],
-            datasets: [{
-                label: 'Movimentações financeiras',
-                data: [1050.50,550//parseInt(aPagarBase)
-                
-                ],
-                backgroundColor: [
-                    'rgb(75, 192, 192)',
-                    'rgb(255, 99, 132)'
-                    
-                ],
-                hoverOffset: 4
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false
-        }
-    });
+            backgroundColor: [
+                'rgb(75, 192, 192)',
+                'rgb(255, 99, 132)'
+
+            ],
+            hoverOffset: 4
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
+});
 
 
 

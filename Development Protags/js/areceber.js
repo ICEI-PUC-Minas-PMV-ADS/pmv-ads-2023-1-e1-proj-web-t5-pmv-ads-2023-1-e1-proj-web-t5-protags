@@ -52,7 +52,8 @@ btnCadastro.addEventListener('click', (e) => {
      'datadevenci': rsDatadeVenci.value, 
      'receberde': rsreceberDe.value, 
      'condicaorec': rsCondicaoRec.value, 
-     'descricao': rsDescricao.value, 
+     'descricao': rsDescricao.value,
+     'situacao': rsSituacao.value, 
      'categoria': categorias.value
    }
 

@@ -43,7 +43,8 @@ btnCadastro.addEventListener('click', (e) => {
       'datadevenci': psDatadeVenci.value, 
       'pagarpara': psPagarPara.value, 
       'condicaopag': psCondicaoPag.value, 
-      'descricao': psDescricao.value, 
+      'descricao': psDescricao.value,
+      'situacao': psSituacao.value, 
       'categoria': categorias.value
   }
   contasAPagar.push(contas)
