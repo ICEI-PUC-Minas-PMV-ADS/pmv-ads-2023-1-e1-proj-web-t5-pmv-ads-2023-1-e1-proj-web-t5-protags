@@ -52,7 +52,6 @@ body {
     width: 8.5rem;
     height: 2.5rem;
     margin-left: 1%;
-    margin-bottom: 3rem;
     padding-left: 0.7rem;
     padding-top: 0.5rem;
     color: #fff;
@@ -138,6 +137,16 @@ button {
     height: 2.3rem;
     font-size: 20px;
     border: 1px solid gray;
+}
+
+#pvisualizarArquivo {
+    font-size: 1.9vh;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 2px;
+    width: 8vw;
+    height: 5vh;
 }
 
 

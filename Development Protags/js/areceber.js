@@ -18,14 +18,11 @@ function logout() {
   window.location.href = './login.html'
 }
 
-rsArquivo.addEventListener('change', () => {
-  const reader = new FileReader()
-
-  reader.addEventListener('load', () => {
-    localStorage.setItem('recent-image', reader.result)
-  })
-  reader.readAsDataURL(rsArquivo.files[0])
-})
+function rvisualizar() {
+  const file = rsArquivo.files[0];
+  const source = URL.createObjectURL(file);
+  window.open(source)
+}
 
 rsArquivo.addEventListener('change', () => {
   const reader = new FileReader();
@@ -57,7 +54,9 @@ btnCadastro.addEventListener('click', (e) => {
      'receberde': rsreceberDe.value, 
      'condicaorec': rsCondicaoRec.value, 
      'descricao': rsDescricao.value, 
-     'categoria': categorias.value
+     'categoria': categorias.value,
+     'situacao': rsSituacao.value,
+     'arquivo-areceber': rsArquivo.files,
    }
 
    contasAReceber.push(contas)
