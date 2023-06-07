@@ -19,13 +19,18 @@ var aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
 var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
 var somaEntrada = 0;
+var dataEntrada = '';
 for (let i = 0; i < aReceberPull.length; i++) {
-    if (aReceberPull[i].situacao === "cRecebido") {
+
+    var dataAReceber = aReceberPull[i].datadevenci;    
+    var dataEntrada = dataAReceber;
+
+    if (aReceberPull[i].situacao === "cRecebido" /*&& FirstDay < dataEntrada > LastDay */ ) {
         var entradaValor = aReceberPull[i].valor;
         var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
         somaEntrada += entradaBRL;
     }
-}
+}//
 var somaSaida = 0;
 for (let i = 0; i < aPagarPull.length; i++) {
     if (aPagarPull[i].situacao === "cPago") {
@@ -54,8 +59,8 @@ var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2
 var saidaBase = somaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-
-
+var resultEntradaSaida = somaEntrada - somaSaida
+var resultDiferença = resultEntradaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {
@@ -77,18 +82,17 @@ if (localStorage.getItem('token') === null) {
         saida.innerHTML = "R$ " + saidaBase;
         aPagar.innerHTML = "R$ " + aPagarBase;
 
-        let resultInfo = parseInt(entradaBase) - parseInt(saidaBase)
-        if (resultInfo > 0) {
+        if (resultEntradaSaida > 0) {
             resultInfo1.innerHTML = `Receitas maiores que despesas`;
-            resultInfo2.innerHTML = `Saldo disponivel: R$ ${resultInfo}`;
+            resultInfo2.innerHTML = `Saldo Liquido Mês: R$ ${resultDiferença}`;
             resultInfo1.setAttribute('style', 'color: green');
             resultInfo2.setAttribute('style', 'color: green');
-        } else if (resultInfo === 0) {
+        } else if (resultEntradaSaida === 0) {
             resultInfo1.innerHTML = `Contas zeradas ou iguais`;
-            resultInfo2.innerHTML = `Saldo disponivel: R$ ${resultInfo}`;
+            resultInfo2.innerHTML = `Saldo disponivel: R$ ${resultDiferença}`;
         } else {
             resultInfo1.innerHTML = `Despesas maiores que receitas`;
-            resultInfo2.innerHTML = `Saldo disponivel: <b>(-)</b> R$ ${resultInfo}`;
+            resultInfo2.innerHTML = `Saldo disponivel: <b>(-)</b> R$ ${resultDiferença}`;
             resultInfo1.setAttribute('style', 'color: red');
         }
 
