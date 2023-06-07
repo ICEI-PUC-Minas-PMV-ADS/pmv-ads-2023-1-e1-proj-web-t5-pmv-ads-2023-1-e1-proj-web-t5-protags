@@ -104,3 +104,25 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
 | Passo 4 | Apertar a tecla "Enter" |
 | Resultado | Após o usuário apertar a tecla "Enter", o valor novo é colocado no lugar do valor anterior. |
 | Caso especial | Não se aplica. |
+
+### Tela de configuração
+ | Caso de teste | Cadastro e alterações de informação do usuário |
+ | --------------- | -------------------------- |
+ | Requisitos Associados | RF-014 - Permitir que o usuário cadastre, visualize, altere e exclua informações |
+ | Objetivo do teste | Verificar se as configurações estão sendo salvas |
+ | Passo 1 | Acessar a tela de configuração |
+ | Passo 2 | Preencher todos os campos com as informações necessárias |
+ | Passo 3 | Clicar no botão "Salvar Alterações" |
+ | Critérios de Êxito | Deverá apresentar um "alert" dizendo que as informações foram salvas com sucesso e o redireciona para a tela de perfil. |
+
+### Tela de perfil
+ | Caso de teste | Visualização das informações cadastradas pelo usuário |
+ | --------------- | -------------------------- |
+ | Requisitos Associados | RF-014 - Permitir que o usuário cadastre, visualize, altere e exclua informações |
+ | Objetivo do teste | Verificar se informações cadastradas pelo usuário estão sendo mostradas corretamente|
+ | Passo 1 | Acessar a tela de perfil |
+ | Passo 2 | Visualizar se as informações, e clicar em editar se necessário|
+ | Passo 3 | Clicar no botão "Salvar Alterações" |
+ | Critérios de Êxito | Deverá exibir as informações que foram cadastradas na página de registro, ou alteradas/adicionadas na página de configuração. |
+ 
+
