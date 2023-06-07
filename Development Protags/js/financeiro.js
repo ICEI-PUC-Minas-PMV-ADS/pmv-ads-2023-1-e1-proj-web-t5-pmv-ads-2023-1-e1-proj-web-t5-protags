@@ -111,33 +111,107 @@ new Chart(ctx3, {
 
 
 
-
-
 // GRÁFICOS LUCAS
+const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
-var datas = []
+let chartEntradas; // Variável para armazenar o gráfico de entradas
+let chartSaidas; // Variável para armazenar o gráfico de saídas
+
+
+// Função para atualizar os gráficos de entradas e saídas com base nos dados filtrados
+function atualizarGraficosFiltrados() {
+    // Destruir gráficos existentes
+    if (chartEntradas) {
+        chartEntradas.destroy();
+    }
+    if (chartSaidas) {
+        chartSaidas.destroy();
+    }
+    // Atualizar gráfico de entradas
+    const categoriasValoresEntradasFiltrados = agruparCategorias(datas);
+    const labelsEntradasFiltrados = Object.keys(categoriasValoresEntradasFiltrados);
+    const valoresEntradasFiltrados = Object.values(categoriasValoresEntradasFiltrados);
+
+    const ctx = document.getElementById('myChart');
+    chartEntradas = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labelsEntradasFiltrados,
+            datasets: [{
+                label: 'Entradas',
+                data: valoresEntradasFiltrados,
+                backgroundColor: 'rgb(75, 192, 192)',
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Atualizar gráfico de saídas
+    const categoriasValoresSaidasFiltrados = agruparCategorias(contasAPagar);
+    const labelsSaidasFiltrados = Object.keys(categoriasValoresSaidasFiltrados);
+    const valoresSaidasFiltrados = Object.values(categoriasValoresSaidasFiltrados);
+
+    const ctx2 = document.getElementById('myChart2');
+    chartSaidas = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: labelsSaidasFiltrados,
+            datasets: [{
+                label: 'Saídas',
+                data: valoresSaidasFiltrados,
+                backgroundColor: 'rgb(255, 99, 132)',
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+}
+
+
+let datas = [];
 
 function filtroData() {
-    
-    var dataInicioTESTE = document.querySelector('#dataInicioTESTE').value
-    var dataFimTESTE = document.querySelector('#dataFimTESTE').value
-    
-    var partesData = dataInicioTESTE.split("-");
-    var dataInicio = new Date(partesData[2], partesData[1] - 1, partesData[0]);
-    
-    var partesData2 = dataFimTESTE.split("-");
-    var dataFim = new Date(partesData2[2], partesData2[1] - 1, partesData2[0]);
-    
+    datas = []; // Redefinir o array antes do filtro
 
-    for (i = 0; i < contasAPagar.length; i++) {
+    let dataInicioTESTE = document.querySelector('#dataInicioTESTE').value;
+    let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
 
-        var partesData = contasAPagar[i].datadevenci.split("-");
-        var dataAtual = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+    let partesData = dataInicioTESTE.split("-");
+    let dataInicio = new Date(partesData[0], partesData[1] - 1, partesData[2]);
 
-        if (dataAtual >= dataInicio && dataAtual <= dataFim) {
-            datas.push(contasAPagar[i])
+    let partesData2 = dataFimTESTE.split("-");
+    let dataFim = new Date(partesData2[0], partesData2[1] - 1, partesData2[2]);
+
+    for (let i = 0; i < contasAPagar.length; i++) {
+
+        let partesDataAPagar = contasAPagar[i].datadevenci.split("-");
+        let dataContaPagar = new Date(partesDataAPagar[0], partesDataAPagar[1] - 1, partesDataAPagar[2]);
+        console.log(dataContaPagar)
+        for (let j = 0; j < contasAReceber.length; j++) {
+            let partesDataAReceber = contasAReceber[j].datadevenci.split("-");
+            let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
+            console.log(dataContaReceber)
+
+
+            if (dataContaPagar >= dataInicio && dataContaPagar <= dataFim) {
+                datas.push(contasAPagar[i]);
+            }
+
+            else if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
+                datas.push(contasAReceber[j]);
+            }
         }
     }
+    //console.log(datas); // Exibir os dados filtrados no console
+    atualizarGraficosFiltrados();
 }
 
 // Função para agrupar categorias e somar os valores correspondentes
@@ -157,7 +231,7 @@ function agruparCategorias(contas) {
 
 
 // GRÁFICO DE ENTRADAS
-const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+
 
 const categoriasValoresEntradas = agruparCategorias(contasAReceber);
 const labelsEntradas = Object.keys(categoriasValoresEntradas);
@@ -184,7 +258,6 @@ new Chart(ctx, {
 
 
 // GRÁFICO DE SAÍDAS
-const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
 const categoriasValoresSaidas = agruparCategorias(contasAPagar);
 const labelsSaidas = Object.keys(categoriasValoresSaidas);
@@ -207,14 +280,3 @@ new Chart(ctx2, {
         maintainAspectRatio: false
     }
 });
-
-
-
-
-
-
-
-
-
-
-
