@@ -1,4 +1,3 @@
-
 const userPerfil = JSON.parse(localStorage.getItem('user'));
 let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
 
@@ -30,7 +29,6 @@ function myFunction() {
     } else if (!userPerfil.alterarSenha || userPerfil.alterarSenha == "") {
         password.textContent = listaUser[0].senhaCad
     }
-
 }
 
 // // // ---------------------------------------------------
@@ -53,9 +51,6 @@ function mostrarSenha() {
         btnShowPass.classList.replace('bi-eye-slash', 'bi-eye');
     }
 }
-
-
-
 
 function mostrarSenhaAdm() {
     var inputPass = document.getElementById('adminPassword');
