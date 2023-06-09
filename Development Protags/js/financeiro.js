@@ -108,30 +108,65 @@ new Chart(ctx3, {
 
 
 
-
-
-
 // GRÁFICOS LUCAS
 const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
 const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
-let chartEntradas; // Variável para armazenar o gráfico de entradas
-let chartSaidas; // Variável para armazenar o gráfico de saídas
+let datas = []
+
+function filtroData() {
+    datas = []; // Redefinir o array antes do filtro
+
+    let dataInicioTESTE = document.querySelector('#dataInicioTESTE').value;
+    let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
+
+    let partesData = dataInicioTESTE.split("-");
+    let dataInicio = new Date(partesData[0], partesData[1] - 1, partesData[2]);
+
+    let partesData2 = dataFimTESTE.split("-");
+    let dataFim = new Date(partesData2[0], partesData2[1] - 1, partesData2[2]);
+
+    for (let i = 0; i < contasAPagar.length; i++) {
+
+        let partesDataAPagar = contasAPagar[i].datadevenci.split("-");
+        let dataContaPagar = new Date(partesDataAPagar[0], partesDataAPagar[1] - 1, partesDataAPagar[2]);
+
+        for (let j = 0; j < contasAReceber.length; j++) {
+            let partesDataAReceber = contasAReceber[j].datadevenci.split("-");
+            let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
+
+            if (dataContaPagar >= dataInicio && dataContaPagar <= dataFim) {
+                datas.push(contasAPagar[i]);
+            } else if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
+                datas.push(contasAReceber[j]);
+            }
+        }
+    }
+    console.log(datas); // Exibir os dados filtrados no console
+    atualizarGraficosFiltrados();
+}
+
+
+// Variáveis para os gráficos
+let chartEntradas = document.getElementById('myChart')
+let chartSaidas = document.getElementById('myChart2')
 
 
 // Função para atualizar os gráficos de entradas e saídas com base nos dados filtrados
 function atualizarGraficosFiltrados() {
     // Destruir gráficos existentes
     if (chartEntradas) {
-        chartEntradas.destroy();
+        chartEntradas.destroy()
+        
+    } else if (chartSaidas) {
+        chartSaidas.destroy()
     }
-    if (chartSaidas) {
-        chartSaidas.destroy();
-    }
-    // Atualizar gráfico de entradas
+
+    // Passar os dados filtrados para a função agruparCategorias
     const categoriasValoresEntradasFiltrados = agruparCategorias(datas);
     const labelsEntradasFiltrados = Object.keys(categoriasValoresEntradasFiltrados);
     const valoresEntradasFiltrados = Object.values(categoriasValoresEntradasFiltrados);
+
 
     const ctx = document.getElementById('myChart');
     chartEntradas = new Chart(ctx, {
@@ -152,7 +187,7 @@ function atualizarGraficosFiltrados() {
     });
 
     // Atualizar gráfico de saídas
-    const categoriasValoresSaidasFiltrados = agruparCategorias(contasAPagar);
+    const categoriasValoresSaidasFiltrados = agruparCategorias(datas);
     const labelsSaidasFiltrados = Object.keys(categoriasValoresSaidasFiltrados);
     const valoresSaidasFiltrados = Object.values(categoriasValoresSaidasFiltrados);
 
@@ -176,44 +211,6 @@ function atualizarGraficosFiltrados() {
 }
 
 
-let datas = [];
-
-function filtroData() {
-    datas = []; // Redefinir o array antes do filtro
-
-    let dataInicioTESTE = document.querySelector('#dataInicioTESTE').value;
-    let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
-
-    let partesData = dataInicioTESTE.split("-");
-    let dataInicio = new Date(partesData[0], partesData[1] - 1, partesData[2]);
-
-    let partesData2 = dataFimTESTE.split("-");
-    let dataFim = new Date(partesData2[0], partesData2[1] - 1, partesData2[2]);
-
-    for (let i = 0; i < contasAPagar.length; i++) {
-
-        let partesDataAPagar = contasAPagar[i].datadevenci.split("-");
-        let dataContaPagar = new Date(partesDataAPagar[0], partesDataAPagar[1] - 1, partesDataAPagar[2]);
-        console.log(dataContaPagar)
-        for (let j = 0; j < contasAReceber.length; j++) {
-            let partesDataAReceber = contasAReceber[j].datadevenci.split("-");
-            let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
-            console.log(dataContaReceber)
-
-
-            if (dataContaPagar >= dataInicio && dataContaPagar <= dataFim) {
-                datas.push(contasAPagar[i]);
-            }
-
-            else if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
-                datas.push(contasAReceber[j]);
-            }
-        }
-    }
-    //console.log(datas); // Exibir os dados filtrados no console
-    atualizarGraficosFiltrados();
-}
-
 // Função para agrupar categorias e somar os valores correspondentes
 function agruparCategorias(contas) {
     const categoriasAgrupadas = {};
@@ -231,7 +228,6 @@ function agruparCategorias(contas) {
 
 
 // GRÁFICO DE ENTRADAS
-
 
 const categoriasValoresEntradas = agruparCategorias(contasAReceber);
 const labelsEntradas = Object.keys(categoriasValoresEntradas);
