@@ -173,11 +173,13 @@ const chartSaidas = new Chart(ctx2, {
 });
 
 // FILTRO DE DATAS
-
-let datas = []
+let contasAPagarFiltradas = [];
+let contasAReceberFiltradas = [];
 
 function filtroData() {
-    datas = [];
+    contasAPagarFiltradas = [];
+    contasAReceberFiltradas = [];
+
     let dataInicioTESTE = document.querySelector('#dataInicioTESTE').value;
     let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
 
@@ -192,7 +194,7 @@ function filtroData() {
         let dataContaPagar = new Date(partesDataAPagar[0], partesDataAPagar[1] - 1, partesDataAPagar[2]);
 
         if (dataContaPagar >= dataInicio && dataContaPagar <= dataFim) {
-            datas.push(contasAPagar[i]);
+            contasAPagarFiltradas.push(contasAPagar[i]);
         }
     }
 
@@ -201,17 +203,18 @@ function filtroData() {
         let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
 
         if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
-            datas.push(contasAReceber[i]);
+            contasAReceberFiltradas.push(contasAReceber[i]);
         }
     }
 
-    console.log(datas); // Exibir os dados filtrados no console
+    console.log(contasAPagarFiltradas); // Exibir os dados filtrados de contasAPagar no console
+    console.log(contasAReceberFiltradas); // Exibir os dados filtrados de contasAReceber no console
     atualizarGraficosFiltrados();
 }
 
 function atualizarGraficosFiltrados() {
     // Atualizar gráfico de entradas
-    const categoriasValoresEntradasFiltrados = agruparCategorias(datas);
+    const categoriasValoresEntradasFiltrados = agruparCategorias(contasAReceberFiltradas);
     const labelsEntradasFiltrados = Object.keys(categoriasValoresEntradasFiltrados);
     const valoresEntradasFiltrados = Object.values(categoriasValoresEntradasFiltrados);
 
@@ -220,7 +223,7 @@ function atualizarGraficosFiltrados() {
     chartEntradas.update();
 
     // Atualizar gráfico de saídas
-    const categoriasValoresSaidasFiltrados = agruparCategorias(datas);
+    const categoriasValoresSaidasFiltrados = agruparCategorias(contasAPagarFiltradas);
     const labelsSaidasFiltrados = Object.keys(categoriasValoresSaidasFiltrados);
     const valoresSaidasFiltrados = Object.values(categoriasValoresSaidasFiltrados);
 
