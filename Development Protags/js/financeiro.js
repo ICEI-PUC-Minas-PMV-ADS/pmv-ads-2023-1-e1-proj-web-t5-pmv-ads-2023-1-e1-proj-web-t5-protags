@@ -142,7 +142,10 @@ new Chart(ctx3, {
 
 
 
-// Função para agrupar categorias e somar os valores correspondentes
+// GRÁFICOS LUCAS
+const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+
 function agruparCategorias(contas) {
     const categoriasAgrupadas = {};
     contas.forEach(conta => {
@@ -157,14 +160,13 @@ function agruparCategorias(contas) {
     return categoriasAgrupadas;
 }
 
-// GRÁFICO DE ENTRADAS
-let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
-let categoriasValoresEntradas = agruparCategorias(contasAReceber);
-let labelsEntradas = Object.keys(categoriasValoresEntradas);
-let valoresEntradas = Object.values(categoriasValoresEntradas);
+// Gráfico de Entradas
+const categoriasValoresEntradas = agruparCategorias(contasAReceber);
+const labelsEntradas = Object.keys(categoriasValoresEntradas);
+const valoresEntradas = Object.values(categoriasValoresEntradas);
 
-const ctx = document.getElementById('myChart');
-new Chart(ctx, {
+const ctx = document.getElementById('myChart').getContext('2d');
+const chartEntradas = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: labelsEntradas,
@@ -181,14 +183,13 @@ new Chart(ctx, {
     }
 });
 
-// GRÁFICO DE SAÍDAS
-let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
-let categoriasValoresSaidas = agruparCategorias(contasAPagar);
-let labelsSaidas = Object.keys(categoriasValoresSaidas);
-let valoresSaidas = Object.values(categoriasValoresSaidas);
+// Gráfico de Saídas
+const categoriasValoresSaidas = agruparCategorias(contasAPagar);
+const labelsSaidas = Object.keys(categoriasValoresSaidas);
+const valoresSaidas = Object.values(categoriasValoresSaidas);
 
-const ctx2 = document.getElementById('myChart2');
-new Chart(ctx2, {
+const ctx2 = document.getElementById('myChart2').getContext('2d');
+const chartSaidas = new Chart(ctx2, {
     type: 'bar',
     data: {
         labels: labelsSaidas,
@@ -205,5 +206,62 @@ new Chart(ctx2, {
     }
 });
 
+// FILTRO DE DATAS
+let contasAPagarFiltradas = [];
+let contasAReceberFiltradas = [];
 
+function filtroData() {
+    contasAPagarFiltradas = [];
+    contasAReceberFiltradas = [];
 
+    let dataInicioTESTE = document.querySelector('#dataInicioTESTE').value;
+    let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
+
+    let partesData = dataInicioTESTE.split("-");
+    let dataInicio = new Date(partesData[0], partesData[1] - 1, partesData[2]);
+
+    let partesData2 = dataFimTESTE.split("-");
+    let dataFim = new Date(partesData2[0], partesData2[1] - 1, partesData2[2]);
+
+    for (let i = 0; i < contasAPagar.length; i++) {
+        let partesDataAPagar = contasAPagar[i].datadevenci.split("-");
+        let dataContaPagar = new Date(partesDataAPagar[0], partesDataAPagar[1] - 1, partesDataAPagar[2]);
+
+        if (dataContaPagar >= dataInicio && dataContaPagar <= dataFim) {
+            contasAPagarFiltradas.push(contasAPagar[i]);
+        }
+    }
+
+    for (let i = 0; i < contasAReceber.length; i++) {
+        let partesDataAReceber = contasAReceber[i].datadevenci.split("-");
+        let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
+
+        if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
+            contasAReceberFiltradas.push(contasAReceber[i]);
+        }
+    }
+
+    console.log(contasAPagarFiltradas); // Exibir os dados filtrados de contasAPagar no console
+    console.log(contasAReceberFiltradas); // Exibir os dados filtrados de contasAReceber no console
+    atualizarGraficosFiltrados();
+}
+
+function atualizarGraficosFiltrados() {
+    // Atualizar gráfico de entradas
+    const categoriasValoresEntradasFiltrados = agruparCategorias(contasAReceberFiltradas);
+    const labelsEntradasFiltrados = Object.keys(categoriasValoresEntradasFiltrados);
+    const valoresEntradasFiltrados = Object.values(categoriasValoresEntradasFiltrados);
+
+    chartEntradas.data.labels = labelsEntradasFiltrados;
+    chartEntradas.data.datasets[0].data = valoresEntradasFiltrados;
+    chartEntradas.update();
+
+    // Atualizar gráfico de saídas
+    const categoriasValoresSaidasFiltrados = agruparCategorias(contasAPagarFiltradas);
+    const labelsSaidasFiltrados = Object.keys(categoriasValoresSaidasFiltrados);
+    const valoresSaidasFiltrados = Object.values(categoriasValoresSaidasFiltrados);
+
+    chartSaidas.data.labels = labelsSaidasFiltrados;
+    chartSaidas.data.datasets[0].data = valoresSaidasFiltrados;
+    chartSaidas.update();
+}
