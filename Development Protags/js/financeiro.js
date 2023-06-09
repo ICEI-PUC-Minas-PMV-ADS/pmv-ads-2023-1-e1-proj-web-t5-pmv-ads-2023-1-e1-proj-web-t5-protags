@@ -1,29 +1,61 @@
-localStorage.setItem("valorEntrada", "1050.50")
-localStorage.setItem("valorAReceber", "250,10")
-localStorage.setItem("valorSaida", "450,20")
-localStorage.setItem("valorAPagar", "250,00")
-
-var entradaLocalBase = localStorage.getItem("valorEntrada")
-var saidaLocalBase = localStorage.getItem("valorSaida")
-var aReceberLocalBase = localStorage.getItem("valorAReceber")
-var aPagarLocalBase = localStorage.getItem("valorAPagar")
-const entradaSaidaArray = []
-var entradaBase = parseFloat(entradaLocalBase.replace(",", "."));
-var aReceberBase = parseFloat(aReceberLocalBase.replace(",", "."));
-var saidaBase = parseFloat(saidaLocalBase.replace(".", ","));
-var aPagarBase = parseFloat(aPagarLocalBase.replace(".", ","));
-entradaSaidaArray.push(entradaBase)
-entradaSaidaArray.push(aReceberBase)
-entradaSaidaArray.push(saidaBase)
-entradaSaidaArray.push(aPagarBase)
-// Variáveis do formulário
-
+// Data
 var data = new Date();
 var dia = String(data.getDate()).padStart(2, '0');
 var mes = String(data.getMonth() + 1).padStart(2, '0');
 var ano = data.getFullYear();
 var FirstDay = "01" + '/' + mes + '/' + ano;
-var LastDay = "31" + '/' + mes + '/' + ano;
+if (mes === "01" || mes === "03" || mes === "05" || mes === "07" || mes === "08" || mes === "10" || mes === "12") {
+    var LastDay = "31" + '/' + mes + '/' + ano;
+} else if (mes === "02") {
+    var LastDay = "28" + '/' + mes + '/' + ano;
+} else {
+    var LastDay = "30" + '/' + mes + '/' + ano;
+}
+
+
+// Modelo Padrão - Alterar depois com o certo
+
+var aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+
+var somaEntrada = 0;
+for (let i = 0; i < aReceberPull.length; i++) {
+    if (aReceberPull[i].situacao === "cRecebido") {   
+    var entradaValor = aReceberPull[i].valor;   
+    var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));   
+    somaEntrada += entradaBRL;
+    } 
+}
+var somaSaida = 0;
+for (let i = 0; i < aPagarPull.length; i++) {
+    if (aPagarPull[i].situacao === "cPago") {   
+    var saidaValor = aPagarPull[i].valor;   
+    var saidaBRL = parseFloat(saidaValor.replace('R$', '').replace(',', '.'));   
+    somaSaida += saidaBRL;
+    } 
+}
+var somaAReceber = 0;
+for (let i = 0; i < aReceberPull.length; i++) {
+        if (aReceberPull[i].situacao === "caReceber") {
+        var aReceberValor = aReceberPull[i].valor;
+        var aReceberBRL = parseFloat(aReceberValor.replace('R$', '').replace(',', '.'));
+        somaAReceber += aReceberBRL;
+        }
+}
+var somaAPagar = 0;
+for (let i = 0; i < aPagarPull.length; i++) {
+    if (aPagarPull[i].situacao === "cAPagar") {
+        var aPagarValor = aPagarPull[i].valor;
+        var aPagarBRL = parseFloat(aPagarValor.replace('R$', '').replace(',', '.'));
+        somaAPagar += aPagarBRL;
+    }
+}
+var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+var saidaBase = somaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {
@@ -40,10 +72,10 @@ if (localStorage.getItem('token') === null) {
 
     window.onload = function () {
 
-        entrada.innerHTML = "R$ " + `${entradaBase}`;
-        aReceber.innerHTML = "R$ " + parseFloat(aReceberBase);
-        saida.innerHTML = "R$ " + parseFloat(saidaBase);
-        aPagar.innerHTML = "R$ " + parseFloat(aPagarBase);
+        entrada.innerHTML = "R$ " + entradaBase;
+        aReceber.innerHTML = "R$ " + aReceberBase;
+        saida.innerHTML = "R$ " + saidaBase;
+        aPagar.innerHTML = "R$ " + aPagarBase;
 
         let resultInfo = parseInt(entradaBase) - parseInt(saidaBase)
         if (resultInfo > 0) {
@@ -79,23 +111,25 @@ function Filtrar() {
 
 // Grafico Tiago
 
+
 const ctx3 = document.getElementById('myChart3');
 new Chart(ctx3, {
     type: 'bar',
     data: {
         labels: [
-            'Despesas',
-            'Receitas'
+            'Receitas',
+            'Despesas'
+
         ],
         datasets: [{
             label: 'Movimentações financeiras',
-            data: [15, 5
-                //    ...contasAReceber.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))), // Adiciona os valores existentes
-                //    ...contasAPagar.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))) // Adiciona os valores existentes
+            data: [parseInt(entradaBase), parseInt(saidaBase)
+
             ],
             backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(75, 192, 192)'
+                'rgb(75, 192, 192)',
+                'rgb(255, 99, 132)'
+
             ],
             hoverOffset: 4
         }]
