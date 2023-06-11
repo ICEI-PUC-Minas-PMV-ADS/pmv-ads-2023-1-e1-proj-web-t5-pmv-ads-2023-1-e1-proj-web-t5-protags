@@ -110,7 +110,6 @@ function cadastrar() {
             nomeCad: nome.value,
             usuarioCad: usuario.value,
             senhaCad: senha.value,
-
         })
 
         localStorage.setItem('listaUser', JSON.stringify(listaUser))
