@@ -71,10 +71,15 @@ if (localStorage.getItem('token') === null) {
             const excluir = document.getElementById('deleteIcon');
 
             excluir.addEventListener('click', () => {
-                listEv = listEv.filter(ev => ev.id !== evento.id);
-                localStorage.setItem('listEv', JSON.stringify(listEv));
-                const cardToRemove = document.getElementById(eventId);
-                cardToRemove.parentNode.removeChild(cardToRemove);
+                let confirmar = confirm('Tem certeza de que deseja excluir?')
+
+                if (confirmar === true) {
+                    alert('Excluído com sucesso')
+                    listEv = listEv.filter(ev => ev.id !== evento.id);
+                    localStorage.setItem('listEv', JSON.stringify(listEv));
+                    const cardToRemove = document.getElementById(eventId);
+                    cardToRemove.parentNode.removeChild(cardToRemove);
+                } else { }
             });
 
             // Evento de click adicionado no botão de Editar 
@@ -147,7 +152,7 @@ function editEvento(listEv, eventoEditado, eventId) {
     }
 
     localStorage.setItem('listEv', JSON.stringify(listEv));
-    alert('Evento cadastrado com sucesso!')
+    alert('Evento alterado com sucesso!')
     sideModalTLInfo.style.display = 'none';
     sideModalTLInfo.classList.remove('show');
     document.body.classList.remove('modal-open');
