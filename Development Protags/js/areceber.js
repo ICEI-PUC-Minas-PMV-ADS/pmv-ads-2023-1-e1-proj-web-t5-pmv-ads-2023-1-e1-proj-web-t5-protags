@@ -14,7 +14,9 @@ let categorias = document.querySelector('#psCategoria')
 let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber')) || [];
 
 rsConta.value = contasAReceber.length.toString();
-rsConta.value++;
+let rvalorIncrementado = rsConta.value;
+rvalorIncrementado++;
+rsConta.value = rvalorIncrementado;
 
 function logout() {
   localStorage.removeItem('token')

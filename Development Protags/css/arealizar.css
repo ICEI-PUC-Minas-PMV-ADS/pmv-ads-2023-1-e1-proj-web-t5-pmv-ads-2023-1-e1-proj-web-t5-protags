@@ -54,6 +54,7 @@ background-color: green;
 }
 
 #menuUrgentes {
+    display: none;
     position: absolute;
     right: 1%;
     background-color: white;
@@ -63,6 +64,7 @@ background-color: green;
     border: 2px solid gray;
     border-radius: 5px;
     z-index: 1;
+    overflow: auto;
 }
 
 .urgentesBorda {
@@ -80,6 +82,10 @@ background-color: green;
 
 .urgentesDataDeVenci {
     font-size: 18px;
+}
+
+.urgentesValor, .urgentesParcelas, .urgentesPagarPara {
+    font-size: 15px;
 }
 
 .logopng {

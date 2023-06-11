@@ -16,7 +16,9 @@ let categorias = document.querySelector('#psCategoria');
 let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar')) || [];
 
 psConta.value = contasAPagar.length.toString();
-psConta.value++;
+let pvalorIncrementado = psConta.value;
+pvalorIncrementado++;
+psConta.value = pvalorIncrementado;
 
 function logout() {
   localStorage.removeItem('token')
