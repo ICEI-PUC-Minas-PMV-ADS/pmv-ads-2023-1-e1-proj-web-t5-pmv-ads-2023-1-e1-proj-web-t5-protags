@@ -1,3 +1,12 @@
+// var user = {
+//     name: "Aline",
+//     // email: "aline@gmail.com",
+//     nomeEmpresa: "Protags",
+//     // cnpj: "123.123.123/1234-12",
+//     adminPassword: "admin123",
+//     username: "aline123",
+//     password: "password123"
+// };
 
 //Variáveis por ID
 let estruturaGrafico = document.getElementById('infosGrafico')
