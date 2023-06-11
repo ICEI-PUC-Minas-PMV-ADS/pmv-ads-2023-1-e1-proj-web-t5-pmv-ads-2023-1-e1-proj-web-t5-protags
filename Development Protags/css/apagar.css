@@ -6,7 +6,10 @@
 
 body {
     font-family: sans-serif;
-}
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set the body to take up the full height of the viewport */
+  }
 
 .navbar-toggler-icon {
     filter: brightness(0) invert(1);
@@ -15,11 +18,12 @@ body {
 }
 
 .header {
+    position: relative;
     height: 11rem;
     min-height: 12vh;
     width: 100vw !important;
     background-color: #47141e;
-}
+  }
 
 #dropdownMenuButton {
     width: fit-content;
@@ -174,6 +178,8 @@ button {
         top: 20px;
         left: 230px;
     }
+    #dropdownMenuButton {
+    }
     #footer {
         position: relative;
     }
@@ -221,6 +227,14 @@ button {
     width: 70px;
 }
 
+#navbarSupportedContent {
+    border: 1px solid #47141E;
+}
+
+.navbar-nav {
+    background-color: #47141E;
+    margin-left: 100px;
+}
 .testediv {
     justify-content: center;
 }
