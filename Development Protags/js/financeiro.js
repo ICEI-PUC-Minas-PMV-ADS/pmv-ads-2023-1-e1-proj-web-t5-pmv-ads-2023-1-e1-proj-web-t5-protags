@@ -21,16 +21,15 @@ var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 var somaEntrada = 0;
 var dataEntrada = '';
 for (let i = 0; i < aReceberPull.length; i++) {
-
     var dataAReceber = aReceberPull[i].datadevenci;    
     var dataEntrada = dataAReceber;
 
-    if (aReceberPull[i].situacao === "cRecebido" /*&& FirstDay < dataEntrada > LastDay */ ) {
+    if (aReceberPull[i].situacao === "cRecebido") {
         var entradaValor = aReceberPull[i].valor;
         var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
         somaEntrada += entradaBRL;
     }
-}//
+}
 var somaSaida = 0;
 for (let i = 0; i < aPagarPull.length; i++) {
     if (aPagarPull[i].situacao === "cPago") {
