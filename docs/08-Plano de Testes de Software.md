@@ -63,19 +63,28 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
 
 
 
-## Registro de contas pagas/a pagar
-| Caso de teste 9 | Cadastrar novas contas a pagar e receber |
+## Tela de registro de contas pagas/a pagar
+| Caso de teste | Cadastrar novas contas a pagar e receber |
 | --------------- | ---------------------------------------- |
+| Requisitos Associados | RF-011 	O site deve conter a capacidade de registrar e controlar contas a pagar, com recursos de categorização e controle de prazos de pagamento; RF-009 	O site deve conter a capacidade de registrar e controlar contas a receber, com recursos de categorização e controle de prazos de recebimento |
 | Objetivo do teste | Verificar se o sistema registra novas contas a pagar e a receber. |
-| Pré condição de teste | O usuário já possui uma conta de usuário cadastrada no sistema; |
 | Passo 1 | Acessar a página de registro por clicar no menu de "Contas", e clicar no tipo de conta desejada |
 | Passo 2 | Preencher todos os campos com informações válidas |
 | Passo 3 | Clicar no botão "Cadastrar" |
-| Resultado | O sistema registra todas as informações inseridas para serem demonstradas no dashboard. |
-| Caso especial | O sistema nega a registração de novas contas caso as informações não serem válidas ou não foram preenchidas. |
+| Critérios de Êxito | É registrado todas as informações inseridas para serem demonstradas no dashboard. |
+
+### Visualizar documentos/comprovantes 
+| Caso de teste | Anexar e Visualizar arquivos selecionados |
+| ---------------- | ----------------------------------------- |
+| Requisitos Associados | RF-017 	Permitir que o anexe documentos/comprovantes de pagamento |
+| Objetivo do teste | Verificar se o sistema é capaz de armazenar documentos/comprovantes, e consegue visualizar os mesmos. |
+| Passo 1 | Acessar a página de registro por clicar no menu de "Contas", e clicar no tipo de conta desejada |
+| Passo 2 | Clicar no botão "Select" na seção "Arquivos" e selecionar o arquivo desejado |
+| Passo 3 | Clicar no botão "Visualizar" logo abaixo da seleção de arquivo |
+| Critérios de Êxito | É registrado o arquivo do documento/comprovante com sucesso; Uma nova aba é aberta no navegador para a visualização do arquivo selecionado.|
 
 ## Dashboard de contas pagas/a pagar
-| Caso de teste 10 | Filtrar contas a pagar/receber registradas |
+| Caso de teste | Filtrar contas a pagar/receber registradas |
 | ---------------- | --------------------------------- |
 | Objetivo do teste | Verificar se o sistema consegue filtrar contas já registradas. |
 | Pré condição de teste | O usuário já possui uma conta de usuário cadastrada no sistema; O usuário já registrou uma conta a pagar/receber no sistema; |
@@ -85,7 +94,7 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
 | Resultado | O sistema apenas demonstra as contas com os dados desejados. |
 | Caso especial | Não se aplica. |
 
-| Caso de teste 11 | Gerar CSV/PDF do dashboard de contas a pagar/receber |
+| Caso de teste | Gerar CSV/PDF do dashboard de contas a pagar/receber |
 | ---------------- | ------------------------------------------------ |
 | Objetivo do teste | Verificar se o sisteme gera CSVs e PDFs prontos para o usuário baixar no seu computador. |
 | Pré condição de teste | O usuário já possui uma conta de usuário cadastrada no sistema; O usuário já registrou uma conta a pagar/receber no sistema; |
@@ -94,7 +103,7 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
 | Resultado | Após o usuário clicar no botão "Gerar CSV" ou "Gerar pdf", o sistema automáticamente baixa uma cópida do dashboard em formato desejado no computador do usuário. |
 | Caso especial | Não se aplica. |
 
-| Caso de teste 12 | Editar contas a pagar/receber |
+| Caso de teste | Editar contas a pagar/receber |
 | ---------------- | ----------------------------- |
 | Objetivo do teste | Verificar se o sistema consegue editar contas já registradas no dashboard. |
 | Pré condição de teste | O usuário já possui uma conta de usuário cadastrada no sistema; O usuário já registrou uma conta a pagar/receber no sistema; |
