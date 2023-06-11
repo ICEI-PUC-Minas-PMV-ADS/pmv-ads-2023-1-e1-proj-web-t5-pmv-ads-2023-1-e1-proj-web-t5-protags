@@ -130,10 +130,18 @@
                     <span id="filtrar" style="text-transform:none;"><a href="#" title="" id="btn_filtro"><i class="fas fa-filter w3darkgray"></i> Filtrar</a></span>
                     <button type="button" title="" id="btn_gerarcsv"><i class="far fa-file-code w3darkgray"></i> Gerar CSV</button>
                     <button type="button" title="" id="btn_gerar"><i class="far fa-file-pdf w3darkgray"></i> Gerar PDF</button>
-
-
+                    <button type="button" title="" id="btnUrgentes">Contas Urgentes</button>
                 </div>
                 <br>
+                <div id="menuUrgentes">
+                    <div class="urgentesBorda">
+                        <div class="urgentesTítulo">Conta 1</div>
+                        <div class="urgentesDataDeVenci">Data de Vencimento:</div>
+                        <div class="urgentesValor">Valor:</div>
+                        <div class="urgentesParcelas">Parcelas:</div>
+                        <div class="urgentesPagarPara">Pagar Para:</div>
+                    </div>
+                </div>
             </td>
 
             </table>
@@ -325,6 +333,8 @@
         </div>
         <!-- Copyright -->
     </footer>
+
+    <script src="./js/arealizar.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

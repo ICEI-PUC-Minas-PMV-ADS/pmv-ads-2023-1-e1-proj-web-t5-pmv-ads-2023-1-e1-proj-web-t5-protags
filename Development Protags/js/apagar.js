@@ -12,8 +12,11 @@ const btnCadastro = document.querySelector('#pregCadastrar')
 const btnVisualizar = document.querySelector('#pvisualizarArquivo')
 const contasAtrasadas = JSON.parse(localStorage.getItem('contasAtrasadas')) || [];
 
+let categorias = document.querySelector('#psCategoria');
+let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar')) || [];
 
-let categorias = document.querySelector('#psCategoria')
+psConta.value = contasAPagar.length.toString();
+psConta.value++;
 
 function logout() {
   localStorage.removeItem('token')
@@ -56,7 +59,6 @@ btnCadastro.addEventListener('click', (e) => {
     localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar))
 
     console.log(contasAPagar);
-    psConta.value = contasAPagar.length.toString();
 
     psValor.style.borderColor = 'gray';
     psDatadeEmissao.style.borderColor = 'gray';
@@ -65,6 +67,11 @@ btnCadastro.addEventListener('click', (e) => {
     alert("Conta cadastrada com sucesso!");
   }
 })
+
+function plimparArray() {
+  contasAPagar.splice(0,contasAPagar.length);
+  localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar))
+}
 
 if (localStorage.getItem('token') === null) {
 

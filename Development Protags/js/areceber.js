@@ -13,6 +13,9 @@ const btnCadastro = document.querySelector('#rregCadastrar')
 let categorias = document.querySelector('#psCategoria')
 let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber')) || [];
 
+rsConta.value = contasAReceber.length.toString();
+rsConta.value++;
+
 function logout() {
   localStorage.removeItem('token')
   window.location.href = './login.html'
@@ -61,8 +64,6 @@ btnCadastro.addEventListener('click', (e) => {
 
    contasAReceber.push(contas)
    localStorage.setItem('contasAReceber', JSON.stringify(contasAReceber))
-
-   rsConta.value = contasAReceber.length.toString();
    
    console.log(contasAReceber)
    rsValor.style.borderColor = 'gray';
