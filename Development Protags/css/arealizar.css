@@ -37,6 +37,57 @@ background-color: green;
 	background-color: #ffff;
 }
 
+#btnUrgentes {
+    float: right;
+    background-color: #47141E;
+    width: 8.5rem;
+    height: 2.5rem;
+    color: #fff;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#btnUrgentes:hover{
+    background-color: white;
+    border: 1px solid #47141E;
+    color: black;
+}
+
+#menuUrgentes {
+    display: none;
+    position: absolute;
+    right: 1%;
+    background-color: white;
+    width: 20rem;
+    height: 20rem;
+    color: black;
+    border: 2px solid gray;
+    border-radius: 5px;
+    z-index: 1;
+    overflow: auto;
+}
+
+.urgentesBorda {
+    margin: 2px 2px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.urgentesTítulo {
+    color: white;
+    background-color: #47141E;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.urgentesDataDeVenci {
+    font-size: 18px;
+}
+
+.urgentesValor, .urgentesParcelas, .urgentesPagarPara {
+    font-size: 15px;
+}
+
 .logopng {
     width: 10rem;
 
@@ -57,7 +108,7 @@ background-color: green;
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
