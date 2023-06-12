@@ -197,11 +197,11 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
  ### Tela de configuração / sem sucesso
  | Caso de configuração | Cadastro e alterações de informação do usuário sem sucesso |
  | --------------- | -------------------------- |
- | Objetivo do teste | Verificar se as informações estão sendo alteradas no localStorage |
+ | Objetivo do teste | Verificar se é possivel salvar alterações com os campo vazios |
  | Passo 1 | Acessar a tela de configuração |
- | Passo 2 | Preencher todos os campos com as informações necessárias |
+ | Passo 2 | Preencher os campos deixando alguns vazios |
  | Passo 3 | Clicar no botão "Salvar Alterações |
- | Critérios de Êxito | Deverá alterar as informações de cadastro do usuário no localStorage|
+ | Critérios de Êxito | Os campos em vazios podem ser deixados em branco, sem gerar erros de validação ao salvar as alterações.|
 
 
 
