@@ -1,12 +1,5 @@
 # Plano de Testes de Software
 
-Para que os testes possam ser realizados, é necessário os seguintes requisitos:
-
- - O site publicado na internet;
- - Um Navegador de Internet (Como o Google Chrome, Firefox ou Microsoft Edge);
- - Conectividade de Internet para a utilização da plataforma.
- 
-## Planos de testes
 
 ### Tela de registro
  | Caso de teste | CT-01 - Cadastro de usuário |
