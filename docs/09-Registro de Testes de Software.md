@@ -52,6 +52,50 @@ CT 18 - Cadastro e alterações de informação do usuário sem sucesso
   
 <img src="/docs/img/perfiltesteInvalido.png"></img>
 
+## Tela de registro
+CT-01 - Cadastro de usuário
+<ul>
+  <li><strong>Objetivo do teste</strong>:	V Verificar se a conta está sendo criada corretamente </li>
+  <li><strong>Resultado</strong>: Apareceu o alert escrito usuário cadastrado com sucesso e logo depois redireciona para pagina de login </li>
+  </ul>
+  ### `Responsável pelo teste: Aline Azedias`
+  
+<img src="/docs/registrosucesso.png"></img>
+
+## Tela de registro / sem sucesso
+CT-02 - Cadastro de usuário sem sucesso 
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se uma conta está sendo criada mesmo preenchendo as informações corretamente </li>
+  <li><strong>Resultado</strong>: Apareceu um texto em vermelho pedindo para preencher todos os campos!</li>
+  </ul>
+  
+  ### `Responsável pelo teste: Aline Azedias`
+  
+<img src="/docs/registrosemsucesso.png"></img>
+
+## Tela de login
+CT-03 - Login de usuário
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema reconhece o usuário e permite o login
+</li>
+  <li><strong>Resultado</strong>: Apareceu o alert de login efetuado com sucesso e logo depois redireciona para pagina de inicio
+</li>
+  </ul>
+  ### `Responsável pelo teste: Aline Azedias`
+  
+<img src="/docs/loginsucesso.png"></img>
+
+## Tela de login / sem sucesso
+CT-04 - Login de usuário sem sucesso
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema reconhece um usuário não cadastrado </li>
+  <li><strong>Resultado</strong>: Apareceu o alert de usuário ou senha incorretos</li>
+  </ul>
+  
+  ### `Responsável pelo teste: Aline Azedias`
+  
+<img src="/docs/img/loginsemsucesso.png"></img>
+
 
 ## Tela de registro de contas pagas/a pagar
 CT 13 - Verificar se o sistema registra novas contas a pagar e a receber.
