@@ -4,6 +4,55 @@
 
 Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
 
+## Tela de configuração
+
+CT 15 - Cadastro e alterações de informação do usuário
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se as configurações estão sendo salvas</li>
+  <li><strong>Resultado</strong>: Um popup apareceu sinalizando sucesso, fui redirecionado para a tela de perfil onde as informações foram exibidas</li>
+  </ul>
+  
+### `Responsável pelo teste: Lucas Gabriel`
+  
+<img src="/docs/img/configteste.png"></img>
+
+## Tela de configuração / sem sucesso
+
+CT 16 - Cadastro e alterações de informação do usuário sem sucesso
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se é possivel salvar alterações com os campos vazios</li>
+  <li><strong>Resultado</strong>: Um popup apareceu sinalizando sucesso, é possível salvar alterações com os campos vazios!</li>
+  </ul>
+  
+### `Responsável pelo teste: Lucas Gabriel`
+  
+<img src="/docs/img/configtesteInvalido.png"></img>
+
+## Tela de perfil
+
+CT 17 - Cadastro e alterações de informação do usuário
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se informações cadastradas pelo usuário estão sendo mostradas corretamente</li>
+  <li><strong>Resultado</strong>: As informações registradas anteriormente na tela de configurações, estão sendo exibidas corretamente nos respectivos campos.</li>
+  </ul>
+  
+  ### `Responsável pelo teste: Lucas Gabriel`
+  
+<img src="/docs/img/perfilteste.png"></img>
+
+## Tela de perfil / sem sucesso / Falta alterar
+
+CT 18 - Cadastro e alterações de informação do usuário sem sucesso
+<ul>
+  <li><strong>Objetivo do teste</strong>:	.</li>
+  <li><strong>Resultado</strong>:.</li>
+  </ul>
+  
+  ### `Responsável pelo teste: Lucas Gabriel`
+  
+<img src="/docs/img/perfiltesteInvalido.png"></img>
+
+
 ## Tela de registro de contas pagas/a pagar
 CT 13 - Verificar se o sistema registra novas contas a pagar e a receber.
 <img src="/docs/img/cadastrodecontasucesso.png"></img>
