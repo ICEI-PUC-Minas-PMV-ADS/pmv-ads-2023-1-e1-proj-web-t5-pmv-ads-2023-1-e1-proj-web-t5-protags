@@ -162,42 +162,42 @@ function editEvento(listEv, eventoEditado, eventId) {
 // Função ativada pelo botão de cadastrar / CREATE (C.r.u.d)
 function cadEvento() {
 
-    const newEvent = {
-        dataEv: dataCad.value,
-        horarioEv: horarioCad.value,
-        contatoEv: contatoCad.value,
-        quemEv: quemCad.value,
-        descEv: descricaoCad.value
-    }
+        const newEvent = {
+            dataEv: dataCad.value,
+            horarioEv: horarioCad.value,
+            contatoEv: contatoCad.value,
+            quemEv: quemCad.value,
+            descEv: descricaoCad.value
+        }
 
-    // Cria um array com as informações dos inputs e salva no localStorage
-    let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
-    listEv.push(newEvent)
+        // Cria um array com as informações dos inputs e salva no localStorage
+        let listEv = JSON.parse(localStorage.getItem('listEv') || '[]')
+        listEv.push(newEvent)
 
-    // Define o ID do novo evento com base no tamanho do array listEv + número aleatório
-    newEvent.id = listEv.length + Math.random();
+        // Define o ID do novo evento com base no tamanho do array listEv + número aleatório
+        newEvent.id = listEv.length + Math.random();
 
-    //Salva a lista no localStorage
-    localStorage.setItem('listEv', JSON.stringify(listEv))
-    alert('Evento cadastrado com sucesso!')
-    const cardContainer = document.querySelector('tbody');
-    const cardHTML = document.createElement('tr');
-    cardHTML.setAttribute('class', 'mb-0 pb-0')
+        //Salva a lista no localStorage
+        localStorage.setItem('listEv', JSON.stringify(listEv))
+        alert('Evento cadastrado com sucesso!')
+        const cardContainer = document.querySelector('tbody');
+        const cardHTML = document.createElement('tr');
+        cardHTML.setAttribute('class', 'mb-0 pb-0')
 
-    // Define o ID do elemento HTML com base no ID do novo evento
-    cardHTML.setAttribute('id', `event-${newEvent.id}`)
+        // Define o ID do elemento HTML com base no ID do novo evento
+        cardHTML.setAttribute('id', `event-${newEvent.id}`)
 
-    // Cria um ID único para cada evento usando a data e hora do cadastro
-    const eventId = `${newEvent.dataEv}_${newEvent.horarioEv}`;
+        // Cria um ID único para cada evento usando a data e hora do cadastro
+        const eventId = `${newEvent.dataEv}_${newEvent.horarioEv}`;
 
-    // Adiciona o ID único ao objeto de evento
-    newEvent.id = eventId;
+        // Adiciona o ID único ao objeto de evento
+        newEvent.id = eventId;
 
-    // Formata a data para exibição
-    const dataFormatada = formatarData(new Date(newEvent.dataEv));
+        // Formata a data para exibição
+        const dataFormatada = formatarData(new Date(newEvent.dataEv));
 
-    // Cria a estrutura do Card a ser exibido
-    cardHTML.innerHTML = `
+        // Cria a estrutura do Card a ser exibido
+        cardHTML.innerHTML = `
         <td id="${eventId}">
             <div class="col-12 mb-2 pt-2 ps-4 pe-4" id="card-view">
                 <div class="col-12 mb-2 pt-2">
@@ -218,19 +218,19 @@ function cadEvento() {
         </td>
     `;
 
-    // Acrescenta os novos Cards no topo da lista
-    cardContainer.insertAdjacentElement('afterbegin', cardHTML)
+        // Acrescenta os novos Cards no topo da lista
+        cardContainer.insertAdjacentElement('afterbegin', cardHTML)
 
-    // Ao cadastrar, retorna o valor dos inputs para ' ' = vazio
-    document.querySelector('#dataCad').value = '';
-    document.querySelector('#horarioCad').value = '';
-    document.querySelector('#quemCad').value = '';
-    document.querySelector('#contatoCad').value = '';
-    document.querySelector('#descricaoCad').value = ''
+        // Ao cadastrar, retorna o valor dos inputs para ' ' = vazio
+        document.querySelector('#dataCad').value = '';
+        document.querySelector('#horarioCad').value = '';
+        document.querySelector('#quemCad').value = '';
+        document.querySelector('#contatoCad').value = '';
+        document.querySelector('#descricaoCad').value = ''
 
-    // Recarrega a página para atualizar as informações
-    location.reload();
-}
+        // Recarrega a página para atualizar as informações
+        location.reload();
+    }
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {

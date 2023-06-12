@@ -8,6 +8,10 @@ body {
     font-family: sans-serif;
 }
 
+.navbar-nav {
+    background-color: #47141E;
+}
+
 .navbar-toggler-icon {
     filter: brightness(0) invert(1);
     background-color: transparent;
