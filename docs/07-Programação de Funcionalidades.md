@@ -275,7 +275,7 @@ Essa página é onde o usuário pode registrar novas contas a pagar e a receber 
 - areceber.css
 - areceber.js
 
-<u>**Armazenamento de dados<**/u>
+<u>**Armazenamento de dados**</u>
 
 - Web Local Storage
   
@@ -285,6 +285,8 @@ Essa página é onde o usuário pode registrar novas contas a pagar e a receber 
 2. Clique em Registrar (Caso ainda não tenha uma conta).
 3. Entre na sua conta.
 4. Navegue pelo menu até em contas.
+5. Adicione todas as informações necessárias.
+6. Clique em "Cadastrar".
 
 
 ![image](/docs/img/paginaconfig.png)

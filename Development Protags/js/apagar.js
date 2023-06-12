@@ -9,19 +9,22 @@ const psDescricao = document.querySelector('#psDescricao')
 const psArquivo = document.querySelector('#psArquivo')
 const psSituacao = document.querySelector('#psSituacao')
 const btnCadastro = document.querySelector('#pregCadastrar')
+const btnVisualizar = document.querySelector('#pvisualizarArquivo')
+const contasAtrasadas = JSON.parse(localStorage.getItem('contasAtrasadas')) || [];
 
 
 let categorias = document.querySelector('#psCategoria')
-let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar')) || [];
 
-psArquivo.addEventListener('change', () => {a
-  const reader = new FileReader()
+function logout() {
+  localStorage.removeItem('token')
+  window.location.href = './login.html'
+}
 
-  reader.addEventListener('load', () => {
-    localStorage.setItem('recent-image', reader.result)
-  })
-  reader.readAsDataURL(psArquivo.files[0])
-})
+function pvisualizar() {
+  const file = psArquivo.files[0];
+  const source = URL.createObjectURL(file);
+  window.open(source)
+}
 
 btnCadastro.addEventListener('click', (e) => {
    e.preventDefault(); 
@@ -44,7 +47,9 @@ btnCadastro.addEventListener('click', (e) => {
       'pagarpara': psPagarPara.value, 
       'condicaopag': psCondicaoPag.value, 
       'descricao': psDescricao.value, 
-      'categoria': categorias.value
+      'categoria': categorias.value,
+      'situacao': psSituacao.value,
+      'arquivo-apagar': psArquivo.files,
   }
   contasAPagar.push(contas)
 
@@ -61,4 +66,13 @@ btnCadastro.addEventListener('click', (e) => {
   }
 })
 
+if (localStorage.getItem('token') === null) {
 
+  alert('Você precisa estar logado para acessar essa página')
+  window.location.href = 'login.html'
+
+} else {
+  window.onload = function () {
+  }
+
+}
