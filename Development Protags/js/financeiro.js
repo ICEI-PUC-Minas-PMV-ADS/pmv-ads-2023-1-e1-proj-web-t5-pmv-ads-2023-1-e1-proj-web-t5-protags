@@ -15,15 +15,11 @@ if (mes === "01" || mes === "03" || mes === "05" || mes === "07" || mes === "08"
 
 // Modelo Padrão - Alterar depois com o certo
 
-var aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
-var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+const aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+const aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
 var somaEntrada = 0;
-var dataEntrada = '';
 for (let i = 0; i < aReceberPull.length; i++) {
-    var dataAReceber = aReceberPull[i].datadevenci;    
-    var dataEntrada = dataAReceber;
-
     if (aReceberPull[i].situacao === "cRecebido") {
         var entradaValor = aReceberPull[i].valor;
         var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
@@ -102,17 +98,6 @@ if (localStorage.getItem('token') === null) {
     }
 }
 
-function Filtrar() {
-    if (dataInicio.value.length < 3) {
-        window.alert('Informe uma data para filtrar')
-    } else {
-        let dataInicio = document.querySelector('input#dataInicio').value;
-        let dataFim = document.querySelector('input#dataFim').value;
-        let dataInicFim = dataInicio.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1')
-            + " a " + dataFim.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
-        resultFiltro.innerHTML = `Movimentação entre  ${dataInicFim}.`;
-    }
-}
 
 
 // Grafico Tiago
@@ -145,6 +130,58 @@ new Chart(ctx3, {
         maintainAspectRatio: false
     }
 });
+
+let contasAReceberFiltroTiago = [];
+let contasApagarFiltroTiago = [];
+
+function filtrarGraficoTiago() {
+    /*if (dataInicioFiltroTiago.value === "0") {
+        window.alert('Informe uma data para filtrar')
+    } else {*/
+        contasAReceberFiltroTiago = [];
+        contasApagarFiltroTiago = [];
+
+        let dataInicioFiltroTiago = document.querySelector('input#dataInicioTiago').value;
+        let dataFimFiltroTiago = document.querySelector('input#dataFimTiago').value;
+
+        let dataInicioSplit = dataInicioFiltroTiago.split("-");
+        let dataFimSplit = dataFimFiltroTiago.split("-");
+
+        let dataInicioTiago = new Date(dataInicioSplit[0],dataInicioSplit[1] - 1,dataInicioSplit[2]);
+        let dataFimTiago = new Date(dataFimSplit[0], dataFimSplit[1] - 1, dataFimSplit[2]);
+
+        for (let i = 0; i < aReceberPull.length; i++){
+            let dataAReceberSplit = aReceberPull[i].datadevenci.split("-");
+            let dataAReceberFormat = new Date(dataAReceberSplit[0], dataAReceberSplit[1] - 1, dataAReceberSplit[2]);
+            if (dataAReceberFormat >= dataInicioTiago && dataAReceberFormat <= dataFimTiago){
+                contasAReceberFiltroTiago.push(aReceberPull[i])
+            }
+        }
+        console.log(dataAReceberSplit)
+
+        for (let i = 0; i < aPagarPull.length; i++){
+            let dataAPagarSplit = aPagarPull[i].datadevenci.split("-");
+            let dataAPagarFormat = new Date(dataAPagarSplit[0], dataAPagarSplit[1] - 1, dataAPagarSplit[2]);
+            if (dataAPagarFormat >= dataInicioTiago && dataAPagarFormat <= dataFimTiago){
+                contasApagarFiltroTiago.push(aPagarPull[i])
+            }
+        }
+
+        console.log(dataInicioTiago);
+        console.log(dataFimTiago);
+
+        
+
+
+
+        let dataInicFim = dataInicioFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1')
+            + " a " + dataFimFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
+        resultFiltro.innerHTML = `Movimentação entre  ${dataInicFim}.`;
+    }
+//}
+
+
+
 
 
 
