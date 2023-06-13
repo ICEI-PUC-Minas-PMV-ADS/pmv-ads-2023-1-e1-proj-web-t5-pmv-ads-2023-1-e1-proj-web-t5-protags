@@ -135,9 +135,9 @@ let contasAReceberFiltroTiago = [];
 let contasApagarFiltroTiago = [];
 
 function filtrarGraficoTiago() {
-    /*if (dataInicioFiltroTiago.value === "0") {
+    if (dataInicioTiago.value.length < 3) {
         window.alert('Informe uma data para filtrar')
-    } else {*/
+    } else {
         contasAReceberFiltroTiago = [];
         contasApagarFiltroTiago = [];
 
@@ -152,33 +152,24 @@ function filtrarGraficoTiago() {
 
         for (let i = 0; i < aReceberPull.length; i++){
             let dataAReceberSplit = aReceberPull[i].datadevenci.split("-");
-            let dataAReceberFormat = new Date(dataAReceberSplit[0], dataAReceberSplit[1] - 1, dataAReceberSplit[2]);
-            if (dataAReceberFormat >= dataInicioTiago && dataAReceberFormat <= dataFimTiago){
+            let dataAReceberFormatado = new Date(dataAReceberSplit[0], dataAReceberSplit[1] - 1, dataAReceberSplit[2]);
+            if (dataAReceberFormatado >= dataInicioTiago && dataAReceberFormatado <= dataFimTiago){
                 contasAReceberFiltroTiago.push(aReceberPull[i])
             }
         }
-        console.log(dataAReceberSplit)
-
         for (let i = 0; i < aPagarPull.length; i++){
             let dataAPagarSplit = aPagarPull[i].datadevenci.split("-");
-            let dataAPagarFormat = new Date(dataAPagarSplit[0], dataAPagarSplit[1] - 1, dataAPagarSplit[2]);
-            if (dataAPagarFormat >= dataInicioTiago && dataAPagarFormat <= dataFimTiago){
+            let dataAPagarFormatado = new Date(dataAPagarSplit[0], dataAPagarSplit[1] - 1, dataAPagarSplit[2]);
+            if (dataAPagarFormatado >= dataInicioTiago && dataAPagarFormatado <= dataFimTiago){
                 contasApagarFiltroTiago.push(aPagarPull[i])
             }
         }
-
-        console.log(dataInicioTiago);
-        console.log(dataFimTiago);
-
-        
-
-
 
         let dataInicFim = dataInicioFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1')
             + " a " + dataFimFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
         resultFiltro.innerHTML = `Movimentação entre  ${dataInicFim}.`;
     }
-//}
+}
 
 
 
