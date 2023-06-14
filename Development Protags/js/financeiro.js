@@ -13,6 +13,7 @@ if (mes === "01" || mes === "03" || mes === "05" || mes === "07" || mes === "08"
 }
 
 
+
 // Pull e agrupamento de Valores e Filtros
 
 const aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
@@ -24,6 +25,7 @@ const aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 var somaEntrada = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
     if (aReceberPull[i].situacao === "cRecebido") {
+        
         var entradaValor = aReceberPull[i].valor;
         var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
         somaEntrada += entradaBRL;
@@ -138,6 +140,7 @@ const chartCaixaValores = new Chart(ctx3, {
 //Filtro de data e Entradas/saidas
 var somaEntradaFiltro = 0
 var somaSaidaFiltro = 0
+
 function filtrarGraficoTiago() {
     if (dataInicioTiago.value.length < 3) {
         window.alert('Informe uma data para filtrar')
@@ -151,6 +154,9 @@ function filtrarGraficoTiago() {
         let dataInicioTiago = new Date(dataInicioSplit[0],dataInicioSplit[1] - 1,dataInicioSplit[2]);
         let dataFimTiago = new Date(dataFimSplit[0], dataFimSplit[1] - 1, dataFimSplit[2]);
 
+        console.log(dataInicioFiltroTiago);
+        console.log(dataInicioSplit);
+        console.log(dataInicioTiago);
         // Filtro Entradas
         somaEntradaFiltro = 0
         for (let i = 0; i < aReceberPull.length; i++){
