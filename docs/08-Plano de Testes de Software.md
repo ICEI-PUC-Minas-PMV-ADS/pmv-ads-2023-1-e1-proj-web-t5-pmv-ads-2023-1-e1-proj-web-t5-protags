@@ -216,3 +216,24 @@
  | Passo 2 | Visualizar se as informações, e clicar em editar se necessário|
  | Passo 3 | Clicar no botão "Salvar Alterações" |
 | Critérios de Êxito | O sistema exibe as alteraçãos corretamente, mas não altera no localStorage|
+
+
+
+
+### Monitoramento de Fluxo de Receitas e Despesas
+| Caso de teste | Alteração de eventos registrados |
+| --------------- | -------------------------------- |
+| Requisitos Associados | RF-006	- O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |
+| Objetivo do teste | Verificar se o sistema exibe os valores em seus campos corretos e filtrado corretamente pelo mês atual |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Critérios de Êxito | Os campos se atualizam dinamicamente com as contas no mês atual ao carregar a pagina |
+
+### Monitoramento de Fluxo de Receitas e Despesas / sem sucesso
+| Caso de teste | Alteração de eventos registrados sem sucesso |
+| --------------- | -------------------------------- |
+| Objetivo do teste | Verificar se o sistema exibe os valores em seus campos corretos e filtrado corretamente pelo mês atual |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Critérios de Êxito | Os campos são preenchidos com valores errados e/ou não filtrados pelo mês atual |
+
