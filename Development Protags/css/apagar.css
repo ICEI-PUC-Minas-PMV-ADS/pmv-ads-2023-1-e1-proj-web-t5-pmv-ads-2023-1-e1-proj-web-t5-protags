@@ -153,6 +153,10 @@ button {
     height: 5vh;
 }
 
+.navbar-nav {
+margin: 0px 100px;
+}
+
 
 @media only screen and (max-width: 768px){
     .conteudo, .div1, .div2, .div3{
@@ -178,10 +182,14 @@ button {
         top: 20px;
         left: 230px;
     }
-    #dropdownMenuButton {
-    }
     #footer {
         position: relative;
+    }
+    #texto {
+        width: 100px;
+    }
+    #navbar-nav {
+        border: 2px solid red;
     }
     label {
         font-size: 1.2rem;
@@ -228,7 +236,6 @@ button {
 }
 
 #navbarSupportedContent {
-    border: 1px solid #47141E;
 }
 
 .navbar-nav {
