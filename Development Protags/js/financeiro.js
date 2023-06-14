@@ -97,7 +97,7 @@ if (localStorage.getItem('token') === null) {
 } else {
 
     window.onload = function () {
-
+        
         entrada.innerHTML = "R$ " + entradaBase;
         aReceber.innerHTML = "R$ " + aReceberBase;
         saida.innerHTML = "R$ " + saidaBase;
@@ -124,8 +124,6 @@ if (localStorage.getItem('token') === null) {
     }
 }
 
-
-
 // Grafico Tiago
 
 const ctx3 = document.getElementById('myChart3');
@@ -133,19 +131,14 @@ const chartCaixaValores = new Chart(ctx3, {
     type: 'bar',
     data: {
         labels: [
-            'Receitas',
-            'Despesas'
-
+            'Receitas','Despesas'
         ],
         datasets: [{
             label: 'Movimentações financeiras',
             data: [parseInt(entradaBase), parseInt(saidaBase)
-
             ],
             backgroundColor: [
-                'rgb(75, 192, 192)',
-                'rgb(255, 99, 132)'
-
+                'rgb(75, 192, 192)','rgb(255, 99, 132)'
             ],
             hoverOffset: 4
         }]
@@ -164,7 +157,7 @@ function filtrarGraficoTiago() {
     if (dataInicioTiago.value.length < 3) {
         window.alert('Informe uma data para filtrar')
     } else {
-        //Base para datas
+        //Base datas Inicio/Fim
         let dataInicioFiltroTiago = document.querySelector('input#dataInicioTiago').value;
         let dataFimFiltroTiago = document.querySelector('input#dataFimTiago').value;
         let dataInicioSplit = dataInicioFiltroTiago.split("-");
@@ -172,9 +165,6 @@ function filtrarGraficoTiago() {
         let dataInicioTiago = new Date(dataInicioSplit[0],dataInicioSplit[1] - 1,dataInicioSplit[2]);
         let dataFimTiago = new Date(dataFimSplit[0], dataFimSplit[1] - 1, dataFimSplit[2]);
 
-        console.log(dataInicioFiltroTiago);
-        console.log(dataInicioSplit);
-        console.log(dataInicioTiago);
         // Filtro Entradas 
         somaEntradaFiltro = 0
         for (let i = 0; i < aReceberPull.length; i++){
