@@ -5,35 +5,35 @@ let parcela = document.querySelector('#parcela')
 let pagarpara = document.querySelector('#pagarpara')
 let descricao = document.querySelector('#descricao')
 let comprovante = document.querySelector('#comprovante')
-let dataDeRecebimento = document.querySelector('#dataDeRecebimento')
+let dataDeVencimento = document.querySelector('#dataDeVencimento')
 let exibirReais = document.querySelector('#exibirReais')
 let selectMenu = document.querySelector('#select-menu')
 
 
-// Array contasAReceber recuperado do localStorage
-let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+// Array contasAPagar recuperado do localStorage
+let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
 // Atribuir IDs individuais para cada conta
-contasAReceber.forEach((conta, index) => {
+contasAPagar.forEach((conta, index) => {
   conta.id = index + 1; // IDs começando em 1
 });
 
 const cardRealizados = document.querySelector('#table-exibicao');
 cardRealizados.innerHTML = '';
 
-for (let i = 0; i < contasAReceber.length; i++) {
-  const conta = contasAReceber[i];
+for (let i = 0; i < contasAPagar.length; i++) {
+  const conta = contasAPagar[i];
 
   const newRow = document.createElement('tr');
   newRow.innerHTML = `
-    <td class="text-center">${conta.id}</td> 
-    <td class="text-center">${conta.datadevenci}</td> 
-    <td class="text-center">${conta.parcelas}</td>
-    <td class="text-center">${conta.pagarpara}</td>
-    <td class="text-center">${conta.descricao}</td>
-    <td class="text-center">${conta.comprovante}</td>
-    <td class="text-center">${conta.dataDeRecebimento}</td>
-    <td class="text-center">${conta.valor}</td>
+    <td class="text-center" id="conta">${conta.id}</td> 
+    <td class="text-center" id="vencimento">${conta.datadevenci}</td> 
+    <td class="text-center" id="parcela">${conta.parcelas}</td>
+    <td class="text-center" id="pagarpara">${conta.pagarpara}</td>
+    <td class="text-center" id="descricao">${conta.descricao}</td>
+    <td class="text-center" id="comprovante">${conta.comprovante}</td>
+    <td class="text-center" id="dataDeVencimento">${conta.datadevenci}</td>
+    <td class="text-center" id="exibirReais">${conta.valor}</td>
     <td class="text-center">
       <select name="acoes" class="selectAcoes" id="select-menu-${conta.id}">
         <option value="<null>" class="nullValue"></option>

@@ -21,7 +21,7 @@
         crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="/Development Protags/css/arealizar.css">
-    <title>Pagamentos a realizar</title>
+    <title>Pagamentos a pagar</title>
 </head>
 
 <body>
@@ -94,14 +94,16 @@
 
         <nav class="dp-menu">
             <ul>
-                <li><a href="PagamentosApagar.html">Contas à pagar</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="ContasApagar.html">Contas à pagar</a>
                     <ul>
-                        <li><a href="#">Contas pagas</a></li>
+                        <li>
+                            <a href="ContasPagas.html">Contas pagas</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contas à receber</a>
+                <li><a href="ContasAReceber.html">Contas à receber</a>
                     <ul>
-                        <li><a href="#">Contas recebidas</a></li>
+                        <li><a href="ContasRecebidas.html">Contas recebidas</a></li>
                     </ul>
                 </li>
             </ul>
@@ -134,7 +136,7 @@
             <th scope="col">PAGAR PARA</th>
             <th scope="col">DESCRIÇÃO</th>
             <th scope="col">COMPROVANTE</th>
-            <th scope="col">DATA DE RECEBIMENTO</th>
+            <th scope="col">DATA DE PAGAMENTO</th>
             <th scope="col">VALOR</th>
             <th scope="col">SITUAÇÃO</th>
           </tr>
@@ -201,7 +203,7 @@
         </div>
         <!-- Copyright -->
       </footer>
-      <script src="./js/arealizar.js"></script>
+      <script src="./js/PagamentosApagar.js"></script>
 </body>
 
 </html>
