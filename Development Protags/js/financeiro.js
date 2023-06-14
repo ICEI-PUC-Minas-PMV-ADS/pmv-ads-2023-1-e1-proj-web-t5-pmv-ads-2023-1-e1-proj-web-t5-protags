@@ -13,19 +13,29 @@ if (mes === "01" || mes === "03" || mes === "05" || mes === "07" || mes === "08"
 }
 
 
-
-// Pull e agrupamento de Valores e Filtros
-
+// Pull de dados Pagina: Contas a pagar e a receber
 const aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
 const aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
-
-
-// Separar Lançamento das contas
+// Base datas Mês atual
+var dataInicioCaixa = ano + '/' + mes + '/' + "01";
+if (mes === "01" || mes === "03" || mes === "05" || mes === "07" || mes === "08" || mes === "10" || mes === "12") {
+    var dataFimCaixa = ano + '/' + mes + '/' + "31";
+} else if (mes === "02") {
+    var dataFimCaixa = ano + '/' + mes + '/' + "28";
+} else {
+    var dataFimCaixa = ano + '/' + mes + '/' + "30";
+}
+var dataInicioCaixaSplit = dataInicioCaixa.split("/");
+var dataFimCaixaSplit = dataFimCaixa.split("/");
+var dataInicioCaixaBase = new Date(dataInicioCaixaSplit[0], dataInicioCaixaSplit[1] - 1, dataInicioCaixaSplit[2]);
+var dataFimCaixaBase = new Date(dataFimCaixaSplit[0], dataFimCaixaSplit[1] - 1, dataFimCaixaSplit[2]);
+// Filtros onload contas MÊS
 var somaEntrada = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
-    if (aReceberPull[i].situacao === "cRecebido") {
-        
+    let dataVenciEntradaSplit = aReceberPull[i].datadevenci.split("-");
+    let dataVenciEntrada = new Date(dataVenciEntradaSplit[0], dataVenciEntradaSplit[1] - 1, dataVenciEntradaSplit[2]);
+    if (aReceberPull[i].situacao === "cRecebido" && dataVenciEntrada >= dataInicioCaixaBase && dataVenciEntrada <= dataFimCaixaBase) {
         var entradaValor = aReceberPull[i].valor;
         var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
         somaEntrada += entradaBRL;
@@ -33,7 +43,9 @@ for (let i = 0; i < aReceberPull.length; i++) {
 }
 var somaSaida = 0;
 for (let i = 0; i < aPagarPull.length; i++) {
-    if (aPagarPull[i].situacao === "cPago") {
+    let dataVenciSaidaSplit = aPagarPull[i].datadevenci.split("-");
+    let dataVenciSaida = new Date(dataVenciSaidaSplit[0], dataVenciSaidaSplit[1] - 1, dataVenciSaidaSplit[2]);
+    if (aPagarPull[i].situacao === "cPago" && dataVenciSaida >= dataInicioCaixaBase && dataVenciSaida <= dataFimCaixaBase) {
         var saidaValor = aPagarPull[i].valor;
         var saidaBRL = parseFloat(saidaValor.replace('R$', '').replace(',', '.'));
         somaSaida += saidaBRL;
@@ -41,7 +53,9 @@ for (let i = 0; i < aPagarPull.length; i++) {
 }
 var somaAReceber = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
-    if (aReceberPull[i].situacao === "caReceber") {
+    let dataVenciAReceberSplit = aReceberPull[i].datadevenci.split("-");
+    let dataVenciAReceber = new Date(dataVenciAReceberSplit[0], dataVenciAReceberSplit[1] - 1, dataVenciAReceberSplit[2]);
+    if (aReceberPull[i].situacao === "caReceber" && dataVenciAReceber >= dataInicioCaixaBase && dataVenciAReceber <= dataFimCaixaBase) {
         var aReceberValor = aReceberPull[i].valor;
         var aReceberBRL = parseFloat(aReceberValor.replace('R$', '').replace(',', '.'));
         somaAReceber += aReceberBRL;
@@ -49,12 +63,16 @@ for (let i = 0; i < aReceberPull.length; i++) {
 }
 var somaAPagar = 0;
 for (let i = 0; i < aPagarPull.length; i++) {
-    if (aPagarPull[i].situacao === "cAPagar") {
+    let dataVenciAPagarSplit = aPagarPull[i].datadevenci.split("-");
+    let dataVenciAPagar = new Date(dataVenciAPagarSplit[0], dataVenciAPagarSplit[1] - 1, dataVenciAPagarSplit[2]);
+    if (aPagarPull[i].situacao === "cAPagar" && dataVenciAPagar >= dataInicioCaixaBase && dataVenciAPagar <= dataFimCaixaBase) {
         var aPagarValor = aPagarPull[i].valor;
         var aPagarBRL = parseFloat(aPagarValor.replace('R$', '').replace(',', '.'));
         somaAPagar += aPagarBRL;
     }
 }
+
+
 // Formatação dos resultados
 var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var saidaBase = somaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -62,6 +80,8 @@ var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits:
 var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var resultEntradaSaida = somaEntrada - somaSaida
 var resultDiferença = resultEntradaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+var resultEntradaSaidaNegativo = somaSaida - somaEntrada
+var resultDiferençaNegativo = resultEntradaSaidaNegativo.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {
@@ -93,7 +113,7 @@ if (localStorage.getItem('token') === null) {
             resultInfo2.innerHTML = `Saldo disponivel: R$ ${resultDiferença}`;
         } else {
             resultInfo1.innerHTML = `Despesas maiores que receitas`;
-            resultInfo2.innerHTML = `Saldo disponivel: <b>(-)</b> R$ ${resultDiferença}`;
+            resultInfo2.innerHTML = `Saldo disponivel: <b>(-)</b>R$ ${resultDiferençaNegativo}`;
             resultInfo1.setAttribute('style', 'color: red');
         }
 
@@ -107,7 +127,6 @@ if (localStorage.getItem('token') === null) {
 
 
 // Grafico Tiago
-
 
 const ctx3 = document.getElementById('myChart3');
 const chartCaixaValores = new Chart(ctx3, {
@@ -137,7 +156,7 @@ const chartCaixaValores = new Chart(ctx3, {
     }
 });
 
-//Filtro de data e Entradas/saidas
+//Filtro de data e Entradas/saidas GRAFICO TIAGO
 var somaEntradaFiltro = 0
 var somaSaidaFiltro = 0
 
@@ -145,7 +164,6 @@ function filtrarGraficoTiago() {
     if (dataInicioTiago.value.length < 3) {
         window.alert('Informe uma data para filtrar')
     } else {
-
         //Base para datas
         let dataInicioFiltroTiago = document.querySelector('input#dataInicioTiago').value;
         let dataFimFiltroTiago = document.querySelector('input#dataFimTiago').value;
@@ -157,7 +175,7 @@ function filtrarGraficoTiago() {
         console.log(dataInicioFiltroTiago);
         console.log(dataInicioSplit);
         console.log(dataInicioTiago);
-        // Filtro Entradas
+        // Filtro Entradas 
         somaEntradaFiltro = 0
         for (let i = 0; i < aReceberPull.length; i++){
             let dataAReceberSplit = aReceberPull[i].datadevenci.split("-");
@@ -179,13 +197,14 @@ function filtrarGraficoTiago() {
                 somaSaidaFiltro += saidaBRLFiltrado;
             }
         }
-
+        // Texto Movimentações
         let dataInicFim = dataInicioFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1')
             + " a " + dataFimFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
-        resultFiltro.innerHTML = `Movimentação entre  ${dataInicFim}.`;
+        resultFiltro.innerHTML = `Movimentação entre:  ${dataInicFim}.`;
         atualizarGraficosCaixa();
     }
 }
+// Atualizar Grafico após botão "filtrarGraficoTiago"
 function atualizarGraficosCaixa() {
         chartCaixaValores.data.datasets[0].data = [parseInt(somaEntradaFiltro), parseInt(somaSaidaFiltro)];
         chartCaixaValores.update();
