@@ -13,11 +13,14 @@ if (mes === "01" || mes === "03" || mes === "05" || mes === "07" || mes === "08"
 }
 
 
-// Modelo Padrão - Alterar depois com o certo
+// Pull e agrupamento de Valores e Filtros
 
 const aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
 const aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
+
+
+// Separar Lançamento das contas
 var somaEntrada = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
     if (aReceberPull[i].situacao === "cRecebido") {
@@ -50,6 +53,7 @@ for (let i = 0; i < aPagarPull.length; i++) {
         somaAPagar += aPagarBRL;
     }
 }
+// Formatação dos resultados
 var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var saidaBase = somaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -104,7 +108,7 @@ if (localStorage.getItem('token') === null) {
 
 
 const ctx3 = document.getElementById('myChart3');
-new Chart(ctx3, {
+const chartCaixaValores = new Chart(ctx3, {
     type: 'bar',
     data: {
         labels: [
@@ -168,9 +172,25 @@ function filtrarGraficoTiago() {
         let dataInicFim = dataInicioFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1')
             + " a " + dataFimFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
         resultFiltro.innerHTML = `Movimentação entre  ${dataInicFim}.`;
+        atualizarGraficosCaixa();
     }
 }
+function atualizarGraficosCaixa() {
 
+    const dataValoresEntradasFiltrados = agruparCategorias(contasAReceberFiltroTiago);
+    const valorCaixaEntradasFiltrados = Object.values(dataValoresEntradasFiltrados);
+    const dataValoresSaidasFiltrados = agruparCategorias(contasApagarFiltroTiago);
+    const valoresCaixaSaidasFiltrados = Object.values(dataValoresSaidasFiltrados);
+
+    console.log(valorCaixaEntradasFiltrados)
+    console.log(valoresCaixaSaidasFiltrados)
+
+        chartCaixaValores.data.datasets[0].data = valorCaixaEntradasFiltrados;
+        chartCaixaValores.update();
+        chartCaixaValores.data.datasets[0].data = valoresCaixaSaidasFiltrados;
+        chartCaixaValores.update();
+
+}
 
 
 
