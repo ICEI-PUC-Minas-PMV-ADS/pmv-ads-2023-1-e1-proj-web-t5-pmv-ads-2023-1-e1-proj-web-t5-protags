@@ -4,6 +4,108 @@
 
 Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
 
+## Tela de configuração
+
+CT 15 - Cadastro e alterações de informação do usuário
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se as configurações estão sendo salvas</li>
+  <li><strong>Resultado</strong>: Um popup apareceu sinalizando sucesso, fui redirecionado para a tela de perfil onde as informações foram exibidas</li>
+  </ul>
+  
+### `Responsável pelo teste: Lucas Gabriel`
+  
+<img src="/docs/img/configteste.png"></img>
+
+## Tela de configuração / sem sucesso
+
+CT 16 - Cadastro e alterações de informação do usuário sem sucesso
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se é possivel salvar alterações com os campos vazios</li>
+  <li><strong>Resultado</strong>: Um popup apareceu sinalizando sucesso, é possível salvar alterações com os campos vazios!</li>
+  </ul>
+  
+### `Responsável pelo teste: Lucas Gabriel`
+  
+<img src="/docs/img/configtesteInvalido.png"></img>
+
+## Tela de perfil
+
+CT 17 - Cadastro e alterações de informação do usuário
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se informações cadastradas pelo usuário estão sendo mostradas corretamente</li>
+  <li><strong>Resultado</strong>: As informações registradas anteriormente na tela de configurações, estão sendo exibidas corretamente nos respectivos campos.</li>
+  </ul>
+  
+  ### `Responsável pelo teste: Lucas Gabriel`
+  
+<img src="/docs/img/perfilteste.png"></img>
+
+## Tela de perfil / sem sucesso / Falta alterar
+
+CT 18 - Cadastro e alterações de informação do usuário sem sucesso
+<ul>
+  <li><strong>Objetivo do teste</strong>:	.</li>
+  <li><strong>Resultado</strong>:.</li>
+  </ul>
+  
+  ### `Responsável pelo teste: Lucas Gabriel`
+  
+<img src="/docs/img/perfiltesteInvalido.png"></img>
+
+## Tela de registro
+CT-01 - Cadastro de usuário
+<ul>
+  <li><strong>Objetivo do teste</strong>:	V Verificar se a conta está sendo criada corretamente </li>
+  <li><strong>Resultado</strong>: Apareceu o alert escrito usuário cadastrado com sucesso e logo depois redireciona para pagina de login </li>
+  </ul>
+  ### `Responsável pelo teste: Aline Azedias`
+  
+<img src="/docs/registrosucesso.png"></img>
+
+## Tela de registro / sem sucesso
+CT-02 - Cadastro de usuário sem sucesso 
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se uma conta está sendo criada mesmo preenchendo as informações corretamente </li>
+  <li><strong>Resultado</strong>: Apareceu um texto em vermelho pedindo para preencher todos os campos!</li>
+  </ul>
+  
+  ### `Responsável pelo teste: Aline Azedias`
+  
+<img src="/docs/registrosemsucesso.png"></img>
+
+## Tela de login
+CT-03 - Login de usuário
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema reconhece o usuário e permite o login
+</li>
+  <li><strong>Resultado</strong>: Apareceu o alert de login efetuado com sucesso e logo depois redireciona para pagina de inicio
+</li>
+  </ul>
+  ### `Responsável pelo teste: Aline Azedias`
+  
+<img src="/docs/loginsucesso.png"></img>
+
+## Tela de login / sem sucesso
+CT-04 - Login de usuário sem sucesso
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema reconhece um usuário não cadastrado </li>
+  <li><strong>Resultado</strong>: Apareceu o alert de usuário ou senha incorretos</li>
+  </ul>
+  
+  ### `Responsável pelo teste: Aline Azedias`
+  
+<img src="/docs/img/loginsemsucesso.png"></img>
+
+
+## Tela de registro de contas pagas/a pagar
+CT 13 - Verificar se o sistema registra novas contas a pagar e a receber.
+<img src="/docs/img/cadastrodecontasucesso.png"></img>
+Resultado: Uma nova conta é cadastrada no sistema com sucesso.
+
+CT 14 - Verificar se o sistema é capaz de armazenar documentos/comprovantes, e consegue visualizar os mesmos.
+<img src="/docs/img/arquivoabrir.png"></img>
+Resultado: O sistema consegue abrir o arquivo em uma nova página no navegado do usuário.
+
 ## Avaliação
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.

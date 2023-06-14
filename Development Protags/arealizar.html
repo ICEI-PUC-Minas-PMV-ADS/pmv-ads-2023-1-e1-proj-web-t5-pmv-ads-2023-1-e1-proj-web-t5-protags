@@ -100,48 +100,69 @@
 								
             <td class="doublelineformat ">
                 <br>
-                <span class="outterTableHeaderRight">
-                                     
-                <button type="button" class="btn btn-success" id="cadastrarCliente" style="margin-left:20px;"
-            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-      CADASTRAR
-    </button>
+                <div style="padding-right:10px;">
+                    <input type="hidden" name="resetCurrentPage" value="null">
+                    <input type="hidden" name="clearFilter" value="false">
+                    <span id="filtrar" style="text-transform:none;"><a href="#" title="" id="btn_filtro"><i class="fas fa-filter w3darkgray"></i> Filtrar</a></span>
+                    <button type="button" title="" id="btn_gerarcsv"><i class="far fa-file-code w3darkgray"></i> Gerar CSV</button>
+                    <button type="button" title="" id="btn_gerar"><i class="far fa-file-pdf w3darkgray"></i> Gerar PDF</button>
+                    <button type="button" title="" id="btnUrgentes">Contas Urgentes</button>
+                </div>
+                <br>
+                <div id="menuUrgentes">
+                    <div class="urgentesBorda" hidden>
+                        <div class="urgentesTítulo"></div>
+                        <div class="urgentesDataDeVenci"></div>
+                        <div class="urgentesValor"></div>
+                        <div class="urgentesParcelas"></div>
+                        <div class="urgentesPagarPara"></div>
+                    </div>
+                </div>
+            </td>
 
-    </span>
+            </table>
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>
+                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
+                        </th>
+                        <th scope="col">CONTA</th>
+                        <th scope="col">VENCIMENTO</th>
+                        <th scope="col">PARCELA</th>
+                        <th scope="col">RECEBER DE</th>
+                        <th scope="col">DESCRIÇÃO</th>
+                        <th scope="col">COMPROVANTE</th>
+                        <th scope="col">DATA DE RECEBIMENTO</th>
+                        <th scope="col">VALOR</th>
+                        <th scope="col">SITUAÇÃO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
+                        </td>
+                        <th scope="row">01</th>
+                        <td>30/04/2023</td>
+                        <td>01/02</td>
+                        <td>Eletrocell</td>
+                        <td>Venda de películas</td>
+                        <td></td>
+                        <td></td>
+                        <td>R$580,00</td>
+                        <td><select name="acoes" class="selectAcoes" onchange="javascript:fazerAcao(this);"
+                                style="width:210px;">
+                                <option value="<null>" class="nullValue"></option>
 
-    <td class="doublelineformat ">
-        <br>
-        <div align="right" style="padding-right:10px;">
-            <button type="button" class="btn btn-primary"
-    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-Gerar CSV
-</button>
 
-<button type="button" class="btn btn-primary"
-    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-Gerar PDF
-</button>
-     </div><br>
-        </td>
-        </table>
-    <table class="table table-bordered" id="tableClient">
-        <thead class="table-dark">
-          <tr >
-            <th>
-                <input class="checkBoxClass" type="checkbox" name="selecteditens" value="20794">
-            </th>
-            <th scope="col">CONTA</th>
-            <th scope="col">VENCIMENTO</th>
-            <th scope="col">PARCELA</th>
-            <th scope="col">PAGAR PARA</th>
-            <th scope="col">DESCRIÇÃO</th>
-            <th scope="col">COMPROVANTE</th>
-            <th scope="col">DATA DE RECEBIMENTO</th>
-            <th scope="col">VALOR</th>
-            <th scope="col">SITUAÇÃO</th>
-          </tr>
-        </thead>
-        <tbody>
+                                <option value="3" class="opt">A PAGAR</option>
+                                <option value="4" class="opt">A RECEBER</option>
+                                <option value="6" class="opt">PAGO</option>
+                                <option value="0" class="opt">RECEBIDO</option>
+
+                            </select></td>
+                        </nav>
 
         </tbody>
           
@@ -199,7 +220,19 @@ Gerar PDF
           <a class="text-light" href="homepage.html">Protags</a>
         </div>
         <!-- Copyright -->
-      </footer>
+    </footer>
+
+    <script src="./js/arealizar.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

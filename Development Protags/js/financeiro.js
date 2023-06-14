@@ -1,29 +1,61 @@
-localStorage.setItem("valorEntrada", "1050.50")
-localStorage.setItem("valorAReceber", "250,10")
-localStorage.setItem("valorSaida", "450,20")
-localStorage.setItem("valorAPagar", "250,00")
-
-var entradaLocalBase = localStorage.getItem("valorEntrada")
-var saidaLocalBase = localStorage.getItem("valorSaida")
-var aReceberLocalBase = localStorage.getItem("valorAReceber")
-var aPagarLocalBase = localStorage.getItem("valorAPagar")
-const entradaSaidaArray = []
-var entradaBase = parseFloat(entradaLocalBase.replace(",", "."));
-var aReceberBase = parseFloat(aReceberLocalBase.replace(",", "."));
-var saidaBase = parseFloat(saidaLocalBase.replace(".", ","));
-var aPagarBase = parseFloat(aPagarLocalBase.replace(".", ","));
-entradaSaidaArray.push(entradaBase)
-entradaSaidaArray.push(aReceberBase)
-entradaSaidaArray.push(saidaBase)
-entradaSaidaArray.push(aPagarBase)
-// Variáveis do formulário
-
+// Data
 var data = new Date();
 var dia = String(data.getDate()).padStart(2, '0');
 var mes = String(data.getMonth() + 1).padStart(2, '0');
 var ano = data.getFullYear();
 var FirstDay = "01" + '/' + mes + '/' + ano;
-var LastDay = "31" + '/' + mes + '/' + ano;
+if (mes === "01" || mes === "03" || mes === "05" || mes === "07" || mes === "08" || mes === "10" || mes === "12") {
+    var LastDay = "31" + '/' + mes + '/' + ano;
+} else if (mes === "02") {
+    var LastDay = "28" + '/' + mes + '/' + ano;
+} else {
+    var LastDay = "30" + '/' + mes + '/' + ano;
+}
+
+
+// Modelo Padrão - Alterar depois com o certo
+
+var aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+var aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+
+var somaEntrada = 0;
+for (let i = 0; i < aReceberPull.length; i++) {
+    if (aReceberPull[i].situacao === "cRecebido") {   
+    var entradaValor = aReceberPull[i].valor;   
+    var entradaBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));   
+    somaEntrada += entradaBRL;
+    } 
+}
+var somaSaida = 0;
+for (let i = 0; i < aPagarPull.length; i++) {
+    if (aPagarPull[i].situacao === "cPago") {   
+    var saidaValor = aPagarPull[i].valor;   
+    var saidaBRL = parseFloat(saidaValor.replace('R$', '').replace(',', '.'));   
+    somaSaida += saidaBRL;
+    } 
+}
+var somaAReceber = 0;
+for (let i = 0; i < aReceberPull.length; i++) {
+        if (aReceberPull[i].situacao === "caReceber") {
+        var aReceberValor = aReceberPull[i].valor;
+        var aReceberBRL = parseFloat(aReceberValor.replace('R$', '').replace(',', '.'));
+        somaAReceber += aReceberBRL;
+        }
+}
+var somaAPagar = 0;
+for (let i = 0; i < aPagarPull.length; i++) {
+    if (aPagarPull[i].situacao === "cAPagar") {
+        var aPagarValor = aPagarPull[i].valor;
+        var aPagarBRL = parseFloat(aPagarValor.replace('R$', '').replace(',', '.'));
+        somaAPagar += aPagarBRL;
+    }
+}
+var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+var saidaBase = somaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); 
+var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {
@@ -40,10 +72,10 @@ if (localStorage.getItem('token') === null) {
 
     window.onload = function () {
 
-        entrada.innerHTML = "R$ " + `${entradaBase}`;
-        aReceber.innerHTML = "R$ " + parseFloat(aReceberBase);
-        saida.innerHTML = "R$ " + parseFloat(saidaBase);
-        aPagar.innerHTML = "R$ " + parseFloat(aPagarBase);
+        entrada.innerHTML = "R$ " + entradaBase;
+        aReceber.innerHTML = "R$ " + aReceberBase;
+        saida.innerHTML = "R$ " + saidaBase;
+        aPagar.innerHTML = "R$ " + aPagarBase;
 
         let resultInfo = parseInt(entradaBase) - parseInt(saidaBase)
         if (resultInfo > 0) {
@@ -79,23 +111,25 @@ function Filtrar() {
 
 // Grafico Tiago
 
+
 const ctx3 = document.getElementById('myChart3');
 new Chart(ctx3, {
     type: 'bar',
     data: {
         labels: [
-            'Despesas',
-            'Receitas'
+            'Receitas',
+            'Despesas'
+
         ],
         datasets: [{
             label: 'Movimentações financeiras',
-            data: [15, 5
-                //    ...contasAReceber.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))), // Adiciona os valores existentes
-                //    ...contasAPagar.map(conta => Number(conta.valor.replace(/[^0-9.-]+/g, ""))) // Adiciona os valores existentes
+            data: [parseInt(entradaBase), parseInt(saidaBase)
+
             ],
             backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(75, 192, 192)'
+                'rgb(75, 192, 192)',
+                'rgb(255, 99, 132)'
+
             ],
             hoverOffset: 4
         }]
@@ -108,14 +142,10 @@ new Chart(ctx3, {
 
 
 
-
-
-
-
-
 // GRÁFICOS LUCAS
+const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
-// Função para agrupar categorias e somar os valores correspondentes
 function agruparCategorias(contas) {
     const categoriasAgrupadas = {};
     contas.forEach(conta => {
@@ -130,16 +160,13 @@ function agruparCategorias(contas) {
     return categoriasAgrupadas;
 }
 
+// Gráfico de Entradas
+const categoriasValoresEntradas = agruparCategorias(contasAReceber);
+const labelsEntradas = Object.keys(categoriasValoresEntradas);
+const valoresEntradas = Object.values(categoriasValoresEntradas);
 
-
-// GRÁFICO DE ENTRADAS
-let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
-let categoriasValoresEntradas = agruparCategorias(contasAReceber);
-let labelsEntradas = Object.keys(categoriasValoresEntradas);
-let valoresEntradas = Object.values(categoriasValoresEntradas);
-
-const ctx = document.getElementById('myChart');
-new Chart(ctx, {
+const ctx = document.getElementById('myChart').getContext('2d');
+const chartEntradas = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: labelsEntradas,
@@ -156,16 +183,13 @@ new Chart(ctx, {
     }
 });
 
+// Gráfico de Saídas
+const categoriasValoresSaidas = agruparCategorias(contasAPagar);
+const labelsSaidas = Object.keys(categoriasValoresSaidas);
+const valoresSaidas = Object.values(categoriasValoresSaidas);
 
-
-// GRÁFICO DE SAÍDAS
-let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
-let categoriasValoresSaidas = agruparCategorias(contasAPagar);
-let labelsSaidas = Object.keys(categoriasValoresSaidas);
-let valoresSaidas = Object.values(categoriasValoresSaidas);
-
-const ctx2 = document.getElementById('myChart2');
-new Chart(ctx2, {
+const ctx2 = document.getElementById('myChart2').getContext('2d');
+const chartSaidas = new Chart(ctx2, {
     type: 'bar',
     data: {
         labels: labelsSaidas,
@@ -182,5 +206,62 @@ new Chart(ctx2, {
     }
 });
 
+// FILTRO DE DATAS
+let contasAPagarFiltradas = [];
+let contasAReceberFiltradas = [];
 
+function filtroData() {
+    contasAPagarFiltradas = [];
+    contasAReceberFiltradas = [];
 
+    let dataInicioTESTE = document.querySelector('#dataInicioTESTE').value;
+    let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
+
+    let partesData = dataInicioTESTE.split("-");
+    let dataInicio = new Date(partesData[0], partesData[1] - 1, partesData[2]);
+
+    let partesData2 = dataFimTESTE.split("-");
+    let dataFim = new Date(partesData2[0], partesData2[1] - 1, partesData2[2]);
+
+    for (let i = 0; i < contasAPagar.length; i++) {
+        let partesDataAPagar = contasAPagar[i].datadevenci.split("-");
+        let dataContaPagar = new Date(partesDataAPagar[0], partesDataAPagar[1] - 1, partesDataAPagar[2]);
+
+        if (dataContaPagar >= dataInicio && dataContaPagar <= dataFim) {
+            contasAPagarFiltradas.push(contasAPagar[i]);
+        }
+    }
+
+    for (let i = 0; i < contasAReceber.length; i++) {
+        let partesDataAReceber = contasAReceber[i].datadevenci.split("-");
+        let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
+
+        if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
+            contasAReceberFiltradas.push(contasAReceber[i]);
+        }
+    }
+
+    console.log(contasAPagarFiltradas); // Exibir os dados filtrados de contasAPagar no console
+    console.log(contasAReceberFiltradas); // Exibir os dados filtrados de contasAReceber no console
+    atualizarGraficosFiltrados();
+}
+
+function atualizarGraficosFiltrados() {
+    // Atualizar gráfico de entradas
+    const categoriasValoresEntradasFiltrados = agruparCategorias(contasAReceberFiltradas);
+    const labelsEntradasFiltrados = Object.keys(categoriasValoresEntradasFiltrados);
+    const valoresEntradasFiltrados = Object.values(categoriasValoresEntradasFiltrados);
+
+    chartEntradas.data.labels = labelsEntradasFiltrados;
+    chartEntradas.data.datasets[0].data = valoresEntradasFiltrados;
+    chartEntradas.update();
+
+    // Atualizar gráfico de saídas
+    const categoriasValoresSaidasFiltrados = agruparCategorias(contasAPagarFiltradas);
+    const labelsSaidasFiltrados = Object.keys(categoriasValoresSaidasFiltrados);
+    const valoresSaidasFiltrados = Object.values(categoriasValoresSaidasFiltrados);
+
+    chartSaidas.data.labels = labelsSaidasFiltrados;
+    chartSaidas.data.datasets[0].data = valoresSaidasFiltrados;
+    chartSaidas.update();
+}

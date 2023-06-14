@@ -6,7 +6,10 @@
 
 body {
     font-family: sans-serif;
-}
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set the body to take up the full height of the viewport */
+  }
 
 .navbar-toggler-icon {
     filter: brightness(0) invert(1);
@@ -15,14 +18,16 @@ body {
 }
 
 .header {
+    position: relative;
     height: 11rem;
     min-height: 12vh;
     width: 100vw !important;
     background-color: #47141e;
-}
+  }
 
 #dropdownMenuButton {
     width: fit-content;
+    height: fit-content;
     background-color: #47141E;
     border-color: #47141E;
 }
@@ -51,9 +56,8 @@ body {
     width: 8.5rem;
     height: 2.5rem;
     margin-left: 1%;
-    margin-bottom: 3rem;
-    padding-left: 1%;
-    padding-top: 0.6%;
+    padding-left: 0.7rem;
+    padding-top: 0.5rem;
     color: #fff;
     border-radius: 5px;
 }
@@ -72,7 +76,7 @@ body {
 }
 
 .div1, .div2, .div3 {
-    padding-left: 180px;
+    padding-left: 200px;
     padding-right: 200px;
 }
 
@@ -139,6 +143,16 @@ button {
     border: 1px solid gray;
 }
 
+#pvisualizarArquivo {
+    font-size: 1.9vh;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 2px;
+    width: 8vw;
+    height: 5vh;
+}
+
 
 @media only screen and (max-width: 768px){
     .conteudo, .div1, .div2, .div3{
@@ -153,15 +167,21 @@ button {
       }
     .div1, .div2, .div3{
         display: flex;
-        padding-left: 9rem;
+        padding-left: 20vw;
     }
-    #footer {
-        position: relative;
+    .titulo {
+        margin-top: 3px;
+
     }
     .pcadastrar {
         position: relative;
         top: 20px;
-        left: 280px;
+        left: 230px;
+    }
+    #dropdownMenuButton {
+    }
+    #footer {
+        position: relative;
     }
     label {
         font-size: 1.2rem;
@@ -177,10 +197,6 @@ button {
         height: 40px;
         font-size: 1rem;
     }
-}
-
-#dropMenuBtn {
-    --bs-dropdown-min-width: 5.4rem;
 }
 
 .div1 {
@@ -211,6 +227,14 @@ button {
     width: 70px;
 }
 
+#navbarSupportedContent {
+    border: 1px solid #47141E;
+}
+
+.navbar-nav {
+    background-color: #47141E;
+    margin-left: 100px;
+}
 .testediv {
     justify-content: center;
 }
