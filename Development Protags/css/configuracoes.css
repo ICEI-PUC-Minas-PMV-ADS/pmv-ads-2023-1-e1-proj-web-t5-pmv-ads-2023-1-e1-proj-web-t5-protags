@@ -38,7 +38,7 @@
 }
 
 #footer {
-    min-height: 8vh;
+    min-height: 5vh;
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
@@ -105,8 +105,8 @@ button {
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: relative;
-    margin-top: 187px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
 }
 

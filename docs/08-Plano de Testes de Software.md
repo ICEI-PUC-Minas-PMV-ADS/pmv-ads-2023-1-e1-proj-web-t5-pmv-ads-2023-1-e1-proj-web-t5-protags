@@ -1,12 +1,5 @@
 # Plano de Testes de Software
 
-Para que os testes possam ser realizados, é necessário os seguintes requisitos:
-
- - O site publicado na internet;
- - Um Navegador de Internet (Como o Google Chrome, Firefox ou Microsoft Edge);
- - Conectividade de Internet para a utilização da plataforma.
- 
-## Planos de testes
 
 ### Tela de registro
  | Caso de teste | CT-01 - Cadastro de usuário |
@@ -134,7 +127,7 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
 
 
 ## Tela de registro de contas pagas/a pagar
-| Caso de teste | Cadastrar novas contas a pagar e receber |
+| Caso de teste | CT-13 - Cadastrar novas contas a pagar e receber |
 | --------------- | ---------------------------------------- |
 | Requisitos Associados | RF-011 	O site deve conter a capacidade de registrar e controlar contas a pagar, com recursos de categorização e controle de prazos de pagamento; RF-009 	O site deve conter a capacidade de registrar e controlar contas a receber, com recursos de categorização e controle de prazos de recebimento |
 | Objetivo do teste | Verificar se o sistema registra novas contas a pagar e a receber. |
@@ -144,7 +137,7 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
 | Critérios de Êxito | É registrado todas as informações inseridas para serem demonstradas no dashboard. |
 
 ### Visualizar documentos/comprovantes 
-| Caso de teste | Anexar e Visualizar arquivos selecionados |
+| Caso de teste | CT-14 - Anexar e Visualizar arquivos selecionados |
 | ---------------- | ----------------------------------------- |
 | Requisitos Associados | RF-017 	Permitir que o anexe documentos/comprovantes de pagamento |
 | Objetivo do teste | Verificar se o sistema é capaz de armazenar documentos/comprovantes, e consegue visualizar os mesmos. |
@@ -193,6 +186,17 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
  | Passo 2 | Preencher todos os campos com as informações necessárias |
  | Passo 3 | Clicar no botão "Salvar Alterações" |
  | Critérios de Êxito | Deverá apresentar um "alert" dizendo que as informações foram salvas com sucesso e o redireciona para a tela de perfil. |
+ 
+ ### Tela de configuração / sem sucesso
+ | Caso de configuração | Cadastro e alterações de informação do usuário sem sucesso |
+ | --------------- | -------------------------- |
+ | Objetivo do teste | Verificar se é possivel salvar alterações com os campo vazios |
+ | Passo 1 | Acessar a tela de configuração |
+ | Passo 2 | Preencher os campos deixando alguns vazios |
+ | Passo 3 | Clicar no botão "Salvar Alterações |
+ | Critérios de Êxito | Os campos em vazios podem ser deixados em branco, sem gerar erros de validação ao salvar as alterações.|
+
+
 
 ### Tela de perfil
  | Caso de teste | Visualização das informações cadastradas pelo usuário |
@@ -203,3 +207,12 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
  | Passo 2 | Visualizar se as informações, e clicar em editar se necessário|
  | Passo 3 | Clicar no botão "Salvar Alterações" |
  | Critérios de Êxito | Deverá exibir as informações que foram cadastradas na página de registro, ou alteradas/adicionadas na página de configuração. |
+
+### Tela de perfil / sem sucesso
+| Caso de teste | Visualização das informações cadastradas pelo usuário sem sucesso|
+| --------------- | ------------------ |
+| Objetivo do teste | Verificar se informações cadastradas estão sendo alteradas e exibidas corretamente |
+| Passo 1 | Acessar a tela de perfil |
+ | Passo 2 | Visualizar se as informações, e clicar em editar se necessário|
+ | Passo 3 | Clicar no botão "Salvar Alterações" |
+| Critérios de Êxito | O sistema exibe as alteraçãos corretamente, mas não altera no localStorage|
