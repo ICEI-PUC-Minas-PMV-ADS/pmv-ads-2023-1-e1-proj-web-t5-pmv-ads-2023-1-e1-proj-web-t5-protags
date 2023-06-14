@@ -121,6 +121,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-016| O Site deve permitir o usuário a exportação das informações |  BAIXA |
 |RF-017| Permitir que o anexe documentos/comprovantes de pagamento | BAIXA |
 |RF-018| O site deve conter um painel de compromissos diários | BAIXA |
+|RF-019| O site deve conter um gráfico de monitoramento do Fluxo de Caixa| ALTA |
+
 
 
 
