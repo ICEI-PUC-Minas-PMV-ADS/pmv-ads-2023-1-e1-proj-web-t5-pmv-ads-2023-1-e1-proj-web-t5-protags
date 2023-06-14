@@ -135,49 +135,43 @@ const chartCaixaValores = new Chart(ctx3, {
     }
 });
 
-
+//Filtro de data e Entradas/saidas
 var somaEntradaFiltro = 0
 var somaSaidaFiltro = 0
-
 function filtrarGraficoTiago() {
     if (dataInicioTiago.value.length < 3) {
         window.alert('Informe uma data para filtrar')
     } else {
 
-
+        //Base para datas
         let dataInicioFiltroTiago = document.querySelector('input#dataInicioTiago').value;
         let dataFimFiltroTiago = document.querySelector('input#dataFimTiago').value;
-
         let dataInicioSplit = dataInicioFiltroTiago.split("-");
         let dataFimSplit = dataFimFiltroTiago.split("-");
-
         let dataInicioTiago = new Date(dataInicioSplit[0],dataInicioSplit[1] - 1,dataInicioSplit[2]);
         let dataFimTiago = new Date(dataFimSplit[0], dataFimSplit[1] - 1, dataFimSplit[2]);
 
+        // Filtro Entradas
         somaEntradaFiltro = 0
         for (let i = 0; i < aReceberPull.length; i++){
             let dataAReceberSplit = aReceberPull[i].datadevenci.split("-");
             let dataAReceberFormatado = new Date(dataAReceberSplit[0], dataAReceberSplit[1] - 1, dataAReceberSplit[2]);
-
             if (dataAReceberFormatado >= dataInicioTiago && dataAReceberFormatado <= dataFimTiago && aReceberPull[i].situacao === "cRecebido"){
-                
                 var entradaValorFiltrado = aReceberPull[i].valor;
                 var entradaBRLFiltrado = parseFloat(entradaValorFiltrado.replace('R$', '').replace(',', '.'));
                 somaEntradaFiltro += entradaBRLFiltrado;
             }
-            console.log(somaEntradaFiltro);
         }
+        // Filtro Saidas
         somaSaidaFiltro = 0
         for (let i = 0; i < aPagarPull.length; i++){
             let dataAPagarSplit = aPagarPull[i].datadevenci.split("-");
             let dataAPagarFormatado = new Date(dataAPagarSplit[0], dataAPagarSplit[1] - 1, dataAPagarSplit[2]);
             if (dataAPagarFormatado >= dataInicioTiago && dataAPagarFormatado <= dataFimTiago && aPagarPull[i].situacao === "cPago"){
-                
                 var saidaValorFiltrado = aPagarPull[i].valor;
                 var saidaBRLFiltrado = parseFloat(saidaValorFiltrado.replace('R$', '').replace(',', '.'));
                 somaSaidaFiltro += saidaBRLFiltrado;
             }
-            console.log(somaSaidaFiltro);
         }
 
         let dataInicFim = dataInicioFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1')
