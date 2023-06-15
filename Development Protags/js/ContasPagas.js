@@ -84,7 +84,6 @@ contasAPagar.forEach((conta, index) => {
   
   console.log(contasAtrasadas);
   localStorage.setItem("contasAtrasadas", JSON.stringify(contasAtrasadas));
-  
 }
 
 

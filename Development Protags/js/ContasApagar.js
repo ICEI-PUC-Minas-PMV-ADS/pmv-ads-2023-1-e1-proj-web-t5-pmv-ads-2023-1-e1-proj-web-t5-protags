@@ -35,7 +35,7 @@ for (let i = 0; i < contasAPagar.length; i++) {
     <td class="text-center" id="dataDeVencimento">${conta.datadevenci}</td>
     <td class="text-center" id="exibirReais">${conta.valor}</td>
     <td class="text-center">
-      <select name="acoes" class="selectAcoes" id="select-menu-${conta.id}">
+      <select name="acoes" class="selectAcoes" id="select-menu-${conta.situacao}">
         <option value="<null>" class="nullValue"></option>
         <option value="3" class="opt">A PAGAR</option>
         <option value="4" class="opt">A RECEBER</option>
