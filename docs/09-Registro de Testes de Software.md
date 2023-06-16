@@ -143,17 +143,33 @@ CT-07 - Alteração de eventos registrados
   
 <img src="/docs/img/AlterarEventoSucesso.png"></img>
 
+## Tela inicial / Alterar eventos - Sem Sucesso
+CT-07 - Alteração de eventos registrados
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema não permita alterar o cadastro de um evento na tela de Inicio, sem nenhum dado escrito.
+  </li>
+  <li><strong>Resultado</strong>: Ao deletar todos os dados e alterar o evento, apareceu o alert de Preencha os campos corretamente e impediu que o sistema de alterar o evento.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/AlterarEventoSemSucesso.png"></img>
+
+
 ## Tela inicial / Alterar eventos - Sem Sucesso - Erro
 CT-07 - Alteração de eventos registrados
 <ul>
   <li><strong>Objetivo do teste</strong>:	Verificar se o sistema não permita alterar o cadastro de um evento na tela de Inicio, sem nenhum dado escrito.
   </li>
-  <li><strong>Resultado</strong>: Ao alterar o evento, apareceu o alert de Evento alterado com sucesso! e logo depois redireciona para pagina de inicio, com um evento com nenhum dado preenchido e um erro.
+  <li><strong>Resultado</strong>: Ao deletar todos os dados e alterar o evento, apareceu o alert de Evento alterado com sucesso! e logo depois redireciona para pagina de inicio, com um evento com nenhum dado preenchido e um erro.
   </li>
 </ul>
-  ### `Responsável pelo teste: Tiago Henrique`
+  ### `Responsável pelo teste: Tiago Henrique` 
 
-<img src="/docs/img/AlterarEventoErro.png"></img>
+<img height=500px src="/docs/img/AlterarEventoErro.png"></img>
+<img width=500px src="/docs/img/EventoCadastradoErroResultado.png" ></img>
+
+
 
 
 
