@@ -162,6 +162,22 @@ function editEvento(listEv, eventoEditado, eventId) {
 // Função ativada pelo botão de cadastrar / CREATE (C.r.u.d)
 function cadEvento() {
 
+    if (dataCad.value === '' && descricaoCad.value === '') {
+
+        let dataCadAlert = document.getElementById('dataCad')
+        let quemCadAlert = document.getElementById('quemCad')
+        let descricaoCadAlert = document.getElementById('descricaoCad')
+        let horarioCadAlert = document.getElementById('horarioCad')
+
+        alert('Preencha os campos corretamente')
+
+        dataCadAlert.setAttribute('style', 'border: solid 1px red')
+        quemCadAlert.setAttribute('style', 'border: solid 1px red')
+        descricaoCadAlert.setAttribute('style', 'border: solid 1px red')
+        horarioCadAlert.setAttribute('style', 'border: solid 1px red')
+
+    } else {
+
         const newEvent = {
             dataEv: dataCad.value,
             horarioEv: horarioCad.value,
@@ -232,8 +248,9 @@ function cadEvento() {
         location.reload();
     }
 
-// Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
-function logout() {
-    localStorage.removeItem('token')
-    window.location.href = 'login.html'
+    // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
+    function logout() {
+        localStorage.removeItem('token')
+        window.location.href = 'login.html'
+    }
 }
