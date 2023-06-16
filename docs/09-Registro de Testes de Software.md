@@ -143,17 +143,97 @@ CT-07 - Alteração de eventos registrados
   
 <img src="/docs/img/AlterarEventoSucesso.png"></img>
 
-## Tela inicial / Alterar eventos - Sem Sucesso - Erro
-CT-07 - Alteração de eventos registrados
+## Tela inicial / Alterar eventos - Sem Sucesso
+CT-08 - Alteração de eventos registrados sem sucesso
 <ul>
   <li><strong>Objetivo do teste</strong>:	Verificar se o sistema não permita alterar o cadastro de um evento na tela de Inicio, sem nenhum dado escrito.
   </li>
-  <li><strong>Resultado</strong>: Ao alterar o evento, apareceu o alert de Evento alterado com sucesso! e logo depois redireciona para pagina de inicio, com um evento com nenhum dado preenchido e um erro.
+  <li><strong>Resultado</strong>: Ao deletar todos os dados e alterar o evento, apareceu o alert de Preencha os campos corretamente e impediu que o sistema de alterar o evento.
   </li>
 </ul>
   ### `Responsável pelo teste: Tiago Henrique`
 
-<img src="/docs/img/AlterarEventoErro.png"></img>
+<img src="/docs/img/AlterarEventoSemSucesso.png"></img>
+
+
+## Tela inicial / Alterar eventos - Sem Sucesso - Erro
+CT-08 - Alteração de eventos registrados sem sucesso
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema não permita alterar o cadastro de um evento na tela de Inicio, sem nenhum dado escrito.
+  </li>
+  <li><strong>Resultado</strong>: Ao deletar todos os dados e alterar o evento, apareceu o alert de Evento alterado com sucesso! e logo depois redireciona para pagina de inicio, com um evento com nenhum dado preenchido e um erro.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique` 
+
+<img height=500px src="/docs/img/AlterarEventoErro.png"></img>
+<img width=500px src="/docs/img/EventoCadastradoErroResultado.png" ></img>
+
+
+## Excluir eventos - Verificação
+CT-10 - Remover eventos sem sucesso
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema não permita alterar o cadastro de um evento na tela de Inicio, sem nenhum dado escrito.
+  </li>
+  <li><strong>Resultado</strong>:  Ao clicar em deletar, aparece um alert "Tem certeza de que deseja excluir?", se clicado em cancelar, volta a tela inicial sem nenhuma alteração.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/DeletarEventoVerificação.png"></img>
+
+## Excluir eventos
+CT-09 - Remover eventos
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema permita excluir um evento na tela de Inicio.
+  </li>
+  <li><strong>Resultado</strong>: Ao clicar em deletar e confirmar a exclusão,aparece um alert "Excluido com sucesso" e após o "ok" o evento é retirado da tela inicial.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/DeletarEventoSucesso.png"></img>
+
+
+
+## Grafico de Categorias
+CT-11 Alteração de eventos registrados
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema mostre os valores formatados e filtrados no grafico de categorias.
+  </li>
+  <li><strong>Resultado</strong>: Após o filtro aplicado, os valores e as categorias aparecem corretamente e formatados.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/GraficoCategoriaFiltrado.png"></img>
+
+
+## Grafico de Categorias - Erro na formatação
+CT-12 - Erro na visualização dos valores
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema mostre os valores formatados e filtrados no grafico de categorias.
+  </li>
+  <li><strong>Resultado</strong>:  O Grafico apresenta os valores sem formatação para BRL.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/GraficoCategoriaErroFormatacao.png"></img>
+
+
+## Grafico de Categorias - Sem Dados
+CT-11 Alteração de eventos registrados
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema mostre os valores formatados e filtrados no grafico de categorias.
+  </li>
+  <li><strong>Resultado</strong>: Após o filtro aplicado e não havendo nenhum dado no periodo, o grafico aparece vazio.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/GraficoCategoriaSemDados.png"></img>
+
 
 
 
