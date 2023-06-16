@@ -196,7 +196,43 @@ CT-09 - Remover eventos
 
 
 
+## Grafico de Categorias
+CT-11 Alteração de eventos registrados
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema mostre os valores formatados e filtrados no grafico de categorias.
+  </li>
+  <li><strong>Resultado</strong>: Após o filtro aplicado, os valores e as categorias aparecem corretamente e formatados.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
 
+<img src="/docs/img/GraficoCategoriaFiltrado.png"></img>
+
+
+## Grafico de Categorias - Erro na formatação
+CT-12 - Erro na visualização dos valores
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema mostre os valores formatados e filtrados no grafico de categorias.
+  </li>
+  <li><strong>Resultado</strong>:  O Grafico apresenta os valores sem formatação para BRL.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/GraficoCategoriaErroFormatacao.png"></img>
+
+
+## Grafico de Categorias - Sem Dados
+CT-11 Alteração de eventos registrados
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema mostre os valores formatados e filtrados no grafico de categorias.
+  </li>
+  <li><strong>Resultado</strong>: Após o filtro aplicado e não havendo nenhum dado no periodo, o grafico aparece vazio.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/GraficoCategoriaSemDados.png"></img>
 
 
 
