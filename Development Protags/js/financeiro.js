@@ -222,7 +222,7 @@ function agruparCategorias(contas) {
     const categoriasAgrupadas = {};
     contas.forEach(conta => {
         const categoria = conta.categoria.toLowerCase();
-        const valor = Number(conta.valor.replace(/[^0-9.-]+/g, ""));
+        const valor = Number(conta.valor.replace(/[^0-9,-]+/g, "").replace(",", "."));
         if (categoria in categoriasAgrupadas) {
             categoriasAgrupadas[categoria] += valor;
         } else {
@@ -231,6 +231,7 @@ function agruparCategorias(contas) {
     });
     return categoriasAgrupadas;
 }
+
 
 // Gráfico de Entradas
 const categoriasValoresEntradas = agruparCategorias(contasAReceber);
@@ -251,7 +252,16 @@ const chartEntradas = new Chart(ctx, {
     },
     options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return 'R$ ' + context.formattedValue;
+                    }
+                }
+            }
+        }
     }
 });
 
@@ -274,7 +284,16 @@ const chartSaidas = new Chart(ctx2, {
     },
     options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return 'R$ ' + context.formattedValue;
+                    }
+                }
+            }
+        }
     }
 });
 
@@ -290,7 +309,7 @@ function filtroData() {
     let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
 
     let partesData = dataInicioTESTE.split("-");
-    let dataInicio = new Date(partesData[0], partesData[1] - 1, partesData[2]);
+    let dataInicio = new Date(partesData[0], partesData[1] -    1, partesData[2]);
 
     let partesData2 = dataFimTESTE.split("-");
     let dataFim = new Date(partesData2[0], partesData2[1] - 1, partesData2[2]);
