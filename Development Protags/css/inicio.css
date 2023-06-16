@@ -154,7 +154,9 @@
 }
 #botaoAdicionar {
     border: none;
-    padding: 0
+    padding: 0;
+    width: 7.4rem;
+    margin-left: 1rem;
 }
 
 
