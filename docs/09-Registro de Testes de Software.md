@@ -109,7 +109,7 @@ CT-05 - Cadastro de eventos
 <img width=500px src="/docs/img/EventoCadastradoResultado.png" ></img>
 
 ## Tela inicial / Criar e exibir eventos - Sem sucesso
-CT-05 - Cadastro de eventos
+CT-06 - Cadastro de eventos sem sucesso
 <ul>
   <li><strong>Objetivo do teste</strong>:	Verificar se o sistema impede o cadastro de um evento na tela de Inicio, sem que os campos estejam preenchidos</li>
   <li><strong>Resultado</strong>: Após tentar cadastrar sem nenhum dado escrito, apareceu o alert de Preencha os campos corretamente, retornando ao cadastro do evento com os campos essenciais em vermelho </li>
@@ -119,7 +119,7 @@ CT-05 - Cadastro de eventos
 <img height=500px src="/docs/img/EventoCadastradoSemSucesso.png" ></img>
 
 ## Tela inicial / Criar e exibir eventos - Sem sucesso - Com erro
-CT-05 - Cadastro de eventos
+CT-06 - Cadastro de eventos sem sucesso
 <ul>
   <li><strong>Objetivo do teste</strong>:	Verificar se o sistema impede o cadastro de um evento na tela de Inicio, sem que os campos estejam preenchidos
 </li>
@@ -131,6 +131,29 @@ CT-05 - Cadastro de eventos
 <img height=500px src="/docs/img/EventoCadastradoErro.png" ></img>
 <img width=500px src="/docs/img/EventoCadastradoErroResultado.png" ></img>
 
+## Tela inicial / Alterar eventos
+CT-07 - Alteração de eventos registrados
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema permite alterar o cadastro de um evento na tela de Inicio, alterando os dados atuais.
+  </li>
+  <li><strong>Resultado</strong>: Ao alterar o evento, apareceu o alert de Evento alterado com sucesso! e logo depois redireciona para pagina de inicio, com um evento com os novos dado preenchido.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+  
+<img src="/docs/img/AlterarEventoSucesso.png"></img>
+
+## Tela inicial / Alterar eventos - Sem Sucesso - Erro
+CT-07 - Alteração de eventos registrados
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema não permita alterar o cadastro de um evento na tela de Inicio, sem nenhum dado escrito.
+  </li>
+  <li><strong>Resultado</strong>: Ao alterar o evento, apareceu o alert de Evento alterado com sucesso! e logo depois redireciona para pagina de inicio, com um evento com nenhum dado preenchido e um erro.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/AlterarEventoErro.png"></img>
 
 
 
