@@ -144,7 +144,7 @@ CT-07 - Alteração de eventos registrados
 <img src="/docs/img/AlterarEventoSucesso.png"></img>
 
 ## Tela inicial / Alterar eventos - Sem Sucesso
-CT-07 - Alteração de eventos registrados
+CT-08 - Alteração de eventos registrados sem sucesso
 <ul>
   <li><strong>Objetivo do teste</strong>:	Verificar se o sistema não permita alterar o cadastro de um evento na tela de Inicio, sem nenhum dado escrito.
   </li>
@@ -157,7 +157,7 @@ CT-07 - Alteração de eventos registrados
 
 
 ## Tela inicial / Alterar eventos - Sem Sucesso - Erro
-CT-07 - Alteração de eventos registrados
+CT-08 - Alteração de eventos registrados sem sucesso
 <ul>
   <li><strong>Objetivo do teste</strong>:	Verificar se o sistema não permita alterar o cadastro de um evento na tela de Inicio, sem nenhum dado escrito.
   </li>
@@ -168,6 +168,34 @@ CT-07 - Alteração de eventos registrados
 
 <img height=500px src="/docs/img/AlterarEventoErro.png"></img>
 <img width=500px src="/docs/img/EventoCadastradoErroResultado.png" ></img>
+
+
+## Excluir eventos - Verificação
+CT-10 - Remover eventos sem sucesso
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema não permita alterar o cadastro de um evento na tela de Inicio, sem nenhum dado escrito.
+  </li>
+  <li><strong>Resultado</strong>:  Ao clicar em deletar, aparece um alert "Tem certeza de que deseja excluir?", se clicado em cancelar, volta a tela inicial sem nenhuma alteração.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/DeletarEventoVerificação.png"></img>
+
+## Excluir eventos
+CT-09 - Remover eventos
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema permita excluir um evento na tela de Inicio.
+  </li>
+  <li><strong>Resultado</strong>: Ao clicar em deletar e confirmar a exclusão,aparece um alert "Excluido com sucesso" e após o "ok" o evento é retirado da tela inicial.
+  </li>
+</ul>
+  ### `Responsável pelo teste: Tiago Henrique`
+
+<img src="/docs/img/DeletarEventoSucesso.png"></img>
+
+
+
 
 
 
