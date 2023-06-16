@@ -97,6 +97,48 @@ CT-04 - Login de usuário sem sucesso
 <img src="/docs/img/loginsemsucesso.png"></img>
 
 
+## Tela inicial / Criar e exibir eventos
+CT-05 - Cadastro de eventos
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se é possível cadastrar um evento na tela de Inicio
+</li>
+  <li><strong>Resultado</strong>: Apareceu o alert de evento cadastrado com sucesso e logo depois redireciona para pagina de inicio, com um evento novo com os dados preenchidos.
+</li>
+  </ul>
+  ### Responsável pelo teste: Tiago Henrique
+
+<img src= ></img>
+<img src= ></img>
+
+## Tela inicial / Criar e exibir eventos - Sem sucesso
+CT-05 - Cadastro de eventos
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema impede o cadastro de um evento na tela de Inicio, sem que os campos estejam preenchidos
+</li>
+  <li><strong>Resultado</strong>: Após tentar cadastrar sem nenhum dado escrito, apareceu o alert de Preencha os campos corretamente, retornando ao cadastro do evento com os campos essenciais em vermelho
+</li>
+  </ul>
+  ### Responsável pelo teste: Tiago Henrique
+  
+<img src= ></img>
+<img src= ></img>
+
+## Tela inicial / Criar e exibir eventos - Sem sucesso - Com erro
+CT-05 - Cadastro de eventos
+<ul>
+  <li><strong>Objetivo do teste</strong>:	Verificar se o sistema impede o cadastro de um evento na tela de Inicio, sem que os campos estejam preenchidos
+</li>
+  <li><strong>Resultado</strong>: O evento não foi impedido de cadastrar, apareceu o alert de evento cadastrado com sucesso e logo depois redireciona para pagina de inicio, com um evento novo com os nenhum dado preenchido e uma mensagem de erro.
+</li>
+  </ul>
+  ### Responsável pelo teste: Tiago Henrique
+  
+<img src= ></img>
+<img src= ></img>
+
+
+
+
 ## Tela de registro de contas pagas/a pagar
 CT 13 - Verificar se o sistema registra novas contas a pagar e a receber.
 <img src="/docs/img/cadastrodecontasucesso.png"></img>
