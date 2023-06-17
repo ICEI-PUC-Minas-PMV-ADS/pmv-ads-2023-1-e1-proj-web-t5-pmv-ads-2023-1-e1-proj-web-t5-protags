@@ -216,3 +216,42 @@
  | Passo 2 | Visualizar se as informações, e clicar em editar se necessário|
  | Passo 3 | Clicar no botão "Salvar Alterações" |
 | Critérios de Êxito | O sistema exibe as alteraçãos corretamente, mas não altera no localStorage|
+
+
+
+
+### Monitoramento de Fluxo de Receitas e Despesas
+| Caso de teste | Alteração de eventos registrados |
+| --------------- | -------------------------------- |
+| Requisitos Associados | RF-006	- O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |
+| Objetivo do teste | Verificar se o sistema exibe os valores em seus campos corretos e filtrado corretamente pelo mês atual |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Critérios de Êxito | Os campos se atualizam dinamicamente com as contas no mês atual ao carregar a pagina |
+
+### Monitoramento de Fluxo de Receitas e Despesas / sem sucesso
+| Caso de teste | Alteração de eventos registrados sem sucesso |
+| --------------- | -------------------------------- |
+| Objetivo do teste | Verificar se o sistema exibe os valores em seus campos corretos e filtrado corretamente pelo mês atual |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Critérios de Êxito | Os campos são preenchidos com valores errados e/ou não filtrados pelo mês atual |
+
+### Gráfico do Fluxo de Caixa
+| Caso de teste | Alteração de eventos registrados |
+| --------------- | -------------------------------- |
+| Requisitos Associados | RF-019 - O site deve conter um gráfico de monitoramento do Fluxo de Caixa |
+| Objetivo do teste | Verificar se o sistema exibe o gráfico com valores de entradas e saidas, filtrado corretamente pelas datas existentes no Local Storage |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Passo 3 | Selecionar datas que incluam as que foram registradas |
+| Critérios de Êxito | O gráfico se atualiza dinamicamente com base no filtro |
+
+### Gráfico do Fluxo de Caixa / sem sucesso
+| Caso de teste | Alteração de eventos registrados sem sucesso |
+| --------------- | -------------------------------- |
+| Objetivo do teste | Verificar se o sistema deixa de exibir o gráfico baseado no filtro |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Passo 3 | Selecionar datas que não incluam as que foram registradas |
+| Critérios de Êxito | O gráfico não exibe informação alguma |

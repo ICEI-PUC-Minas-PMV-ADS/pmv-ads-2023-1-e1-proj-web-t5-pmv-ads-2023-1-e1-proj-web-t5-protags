@@ -5,7 +5,6 @@ function myFunction() {
 
     document.getElementById('nomeEmpresa').textContent = userPerfil.novoNomeEmpresa;
     document.getElementById('cnpj').textContent = userPerfil.novoCNPJ;
-    document.getElementById('adminPassword').textContent = userPerfil.senhaadmim;
     // document.getElementById('name').textContent = userPerfil.novoNomeUsuario;
     document.getElementById('username').textContent = userPerfil.novoUsuario;
     document.getElementById('email').textContent = userPerfil.novoEmail;
@@ -52,20 +51,3 @@ function mostrarSenha() {
     }
 }
 
-function mostrarSenhaAdm() {
-    var inputPass = document.getElementById('adminPassword');
-    var btnShowPass = document.getElementById('btn-senhaadm');
-
-    if (inputPass.innerHTML != userPerfil.senhaadmim) {
-        inputPass.innerHTML = userPerfil.senhaadmim;
-        btnShowPass.classList.replace('bi-eye', 'bi-eye-slash');
-        if (userPerfil.senhaadmim && userPerfil.senhaadmim != "") {
-            inputPass.innerHTML = userPerfil.senhaadmim
-        } else if (!userPerfil.senhaadmim || userPerfil.senhaadmim == "") {
-            inputPass.innerHTML = userPerfil.senhaadmim
-        }
-    } else if (inputPass.innerHTML == userPerfil.senhaadmim) {
-        inputPass.innerHTML = '******';
-        btnShowPass.classList.replace('bi-eye-slash', 'bi-eye');
-    }
-}

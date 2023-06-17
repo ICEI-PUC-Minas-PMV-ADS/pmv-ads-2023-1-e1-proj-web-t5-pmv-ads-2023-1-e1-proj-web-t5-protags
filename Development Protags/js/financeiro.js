@@ -33,7 +33,7 @@ var dataFimCaixaBase = new Date(dataFimCaixaSplit[0], dataFimCaixaSplit[1] - 1, 
 // Filtros onload contas MÊS
 var somaEntrada = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
-    let dataVenciEntradaSplit = aReceberPull[i].datadevenci.split("-");
+    let dataVenciEntradaSplit = aReceberPull[i].dataderecebimento.split("-");
     let dataVenciEntrada = new Date(dataVenciEntradaSplit[0], dataVenciEntradaSplit[1] - 1, dataVenciEntradaSplit[2]);
     if (aReceberPull[i].situacao === "cRecebido" && dataVenciEntrada >= dataInicioCaixaBase && dataVenciEntrada <= dataFimCaixaBase) {
         var entradaValor = aReceberPull[i].valor;
@@ -53,7 +53,7 @@ for (let i = 0; i < aPagarPull.length; i++) {
 }
 var somaAReceber = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
-    let dataVenciAReceberSplit = aReceberPull[i].datadevenci.split("-");
+    let dataVenciAReceberSplit = aReceberPull[i].dataderecebimento.split("-");
     let dataVenciAReceber = new Date(dataVenciAReceberSplit[0], dataVenciAReceberSplit[1] - 1, dataVenciAReceberSplit[2]);
     if (aReceberPull[i].situacao === "caReceber" && dataVenciAReceber >= dataInicioCaixaBase && dataVenciAReceber <= dataFimCaixaBase) {
         var aReceberValor = aReceberPull[i].valor;
@@ -168,7 +168,7 @@ function filtrarGraficoTiago() {
         // Filtro Entradas 
         somaEntradaFiltro = 0
         for (let i = 0; i < aReceberPull.length; i++){
-            let dataAReceberSplit = aReceberPull[i].datadevenci.split("-");
+            let dataAReceberSplit = aReceberPull[i].dataderecebimento.split("-");
             let dataAReceberFormatado = new Date(dataAReceberSplit[0], dataAReceberSplit[1] - 1, dataAReceberSplit[2]);
             if (dataAReceberFormatado >= dataInicioTiago && dataAReceberFormatado <= dataFimTiago && aReceberPull[i].situacao === "cRecebido"){
                 var entradaValorFiltrado = aReceberPull[i].valor;
@@ -212,7 +212,7 @@ function agruparCategorias(contas) {
     const categoriasAgrupadas = {};
     contas.forEach(conta => {
         const categoria = conta.categoria.toLowerCase();
-        const valor = Number(conta.valor.replace(/[^0-9.-]+/g, ""));
+        const valor = Number(conta.valor.replace(/[^0-9,-]+/g, "").replace(",", "."));
         if (categoria in categoriasAgrupadas) {
             categoriasAgrupadas[categoria] += valor;
         } else {
@@ -221,6 +221,7 @@ function agruparCategorias(contas) {
     });
     return categoriasAgrupadas;
 }
+
 
 // Gráfico de Entradas
 const categoriasValoresEntradas = agruparCategorias(contasAReceber);
@@ -241,7 +242,16 @@ const chartEntradas = new Chart(ctx, {
     },
     options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return 'R$ ' + context.formattedValue;
+                    }
+                }
+            }
+        }
     }
 });
 
@@ -264,7 +274,16 @@ const chartSaidas = new Chart(ctx2, {
     },
     options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return 'R$ ' + context.formattedValue;
+                    }
+                }
+            }
+        }
     }
 });
 
@@ -280,7 +299,7 @@ function filtroData() {
     let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
 
     let partesData = dataInicioTESTE.split("-");
-    let dataInicio = new Date(partesData[0], partesData[1] - 1, partesData[2]);
+    let dataInicio = new Date(partesData[0], partesData[1] -    1, partesData[2]);
 
     let partesData2 = dataFimTESTE.split("-");
     let dataFim = new Date(partesData2[0], partesData2[1] - 1, partesData2[2]);
@@ -295,7 +314,7 @@ function filtroData() {
     }
 
     for (let i = 0; i < contasAReceber.length; i++) {
-        let partesDataAReceber = contasAReceber[i].datadevenci.split("-");
+        let partesDataAReceber = contasAReceber[i].dataderecebimento.split("-");
         let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
 
         if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
