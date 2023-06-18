@@ -9,45 +9,93 @@ let dataDeRecebimento = document.querySelector('#dataDeRecebimento')
 let exibirReais = document.querySelector('#exibirReais')
 let selectMenu = document.querySelector('#select-menu')
  
+// Formata a data para exibição
+function formatarData(data) {
+
+  const partes = data.split('-');
+
+  const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
+
+  return dataFormatada;
+
+}
 
 
-// Array contasAReceber recuperado do localStorage
-const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+
+
+// Array Contas A Receber recuperado do localStorage
+
+let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+
+
+
 
 // Atribuir IDs individuais para cada conta
+
 contasAReceber.forEach((conta, index) => {
+
   conta.id = index + 1; // IDs começando em 1
+
 });
 
+
+
+
 const cardRealizados = document.querySelector('#table-exibicao');
+
 cardRealizados.innerHTML = '';
 
+
+
+
 for (let i = 0; i < contasAReceber.length; i++) {
+
   const conta = contasAReceber[i];
-  console.log(conta)
+
+  const dataFormatadaVenci = formatarData(conta.dataderecebimento);
+   
+  
+  // Formata a data
 
   const newRow = document.createElement('tr');
+
   newRow.innerHTML = `
-  <td class="text-center" id="conta">${conta.id}</td> 
-  <td class="text-center" id="vencimento">${conta.dataderecebimento}</td> 
-  <td class="text-center" id="parcela">${conta.parcelas}</td>
-  <td class="text-center" id="receberde">${conta.receberde}</td>
-  <td class="text-center" id="descricao">${conta.descricao}</td>
-  <td class="text-center" id="comprovante">${conta.comprovante}</td>
-  <td class="text-center" id="dataDeVencimento">${conta.datadevenci}</td>
-  <td class="text-center" id="exibirReais">${conta.valor}</td>
-  <td class="text-center">
-    <select name="acoes" class="selectAcoes" id="select-menu-${conta.situacao}">
-      <option value="<null>" class="nullValue"></option>
-      <option value="3" class="opt">A PAGAR</option>
-      <option value="4" class="opt">A RECEBER</option>
-      <option value="6" class="opt">PAGO</option>
-      <option value="0" class="opt">RECEBIDO</option>
-    </select>
-  </td>
+
+    <td class="text-center" id="conta">${conta.id}</td>
+
+    <td class="text-center" id="vencimento">${dataFormatadaVenci}</td>
+
+    <td class="text-center" id="parcela">${conta.parcelas}</td>
+
+    <td class="text-center" id="receberde">${conta.receberde}</td>
+
+    <td class="text-center" id="descricao">${conta.descricao}</td>
+
+    <td class="text-center" id="comprovante"><input type="file"></td>
+
+    <td class="text-center" id="dataDeVencimento"><input type="date"></td>
+
+    <td class="text-center" id="exibirReais">${conta.valor}</td>
+
+    <td class="text-center">
+
+      <select name="acoes" class="selectAcoes" id="select-menu-${conta.situacao}">
+
+        <option value="3" class="opt">A RECEBER</option>
+
+        <option value="6" class="opt">RECEBIDO</option>
+
+      </select>
+
+    </td>
+
   `;
 
+
+
+
   cardRealizados.appendChild(newRow);
+
 }
 
 for (let i = 0; i < contasAtrasadas.length; i++) {
