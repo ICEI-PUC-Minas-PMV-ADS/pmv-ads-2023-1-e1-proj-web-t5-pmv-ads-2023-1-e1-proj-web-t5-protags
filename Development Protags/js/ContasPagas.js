@@ -1,4 +1,12 @@
-// Formata a data para exibição
+// Não permite que o usuário entre no sistema sem estar logado
+if (localStorage.getItem('token') === null) {
+
+  alert('Você precisa estar logado para acessar essa página')
+  window.location.href = 'login.html'
+
+} else {
+  
+  // Formata a data para exibição
 function formatarData(data) {
   
   const partes = data.split('-');
@@ -31,3 +39,9 @@ contasPagas.forEach((conta) => {
   tabelaContasPagas.appendChild(newRow);
 });
 
+}
+ // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
+ function logout() {
+  localStorage.removeItem('token')
+  window.location.href = 'login.html'
+}

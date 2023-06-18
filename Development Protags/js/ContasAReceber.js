@@ -1,4 +1,12 @@
-// Variáveis armazenadas para exibição
+// Não permite que o usuário entre no sistema sem estar logado
+if (localStorage.getItem('token') === null) {
+
+  alert('Você precisa estar logado para acessar essa página')
+  window.location.href = 'login.html'
+
+} else {
+  
+  // Variáveis armazenadas para exibição
 let conta = document.querySelector('#conta')
 let vencimento = document.querySelector('#vencimento')
 let parcela = document.querySelector('#parcela')
@@ -132,3 +140,11 @@ for (let i = 0; i < contasAtrasadas.length; i++) {
 
 console.log(contasAtrasadas);
 localStorage.setItem("contasAtrasadas", JSON.stringify(contasAtrasadas));
+
+}
+
+ // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
+ function logout() {
+  localStorage.removeItem('token')
+  window.location.href = 'login.html'
+}
