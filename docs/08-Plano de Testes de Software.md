@@ -136,7 +136,7 @@
 | Passo 3 | Clicar no botão "Cadastrar" |
 | Critérios de Êxito | É registrado todas as informações inseridas para serem demonstradas no dashboard. |
 
-### Registro de contas pagas/a pagar sem sucesso
+### Registro de contas pagas/a pagar / sem sucesso
 | Caso de teste | CT-14 - Cadastrar novas contas a pagar e receber sem sucesso |
 | ------------- | ------------------------------------------------------------ |
 | Objetivo do teste | Verificar se o sistema não registra contas que não possuem todas as informações necessárias |
