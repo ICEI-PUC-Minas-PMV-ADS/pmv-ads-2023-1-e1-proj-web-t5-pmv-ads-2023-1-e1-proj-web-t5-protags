@@ -177,7 +177,7 @@
 | Caso especial | Não se aplica. |
 
 ### Tela de configuração
- | Caso de teste | Cadastro e alterações de informação do usuário |
+ | Caso de teste | CT-15 - Cadastro e alterações de informação do usuário |
  | --------------- | -------------------------- |
  | Requisitos Associados | RF-014 - Permitir que o usuário cadastre, visualize, altere e exclua informações |
  | Objetivo do teste | Verificar se as configurações estão sendo salvas |
@@ -187,7 +187,7 @@
  | Critérios de Êxito | Deverá apresentar um "alert" dizendo que as informações foram salvas com sucesso e o redireciona para a tela de perfil. |
  
  ### Tela de configuração / sem sucesso
- | Caso de configuração | Cadastro e alterações de informação do usuário sem sucesso |
+ | Caso de configuração | CT-16  - Cadastro e alterações de informação do usuário sem sucesso |
  | --------------- | -------------------------- |
  | Objetivo do teste | Verificar se é possivel salvar alterações com os campo vazios |
  | Passo 1 | Acessar a tela de configuração |
@@ -198,7 +198,7 @@
 
 
 ### Tela de perfil
- | Caso de teste | Visualização das informações cadastradas pelo usuário |
+ | Caso de teste | CT-17 - Visualização das informações cadastradas pelo usuário |
  | --------------- | -------------------------- |
  | Requisitos Associados | RF-014 - Permitir que o usuário cadastre, visualize, altere e exclua informações |
  | Objetivo do teste | Verificar se informações cadastradas pelo usuário estão sendo mostradas corretamente|
@@ -208,7 +208,7 @@
  | Critérios de Êxito | Deverá exibir as informações que foram cadastradas na página de registro, ou alteradas/adicionadas na página de configuração. |
 
 ### Tela de perfil / sem sucesso
-| Caso de teste | Visualização das informações cadastradas pelo usuário sem sucesso|
+| Caso de teste | CT-18 - Visualização das informações cadastradas pelo usuário sem sucesso|
 | --------------- | ------------------ |
 | Objetivo do teste | Verificar se informações cadastradas estão sendo alteradas e exibidas corretamente |
 | Passo 1 | Acessar a tela de perfil |
