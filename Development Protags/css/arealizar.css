@@ -108,7 +108,7 @@ background-color: green;
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -207,4 +207,15 @@ display: inline-block;
 
     #dropMenuBtn {
         --bs-dropdown-min-width: 5.4rem;
+    }
+
+    .editarIcon {
+        background-color: #fff;
+        width: 1.2rem;
+        height: 1.2rem;
+        border: none;
+    }
+    
+    .editarIcon:hover {
+        background-color: #F0DB4F;
     }
