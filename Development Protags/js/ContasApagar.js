@@ -16,6 +16,11 @@ if (localStorage.getItem('token') === null) {
   let dataDePagamento = document.querySelector('#dataDePagamento');
   let exibirReais = document.querySelector('#exibirReais');
   let selectMenu = document.querySelector('#select-menu');
+  let btnUrgentes = document.querySelector('#btnUrgentes');
+  //Dados para o menu "Contas Urgentes"
+  const contasAtrasadas = [];
+  const dataAtual = new Date();
+  const menuUrgentes = document.querySelector('#menuUrgentes');
 
   // Formata a data para exibição
   function formatarData(data) {
@@ -93,10 +98,28 @@ if (localStorage.getItem('token') === null) {
     window.location.href = 'ContasPagas.html';
   }
 
+  //eventListener para abrir e fechar o menu de contas urgentes
+  btnUrgentes.addEventListener('click', () => {
+      if (menuUrgentes.style.display !== "block") {
+          menuUrgentes.style.display = "block";
+      } else {
+          menuUrgentes.style.display = "none";
+      }
+  });
 
+  //Função para apenas adicionar contas chegando perto da data de vencimento ao array "contasAtrasadas"
+contasAPagar.forEach(conta => {
+  const dataVencimento = new Date(conta.datadevenci);
+  
+  const dataLimite = new Date(dataVencimento);
+  dataLimite.setDate(dataLimite.getDate() - 3);
 
+  if (dataAtual >= dataLimite && dataAtual < dataVencimento) {
+    contasAtrasadas.push(conta);
+  }
+});
 
-
+//Função para dar Append nas informações das contas urgentes
 
   for (let i = 0; i < contasAtrasadas.length; i++) {
     const bordaAppend = document.createElement('div');
