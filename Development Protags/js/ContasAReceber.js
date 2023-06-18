@@ -5,69 +5,69 @@ if (localStorage.getItem('token') === null) {
   window.location.href = 'login.html'
 
 } else {
-  
+
   // Variáveis armazenadas para exibição
-let conta = document.querySelector('#conta')
-let vencimento = document.querySelector('#vencimento')
-let parcela = document.querySelector('#parcela')
-let receberde = document.querySelector('#receberde')
-let descricao = document.querySelector('#descricao')
-let comprovante = document.querySelector('#comprovante')
-let dataDeRecebimento = document.querySelector('#dataDeRecebimento')
-let exibirReais = document.querySelector('#exibirReais')
-let selectMenu = document.querySelector('#select-menu')
- 
-// Formata a data para exibição
-function formatarData(data) {
+  let conta = document.querySelector('#conta')
+  let vencimento = document.querySelector('#vencimento')
+  let parcela = document.querySelector('#parcela')
+  let receberde = document.querySelector('#receberde')
+  let descricao = document.querySelector('#descricao')
+  let comprovante = document.querySelector('#comprovante')
+  let dataDeRecebimento = document.querySelector('#dataDeRecebimento')
+  let exibirReais = document.querySelector('#exibirReais')
+  let selectMenu = document.querySelector('#select-menu')
 
-  const partes = data.split('-');
+  // Formata a data para exibição
+  function formatarData(data) {
 
-  const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
+    const partes = data.split('-');
 
-  return dataFormatada;
+    const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
 
-}
+    return dataFormatada;
 
-
-
-
-// Array Contas A Receber recuperado do localStorage
-
-let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+  }
 
 
 
 
-// Atribuir IDs individuais para cada conta
+  // Array Contas A Receber recuperado do localStorage
 
-contasAReceber.forEach((conta, index) => {
-
-  conta.id = index + 1; // IDs começando em 1
-
-});
+  let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
 
 
 
 
-const cardRealizados = document.querySelector('#table-exibicao');
+  // Atribuir IDs individuais para cada conta
 
-cardRealizados.innerHTML = '';
+  contasAReceber.forEach((conta, index) => {
+
+    conta.id = index + 1; // IDs começando em 1
+
+  });
 
 
 
 
-for (let i = 0; i < contasAReceber.length; i++) {
+  const cardRealizados = document.querySelector('#table-exibicao');
 
-  const conta = contasAReceber[i];
+  cardRealizados.innerHTML = '';
 
-  const dataFormatadaVenci = formatarData(conta.dataderecebimento);
-   
-  
-  // Formata a data
 
-  const newRow = document.createElement('tr');
 
-  newRow.innerHTML = `
+
+  for (let i = 0; i < contasAReceber.length; i++) {
+
+    const conta = contasAReceber[i];
+
+    const dataFormatadaVenci = formatarData(conta.dataderecebimento);
+
+
+    // Formata a data
+
+    const newRow = document.createElement('tr');
+
+    newRow.innerHTML = `
 
     <td class="text-center" id="conta">${conta.id}</td>
 
@@ -102,16 +102,16 @@ for (let i = 0; i < contasAReceber.length; i++) {
 
 
 
-  cardRealizados.appendChild(newRow);
+    cardRealizados.appendChild(newRow);
 
-}
+  }
 
-for (let i = 0; i < contasAtrasadas.length; i++) {
+  for (let i = 0; i < contasAtrasadas.length; i++) {
     const bordaAppend = document.createElement('div');
     bordaAppend.classList.add('urgentesBorda');
     bordaAppend.innerHTML = `<div></div>`;
     menuUrgentes.appendChild(bordaAppend);
-    
+
     const títuloAppend = document.createElement('div');
     títuloAppend.classList.add('urgentesTítulo');
     títuloAppend.innerHTML = `<div>Conta ${contasAtrasadas[i].conta}</div>`;
@@ -121,7 +121,7 @@ for (let i = 0; i < contasAtrasadas.length; i++) {
     datadevenciAppend.classList.add('urgentesDataDeVenci');
     datadevenciAppend.innerHTML = `<div>Data de Vencimento: ${contasAtrasadas[i].datadevenci}</div>`;
     bordaAppend.appendChild(datadevenciAppend);
-  
+
     const valorAppend = document.createElement('div');
     valorAppend.classList.add('urgentesValor');
     valorAppend.innerHTML = `<div>Valor: ${contasAtrasadas[i].valor}</div>`;
@@ -138,13 +138,13 @@ for (let i = 0; i < contasAtrasadas.length; i++) {
     bordaAppend.appendChild(pagarParaAppend);
   }
 
-console.log(contasAtrasadas);
-localStorage.setItem("contasAtrasadas", JSON.stringify(contasAtrasadas));
+  console.log(contasAtrasadas);
+  localStorage.setItem("contasAtrasadas", JSON.stringify(contasAtrasadas));
 
 }
 
- // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
- function logout() {
+// Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
+function logout() {
   localStorage.removeItem('token')
   window.location.href = 'login.html'
 }

@@ -5,26 +5,26 @@ if (localStorage.getItem('token') === null) {
   window.location.href = 'login.html'
 
 } else {
-  
+
   // Formata a data para exibição
-function formatarData(data) {
-  
-  const partes = data.split('-');
-  const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
-  return dataFormatada;
+  function formatarData(data) {
 
-}
+    const partes = data.split('-');
+    const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
+    return dataFormatada;
 
-// Recupere o array contasPagas do localStorage
-const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
+  }
 
-// Obtenha a referência ao elemento onde você deseja exibir os dados
-const tabelaContasPagas = document.querySelector('#table-exibicao');
+  // Recupere o array contasPagas do localStorage
+  const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
 
-contasPagas.forEach((conta) => {
-  const newRow = document.createElement('tr');
+  // Obtenha a referência ao elemento onde você deseja exibir os dados
+  const tabelaContasPagas = document.querySelector('#table-exibicao');
 
-  newRow.innerHTML = `
+  contasPagas.forEach((conta) => {
+    const newRow = document.createElement('tr');
+
+    newRow.innerHTML = `
     <td class="text-center">${conta.id}</td>
     <td class="text-center">${formatarData(conta.datadevenci)}</td>
     <td class="text-center">${conta.parcelas}</td>
@@ -36,12 +36,12 @@ contasPagas.forEach((conta) => {
     <td class="text-center"><img src="https://img.freepik.com/vetores-premium/sinal-correto-conjunto-de-icones-de-marca-direita-simbolo-plano-verde-marque-ok-sim-marcas-para-decisao-de-voto_473851-126.jpg?w=360" id="vVerde" style="width: 2rem; height: 2rem"></td>
   `;
 
-  tabelaContasPagas.appendChild(newRow);
-});
+    tabelaContasPagas.appendChild(newRow);
+  });
 
 }
- // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
- function logout() {
+// Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
+function logout() {
   localStorage.removeItem('token')
   window.location.href = 'login.html'
 }

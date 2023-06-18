@@ -5,47 +5,47 @@ if (localStorage.getItem('token') === null) {
   window.location.href = 'login.html'
 
 } else {
-  
+
   // Variáveis armazenadas para exibição
-let conta = document.querySelector('#conta');
-let vencimento = document.querySelector('#vencimento');
-let parcela = document.querySelector('#parcela');
-let pagarpara = document.querySelector('#pagarpara');
-let descricao = document.querySelector('#descricao');
-let comprovante = document.querySelector('#comprovante');
-let dataDePagamento = document.querySelector('#dataDePagamento');
-let exibirReais = document.querySelector('#exibirReais');
-let selectMenu = document.querySelector('#select-menu');
+  let conta = document.querySelector('#conta');
+  let vencimento = document.querySelector('#vencimento');
+  let parcela = document.querySelector('#parcela');
+  let pagarpara = document.querySelector('#pagarpara');
+  let descricao = document.querySelector('#descricao');
+  let comprovante = document.querySelector('#comprovante');
+  let dataDePagamento = document.querySelector('#dataDePagamento');
+  let exibirReais = document.querySelector('#exibirReais');
+  let selectMenu = document.querySelector('#select-menu');
 
-// Formata a data para exibição
-function formatarData(data) {
-  const partes = data.split('-');
-  const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
-  return dataFormatada;
-}
+  // Formata a data para exibição
+  function formatarData(data) {
+    const partes = data.split('-');
+    const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
+    return dataFormatada;
+  }
 
-// Array contasAPagar recuperado do localStorage
-const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+  // Array contasAPagar recuperado do localStorage
+  const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
-// Atribuir IDs individuais para cada conta
-contasAPagar.forEach((conta, index) => {
-  conta.id = index + 1; // IDs começando em 1
-});
+  // Atribuir IDs individuais para cada conta
+  contasAPagar.forEach((conta, index) => {
+    conta.id = index + 1; // IDs começando em 1
+  });
 
-const cardRealizados = document.querySelector('#table-exibicao');
+  const cardRealizados = document.querySelector('#table-exibicao');
 
-cardRealizados.innerHTML = '';
+  cardRealizados.innerHTML = '';
 
-for (let i = 0; i < contasAPagar.length; i++) {
-  const conta = contasAPagar[i];
+  for (let i = 0; i < contasAPagar.length; i++) {
+    const conta = contasAPagar[i];
 
-  const dataFormatadaVenci = formatarData(conta.datadevenci);
-  const dataFormatadaEmissao = formatarData(conta.datadeemissao);
+    const dataFormatadaVenci = formatarData(conta.datadevenci);
+    const dataFormatadaEmissao = formatarData(conta.datadeemissao);
 
-  // Formata a data
-  const newRow = document.createElement('tr');
+    // Formata a data
+    const newRow = document.createElement('tr');
 
-  newRow.innerHTML = `
+    newRow.innerHTML = `
     <td class="text-center" id="conta_${i}">${conta.id}</td>
     <td class="text-center" id="vencimento_${i}">${dataFormatadaVenci}</td>
     <td class="text-center" id="parcela_${i}">${conta.parcelas}</td>
@@ -63,80 +63,80 @@ for (let i = 0; i < contasAPagar.length; i++) {
     </td>
   `;
 
-  cardRealizados.appendChild(newRow);
+    cardRealizados.appendChild(newRow);
+  }
+
+  function editarConta(i) {
+    // Recupera os valores da conta com base na posição 'i' no array contasAPagar
+    const conta = contasAPagar[i];
+
+    // Redireciona para a página "apagar.html" com os valores preenchidos como parâmetros na URL
+    window.location.href = `apagar.html?conta=${conta.id}&vencimento=${conta.datadevenci}&parcela=${conta.parcelas}&pagarpara=${conta.pagarpara}&descricao=${conta.descricao}&valor=${conta.valor}`;
+  }
+
+
+  function salvarETransferir(i) {
+    let dataDePagamentoElement = document.getElementById(`dataDePagamento_${i}`);
+    let dataDePagamentoValue = dataDePagamentoElement.querySelector('input').value;
+
+    let contaPagamento = { ...contasAPagar[i] };
+    contaPagamento.dataDePagamento = dataDePagamentoValue;
+
+    const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
+
+    contasPagas.push(contaPagamento);
+    contasAPagar.splice(i, 1);
+
+    localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
+    localStorage.setItem('contasPagas', JSON.stringify(contasPagas));
+
+    window.location.href = 'ContasPagas.html';
+  }
+
+
+
+
+
+
+  for (let i = 0; i < contasAtrasadas.length; i++) {
+    const bordaAppend = document.createElement('div');
+    bordaAppend.classList.add('urgentesBorda');
+    bordaAppend.innerHTML = `<div></div>`;
+    menuUrgentes.appendChild(bordaAppend);
+
+    const títuloAppend = document.createElement('div');
+    títuloAppend.classList.add('urgentesTítulo');
+    títuloAppend.innerHTML = `<div>Conta ${contasAtrasadas[i].conta}</div>`;
+    bordaAppend.appendChild(títuloAppend);
+
+    const datadevenciAppend = document.createElement('div');
+    datadevenciAppend.classList.add('urgentesDataDeVenci');
+    datadevenciAppend.innerHTML = `<div>Data de Vencimento: ${contasAtrasadas[i].datadevenci}</div>`;
+    bordaAppend.appendChild(datadevenciAppend);
+
+    const valorAppend = document.createElement('div');
+    valorAppend.classList.add('urgentesValor');
+    valorAppend.innerHTML = `<div>Valor: ${contasAtrasadas[i].valor}</div>`;
+    bordaAppend.appendChild(valorAppend);
+
+    const parcelasAppend = document.createElement('div');
+    parcelasAppend.classList.add('urgentesParcelas');
+    parcelasAppend.innerHTML = `<div>Parcelas: ${contasAtrasadas[i].parcelas}</div>`;
+    bordaAppend.appendChild(parcelasAppend);
+
+    const pagarParaAppend = document.createElement('div');
+    pagarParaAppend.classList.add('urgentesPagarPara');
+    pagarParaAppend.innerHTML = `<div>Pagar Para: ${contasAtrasadas[i].pagarpara}</div>`;
+    bordaAppend.appendChild(pagarParaAppend);
+  }
+
+  console.log(contasAtrasadas);
+  localStorage.setItem("contasAtrasadas", JSON.stringify(contasAtrasadas));
+
 }
 
-function editarConta(i) {
-  // Recupere os valores da conta com base na posição 'i' no array contasAPagar
-  const conta = contasAPagar[i];
-
-  // Redirecione para a página "apagar.html" com os valores preenchidos como parâmetros na URL
-  window.location.href = `apagar.html?conta=${conta.id}&vencimento=${conta.datadevenci}&parcela=${conta.parcelas}&pagarpara=${conta.pagarpara}&descricao=${conta.descricao}&valor=${conta.valor}`;
-}
-
-
-function salvarETransferir(i) {
-  let dataDePagamentoElement = document.getElementById(`dataDePagamento_${i}`);
-  let dataDePagamentoValue = dataDePagamentoElement.querySelector('input').value;
-
-  let contaPagamento = { ...contasAPagar[i] };
-  contaPagamento.dataDePagamento = dataDePagamentoValue;
-
-  const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
-
-  contasPagas.push(contaPagamento);
-  contasAPagar.splice(i, 1);
-
-  localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
-  localStorage.setItem('contasPagas', JSON.stringify(contasPagas));
-
-  window.location.href = 'ContasPagas.html'; 
-}
-
-
-
-
-
-
-for (let i = 0; i < contasAtrasadas.length; i++) {
-  const bordaAppend = document.createElement('div');
-  bordaAppend.classList.add('urgentesBorda');
-  bordaAppend.innerHTML = `<div></div>`;
-  menuUrgentes.appendChild(bordaAppend);
-
-  const títuloAppend = document.createElement('div');
-  títuloAppend.classList.add('urgentesTítulo');
-  títuloAppend.innerHTML = `<div>Conta ${contasAtrasadas[i].conta}</div>`;
-  bordaAppend.appendChild(títuloAppend);
-
-  const datadevenciAppend = document.createElement('div');
-  datadevenciAppend.classList.add('urgentesDataDeVenci');
-  datadevenciAppend.innerHTML = `<div>Data de Vencimento: ${contasAtrasadas[i].datadevenci}</div>`;
-  bordaAppend.appendChild(datadevenciAppend);
-
-  const valorAppend = document.createElement('div');
-  valorAppend.classList.add('urgentesValor');
-  valorAppend.innerHTML = `<div>Valor: ${contasAtrasadas[i].valor}</div>`;
-  bordaAppend.appendChild(valorAppend);
-
-  const parcelasAppend = document.createElement('div');
-  parcelasAppend.classList.add('urgentesParcelas');
-  parcelasAppend.innerHTML = `<div>Parcelas: ${contasAtrasadas[i].parcelas}</div>`;
-  bordaAppend.appendChild(parcelasAppend);
-
-  const pagarParaAppend = document.createElement('div');
-  pagarParaAppend.classList.add('urgentesPagarPara');
-  pagarParaAppend.innerHTML = `<div>Pagar Para: ${contasAtrasadas[i].pagarpara}</div>`;
-  bordaAppend.appendChild(pagarParaAppend);
-}
-
-console.log(contasAtrasadas);
-localStorage.setItem("contasAtrasadas", JSON.stringify(contasAtrasadas));
-
-}
-
- // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
- function logout() {
+// Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
+function logout() {
   localStorage.removeItem('token')
   window.location.href = 'login.html'
 }
