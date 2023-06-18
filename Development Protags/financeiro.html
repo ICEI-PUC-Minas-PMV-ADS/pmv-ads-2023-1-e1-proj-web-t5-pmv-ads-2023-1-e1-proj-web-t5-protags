@@ -98,28 +98,28 @@
             <div class="col">
                 <div class="containerEntradaSaida">
                     <div class="entradaBox">
-                        <h2> Entradas </h2>
-                        <p class="box_green" id="entrada"> R$ 479,00 </p>
+                        <h2> Receitas </h2>
+                        <p class="box_green" id="entrada">  </p>
                         <h2> A receber </h2>
-                        <p class="box_green" id="aReceber"> R$ 570,00 </p>
+                        <p class="box_green" id="aReceber">  </p>
                     </div>
                     <div class="saidaBox">
-                        <h3> Saidas </h3>
-                        <p class="box_red" id="saida"> R$ 750,00 </p>
+                        <h3> Despesas </h3>
+                        <p class="box_red" id="saida">  </p>
                         <h3> A pagar</h3>
-                        <p class="box_red" id="aPagar"> R$ 980,00 </p>
+                        <p class="box_red" id="aPagar">  </p>
                     </div>
                 </div>
 
                 <div class="informativos">
                     <h4> Informativo 1 </h4>
-                    <p class="period_info_1" id="period_info_1"> Periodo: 04/04/2023 até 14/04/2023 </p>
-                    <p class="result_info_1" id="resultInfo1"> Despesas maiores que receitas</p>
+                    <p class="period_info_1" id="period_info_1">  </p>
+                    <p class="result_info_1" id="resultInfo1"> </p>
                 </div>
                 <div class="informativos">
                     <h4> Informativo 2 </h4>
-                    <p class="period_info_2" id="period_info_2"> Periodo: 04/04/2023 até 14/04/2023 </p>
-                    <p class="result_info_2" id="resultInfo2"> Saldo disponivel: (-) R$ 270,10 </p>
+                    <p class="period_info_2" id="period_info_2">  </p>
+                    <p class="result_info_2" id="resultInfo2">  </p>
                 </div>
 
             </div>
@@ -132,13 +132,12 @@
                         <h5></h5>
                     </div>
                     <div class="boxPesquisaGrafico">
-                        <p class="box_empty"> <input type="date" name="dataInicio" id="dataInicio"> </p>
-                        <p class="box_empty"> <input type="date" name="dataFim" id="dataFim"> </p>
-                        <p class="box_red_full"> <input type="button" value=" Filtrar " onclick="Filtrar()"
-                                id="Filtrar"></p>
+                        <p class="box_empty"> <input type="date" name="dataInicioTiago" id="dataInicioTiago"> </p>
+                        <p class="box_empty"> <input type="date" name="dataFimTiago" id="dataFimTiago"> </p>
+                        <p class="box_red_full"> <input type="button" value=" Filtrar " onclick="filtrarGraficoTiago()"id="Filtrar"></p>
                     </div>
                 </div>
-                <div class="resultFiltro" id="resultFiltro">Movimentação entre 05/05/2023 a 14/05/2023</div>
+                <div class="resultFiltro" id="resultFiltro"> </div>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                 <div class="chart-container3" style="position: relative; height: 65%; width: 100%;">
                     <canvas id="myChart3"></canvas>

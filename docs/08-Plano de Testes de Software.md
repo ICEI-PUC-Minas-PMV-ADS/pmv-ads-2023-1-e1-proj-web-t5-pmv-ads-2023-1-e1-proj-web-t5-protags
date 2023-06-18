@@ -1,12 +1,5 @@
 # Plano de Testes de Software
 
-Para que os testes possam ser realizados, é necessário os seguintes requisitos:
-
- - O site publicado na internet;
- - Um Navegador de Internet (Como o Google Chrome, Firefox ou Microsoft Edge);
- - Conectividade de Internet para a utilização da plataforma.
- 
-## Planos de testes
 
 ### Tela de registro
  | Caso de teste | CT-01 - Cadastro de usuário |
@@ -193,6 +186,17 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
  | Passo 2 | Preencher todos os campos com as informações necessárias |
  | Passo 3 | Clicar no botão "Salvar Alterações" |
  | Critérios de Êxito | Deverá apresentar um "alert" dizendo que as informações foram salvas com sucesso e o redireciona para a tela de perfil. |
+ 
+ ### Tela de configuração / sem sucesso
+ | Caso de configuração | Cadastro e alterações de informação do usuário sem sucesso |
+ | --------------- | -------------------------- |
+ | Objetivo do teste | Verificar se é possivel salvar alterações com os campo vazios |
+ | Passo 1 | Acessar a tela de configuração |
+ | Passo 2 | Preencher os campos deixando alguns vazios |
+ | Passo 3 | Clicar no botão "Salvar Alterações |
+ | Critérios de Êxito | Os campos em vazios podem ser deixados em branco, sem gerar erros de validação ao salvar as alterações.|
+
+
 
 ### Tela de perfil
  | Caso de teste | Visualização das informações cadastradas pelo usuário |
@@ -203,3 +207,51 @@ Para que os testes possam ser realizados, é necessário os seguintes requisitos
  | Passo 2 | Visualizar se as informações, e clicar em editar se necessário|
  | Passo 3 | Clicar no botão "Salvar Alterações" |
  | Critérios de Êxito | Deverá exibir as informações que foram cadastradas na página de registro, ou alteradas/adicionadas na página de configuração. |
+
+### Tela de perfil / sem sucesso
+| Caso de teste | Visualização das informações cadastradas pelo usuário sem sucesso|
+| --------------- | ------------------ |
+| Objetivo do teste | Verificar se informações cadastradas estão sendo alteradas e exibidas corretamente |
+| Passo 1 | Acessar a tela de perfil |
+ | Passo 2 | Visualizar se as informações, e clicar em editar se necessário|
+ | Passo 3 | Clicar no botão "Salvar Alterações" |
+| Critérios de Êxito | O sistema exibe as alteraçãos corretamente, mas não altera no localStorage|
+
+
+
+
+### Monitoramento de Fluxo de Receitas e Despesas
+| Caso de teste | Alteração de eventos registrados |
+| --------------- | -------------------------------- |
+| Requisitos Associados | RF-006	- O site deve conter a capacidade de monitorar o fluxo de caixa da empresa, incluindo o registro de receitas, despesas e saldos bancários |
+| Objetivo do teste | Verificar se o sistema exibe os valores em seus campos corretos e filtrado corretamente pelo mês atual |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Critérios de Êxito | Os campos se atualizam dinamicamente com as contas no mês atual ao carregar a pagina |
+
+### Monitoramento de Fluxo de Receitas e Despesas / sem sucesso
+| Caso de teste | Alteração de eventos registrados sem sucesso |
+| --------------- | -------------------------------- |
+| Objetivo do teste | Verificar se o sistema exibe os valores em seus campos corretos e filtrado corretamente pelo mês atual |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Critérios de Êxito | Os campos são preenchidos com valores errados e/ou não filtrados pelo mês atual |
+
+### Gráfico do Fluxo de Caixa
+| Caso de teste | Alteração de eventos registrados |
+| --------------- | -------------------------------- |
+| Requisitos Associados | RF-019 - O site deve conter um gráfico de monitoramento do Fluxo de Caixa |
+| Objetivo do teste | Verificar se o sistema exibe o gráfico com valores de entradas e saidas, filtrado corretamente pelas datas existentes no Local Storage |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Passo 3 | Selecionar datas que incluam as que foram registradas |
+| Critérios de Êxito | O gráfico se atualiza dinamicamente com base no filtro |
+
+### Gráfico do Fluxo de Caixa / sem sucesso
+| Caso de teste | Alteração de eventos registrados sem sucesso |
+| --------------- | -------------------------------- |
+| Objetivo do teste | Verificar se o sistema deixa de exibir o gráfico baseado no filtro |
+| Passo 1 | Cadastrar conta (A pagar e/ou A Receber) |
+| Passo 2 | Navegar até a tela financeiro |
+| Passo 3 | Selecionar datas que não incluam as que foram registradas |
+| Critérios de Êxito | O gráfico não exibe informação alguma |

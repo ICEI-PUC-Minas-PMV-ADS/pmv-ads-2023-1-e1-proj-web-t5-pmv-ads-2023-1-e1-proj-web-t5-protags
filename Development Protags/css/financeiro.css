@@ -158,10 +158,11 @@ h5 {
 .box_empty .box_red_full {
     border-radius: 7px;
     border: 3px solid #000000;
+    
 }
 
-#dataFim,
-#dataInicio {
+#dataFimTiago,
+#dataInicioTiago {
     height: 30px;
     border: 3px solid black;
     border-radius: 4px;
