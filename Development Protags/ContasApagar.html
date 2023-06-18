@@ -5,22 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        
+
     <!-- CSS -->
     <link rel="stylesheet" href="./css/arealizar.css">
+    <link rel="icon" href="./images/favicon.ico">
     <title>Contas a pagar</title>
 </head>
 
@@ -92,26 +84,27 @@
 
     <!-- O QUE PRECISA SER DESENVOLVIDO -->
 
-        <nav class="dp-menu">
-            <ul>
-                <li class="nav-item">
-                    <a class="nav-link active" href="ContasApagar.html">Contas à pagar</a>
-                    <ul>
-                        <li>
-                            <a href="ContasPagas.html">Contas pagas</a></li>
-                    </ul>
-                </li>
-                <li><a href="ContasAReceber.html">Contas à receber</a>
-                    <ul>
-                        <li><a href="ContasRecebidas.html">Contas recebidas</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+    <nav class="dp-menu">
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link active" href="ContasApagar.html">Contas à pagar</a>
+                <ul>
+                    <li>
+                        <a href="ContasPagas.html">Contas pagas</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="ContasAReceber.html">Contas à receber</a>
+                <ul>
+                    <li><a href="ContasRecebidas.html">Contas recebidas</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-     <br>
+    <br>
 
-     <td class="doublelineformat ">
+    <td class="doublelineformat ">
         <div>
             <button type="button" title="" id="btnUrgentes">Contas Urgentes</button>
         </div>
@@ -129,28 +122,28 @@
 
     <table class="table table-bordered" id="tableClient">
         <thead class="table-dark">
-          <tr >
-            <th scope="col">CONTA</th>
-            <th scope="col">VENCIMENTO</th>
-            <th scope="col">PARCELA</th>
-            <th scope="col">PAGAR PARA</th>
-            <th scope="col">DESCRIÇÃO</th>
-            <th scope="col">COMPROVANTE</th>
-            <th scope="col">DATA DE PAGAMENTO</th>
-            <th scope="col">VALOR</th>
-            <th scope="col">SITUAÇÃO</th>
-          </tr>
+            <tr>
+                <th scope="col">CONTA</th>
+                <th scope="col">VENCIMENTO</th>
+                <th scope="col">PARCELA</th>
+                <th scope="col">PAGAR PARA</th>
+                <th scope="col">DESCRIÇÃO</th>
+                <th scope="col">COMPROVANTE</th>
+                <th scope="col">DATA DE PAGAMENTO</th>
+                <th scope="col">VALOR</th>
+                <th scope="col">SITUAÇÃO</th>
+            </tr>
         </thead>
         <tbody id="table-exibicao">
             <tr>
-            <!--Estrutura da Table-->
+                <!--Estrutura da Table-->
             </tr>
         </tbody>
-        </table>
-          
+    </table>
 
-      <!-- MODAL APAGAR -->
-      <div class="modal" id="modal2">
+
+    <!-- MODAL APAGAR -->
+    <div class="modal" id="modal2">
         <div class="modal-content">
             <header class="modal-header">
                 <h2>Excluir Cliente</h2>
@@ -198,12 +191,25 @@
     <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3" id="footer">
-          © 2023
-          <a class="text-light" href="homepage.html">Protags</a>
+            © 2023
+            <a class="text-light" href="homepage.html">Protags</a>
         </div>
         <!-- Copyright -->
-      </footer>
-      <script src="./js/ContasApagar.js"></script>
+    </footer>
+
+
+    <script src="./js/ContasApagar.js"></script>
+
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

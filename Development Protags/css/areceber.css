@@ -1,4 +1,3 @@
-
 * {
   padding: 0;
   margin: 0;
@@ -51,14 +50,14 @@
 }
 
 .titulo {
-    background-color: #47141E;
-    width: 9.6rem;
-    height: 2.5rem;
-    margin: 0.5rem 0 0 1%;
-    padding: 0.5rem 0 0 0.7rem;
-    color: #fff;
-    border-radius: 5px;
-  }
+  background-color: #47141E;
+  width: 9.6rem;
+  height: 2.5rem;
+  margin: 0.5rem 0 0 1%;
+  padding: 0.5rem 0 0 0.7rem;
+  color: #fff;
+  border-radius: 5px;
+}
 
 .div4,
 .div5 {
@@ -81,7 +80,8 @@
   justify-content: space-between;
 }
 
-.linha3, .linha4 {
+.linha3,
+.linha4 {
   display: flexbox;
   padding: 0.4rem;
   align-items: center;
@@ -91,52 +91,52 @@
 }
 
 .linha4 input[type=file] {
-    background-color: white;
-    border: 2px solid gray;
-    border-radius: 5px;
-    padding-top: 2px;
-  }
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding-top: 2px;
+}
 
-  .rcadastrar {
-    position: fixed;
-    bottom: 8vh;
-    margin-bottom: 1vh;
-    right: 1px;
-    align-items: flex-end;
-  }
+.rcadastrar {
+  position: fixed;
+  bottom: 8vh;
+  margin-bottom: 1vh;
+  right: 1px;
+  align-items: flex-end;
+}
 
 label {
-    font-size: 3vh;
-    padding-right: 0.5rem;
-    white-space: nowrap;
-    text-align: center;
+  font-size: 3vh;
+  padding-right: 0.5rem;
+  white-space: nowrap;
+  text-align: center;
 }
 
 input {
-    font-size: 2vh;
-    border-radius:0.5vh;
-    border-width: 0.2vh;
-    border-color: gray;
-    width: 15vw;
-    height: 5vh;
-    padding-left: 0.5rem;
-    align-content: center;
+  font-size: 2vh;
+  border-radius: 0.5vh;
+  border-width: 0.2vh;
+  border-color: gray;
+  width: 15vw;
+  height: 5vh;
+  padding-left: 0.5rem;
+  align-content: center;
 }
 
 select {
-    font-size: 3vh;
-    align-items: center;
-    border-radius: .3rem;
-    text-align: center;
-    width: 8vw;
-    height: 5vh;
+  font-size: 3vh;
+  align-items: center;
+  border-radius: .3rem;
+  text-align: center;
+  width: 8vw;
+  height: 5vh;
 }
 
 button {
-    width: 10rem;
-    height: 2.3rem;
-    font-size: 20px;
-    border: 1px solid gray;
+  width: 10rem;
+  height: 2.3rem;
+  font-size: 20px;
+  border: 1px solid gray;
 }
 
 #rvisualizarArquivo {
@@ -149,36 +149,47 @@ button {
   height: 5vh;
 }
 
-  #rsCategoria {
-    font-size: medium;
-  }
-  
-  #rsConta {
-    width: 70px;
-  }
-
-  .testediv {
-    justify-content: center;
-  }
-
-  #dropMenuBtn {
-    --bs-dropdown-min-width: 5.4rem;
+#rsCategoria {
+  font-size: medium;
 }
 
-@media only screen and (max-width: 768px){
-  .div4, .div5, .linha3, .linha4 {
+#rsConta {
+  width: 70px;
+}
+
+.testediv {
+  justify-content: center;
+}
+
+#dropMenuBtn {
+  --bs-dropdown-min-width: 5.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .div4,
+  .div5,
+  .linha3,
+  .linha4 {
     display: flex;
     flex-direction: column;
   }
-  button, input, select, #rvisualizarArquivo {
+
+  button,
+  input,
+  select,
+  #rvisualizarArquivo {
     width: 140px;
   }
-  #footer, .rcadastrar {
+
+  #footer,
+  .rcadastrar {
     position: relative;
     bottom: 0;
     float: right;
     margin: 10px 0 0 0;
   }
+
   #dropdownMenuButton {
     float: right;
   }
