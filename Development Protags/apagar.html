@@ -91,6 +91,7 @@
 
     <div class="conteudo">
 
+            
         <!--ELEMENTOS DA LINHA 1-->
         <div class="titulo">Contas a Pagar</div>
         <div class="div1">
@@ -129,7 +130,7 @@
         </div>
 
         <!--ELEMENTOS DA LINHA 2-->
-        <div class="div2">
+        <div class="div2 mt-5">
             <div class="linha2"> <!--ENTRADA DO PAGAR PARA-->
                 <label for="ppagarPara">Pagar para</label>
                 <input id="psPagarPara" type="text" placeholder="Insira um nome">
@@ -152,6 +153,7 @@
             <div class="linha2">
                 <label for="panexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
                 <input id="psArquivo" type="file" name="pArquivo">
+                <button id="pvisualizarArquivo" onclick="pvisualizar()">Visualizar Arquivo</button>
             </div>
             <div class="linha2">
                 <label for="pSituação">Situação</label> <!--SITUAÇÃO-->
@@ -172,9 +174,6 @@
     </div>
 
 
-
-
-
     <!-- RODAPÉ DA PÁGINA -->
 
     <footer class="bg-light text-center text-lg-start">
@@ -186,9 +185,8 @@
         <!-- Copyright -->
     </footer>
 
-
     <script src="./js/apagar.js"></script>
-
+    <script src="./js/pdfjs.js/pdf.js"></script>
    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

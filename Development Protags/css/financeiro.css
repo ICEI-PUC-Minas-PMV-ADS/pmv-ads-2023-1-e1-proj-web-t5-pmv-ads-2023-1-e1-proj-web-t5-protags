@@ -6,7 +6,7 @@
 .header {
     min-height: 12vh;
     background-color: #47141e;
-    
+
 }
 
 #dropdownMenuButton {
@@ -39,6 +39,7 @@
     bottom: 0;
     width: 100%;
 }
+
 .logout {
     --bs-dropdown-min-width: 5.5rem;
 }
@@ -49,30 +50,36 @@
 main { width: 50%; float: left;}
 aside { width: 48%; float: right;}
 */
-    /* Box para Entradas e Saidas */
+/* Box para Entradas e Saidas */
 
-.containerEntradaSaida{
+.containerEntradaSaida {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 10%;
 }
-h2, h3 {
+
+h2,
+h3 {
     font-size: 15px;
     text-align: center;
 }
-.entradaBox{
+
+.entradaBox {
     width: 40%;
 }
-.saidaBox{
+
+.saidaBox {
     width: 40%;
 }
+
 .box_green {
     text-align: center;
     font-size: small;
     border-radius: 7px;
     border: 3px solid rgb(50, 190, 50);
 }
+
 .box_red {
     text-align: center;
     font-size: small;
@@ -80,9 +87,9 @@ h2, h3 {
     border: 3px solid rgb(199, 35, 35);
 }
 
-    /* Fim - Box para Entradas e Saidas */
+/* Fim - Box para Entradas e Saidas */
 
-    /* Inicio - Informativos */
+/* Inicio - Informativos */
 .informativos {
     width: 95%;
     display: inline-block;
@@ -91,23 +98,30 @@ h2, h3 {
     border: 2px solid black;
     border-radius: 7px;
 }
+
 h4 {
     text-align-last: left;
     border: 2px solid black;
     border-radius: 3px;
 }
-.period_info_1, .period_info_2, .result_info_1, .result_info_2 {
+
+.period_info_1,
+.period_info_2,
+.result_info_1,
+.result_info_2 {
     font-size: 15px;
 }
-    /*Fim - Informativos*/
 
-    /* Inicio - Movimentações Recentes */
+/*Fim - Informativos*/
 
-#graficoContainer{
+/* Inicio - Movimentações Recentes */
+
+#graficoContainer {
     margin: 4px;
     border: 4px solid black;
     border-radius: 7px;
 }
+
 .Movimentações_Recentes {
     width: 100%;
     font-size: larger;
@@ -115,51 +129,62 @@ h4 {
     margin-bottom: 5px;
     border-bottom: 4px solid black;
 }
+
 .pesquisaGrafico {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
+
 .tituloPesquisaGrafico {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 10%;
 }
+
 .boxPesquisaGrafico {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 2%;
 }
+
 h5 {
     text-align: center;
     margin-left: 5%;
 }
+
 .box_empty .box_red_full {
     border-radius: 7px;
-    border: 3px solid #000000 ;
+    border: 3px solid #000000;
+    
 }
-#dataFim, #dataInicio {
+
+#dataFimTiago,
+#dataInicioTiago {
     height: 30px;
     border: 3px solid black;
     border-radius: 4px;
     font-size: 14px;
     text-align: center;
 }
+
 #Filtrar {
     border: 3px solid black;
     background-color: rgb(199, 35, 35);
     color: #ffffff;
 }
-.resultFiltro{
+
+.resultFiltro {
     display: flex;
     justify-content: center;
     text-align: center;
     margin-bottom: 0px;
     font-size: 14px;
 }
-    /* Fim - Movimentações Recentes  */
+
+/* Fim - Movimentações Recentes  */
 
 
 #containerMovimentacoes {
@@ -169,7 +194,7 @@ h5 {
     border-radius: 20px;
 }
 
-    /* GRÁFICOS LUCAS */
+/* GRÁFICOS LUCAS */
 
 #grafico {
     -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
@@ -189,4 +214,19 @@ h5 {
 
 #dropMenuBtn {
     --bs-dropdown-min-width: 5.4rem;
+}
+
+
+#btnFiltrar {
+    background-color: #47141E;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1px 10px;
+    margin-bottom: 20px;
+}
+
+#btnFiltrar:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
 }

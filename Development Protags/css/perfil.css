@@ -2,122 +2,70 @@
     margin-top: 15px;
 }
 
-.retangulo {
-    width: 400px;
-    height: 300px;
-    border: 2px solid black;
-    position: relative;
-    left: 100px;
+.container h2 {
     margin-top: 15px;
 }
 
-/* .frase {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-} */
-
-#faturamento {
-    /* width: 200px; */
-    /* height: 100px; */
-    float: left;
-    /* text-align: center; */
-    line-height: 350px;
+.profile-section {
+    margin-top: 30px;
+    padding: 20px;
 }
 
-#evolucao {
-    /* margin-top: 15px; */
-}
-
-.tema {
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.tema2 {
-    /* margin-top: 20px; */
-    font-size: 22px;
-    font-weight: 500;
-    /* display: flex; */
-    /* align-items: center; */
-    justify-content: center;
-}
-
-.box {
-    border: 2px solid green;
-    border-radius: 10px;
-    /* width: 100px; */
-    height: 45px;
+/* 
+.profile-info {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
-}
-
-/* .progress{
-    margin-top: 20px;
+    margin-bottom: 10px;
 } */
 
-#porcentagem {
-    color: gray;
-    font-size: small;
+.profile-info label {
+    font-weight: bold;
+    margin-right: 10px;
 }
 
-#texto2 {
-    /* color: gray; */
-    font-size: small;
+.profile-info p {
+    /* padding: 10px;
+   margin-bottom: 10px; */
 }
 
-
-/* GRÁFICO */
-
-
-
-#objetivos {
-    display: flex;
-    justify-content: center;
+.edit-icon {
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-
-
-
-
-
-#cancelarMeta {
-    background-color: #47141e;
+#card-view {
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+    border-color: #47141E;
 }
 
-#cancelarMeta:hover {
-    background-color: #fff;
-    border-style: solid 2px;
-    border-color: #000;
-    color: #000;
+.linha {
+    border-bottom: 1px solid #333;
+    width: 100%;
+    margin-top: 10px;
+    min-height: 10px;
 }
 
-#tituloMeta {
-    text-align: center;
+.bi-eye {
+    margin-bottom: 10px;
 }
 
-.valorMetaCumprida {
-    text-align: center;
+.bi-eye-slash {
+    margin-bottom: 10px;
 }
 
-#valoresMeta {
-    text-align: center;
+.edit-icon {
+    color: black;
 }
 
-.valoresMetas {
-    text-align: center;
-}
-
-.valorMetaCumprida {
-    text-align: center;
-}
-
-.informativoMetas {
-    text-align: center;
-}
-
-.logout{
-    --bs-dropdown-min-width: 5.4rem;
+#footer {
+    min-height: 5vh;
+    background-color: #47141E;
+    color: #fff;
+    text-emphasis-color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
