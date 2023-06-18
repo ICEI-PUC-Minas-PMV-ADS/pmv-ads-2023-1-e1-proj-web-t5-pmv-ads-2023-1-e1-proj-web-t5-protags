@@ -208,3 +208,14 @@ display: inline-block;
     #dropMenuBtn {
         --bs-dropdown-min-width: 5.4rem;
     }
+
+    .editarIcon {
+        background-color: #fff;
+        width: 1.2rem;
+        height: 1.2rem;
+        border: none;
+    }
+    
+    .editarIcon:hover {
+        background-color: #F0DB4F;
+    }

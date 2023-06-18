@@ -1,102 +1,93 @@
 // Variáveis armazenadas para exibição
-let conta = document.querySelector('#conta')
-let vencimento = document.querySelector('#vencimento')
-let parcela = document.querySelector('#parcela')
-let pagarpara = document.querySelector('#pagarpara')
-let descricao = document.querySelector('#descricao')
-let comprovante = document.querySelector('#comprovante')
-let dataDeVencimento = document.querySelector('#dataDeVencimento')
-let exibirReais = document.querySelector('#exibirReais')
-let selectMenu = document.querySelector('#select-menu')
+let conta = document.querySelector('#conta');
+let vencimento = document.querySelector('#vencimento');
+let parcela = document.querySelector('#parcela');
+let pagarpara = document.querySelector('#pagarpara');
+let descricao = document.querySelector('#descricao');
+let comprovante = document.querySelector('#comprovante');
+let dataDePagamento = document.querySelector('#dataDePagamento');
+let exibirReais = document.querySelector('#exibirReais');
+let selectMenu = document.querySelector('#select-menu');
 
 // Formata a data para exibição
 function formatarData(data) {
-
   const partes = data.split('-');
-
   const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
-
   return dataFormatada;
-
 }
 
-
-
-
 // Array contasAPagar recuperado do localStorage
-
-let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
-
-
-
+const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
 // Atribuir IDs individuais para cada conta
-
 contasAPagar.forEach((conta, index) => {
-
   conta.id = index + 1; // IDs começando em 1
-
 });
-
-
-
 
 const cardRealizados = document.querySelector('#table-exibicao');
 
 cardRealizados.innerHTML = '';
 
-
-
-
 for (let i = 0; i < contasAPagar.length; i++) {
-
   const conta = contasAPagar[i];
 
   const dataFormatadaVenci = formatarData(conta.datadevenci);
-  const dataFormatadaEmissao = formatarData(conta.datadeemissao) 
-  
-  // Formata a data
+  const dataFormatadaEmissao = formatarData(conta.datadeemissao);
 
+  // Formata a data
   const newRow = document.createElement('tr');
 
   newRow.innerHTML = `
-
-    <td class="text-center" id="conta">${conta.id}</td>
-
-    <td class="text-center" id="vencimento">${dataFormatadaVenci}</td>
-
-    <td class="text-center" id="parcela">${conta.parcelas}</td>
-
-    <td class="text-center" id="pagarpara">${conta.pagarpara}</td>
-
-    <td class="text-center" id="descricao">${conta.descricao}</td>
-
-    <td class="text-center" id="comprovante"><input type="file"></td>
-
-    <td class="text-center" id="dataDeVencimento"><input type="date"></td>
-
-    <td class="text-center" id="exibirReais">${conta.valor}</td>
-
+    <td class="text-center" id="conta_${i}">${conta.id}</td>
+    <td class="text-center" id="vencimento_${i}">${dataFormatadaVenci}</td>
+    <td class="text-center" id="parcela_${i}">${conta.parcelas}</td>
+    <td class="text-center" id="pagarpara_${i}">${conta.pagarpara}</td>
+    <td class="text-center" id="descricao_${i}">${conta.descricao}</td>
+    <td class="text-center" id="comprovante_${i}"><input type="file"></td>
+    <td class="text-center" id="dataDePagamento_${i}"><input type="date"></td>
+    <td class="text-center" id="exibirReais_${i}">${conta.valor}</td>
     <td class="text-center">
-
-      <select name="acoes" class="selectAcoes" id="select-menu-${conta.situacao}">
-
+      <select name="acoes" class="selectAcoes" id="select-apagar_${i}" onchange="salvarETransferir(${i})">
         <option value="3" class="opt">A PAGAR</option>
-
         <option value="6" class="opt">PAGO</option>
-
       </select>
-
+      <button onclick="editarConta(${i})"><img class="editarIcon" src="./images/editar.png"></button>
     </td>
-
   `;
 
-
-
-
   cardRealizados.appendChild(newRow);
-
 }
+
+function editarConta(i) {
+  // Recupere os valores da conta com base na posição 'i' no array contasAPagar
+  const conta = contasAPagar[i];
+
+  // Redirecione para a página "apagar.html" com os valores preenchidos como parâmetros na URL
+  window.location.href = `apagar.html?conta=${conta.id}&vencimento=${conta.datadevenci}&parcela=${conta.parcelas}&pagarpara=${conta.pagarpara}&descricao=${conta.descricao}&valor=${conta.valor}`;
+}
+
+
+function salvarETransferir(i) {
+  let dataDePagamentoElement = document.getElementById(`dataDePagamento_${i}`);
+  let dataDePagamentoValue = dataDePagamentoElement.querySelector('input').value;
+
+  let contaPagamento = { ...contasAPagar[i] };
+  contaPagamento.dataDePagamento = dataDePagamentoValue;
+
+  const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
+
+  contasPagas.push(contaPagamento);
+  contasAPagar.splice(i, 1);
+
+  localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
+  localStorage.setItem('contasPagas', JSON.stringify(contasPagas));
+
+  window.location.href = 'ContasPagas.html'; 
+}
+
+
+
+
 
 
 for (let i = 0; i < contasAtrasadas.length; i++) {
