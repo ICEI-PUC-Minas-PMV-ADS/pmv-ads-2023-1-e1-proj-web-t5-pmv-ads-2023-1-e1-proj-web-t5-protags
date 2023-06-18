@@ -115,6 +115,7 @@ if (localStorage.getItem('token') === null) {
             quemCad.value = eventoEditado[0].quemEv;
             descricaoCad.value = eventoEditado[0].descEv;
 
+                
             // Alterar botão Cadastrar para Atualizar e adicionando evento de Click para ativar a função
             botaoModal.innerHTML = `<button id="botaoAtualizar" class="button-cadastrar-ev">Atualizar</button>`;
             botaoModal.querySelector('#botaoAtualizar').addEventListener('click', () => {
@@ -138,29 +139,61 @@ const quemCad = document.querySelector('#quemCad')
 const descricaoCad = document.querySelector('#descricaoCad')
 
 function editEvento(listEv, eventoEditado, eventId) {
+    if (dataCad.value === '' || quemCad.value === '' || horarioCad.value === '' || descricaoCad.value === '') {
+      let dataCadAlert = document.getElementById('dataCad');
+      let quemCadAlert = document.getElementById('quemCad');
+      let descricaoCadAlert = document.getElementById('descricaoCad');
+      let horarioCadAlert = document.getElementById('horarioCad');
+  
+      alert('Preencha os campos corretamente');
+  
+      dataCadAlert.setAttribute('style', 'border: solid 1px red');
+      quemCadAlert.setAttribute('style', 'border: solid 1px red');
+      descricaoCadAlert.setAttribute('style', 'border: solid 1px red');
+      horarioCadAlert.setAttribute('style', 'border: solid 1px red');
+      return;
+    }
+  
     eventoEditado['dataEv'] = dataCad.value;
     eventoEditado['horarioEv'] = horarioCad.value;
     eventoEditado['contatoEv'] = contatoCad.value;
     eventoEditado['quemEv'] = quemCad.value;
     eventoEditado['descEv'] = descricaoCad.value;
-
+  
     for (let i = 0; i < listEv.length; i++) {
-        if (listEv[i].id === eventId) {
-            listEv[i] = eventoEditado;
-            break;
-        }
+      if (listEv[i].id === eventId) {
+        listEv[i] = eventoEditado;
+        break;
+      }
     }
-
+  
     localStorage.setItem('listEv', JSON.stringify(listEv));
-    alert('Evento alterado com sucesso!')
+    alert('Evento alterado com sucesso!');
     sideModalTLInfo.style.display = 'none';
     sideModalTLInfo.classList.remove('show');
     document.body.classList.remove('modal-open');
     location.reload();
-}
+  }
+  
 
 // Função ativada pelo botão de cadastrar / CREATE (C.r.u.d)
 function cadEvento() {
+
+    if (dataCad.value === '' && quemCad.value === '' && horarioCad.value === '' && descricaoCad.value === '') {
+
+        let dataCadAlert = document.getElementById('dataCad')
+        let quemCadAlert = document.getElementById('quemCad')
+        let descricaoCadAlert = document.getElementById('descricaoCad')
+        let horarioCadAlert = document.getElementById('horarioCad')
+
+        alert('Preencha os campos corretamente')
+
+        dataCadAlert.setAttribute('style', 'border: solid 1px red')
+        quemCadAlert.setAttribute('style', 'border: solid 1px red')
+        descricaoCadAlert.setAttribute('style', 'border: solid 1px red')
+        horarioCadAlert.setAttribute('style', 'border: solid 1px red')
+
+    } else {
 
         const newEvent = {
             dataEv: dataCad.value,
@@ -232,8 +265,9 @@ function cadEvento() {
         location.reload();
     }
 
-// Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
-function logout() {
-    localStorage.removeItem('token')
-    window.location.href = 'login.html'
+    // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
+    function logout() {
+        localStorage.removeItem('token')
+        window.location.href = 'login.html'
+    }
 }
