@@ -36,7 +36,9 @@ function login() {
 
   }
 
-  else if (usuario.value === userValid.usuario && senha.value === userValid.senha) {
+  let user = JSON.parse(localStorage.getItem('user')) || {};
+
+  if (usuario.value === userValid.usuario && senha.value === userValid.senha || usuario.value === user.novoUsuario && senha.value === user.alterarSenha) {
 
     let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
 

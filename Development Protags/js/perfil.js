@@ -1,6 +1,11 @@
 const userPerfil = JSON.parse(localStorage.getItem('user'));
 let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
 
+window.onload = function () {
+    myFunction();
+    mostrarSenha();
+};
+
 function myFunction() {
 
     document.getElementById('nomeEmpresa').textContent = userPerfil.novoNomeEmpresa;
