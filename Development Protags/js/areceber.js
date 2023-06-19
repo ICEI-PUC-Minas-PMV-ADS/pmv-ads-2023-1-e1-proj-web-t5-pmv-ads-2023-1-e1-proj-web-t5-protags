@@ -18,6 +18,7 @@ if (localStorage.getItem('token') === null) {
 
   let categorias = document.querySelector('#rsCategoria')
   let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber')) || [];
+  let contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
 
   btnCadastro.addEventListener('click', (e) => {
     e.preventDefault();
