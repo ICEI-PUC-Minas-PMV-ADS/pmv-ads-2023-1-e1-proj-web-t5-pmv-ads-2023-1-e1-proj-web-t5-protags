@@ -93,6 +93,12 @@ if (localStorage.getItem('token') === null) {
   document.querySelector('#psDescricao').value = descricao;
   document.querySelector('#psValor').value = valor;
 
+  //Preenchimento automático **REMOVER CASO NECESSÁRIO**
+  document.querySelector('#psParcelas').value = "1";
+  document.querySelector('#psValor').value = "R$";
+  //**FAVOR REMOVER ISTO CASO INTERFERIR EM ALGO**
+
+  //Sistema que mostra o número total de contas registradas
   const pcontasTotalApagar = contasAPagar.length;
   const pcontasTotalPagas = contasPagas.length;
   let pcontasTotal = pcontasTotalApagar + pcontasTotalPagas;
