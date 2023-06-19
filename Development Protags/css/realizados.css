@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -18,27 +18,27 @@ header {
 }
 
 #dropdownMenuButton-pagas {
-background-color: green;
+    background-color: green;
 }
 
 #dropdownMenuButton-apagar {
-	background-color: yellow;
+    background-color: yellow;
 }
 
 #dropdownMenuButton-recebido {
-	background-color: green;
+    background-color: green;
 }
 
 #dropdownMenuButton-areceber {
-	background-color: yellow;
-	}
+    background-color: yellow;
+}
 
 #dropdownMenuButton-pendente {
-		background-color: red;
-		}	
+    background-color: red;
+}
 
 #dropdown-item {
-	background-color: #ffff;
+    background-color: #ffff;
 }
 
 .logopng {
@@ -56,7 +56,7 @@ background-color: green;
 }
 
 #footer {
-    min-height: 8vh;
+    min-height: 5vh;
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
@@ -67,63 +67,64 @@ background-color: green;
 
 
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 main {
-	margin: 20px;
+    margin: 20px;
 }
 
 table {
-	border-collapse: collapse;
-	width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 table th,
 table td {
-	padding: 10px;
-	text-align: left;
+    padding: 10px;
+    text-align: left;
 }
 
 table th {
-	background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
 table td {
-	border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 table td.status-pago {
-	color: green;
+    color: green;
 }
 
 table td.status-pendente {
-	color: orange;
+    color: orange;
 }
 
 table td.status-vencido {
-	color: red;
+    color: red;
 }
 
-:root{
+:root {
     --cor-fundo: #000000;
     --cor-texto: #ffffff;
     --cor-hover: #47141e;
 }
-.dp-menu ul{
+
+.dp-menu ul {
     list-style-type: none;
     padding: 0px;
 }
 
-.dp-menu ul{
-background-color: var(--cor-fundo);
-position: relative;
+.dp-menu ul {
+    background-color: var(--cor-fundo);
+    position: relative;
 }
 
-.dp-menu ul li{
-display: inline-block;
+.dp-menu ul li {
+    display: inline-block;
 }
 
 .dp-menu ul li a {
@@ -134,27 +135,28 @@ display: inline-block;
     transition: background 0.3s;
 }
 
-.dp-menu ul li a:hover{
+.dp-menu ul li a:hover {
     background-color: var(--cor-hover);
-    }
+}
 
 /*sub menu*/
 .dp-menu ul ul {
     display: none;
     position: absolute;
-    }
+}
 
 .dp-menu ul li:hover ul {
     display: block;
-    }
+    width: auto;
+}
 
-.dp-menu ul ul{
+.dp-menu ul ul {
     width: 150px;
-    }
+}
 
 .dp-menu ul ul li a {
     display: block;
-    }
+}
 
 .dvm-circle {
     margin: 5px;

@@ -11,17 +11,16 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/areceber.css">
+    <link rel="stylesheet" href="./css/arealizar.css">
     <link rel="icon" href="./images/favicon.ico">
-    <title>Contas a receber</title>
+    <title>Contas a pagar</title>
 </head>
 
 <body>
 
-     <!-- MENU DE NAVEGAÇÃO -->
+    <!-- MENU DE NAVEGAÇÃO -->
 
-
-     <div class="header">
+    <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <a href="./inicio.html"><img src="./images/Protags.png" alt="logo" class="logopng"></img></a>
             <button class="navbar-toggler me-2 transparent" type="button" data-toggle="collapse"
@@ -48,6 +47,7 @@
                             <a class="dropdown-item" href="./areceber.html">A Receber</a>
                         </div>
                     </div>
+
 
                     <li class="nav-item">
                         <a class="nav-link active text-white ps-0" href="./ContasApagar.html">
@@ -80,88 +80,106 @@
     </div>
     </nav>
 
-    <!-- CONTEUDO DA PÁGINA -->
 
-    <div class="conteudo">
 
-        <!--ELEMENTOS DA LINHA 1-->
-        <div class="titulo">Contas a Receber</div>
-        <div class="div4">
-            <div class="linha3"> <!--ENTRADA DO NÚMERO DA CONTA-->
-                <label for="rconta">Conta</label>
-                <input id="rsConta" type="number" min="0">
-            </div>
-            <div class="linha3"> <!--ENTRADA DO VALOR-->
-                <label for="rvalor" id="rvalor">Valor</label>
-                <input id="rsValor" type="text" value="R$">
-            </div>
-            <div class="linha3"> <!--SELECIONADOR DE PARCELAS-->
-                <label for="rparcelas">Parcelas</label>
-                <select id="rsParcelas" name="rparcelas">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="6">6</option>
-                    <option value="12">12</option>
-                    <option value="24">24</option>
-                </select>
-            </div>
-            <div class="linha3"> <!--ENTRADA DA DATA DE EMISSÃO-->
-                <label for="rdatadeEmissao">Data de emissão</label>
-                <input id="rsDatadeEmissao" type="date">
-            </div>
-            <div class="linha3"> <!--ENTRADA DA DATA DE RECEBIMENTO-->
-                <label for="rdatadeRecebimento">Data de Recebimento</label>
-                <input id="rsDatadeRecebi" type="date">
+    <!-- O QUE PRECISA SER DESENVOLVIDO -->
+
+    <nav class="dp-menu">
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link active" href="ContasApagar.html">Contas à pagar</a>
+                <ul>
+                    <li>
+                        <a href="ContasPagas.html">Contas pagas</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="ContasAReceber.html">Contas à receber</a>
+                <ul>
+                    <li><a href="ContasRecebidas.html">Contas recebidas</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <td class="doublelineformat ">
+        <div>
+            <button type="button" title="" id="btnUrgentes">Contas Urgentes</button>
+        </div>
+        <br>
+        <div id="menuUrgentes">
+            <div class="urgentesBorda" hidden>
+                <div class="urgentesTítulo"></div>
+                <div class="urgentesDataDeVenci"></div>
+                <div class="urgentesValor"></div>
+                <div class="urgentesParcelas"></div>
+                <div class="urgentesPagarPara"></div>
             </div>
         </div>
-        
+    </td>
 
-        <!--ELEMENTOS DA LINHA 2-->
-        <div class="div5">
-            <div class="linha4"> <!--ENTRADA DO PAGAR PARA-->
-                <label for="rreceberDe">Receber de</label>
-                <input id="rsreceberDe" type="text" placeholder="Insira um nome">
-            </div>
-            <div class="linha4"> <!--SELECIONADOR DE DATA-->
-                <label for="rcondicaoRecebimento">Condição de Recebimento</label>
-                <select id="rsCondicaoRec" name="rcondicaoRecebimento">
-                    <option value="avista">À Vista</option>
-                    <option value="15d">15 Dias</option>
-                    <option value="30d">30 Dias</option>
-                    <option value="45d">45 Dias</option>
-                    <option value="60d">60 Dias</option>
-                    <option value="75d">75 Dias</option>
-                    <option value="90d">90 Dias</option>
-                </select>
-            </div>
-            <div class="linha4"> <!--ENTRADA DA DESCRIÇÃO-->
-                <label for="rDescricao">Descrição (Opcional)</label>
-                <input id="rsDescricao" type="text" placeholder="Insira a descrição">
-            </div>
-            <div class="linha4"> <!--SELECIONADOR DE CATEGORIAS-->
-                <label for="rcategoria">Categoria</label>
-                <input type="text" id="rsCategoria" name="rpcategoria" placeholder="Ex: Vendas, Serviços">
-            </div>
-            <div class="linha4">
-                <label for="rSituação">Situação</label> <!--SITUAÇÃO-->
-                <select id="rsSituacao" name="rSituacao">
-                    <option value="caReceber">A Receber</option>
-                    <option value="cRecebido">Recebido</option>
-                    <option value="crecebidoParci">Recebido Parcialmente</option>
-                </select>
-            </div>
-        </div>
+    <table class="table table-bordered" id="tableClient">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col" class="text-center">CONTA</th>
+                <th scope="col" class="text-center">PARCELA</th>
+                <th scope="col" class="text-center">PAGAR PARA</th>
+                <th scope="col" class="text-center">DESCRIÇÃO</th>
+                <th scope="col" class="text-center">VENCIMENTO</th>
+                <th scope="col" class="text-center">DATA DE PAGAMENTO</th>
+                <th scope="col" class="text-center">VALOR</th>
+                <th scope="col" class="text-center">SITUAÇÃO</th>
+            </tr>
+        </thead>
+        <tbody id="table-exibicao">
+            <tr>
+                <!--Estrutura da Table-->
+            </tr>
+        </tbody>
+    </table>
 
-        <!--ELEMENTOS DA LINHA 3-->
-        <div class="div6">
-        </div>
-        <div class="rcadastrar"> <!--CADASTRAR C. PARA RECEBER-->
-            <button id="rregCadastrar">Cadastrar</button>
+
+    <!-- MODAL APAGAR -->
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2>Excluir Cliente</h2>
+                <span class="modal-close" id="modalClose2">&#10006;</span>
+            </header>
+            <div id='avisoDelete'>
+                <!-- aviso de delete -->
+            </div>
+            <footer class="modal-footer">
+                <button id="apagar" class="button red">Apagar</button>
+                <button id="cancelar2" class="button blue">Cancelar</button>
+            </footer>
         </div>
     </div>
-    
+
+    <!-- MODAL CRIAR E EDITAR -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2>Novo Cliente</h2>
+                <span class="modal-close" id="modalClose">&#10006;</span>
+            </header>
+            <form id="form" class="modal-form">
+                <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"
+                    required>
+                <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
+                <input type="text" id="celular" class="modal-field" placeholder="Celular do Cliente" required>
+                <input type="text" id="cidade" class="modal-field" placeholder="Cidade do Cliente" required>
+            </form>
+            <footer class="modal-footer">
+                <button id="salvar" class="button green">Salvar</button>
+                <button id="cancelar" class="button blue">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+
+
 
 
 
@@ -173,15 +191,13 @@
         <!-- Copyright -->
         <div class="text-center p-3" id="footer">
             © 2023
-            <a class="text-light" href="/index.html">Protags</a>
+            <a class="text-light" href="homepage.html">Protags</a>
         </div>
         <!-- Copyright -->
     </footer>
 
 
-
-
-    <script src="./js/areceber.js"></script>
+    <script src="./js/ContasApagar.js"></script>
 
     <!--Bootstrap-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

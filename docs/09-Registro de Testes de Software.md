@@ -103,6 +103,7 @@ CT-05 - Cadastro de eventos
   <li> <strong>Objetivo do teste</strong>:	Verificar se é possível cadastrar um evento na tela de Inicio </li>
   <li> <strong>Resultado</strong>: Apareceu o alert de evento cadastrado com sucesso e logo depois redireciona para pagina de inicio, com um evento novo com os dados preenchidos. </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique`
 
 <img height=500px src="/docs/img/EventoCadastradoSucesso.png" ></img>
@@ -114,6 +115,7 @@ CT-06 - Cadastro de eventos sem sucesso
   <li><strong>Objetivo do teste</strong>:	Verificar se o sistema impede o cadastro de um evento na tela de Inicio, sem que os campos estejam preenchidos</li>
   <li><strong>Resultado</strong>: Após tentar cadastrar sem nenhum dado escrito, apareceu o alert de Preencha os campos corretamente, retornando ao cadastro do evento com os campos essenciais em vermelho </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique`
   
 <img height=500px src="/docs/img/EventoCadastradoSemSucesso.png" ></img>
@@ -126,6 +128,7 @@ CT-06 - Cadastro de eventos sem sucesso
   <li><strong>Resultado</strong>: O evento não foi impedido de cadastrar, apareceu o alert de evento cadastrado com sucesso e logo depois redireciona para pagina de inicio, com um evento novo com os nenhum dado preenchido e uma mensagem de erro.
 </li>
   </ul>
+  
   ### `Responsável pelo teste: Tiago Henrique`
   
 <img height=500px src="/docs/img/EventoCadastradoErro.png" ></img>
@@ -139,6 +142,7 @@ CT-07 - Alteração de eventos registrados
   <li><strong>Resultado</strong>: Ao alterar o evento, apareceu o alert de Evento alterado com sucesso! e logo depois redireciona para pagina de inicio, com um evento com os novos dado preenchido.
   </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique`
   
 <img src="/docs/img/AlterarEventoSucesso.png"></img>
@@ -151,6 +155,7 @@ CT-08 - Alteração de eventos registrados sem sucesso
   <li><strong>Resultado</strong>: Ao deletar todos os dados e alterar o evento, apareceu o alert de Preencha os campos corretamente e impediu que o sistema de alterar o evento.
   </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique`
 
 <img src="/docs/img/AlterarEventoSemSucesso.png"></img>
@@ -164,6 +169,7 @@ CT-08 - Alteração de eventos registrados sem sucesso
   <li><strong>Resultado</strong>: Ao deletar todos os dados e alterar o evento, apareceu o alert de Evento alterado com sucesso! e logo depois redireciona para pagina de inicio, com um evento com nenhum dado preenchido e um erro.
   </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique` 
 
 <img height=500px src="/docs/img/AlterarEventoErro.png"></img>
@@ -178,6 +184,7 @@ CT-10 - Remover eventos sem sucesso
   <li><strong>Resultado</strong>:  Ao clicar em deletar, aparece um alert "Tem certeza de que deseja excluir?", se clicado em cancelar, volta a tela inicial sem nenhuma alteração.
   </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique`
 
 <img src="/docs/img/DeletarEventoVerificação.png"></img>
@@ -190,6 +197,7 @@ CT-09 - Remover eventos
   <li><strong>Resultado</strong>: Ao clicar em deletar e confirmar a exclusão,aparece um alert "Excluido com sucesso" e após o "ok" o evento é retirado da tela inicial.
   </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique`
 
 <img src="/docs/img/DeletarEventoSucesso.png"></img>
@@ -204,6 +212,7 @@ CT-11 Alteração de eventos registrados
   <li><strong>Resultado</strong>: Após o filtro aplicado, os valores e as categorias aparecem corretamente e formatados.
   </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique`
 
 <img src="/docs/img/GraficoCategoriaFiltrado.png"></img>
@@ -217,6 +226,7 @@ CT-12 - Erro na visualização dos valores
   <li><strong>Resultado</strong>:  O Grafico apresenta os valores sem formatação para BRL.
   </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique`
 
 <img src="/docs/img/GraficoCategoriaErroFormatacao.png"></img>
@@ -230,21 +240,11 @@ CT-11 Alteração de eventos registrados
   <li><strong>Resultado</strong>: Após o filtro aplicado e não havendo nenhum dado no periodo, o grafico aparece vazio.
   </li>
 </ul>
+
   ### `Responsável pelo teste: Tiago Henrique`
 
 <img src="/docs/img/GraficoCategoriaSemDados.png"></img>
 
-
-
-
-## Tela de registro de contas pagas/a pagar
-CT 13 - Verificar se o sistema registra novas contas a pagar e a receber.
-<img src="/docs/img/cadastrodecontasucesso.png"></img>
-Resultado: Uma nova conta é cadastrada no sistema com sucesso.
-
-CT 14 - Verificar se o sistema é capaz de armazenar documentos/comprovantes, e consegue visualizar os mesmos.
-<img src="/docs/img/arquivoabrir.png"></img>
-Resultado: O sistema consegue abrir o arquivo em uma nova página no navegado do usuário.
 
 ## Avaliação
 

@@ -1,56 +1,54 @@
-
 * {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-}
-
-.body {
-  font-family: sans-serif;
-}
-
-.navbar-toggler-icon {
-  filter: brightness(0) invert(1);
-  background-color: transparent;
-  color: transparent;
-}
-
-.header {
-  min-height: 12vh;
-  width: 100vw !important;
-  background-color: #47141e;
-}
-
-#dropdownMenuButton {
-  width: fit-content;
-  background-color: #47141E;
-  border-color: #47141E;
-}
-
-.logopng {
-  width: 10rem;
-  margin-left: 10px;
-}
-
-.texto {
-  margin-bottom: 0;
-}
-
-#footer {
-  min-height: 5vh;
-  background-color: #47141E;
-  color: #fff;
-  text-emphasis-color: #fff;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.conteudo {
-  min-height: 58vh;
-}
-
-.titulo {
+  }
+  
+  .body {
+    font-family: sans-serif;
+  }
+  
+  .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+    background-color: transparent;
+    color: transparent;
+  }
+  
+  .header {
+    min-height: 12vh;
+    width: 100vw !important;
+    background-color: #47141e;
+  }
+  
+  #dropdownMenuButton {
+    width: fit-content;
+    background-color: #47141E;
+    border-color: #47141E;
+  }
+  
+  .logopng {
+    width: 10rem;
+  }
+  
+  .texto {
+    margin-bottom: 0;
+  }
+  
+  #footer {
+    min-height: 5vh;
+    background-color: #47141E;
+    color: #fff;
+    text-emphasis-color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .conteudo {
+    min-height: 58vh;
+  }
+  
+  .titulo {
     background-color: #47141E;
     width: 8.5rem;
     height: 2.5rem;
@@ -59,45 +57,45 @@
     color: #fff;
     border-radius: 5px;
   }
-
-.div1,
-.div2 {
-  position: relative;
-  -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
-  border-radius: 20px;
-  width: 80%;
-  justify-content: center;
-  margin: auto;
-  margin-top: 50px;
-}
-
-.div1,
-.div2,
-.div3,
-.pcadastrar,
-.titulo {
-  display: flex;
-  justify-content: space-between;
-}
-
-.linha1, .linha2 {
-  display: flexbox;
-  padding: 0.4rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.linha2 input[type=file] {
+  
+  .div1,
+  .div2 {
+    position: relative;
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
+    border-radius: 20px;
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+  .div1,
+  .div2,
+  .pcadastrar,
+  .titulo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .linha1,
+  .linha2 {
+    display: flexbox;
+    padding: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .linha2 input[type=file] {
     background-color: white;
     border: 2px solid gray;
     border-radius: 5px;
     padding-top: 2px;
   }
-
+  
   .pcadastrar {
     position: fixed;
     bottom: 8vh;
@@ -105,51 +103,51 @@
     right: 1px;
     align-items: flex-end;
   }
-
-label {
+  
+  label {
     font-size: 3vh;
     padding-right: 0.5rem;
     white-space: nowrap;
     text-align: center;
-}
-
-input {
+  }
+  
+  input {
     font-size: 2vh;
-    border-radius:0.5vh;
+    border-radius: 0.5vh;
     border-width: 0.2vh;
     border-color: gray;
     width: 15vw;
     height: 5vh;
     padding-left: 0.5rem;
     align-content: center;
-}
-
-select {
+  }
+  
+  select {
     font-size: 3vh;
     align-items: center;
     border-radius: .3rem;
     text-align: center;
     width: 8vw;
     height: 5vh;
-}
-
-button {
+  }
+  
+  button {
     width: 10rem;
     height: 2.3rem;
     font-size: 20px;
     border: 1px solid gray;
-}
-
-#pvisualizarArquivo {
-  font-size: 1.9vh;
-  background-color: rgb(240, 240, 240);
-  border: 1px solid gray;
-  border-radius: 5px;
-  margin-top: 2px;
-  width: 8vw;
-  height: 5vh;
-}
-
+  }
+  
+  #pvisualizarArquivo {
+    font-size: 1.9vh;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 2px;
+    width: 8vw;
+    height: 5vh;
+  }
+  
   #psCategoria {
     font-size: medium;
   }
@@ -157,30 +155,41 @@ button {
   #psConta {
     width: 70px;
   }
-
+  
   .testediv {
     justify-content: center;
   }
-
+  
   #dropMenuBtn {
     --bs-dropdown-min-width: 5.4rem;
-}
-
-@media only screen and (max-width: 768px){
-  .div1, .div2, .linha1, .linha2 {
-    display: flex;
-    flex-direction: column;
   }
-  button, input, select, #pvisualizarArquivo {
-    width: 140px;
+  
+  @media only screen and (max-width: 768px) {
+  
+    .div1,
+    .div2,
+    .linha1,
+    .linha2 {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    button,
+    input,
+    select,
+    #pvisualizarArquivo {
+      width: 140px;
+    }
+  
+    #footer,
+    .pcadastrar {
+      position: relative;
+      bottom: 0;
+      float: right;
+      margin: 10px 0 0 0;
+    }
+  
+    #dropdownMenuButton {
+      float: right;
+    }
   }
-  #footer, .pcadastrar {
-    position: relative;
-    bottom: 0;
-    float: right;
-    margin: 10px 0 0 0;
-  }
-  #dropdownMenuButton {
-    float: right;
-  }
-}

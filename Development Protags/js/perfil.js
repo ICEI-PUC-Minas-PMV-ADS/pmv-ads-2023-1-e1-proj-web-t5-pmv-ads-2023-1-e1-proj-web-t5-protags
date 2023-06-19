@@ -1,6 +1,19 @@
 const userPerfil = JSON.parse(localStorage.getItem('user'));
 let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
 
+window.onload = function () {
+    myFunction();
+    mostrarSenha();
+    if (localStorage.getItem('token') === null) {
+        alert('Você precisa estar logado para acessar essa página');
+        window.location.href = 'login.html';
+    }
+};
+
+function logout() {
+    localStorage.removeItem('token');
+    window.location.href = 'login.html';
+}
 function myFunction() {
 
     document.getElementById('nomeEmpresa').textContent = userPerfil.novoNomeEmpresa;
@@ -50,4 +63,3 @@ function mostrarSenha() {
         btnShowPass.classList.replace('bi-eye-slash', 'bi-eye');
     }
 }
-

@@ -23,11 +23,6 @@
     margin-right: 10px;
 }
 
-.profile-info p {
-    /* padding: 10px;
-   margin-bottom: 10px; */
-}
-
 .edit-icon {
     margin-left: 10px;
     cursor: pointer;
@@ -68,4 +63,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+#dropMenuBtn {
+    --bs-dropdown-min-width: 5.3rem;
 }

@@ -49,17 +49,11 @@
                         </div>
                     </div>
 
-
-                    <div class="dropdown pt-5">
-                        <button class="btn btn-secondary dropdown-toggle ps-0" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pagamentos
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="./arealizar.html">A Realizar</a>
-                            <a class="dropdown-item" href="./realizados.html">Realizados</a>
-                        </div>
-                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white ps-0" href="./ContasApagar.html">
+                            <p class="texto pt-5">Pagamentos</p>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active text-white ps-0" href="./financeiro.html">
                             <p class="texto pt-5">Financeiro</p>
@@ -123,10 +117,6 @@
                 <label for="pdatadeVencimento">Data de Vencimento</label>
                 <input id="psDatadeVenci" type="date">
             </div>
-            <div class="linha1"> <!--SELECIONADOR DE CATEGORIAS-->
-                <label for="pcategoria">Categoria</label>
-                <input type="text" id="psCategoria" name="ppcategoria" placeholder="Ex: Impostos, Aluguel">
-            </div>
         </div>
 
         <!--ELEMENTOS DA LINHA 2-->
@@ -138,6 +128,7 @@
             <div class="linha2"> <!--SELECIONADOR DE DATA-->
                 <label for="pcondicaoPagamento">Condição de Pagamento</label>
                 <select id="psCondicaoPag" name="pcondicaoPagamento">
+                    <option value="avista">À Vista</option>
                     <option value="15d">15 Dias</option>
                     <option value="30d">30 Dias</option>
                     <option value="45d">45 Dias</option>
@@ -150,16 +141,15 @@
                 <label for="pDescricao">Descrição (Opcional)</label>
                 <input id ="psDescricao" type="text" placeholder="Insira a descrição">
             </div>
-            <div class="linha2">
-                <label for="panexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
-                <input id="psArquivo" type="file" name="pArquivo">
-                <button id="pvisualizarArquivo" onclick="pvisualizar()">Visualizar Arquivo</button>
+            <div class="linha2"> <!--SELECIONADOR DE CATEGORIAS-->
+                <label for="pcategoria">Categoria</label>
+                <input type="text" id="psCategoria" name="ppcategoria" placeholder="Ex: Impostos, Aluguel">
             </div>
             <div class="linha2">
                 <label for="pSituação">Situação</label> <!--SITUAÇÃO-->
                 <select id="psSituacao" name="pSituação" >
-                    <option value="cPago">Pago</option>
                     <option value="cAPagar">A Pagar</option>
+                    <option value="cPago">Pago</option>
                     <option value="cpagoParcialmente">Pago Parcialmente</option>
                 </select>
             </div>

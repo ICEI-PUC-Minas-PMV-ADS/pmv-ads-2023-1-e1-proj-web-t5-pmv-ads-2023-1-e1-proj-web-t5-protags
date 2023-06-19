@@ -33,7 +33,6 @@
 
 .logopng {
     width: 10rem;
-    margin-left: 10px;
 }
 
 .texto {
@@ -108,13 +107,13 @@
 /* CARDS EVENTOS */
 
 #body-card {
-    border: none    ;
+    border: none;
     border-radius: 20px;
 }
 
 #card-view {
-    -webkit-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 2px 22px 8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
     border-radius: 20px;
     border-color: #47141E;
@@ -152,12 +151,10 @@
 .crudBtn {
     padding-bottom: 20px;
 }
+
 #botaoAdicionar {
     border: none;
     padding: 0;
     width: 7.4rem;
     margin-left: 1rem;
 }
-
-
-
