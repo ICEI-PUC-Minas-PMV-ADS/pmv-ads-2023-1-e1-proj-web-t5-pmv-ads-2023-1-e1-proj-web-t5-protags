@@ -117,10 +117,6 @@
                 <label for="pdatadeVencimento">Data de Vencimento</label>
                 <input id="psDatadeVenci" type="date">
             </div>
-            <div class="linha1"> <!--SELECIONADOR DE CATEGORIAS-->
-                <label for="pcategoria">Categoria</label>
-                <input type="text" id="psCategoria" name="ppcategoria" placeholder="Ex: Impostos, Aluguel">
-            </div>
         </div>
 
         <!--ELEMENTOS DA LINHA 2-->
@@ -132,6 +128,7 @@
             <div class="linha2"> <!--SELECIONADOR DE DATA-->
                 <label for="pcondicaoPagamento">Condição de Pagamento</label>
                 <select id="psCondicaoPag" name="pcondicaoPagamento">
+                    <option value="avista">À Vista</option>
                     <option value="15d">15 Dias</option>
                     <option value="30d">30 Dias</option>
                     <option value="45d">45 Dias</option>
@@ -144,10 +141,9 @@
                 <label for="pDescricao">Descrição (Opcional)</label>
                 <input id ="psDescricao" type="text" placeholder="Insira a descrição">
             </div>
-            <div class="linha2">
-                <label for="panexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
-                <input id="psArquivo" type="file" name="pArquivo">
-                <button id="pvisualizarArquivo" onclick="pvisualizar()">Visualizar Arquivo</button>
+            <div class="linha2"> <!--SELECIONADOR DE CATEGORIAS-->
+                <label for="pcategoria">Categoria</label>
+                <input type="text" id="psCategoria" name="ppcategoria" placeholder="Ex: Impostos, Aluguel">
             </div>
             <div class="linha2">
                 <label for="pSituação">Situação</label> <!--SITUAÇÃO-->

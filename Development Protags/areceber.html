@@ -115,10 +115,6 @@
                 <label for="rdatadeRecebimento">Data de Recebimento</label>
                 <input id="rsDatadeRecebi" type="date">
             </div>
-            <div class="linha3"> <!--SELECIONADOR DE CATEGORIAS-->
-                <label for="pcategoria">Categoria</label>
-                <input type="text" id="psCategoria" name="ppcategoria" placeholder="Ex: Vendas, Serviços">
-            </div>
         </div>
         
 
@@ -131,6 +127,7 @@
             <div class="linha4"> <!--SELECIONADOR DE DATA-->
                 <label for="rcondicaoRecebimento">Condição de Recebimento</label>
                 <select id="rsCondicaoRec" name="rcondicaoRecebimento">
+                    <option value="avista">À Vista</option>
                     <option value="15d">15 Dias</option>
                     <option value="30d">30 Dias</option>
                     <option value="45d">45 Dias</option>
@@ -143,10 +140,9 @@
                 <label for="rDescricao">Descrição (Opcional)</label>
                 <input id="rsDescricao" type="text" placeholder="Insira a descrição">
             </div>
-            <div class="linha4">
-                <label for="ranexarArquivos">Anexar arquivo</label> <!--ANEXAR ARQUIVOS-->
-                <input id="rsArquivo" type="file" name="rArquivo">
-                <button id="rvisualizarArquivo" onclick="rvisualizar()">Visualizar Arquivo</button>
+            <div class="linha4"> <!--SELECIONADOR DE CATEGORIAS-->
+                <label for="rcategoria">Categoria</label>
+                <input type="text" id="rsCategoria" name="rpcategoria" placeholder="Ex: Vendas, Serviços">
             </div>
             <div class="linha4">
                 <label for="rSituação">Situação</label> <!--SITUAÇÃO-->

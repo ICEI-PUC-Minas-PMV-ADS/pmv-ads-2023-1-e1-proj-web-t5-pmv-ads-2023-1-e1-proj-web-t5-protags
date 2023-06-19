@@ -18,8 +18,8 @@ if (localStorage.getItem('token') === null) {
   let selectMenu = document.querySelector('#select-menu');
   let btnUrgentes = document.querySelector('#btnUrgentes');
   //Dados para o menu "Contas Urgentes"
-  const contasAtrasadas = [];
-  const dataAtual = new Date();
+  const pcontasAtrasadas = [];
+  const pdataAtual = new Date();
   const menuUrgentes = document.querySelector('#menuUrgentes');
 
   // Formata a data para exibição
@@ -118,22 +118,22 @@ if (localStorage.getItem('token') === null) {
       }
   });
 
-  //Função para apenas adicionar contas chegando perto da data de vencimento ao array "contasAtrasadas"
+  //Função para apenas adicionar contas chegando perto da data de vencimento ao array "pcontasAtrasadas"
 contasAPagar.forEach(conta => {
   const dataVencimento = new Date(conta.datadevenci);
   
   const dataLimite = new Date(dataVencimento);
   dataLimite.setDate(dataLimite.getDate() - 3);
 
-  if (dataAtual >= dataLimite && dataAtual < dataVencimento) {
-    contasAtrasadas.push(conta);
+  if (pdataAtual >= dataLimite && pdataAtual < dataVencimento) {
+    pcontasAtrasadas.push(conta);
   }
 });
 
 //Função para dar Append nas informações das contas urgentes
 
 
-  for (let i = 0; i < contasAtrasadas.length; i++) {
+  for (let i = 0; i < pcontasAtrasadas.length; i++) {
     const bordaAppend = document.createElement('div');
     bordaAppend.classList.add('urgentesBorda');
     bordaAppend.innerHTML = `<div></div>`;
@@ -141,32 +141,32 @@ contasAPagar.forEach(conta => {
 
     const títuloAppend = document.createElement('div');
     títuloAppend.classList.add('urgentesTítulo');
-    títuloAppend.innerHTML = `<div>Conta ${contasAtrasadas[i].conta}</div>`;
+    títuloAppend.innerHTML = `<div>Conta ${pcontasAtrasadas[i].conta}</div>`;
     bordaAppend.appendChild(títuloAppend);
 
     const datadevenciAppend = document.createElement('div');
     datadevenciAppend.classList.add('urgentesDataDeVenci');
-    datadevenciAppend.innerHTML = `<div>Data de Vencimento: ${contasAtrasadas[i].datadevenci}</div>`;
+    datadevenciAppend.innerHTML = `<div>Data de Vencimento: ${pcontasAtrasadas[i].datadevenci}</div>`;
     bordaAppend.appendChild(datadevenciAppend);
 
     const valorAppend = document.createElement('div');
     valorAppend.classList.add('urgentesValor');
-    valorAppend.innerHTML = `<div>Valor: ${contasAtrasadas[i].valor}</div>`;
+    valorAppend.innerHTML = `<div>Valor: ${pcontasAtrasadas[i].valor}</div>`;
     bordaAppend.appendChild(valorAppend);
 
     const parcelasAppend = document.createElement('div');
     parcelasAppend.classList.add('urgentesParcelas');
-    parcelasAppend.innerHTML = `<div>Parcelas: ${contasAtrasadas[i].parcelas}</div>`;
+    parcelasAppend.innerHTML = `<div>Parcelas: ${pcontasAtrasadas[i].parcelas}</div>`;
     bordaAppend.appendChild(parcelasAppend);
 
     const pagarParaAppend = document.createElement('div');
     pagarParaAppend.classList.add('urgentesPagarPara');
-    pagarParaAppend.innerHTML = `<div>Pagar Para: ${contasAtrasadas[i].pagarpara}</div>`;
+    pagarParaAppend.innerHTML = `<div>Pagar Para: ${pcontasAtrasadas[i].pagarpara}</div>`;
     bordaAppend.appendChild(pagarParaAppend);
   }
 
-  console.log(contasAtrasadas);
-  localStorage.setItem("contasAtrasadas", JSON.stringify(contasAtrasadas));
+  console.log(pcontasAtrasadas);
+  localStorage.setItem("pcontasAtrasadas", JSON.stringify(pcontasAtrasadas));
 
 }
 
