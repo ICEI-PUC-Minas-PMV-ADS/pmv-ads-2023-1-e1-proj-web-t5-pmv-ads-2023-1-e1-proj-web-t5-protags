@@ -47,21 +47,20 @@ if (localStorage.getItem('token') === null) {
 
     newRow.innerHTML = `
     <td class="text-center" id="conta_${i}">${conta.id}</td>
-    <td class="text-center" id="vencimento_${i}">${dataFormatadaVenci}</td>
     <td class="text-center" id="parcela_${i}">${conta.parcelas}</td>
     <td class="text-center" id="pagarpara_${i}">${conta.pagarpara}</td>
     <td class="text-center" id="descricao_${i}">${conta.descricao}</td>
-    <td class="text-center" id="comprovante_${i}"><input type="file"></td>
-    <td class="text-center" id="dataDePagamento_${i}"><input type="date"></td>
+    <td class="text-center" id="vencimento_${i}">${dataFormatadaVenci}</td>
+    <td class="text-center" id="dataDePagamento_${i}"><input type="date" onchange="salvarETransferir(${i})"></td>
     <td class="text-center" id="exibirReais_${i}">${conta.valor}</td>
     <td class="text-center">
-      <select name="acoes" class="selectAcoes" id="select-apagar_${i}" onchange="salvarETransferir(${i})">
-        <option value="3" class="opt">A PAGAR</option>
-        <option value="6" class="opt">PAGO</option>
-      </select>
-      <button onclick="editarConta(${i})"><img class="editarIcon" src="./images/editar.png"></button>
+        <select name="acoes" class="selectAcoes" id="select-apagar_${i}" onchange="salvarETransferir(${i})">
+            <option value="3" class="opt">A PAGAR</option>
+            <option value="6" class="opt">PAGO</option>
+        </select>
+        <button onclick="editarConta(${i})"><img class="editarIcon" src="./images/editar.png"></button>
     </td>
-  `;
+    `;
 
     cardRealizados.appendChild(newRow);
   }
@@ -76,22 +75,35 @@ if (localStorage.getItem('token') === null) {
 
 
   function salvarETransferir(i) {
-    let dataDePagamentoElement = document.getElementById(`dataDePagamento_${i}`);
-    let dataDePagamentoValue = dataDePagamentoElement.querySelector('input').value;
+    let selectElement = document.getElementById(`select-apagar_${i}`);
+    let selectValue = selectElement.value;
 
-    let contaPagamento = { ...contasAPagar[i] };
-    contaPagamento.dataDePagamento = dataDePagamentoValue;
+    if (selectValue === '6') { // Verifica se o valor selecionado é "PAGO"
+      let dataDePagamentoElement = document.getElementById(`dataDePagamento_${i}`);
+      let inputDataDePagamento = dataDePagamentoElement.querySelector('input');
+      let dataDePagamentoValue = inputDataDePagamento.value;
 
-    const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
+      if (dataDePagamentoValue === '' || dataDePagamentoValue === null) {
+        inputDataDePagamento.setAttribute('style', 'border: solid 2px red');
+      } else {
+        inputDataDePagamento.removeAttribute('style');
 
-    contasPagas.push(contaPagamento);
-    contasAPagar.splice(i, 1);
+        let contaPagamento = { ...contasAPagar[i] };
+        contaPagamento.dataDePagamento = dataDePagamentoValue;
 
-    localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
-    localStorage.setItem('contasPagas', JSON.stringify(contasPagas));
+        const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
 
-    window.location.href = 'ContasPagas.html';
+        contasPagas.push(contaPagamento);
+        contasAPagar.splice(i, 1);
+
+        localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
+        localStorage.setItem('contasPagas', JSON.stringify(contasPagas));
+
+        window.location.href = 'ContasPagas.html';
+      }
+    }
   }
+
 
 
 

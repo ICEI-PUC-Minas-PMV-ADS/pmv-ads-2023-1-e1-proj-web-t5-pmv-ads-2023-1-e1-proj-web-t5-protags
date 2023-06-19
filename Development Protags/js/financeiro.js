@@ -169,7 +169,7 @@ function filtrarGraficoTiago() {
         let dataFimFiltroTiago = document.querySelector('input#dataFimTiago').value;
         let dataInicioSplit = dataInicioFiltroTiago.split("-");
         let dataFimSplit = dataFimFiltroTiago.split("-");
-        let dataInicioTiago = new Date(dataInicioSplit[0],dataInicioSplit[1] - 1,dataInicioSplit[2]);
+        let dataInicioTiago = new Date(dataInicioSplit[0], dataInicioSplit[1] - 1, dataInicioSplit[2]);
         let dataFimTiago = new Date(dataFimSplit[0], dataFimSplit[1] - 1, dataFimSplit[2]);
 
         console.log(dataInicioFiltroTiago);
@@ -177,10 +177,10 @@ function filtrarGraficoTiago() {
         console.log(dataInicioTiago);
         // Filtro Entradas 
         somaEntradaFiltro = 0
-        for (let i = 0; i < aReceberPull.length; i++){
+        for (let i = 0; i < aReceberPull.length; i++) {
             let dataAReceberSplit = aReceberPull[i].dataderecebimento.split("-");
             let dataAReceberFormatado = new Date(dataAReceberSplit[0], dataAReceberSplit[1] - 1, dataAReceberSplit[2]);
-            if (dataAReceberFormatado >= dataInicioTiago && dataAReceberFormatado <= dataFimTiago && aReceberPull[i].situacao === "cRecebido"){
+            if (dataAReceberFormatado >= dataInicioTiago && dataAReceberFormatado <= dataFimTiago && aReceberPull[i].situacao === "cRecebido") {
                 var entradaValorFiltrado = aReceberPull[i].valor;
                 var entradaBRLFiltrado = parseFloat(entradaValorFiltrado.replace('R$', '').replace(',', '.'));
                 somaEntradaFiltro += entradaBRLFiltrado;
@@ -188,10 +188,10 @@ function filtrarGraficoTiago() {
         }
         // Filtro Saidas
         somaSaidaFiltro = 0
-        for (let i = 0; i < aPagarPull.length; i++){
+        for (let i = 0; i < aPagarPull.length; i++) {
             let dataAPagarSplit = aPagarPull[i].datadevenci.split("-");
             let dataAPagarFormatado = new Date(dataAPagarSplit[0], dataAPagarSplit[1] - 1, dataAPagarSplit[2]);
-            if (dataAPagarFormatado >= dataInicioTiago && dataAPagarFormatado <= dataFimTiago && aPagarPull[i].situacao === "cPago"){
+            if (dataAPagarFormatado >= dataInicioTiago && dataAPagarFormatado <= dataFimTiago && aPagarPull[i].situacao === "cPago") {
                 var saidaValorFiltrado = aPagarPull[i].valor;
                 var saidaBRLFiltrado = parseFloat(saidaValorFiltrado.replace('R$', '').replace(',', '.'));
                 somaSaidaFiltro += saidaBRLFiltrado;
@@ -206,8 +206,8 @@ function filtrarGraficoTiago() {
 }
 // Atualizar Grafico após botão "filtrarGraficoTiago"
 function atualizarGraficosCaixa() {
-        chartCaixaValores.data.datasets[0].data = [parseInt(somaEntradaFiltro), parseInt(somaSaidaFiltro)];
-        chartCaixaValores.update();
+    chartCaixaValores.data.datasets[0].data = [parseInt(somaEntradaFiltro), parseInt(somaSaidaFiltro)];
+    chartCaixaValores.update();
 }
 
 
@@ -217,6 +217,7 @@ function atualizarGraficosCaixa() {
 // GRÁFICOS LUCAS
 const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
 const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
 
 function agruparCategorias(contas) {
     const categoriasAgrupadas = {};
@@ -231,7 +232,6 @@ function agruparCategorias(contas) {
     });
     return categoriasAgrupadas;
 }
-
 
 // Gráfico de Entradas
 const categoriasValoresEntradas = agruparCategorias(contasAReceber);
@@ -256,7 +256,7 @@ const chartEntradas = new Chart(ctx, {
         plugins: {
             tooltip: {
                 callbacks: {
-                    label: function(context) {
+                    label: function (context) {
                         return 'R$ ' + context.formattedValue;
                     }
                 }
@@ -266,7 +266,7 @@ const chartEntradas = new Chart(ctx, {
 });
 
 // Gráfico de Saídas
-const categoriasValoresSaidas = agruparCategorias(contasAPagar);
+const categoriasValoresSaidas = agruparCategorias([...contasAPagar, ...contasPagas]);
 const labelsSaidas = Object.keys(categoriasValoresSaidas);
 const valoresSaidas = Object.values(categoriasValoresSaidas);
 
@@ -288,7 +288,7 @@ const chartSaidas = new Chart(ctx2, {
         plugins: {
             tooltip: {
                 callbacks: {
-                    label: function(context) {
+                    label: function (context) {
                         return 'R$ ' + context.formattedValue;
                     }
                 }
@@ -300,16 +300,18 @@ const chartSaidas = new Chart(ctx2, {
 // FILTRO DE DATAS
 let contasAPagarFiltradas = [];
 let contasAReceberFiltradas = [];
+let contasPagasFiltradas = [];
 
 function filtroData() {
     contasAPagarFiltradas = [];
     contasAReceberFiltradas = [];
+    contasPagasFiltradas = [];
 
     let dataInicioTESTE = document.querySelector('#dataInicioTESTE').value;
     let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
 
     let partesData = dataInicioTESTE.split("-");
-    let dataInicio = new Date(partesData[0], partesData[1] -    1, partesData[2]);
+    let dataInicio = new Date(partesData[0], partesData[1] - 1, partesData[2]);
 
     let partesData2 = dataFimTESTE.split("-");
     let dataFim = new Date(partesData2[0], partesData2[1] - 1, partesData2[2]);
@@ -332,10 +334,17 @@ function filtroData() {
         }
     }
 
-    console.log(contasAPagarFiltradas); // Exibir os dados filtrados de contasAPagar no console
-    console.log(contasAReceberFiltradas); // Exibir os dados filtrados de contasAReceber no console
-    atualizarGraficosFiltrados();
+    for (let i = 0; i < contasPagas.length; i++) {
+        let partesDataPagas = contasPagas[i].dataDePagamento.split("-");
+        let dataContaPaga = new Date(partesDataPagas[0], partesDataPagas[1] - 1, partesDataPagas[2]);
+
+        if (dataContaPaga >= dataInicio && dataContaPaga <= dataFim) {
+            contasPagasFiltradas.push(contasPagas[i]);
+        }
+    }
+    atualizarGraficosFiltrados(); 
 }
+
 
 function atualizarGraficosFiltrados() {
     // Atualizar gráfico de entradas
@@ -348,7 +357,8 @@ function atualizarGraficosFiltrados() {
     chartEntradas.update();
 
     // Atualizar gráfico de saídas
-    const categoriasValoresSaidasFiltrados = agruparCategorias(contasAPagarFiltradas);
+    const contasSaidas = [...contasAPagarFiltradas, ...contasPagasFiltradas];
+    const categoriasValoresSaidasFiltrados = agruparCategorias(contasSaidas);
     const labelsSaidasFiltrados = Object.keys(categoriasValoresSaidasFiltrados);
     const valoresSaidasFiltrados = Object.values(categoriasValoresSaidasFiltrados);
 
