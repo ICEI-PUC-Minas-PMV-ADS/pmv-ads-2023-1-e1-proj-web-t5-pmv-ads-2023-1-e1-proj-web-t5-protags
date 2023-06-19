@@ -14,6 +14,8 @@ if (mes === "01" || mes === "03" || mes === "05" || mes === "07" || mes === "08"
 
 
 // Pull de dados Pagina: Contas a pagar e a receber
+const entradaPull = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
+const saidaPull = JSON.parse(localStorage.getItem('contasPagas') || '[]');
 const aReceberPull = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
 const aPagarPull = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 
@@ -30,6 +32,7 @@ var dataInicioCaixaSplit = dataInicioCaixa.split("/");
 var dataFimCaixaSplit = dataFimCaixa.split("/");
 var dataInicioCaixaBase = new Date(dataInicioCaixaSplit[0], dataInicioCaixaSplit[1] - 1, dataInicioCaixaSplit[2]);
 var dataFimCaixaBase = new Date(dataFimCaixaSplit[0], dataFimCaixaSplit[1] - 1, dataFimCaixaSplit[2]);
+
 // Filtros onload contas MÊS
 var somaEntrada = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
@@ -41,6 +44,17 @@ for (let i = 0; i < aReceberPull.length; i++) {
         somaEntrada += entradaBRL;
     }
 }
+var somaEntradaTransf = 0;
+for (let i = 0; i < entradaPull.length; i++) {
+    let dataVenciEntradaTransfSplit = entradaPull[i].dataderecebimento.split("-");
+    let dataVenciEntradaTransf = new Date(dataVenciEntradaTransfSplit[0], dataVenciEntradaTransfSplit[1] - 1, dataVenciEntradaTransfSplit[2]);
+    if (entradaPull[i].situacao === "cRecebido" && dataVenciEntradaTransf >= dataInicioCaixaBase && dataVenciEntradaTransf <= dataFimCaixaBase) {
+        var entradaValorTransf = entradaPull[i].valor;
+        var entradaTransfBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
+        somaEntradaTransf += entradaTransfBRL;
+    }
+}
+
 var somaSaida = 0;
 for (let i = 0; i < aPagarPull.length; i++) {
     let dataVenciSaidaSplit = aPagarPull[i].datadevenci.split("-");
@@ -51,6 +65,17 @@ for (let i = 0; i < aPagarPull.length; i++) {
         somaSaida += saidaBRL;
     }
 }
+var somaSaidaTransf = 0;
+for (let i = 0; i < saidaPull.length; i++) {
+    let dataVenciSaidaTransfSplit = saidaPull[i].datadevenci.split("-");
+    let dataVenciSaidaTransf = new Date(dataVenciSaidaTransfSplit[0], dataVenciSaidaTransfSplit[1] - 1, dataVenciSaidaTransfSplit[2]);
+    if (saidaPull[i].situacao === "cPago" && dataVenciSaidaTransf >= dataInicioCaixaBase && dataVenciSaidaTransf <= dataFimCaixaBase) {
+        var saidaValorTransf = saidaPull[i].valor;
+        var saidaTransfBRL = parseFloat(saidaValorTransf.replace('R$', '').replace(',', '.'));
+        somaSaidaTransf += saidaTransfBRL;
+    }
+}
+
 var somaAReceber = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
     let dataVenciAReceberSplit = aReceberPull[i].dataderecebimento.split("-");
@@ -74,8 +99,10 @@ for (let i = 0; i < aPagarPull.length; i++) {
 
 
 // Formatação dos resultados
-var entradaBase = somaEntrada.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-var saidaBase = somaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+var somaEntradasTransformadas = somaEntrada + somaEntradaTransf;
+var somaSaidasTransformadas = somaSaida + somaSaidaTransf;
+var entradaBase = somaEntradasTransformadas.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+var saidaBase = somaSaidasTransformadas.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var resultEntradaSaida = somaEntrada - somaSaida
