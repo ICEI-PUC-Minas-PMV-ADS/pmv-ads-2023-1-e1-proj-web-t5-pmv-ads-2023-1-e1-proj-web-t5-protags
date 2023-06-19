@@ -124,7 +124,7 @@ function alterarNomeUsuario() {
         localStorage.setItem(alterarusuarioValue + "nomeEmpresa", nomeEmpresaValue);
         localStorage.setItem(alterarusuarioValue + "cnpj", cnpjValue);
 
-        alert("Nome de usuário alterado com sucesso!");
+        // alert("Nome de usuário alterado com sucesso!");
         alterarnome.value = "";
         mudarSenha.value = "";
         email.value = "";
