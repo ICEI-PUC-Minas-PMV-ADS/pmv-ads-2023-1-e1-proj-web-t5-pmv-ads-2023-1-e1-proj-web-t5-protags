@@ -64,3 +64,7 @@
     bottom: 0;
     width: 100%;
 }
+
+#dropMenuBtn {
+    --bs-dropdown-min-width: 5.3rem;
+}

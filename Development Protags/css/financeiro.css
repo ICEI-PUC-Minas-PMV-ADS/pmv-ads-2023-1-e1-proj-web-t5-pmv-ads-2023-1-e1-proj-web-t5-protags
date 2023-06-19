@@ -30,7 +30,7 @@
 }
 
 #footer {
-    min-height: 8vh;
+    min-height: 5vh;
     background-color: #47141E;
     color: #fff;
     text-emphasis-color: #fff;
@@ -213,7 +213,7 @@ h5 {
 }
 
 #dropMenuBtn {
-    --bs-dropdown-min-width: 5.4rem;
+    --bs-dropdown-min-width: 5.3rem;
 }
 
 
