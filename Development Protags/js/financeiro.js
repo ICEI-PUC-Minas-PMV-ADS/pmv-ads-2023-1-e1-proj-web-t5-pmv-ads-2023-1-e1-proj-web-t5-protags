@@ -105,9 +105,9 @@ var entradaBase = somaEntradasTransformadas.toLocaleString('pt-BR', { minimumFra
 var saidaBase = somaSaidasTransformadas.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var aReceberBase = somaAReceber.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var aPagarBase = somaAPagar.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-var resultEntradaSaida = somaEntrada - somaSaida
+var resultEntradaSaida = somaEntradasTransformadas - somaSaidasTransformadas
 var resultDiferença = resultEntradaSaida.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-var resultEntradaSaidaNegativo = somaSaida - somaEntrada
+var resultEntradaSaidaNegativo = somaSaidasTransformadas - somaEntradasTransformadas
 var resultDiferençaNegativo = resultEntradaSaidaNegativo.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
@@ -213,6 +213,16 @@ function filtrarGraficoTiago() {
                 somaEntradaFiltro += entradaBRLFiltrado;
             }
         }
+        somaEntradaFiltroTransf = 0
+        for (let i = 0; i < entradaPull.length; i++) {
+            let dataEntradaTransfSplit = entradaPull[i].datadevenci.split("-");
+            let dataEntradaTransfFormatado = new Date(dataEntradaTransfSplit[0], dataEntradaTransfSplit[1] - 1, dataEntradaTransfSplit[2]);
+            if (dataEntradaTransfFormatado >= dataInicioTiago && dataEntradaTransfFormatado <= dataFimTiago && entradaPull[i].situacao === "cRecebido") {
+                var entradaTransfValorFiltrado = entradaPull[i].valor;
+                var entradaTransfBRLFiltrado = parseFloat(entradaTransfValorFiltrado.replace('R$', '').replace(',', '.'));
+                somaEntradaFiltroTransf += entradaTransfBRLFiltrado;
+            }
+        }
         // Filtro Saidas
         somaSaidaFiltro = 0
         for (let i = 0; i < aPagarPull.length; i++) {
@@ -224,6 +234,16 @@ function filtrarGraficoTiago() {
                 somaSaidaFiltro += saidaBRLFiltrado;
             }
         }
+        somaSaidaFiltroTransf = 0
+        for (let i = 0; i < saidaPull.length; i++) {
+            let dataSaidaTransfSplit = saidaPull[i].datadevenci.split("-");
+            let dataSaidaTransfFormatado = new Date(dataSaidaTransfSplit[0], dataSaidaTransfSplit[1] - 1, dataSaidaTransfSplit[2]);
+            if (dataSaidaTransfFormatado >= dataInicioTiago && dataSaidaTransfFormatado <= dataFimTiago && saidaPull[i].situacao === "cPago") {
+                var saidaTransfValorFiltrado = saidaPull[i].valor;
+                var saidaTransfBRLFiltrado = parseFloat(saidaTransfValorFiltrado.replace('R$', '').replace(',', '.'));
+                somaSaidaFiltroTransf += saidaTransfBRLFiltrado;
+            }
+        }
         // Texto Movimentações
         let dataInicFim = dataInicioFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1')
             + " a " + dataFimFiltroTiago.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
@@ -233,7 +253,9 @@ function filtrarGraficoTiago() {
 }
 // Atualizar Grafico após botão "filtrarGraficoTiago"
 function atualizarGraficosCaixa() {
-    chartCaixaValores.data.datasets[0].data = [parseInt(somaEntradaFiltro), parseInt(somaSaidaFiltro)];
+    var somaEntradaTransfFiltro = somaEntradaFiltro + somaEntradaFiltroTransf
+    var somaSaidaTransfFiltro = somaSaidaFiltro + somaSaidaFiltroTransf;
+    chartCaixaValores.data.datasets[0].data = [parseInt(somaEntradaTransfFiltro), parseInt(somaSaidaTransfFiltro)];
     chartCaixaValores.update();
 }
 
