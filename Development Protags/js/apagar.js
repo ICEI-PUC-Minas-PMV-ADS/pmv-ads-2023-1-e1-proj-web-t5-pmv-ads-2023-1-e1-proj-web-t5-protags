@@ -55,6 +55,7 @@ btnCadastro.addEventListener('click', (e) => {
       'categoria': categorias.value,
       'situacao': psSituacao.value,
       'arquivo-apagar': psArquivo.files,
+      'dataDePagamento': ''
   }
   contasAPagar.push(contas)
 
@@ -85,3 +86,22 @@ if (localStorage.getItem('token') === null) {
   }
 
 }
+
+
+// Recupere os valores da URL
+const urlParams = new URLSearchParams(window.location.search);
+const conta = urlParams.get('conta');
+const vencimento = urlParams.get('vencimento');
+const parcela = urlParams.get('parcela');
+const pagarpara = urlParams.get('pagarpara');
+const descricao = urlParams.get('descricao');
+const valor = urlParams.get('valor');
+
+// Preencha os campos com os valores recuperados
+document.querySelector('#psConta').value = conta;
+document.querySelector('#psDatadeVenci').value = vencimento;
+document.querySelector('#psParcelas').value = parcela;
+document.querySelector('#psPagarPara').value = pagarpara;
+document.querySelector('#psDescricao').value = descricao;
+document.querySelector('#psValor').value = valor;
+
