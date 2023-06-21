@@ -67,7 +67,7 @@ for (let i = 0; i < aPagarPull.length; i++) {
 }
 var somaSaidaTransf = 0;
 for (let i = 0; i < saidaPull.length; i++) {
-    let dataVenciSaidaTransfSplit = saidaPull[i].datadevenci.split("-");
+    let dataVenciSaidaTransfSplit = saidaPull[i].dataDePagamento.split("-");
     let dataVenciSaidaTransf = new Date(dataVenciSaidaTransfSplit[0], dataVenciSaidaTransfSplit[1] - 1, dataVenciSaidaTransfSplit[2]);
     if (saidaPull[i].situacao === "cAPagar" && dataVenciSaidaTransf >= dataInicioCaixaBase && dataVenciSaidaTransf <= dataFimCaixaBase) {
         var saidaValorTransf = saidaPull[i].valor;
