@@ -199,9 +199,6 @@ function filtrarGraficoTiago() {
         let dataInicioTiago = new Date(dataInicioSplit[0], dataInicioSplit[1] - 1, dataInicioSplit[2]);
         let dataFimTiago = new Date(dataFimSplit[0], dataFimSplit[1] - 1, dataFimSplit[2]);
 
-        console.log(dataInicioFiltroTiago);
-        console.log(dataInicioSplit);
-        console.log(dataInicioTiago);
         // Filtro Entradas 
         somaEntradaFiltro = 0
         for (let i = 0; i < aReceberPull.length; i++) {
@@ -217,7 +214,7 @@ function filtrarGraficoTiago() {
         for (let i = 0; i < entradaPull.length; i++) {
             let dataEntradaTransfSplit = entradaPull[i].datadevenci.split("-");
             let dataEntradaTransfFormatado = new Date(dataEntradaTransfSplit[0], dataEntradaTransfSplit[1] - 1, dataEntradaTransfSplit[2]);
-            if (dataEntradaTransfFormatado >= dataInicioTiago && dataEntradaTransfFormatado <= dataFimTiago && entradaPull[i].situacao === "caReceber") {
+            if (dataEntradaTransfFormatado >= dataInicioTiago && dataEntradaTransfFormatado <= dataFimTiago && entradaPull[i].situacao === "cAReceber") {
                 var entradaTransfValorFiltrado = entradaPull[i].valor;
                 var entradaTransfBRLFiltrado = parseFloat(entradaTransfValorFiltrado.replace('R$', '').replace(',', '.'));
                 somaEntradaFiltroTransf += entradaTransfBRLFiltrado;
