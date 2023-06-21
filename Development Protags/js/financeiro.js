@@ -48,7 +48,7 @@ var somaEntradaTransf = 0;
 for (let i = 0; i < entradaPull.length; i++) {
     let dataVenciEntradaTransfSplit = entradaPull[i].dataderecebimento.split("-");
     let dataVenciEntradaTransf = new Date(dataVenciEntradaTransfSplit[0], dataVenciEntradaTransfSplit[1] - 1, dataVenciEntradaTransfSplit[2]);
-    if (entradaPull[i].situacao === "caReceber" && dataVenciEntradaTransf >= dataInicioCaixaBase && dataVenciEntradaTransf <= dataFimCaixaBase) {
+    if (dataVenciEntradaTransf >= dataInicioCaixaBase && dataVenciEntradaTransf <= dataFimCaixaBase) {
         var entradaValorTransf = entradaPull[i].valor;
         var entradaTransfBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
         somaEntradaTransf += entradaTransfBRL;
@@ -69,7 +69,7 @@ var somaSaidaTransf = 0;
 for (let i = 0; i < saidaPull.length; i++) {
     let dataVenciSaidaTransfSplit = saidaPull[i].dataDePagamento.split("-");
     let dataVenciSaidaTransf = new Date(dataVenciSaidaTransfSplit[0], dataVenciSaidaTransfSplit[1] - 1, dataVenciSaidaTransfSplit[2]);
-    if (saidaPull[i].situacao === "cAPagar" && dataVenciSaidaTransf >= dataInicioCaixaBase && dataVenciSaidaTransf <= dataFimCaixaBase) {
+    if (dataVenciSaidaTransf >= dataInicioCaixaBase && dataVenciSaidaTransf <= dataFimCaixaBase) {
         var saidaValorTransf = saidaPull[i].valor;
         var saidaTransfBRL = parseFloat(saidaValorTransf.replace('R$', '').replace(',', '.'));
         somaSaidaTransf += saidaTransfBRL;
@@ -214,7 +214,7 @@ function filtrarGraficoTiago() {
         for (let i = 0; i < entradaPull.length; i++) {
             let dataEntradaTransfSplit = entradaPull[i].datadevenci.split("-");
             let dataEntradaTransfFormatado = new Date(dataEntradaTransfSplit[0], dataEntradaTransfSplit[1] - 1, dataEntradaTransfSplit[2]);
-            if (dataEntradaTransfFormatado >= dataInicioTiago && dataEntradaTransfFormatado <= dataFimTiago && entradaPull[i].situacao === "cAReceber") {
+            if (dataEntradaTransfFormatado >= dataInicioTiago && dataEntradaTransfFormatado <= dataFimTiago) {
                 var entradaTransfValorFiltrado = entradaPull[i].valor;
                 var entradaTransfBRLFiltrado = parseFloat(entradaTransfValorFiltrado.replace('R$', '').replace(',', '.'));
                 somaEntradaFiltroTransf += entradaTransfBRLFiltrado;
@@ -235,7 +235,7 @@ function filtrarGraficoTiago() {
         for (let i = 0; i < saidaPull.length; i++) {
             let dataSaidaTransfSplit = saidaPull[i].datadevenci.split("-");
             let dataSaidaTransfFormatado = new Date(dataSaidaTransfSplit[0], dataSaidaTransfSplit[1] - 1, dataSaidaTransfSplit[2]);
-            if (dataSaidaTransfFormatado >= dataInicioTiago && dataSaidaTransfFormatado <= dataFimTiago && saidaPull[i].situacao === "cAPagar") {
+            if (dataSaidaTransfFormatado >= dataInicioTiago && dataSaidaTransfFormatado <= dataFimTiago) {
                 var saidaTransfValorFiltrado = saidaPull[i].valor;
                 var saidaTransfBRLFiltrado = parseFloat(saidaTransfValorFiltrado.replace('R$', '').replace(',', '.'));
                 somaSaidaFiltroTransf += saidaTransfBRLFiltrado;
