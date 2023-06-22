@@ -65,7 +65,7 @@
     -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
     border-radius: 20px;
-    width: 80%;
+    width: 85%;
     justify-content: center;
     margin: auto;
     margin-top: 50px;
@@ -154,6 +154,10 @@
   
   #rsConta {
     width: 70px;
+  }
+
+  #rsDatadeRecebi, #rdataderecebimento {
+    display: none;
   }
   
   .testediv {

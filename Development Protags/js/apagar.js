@@ -16,8 +16,8 @@ if (localStorage.getItem('token') === null) {
   const psDescricao = document.querySelector('#psDescricao')
   const psSituacao = document.querySelector('#psSituacao')
   const btnCadastro = document.querySelector('#pregCadastrar')
-  const btnVisualizar = document.querySelector('#pvisualizarArquivo')
-  const contasAtrasadas = JSON.parse(localStorage.getItem('contasAtrasadas')) || [];
+  const psDatadePagamento = document.querySelector('#psDatadePagamento')
+  const psDatadePagamentolabel = document.getElementById('pdatadePagamento')
   const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
 
   let categorias = document.querySelector('#psCategoria');
@@ -29,6 +29,16 @@ if (localStorage.getItem('token') === null) {
     window.location.href = './login.html'
   }
 
+  psSituacao.addEventListener('change', () => {
+    if (psSituacao.value == 'cPago') {
+      psDatadePagamentolabel.style.display = "block"
+      psDatadePagamento.style.display = "block";
+    } else {
+      psDatadePagamentolabel.style.display = "none"
+      psDatadePagamento.style.display = "none";
+    }
+  });
+
   btnCadastro.addEventListener('click', (e) => {
     e.preventDefault();
     if (psValor.value == "" || psParcelas.value == "" || psDatadeEmissao.value == "" || psDatadeVenci.value == "" || psPagarPara.value == "" || psSituacao == "" || categorias == '') {
@@ -36,38 +46,72 @@ if (localStorage.getItem('token') === null) {
       psDatadeEmissao.style.borderColor = 'red';
       psDatadeVenci.style.borderColor = 'red';
       psPagarPara.style.borderColor = 'red';
-      categorias.style.borderColor = 'red'
+      categorias.style.borderColor = 'red';
+      psDatadePagamento.style.borderColor = 'red';
       alert("Por favor, preencha todos os campos.");
     }
     else {
+      if (psSituacao.value === 'cAPagar') {
+        const contas = {
+          'conta': psConta.value,
+          'valor': psValor.value,
+          'parcelas': psParcelas.value,
+          'datadeemissao': psDatadeEmissao.value,
+          'datadevenci': psDatadeVenci.value,
+          'pagarpara': psPagarPara.value,
+          'condicaopag': psCondicaoPag.value,
+          'descricao': psDescricao.value,
+          'categoria': categorias.value,
+          'situacao': psSituacao.value,
+          'dataDePagamento': ''
+        }
 
-      const contas = {
-        'conta': psConta.value,
-        'valor': psValor.value,
-        'parcelas': psParcelas.value,
-        'datadeemissao': psDatadeEmissao.value,
-        'datadevenci': psDatadeVenci.value,
-        'pagarpara': psPagarPara.value,
-        'condicaopag': psCondicaoPag.value,
-        'descricao': psDescricao.value,
-        'categoria': categorias.value,
-        'situacao': psSituacao.value,
-        'dataDePagamento': ''
+        contasAPagar.push(contas)
+        localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar))
+
+        console.log(contasAPagar);
+
+        psValor.style.borderColor = 'gray';
+        psDatadeEmissao.style.borderColor = 'gray';
+        psDatadeVenci.style.borderColor = 'gray';
+        psPagarPara.style.borderColor = 'gray';
+        alert("Conta cadastrada com sucesso!");
+
+        window.location.href = './ContasAPagar.html'
+
+      } else {
+        const contas = {
+          'conta': psConta.value,
+          'valor': psValor.value,
+          'parcelas': psParcelas.value,
+          'datadeemissao': psDatadeEmissao.value,
+          'datadevenci': psDatadeVenci.value,
+          'pagarpara': psPagarPara.value,
+          'condicaopag': psCondicaoPag.value,
+          'descricao': psDescricao.value,
+          'categoria': categorias.value,
+          'situacao': psSituacao.value,
+          'dataDePagamento': psDatadePagamento.value,
+        }
+
+        contasPagas.push(contas)
+
+        localStorage.setItem('contasPagas', JSON.stringify(contasPagas))
+
+        console.log(contasPagas);
+        console.log(psDatadePagamento.value)
+
+        psValor.style.borderColor = 'gray';
+        psDatadeEmissao.style.borderColor = 'gray';
+        psDatadeVenci.style.borderColor = 'gray';
+        psPagarPara.style.borderColor = 'gray';
+        alert("Conta cadastrada com sucesso!");
+
+        window.location.href = './ContasPagas.html'
+
       }
-      contasAPagar.push(contas)
-
-      localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar))
-
-      console.log(contasAPagar);
-
-      psValor.style.borderColor = 'gray';
-      psDatadeEmissao.style.borderColor = 'gray';
-      psDatadeVenci.style.borderColor = 'gray';
-      psPagarPara.style.borderColor = 'gray';
-      alert("Conta cadastrada com sucesso!");
-
-      location.reload()
     }
+
   })
 
   function plimparArray() {

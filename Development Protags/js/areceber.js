@@ -15,62 +15,109 @@ if (localStorage.getItem('token') === null) {
   const rsDescricao = document.querySelector('#rsDescricao')
   const rsSituacao = document.querySelector('#rsSituacao')
   const btnCadastro = document.querySelector('#rregCadastrar')
+  const rsDatadeVencimento = document.querySelector('#rsDatadeVencimento')
+  const rsDatadeRecebimentolabel = document.getElementById('rdataderecebimento')
 
   let categorias = document.querySelector('#rsCategoria')
   let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber')) || [];
-  let contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
+  let contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas')) || [];
+
+  //Função de logout
+  function logout() {
+    localStorage.removeItem('token')
+    window.location.href = 'login.html'
+  }
+
+  rsSituacao.addEventListener('change', () => {
+    if (rsSituacao.value == 'cRecebido') {
+      rsDatadeRecebimentolabel.style.display = "block"
+      rsDatadeRecebimento.style.display = "block";
+    } else {
+      rsDatadeRecebimentolabel.style.display = "none"
+      rsDatadeRecebimento.style.display = "none";
+    }
+  });
 
   btnCadastro.addEventListener('click', (e) => {
     e.preventDefault();
-    if (rsValor.value == "" || rsParcelas.value == "" || rsDatadeEmissao.value == "" || rsDatadeRecebimento.value == "" || rsreceberDe.value == "" || rsSituacao == "" || categorias == '') {
+    if (rsValor.value == "" || rsParcelas.value == "" || rsDatadeEmissao.value == "" || rsDatadeVencimento.value == "" || rsreceberDe.value == "" || rsSituacao == "" || categorias == '') {
       rsValor.style.borderColor = 'red';
       rsDatadeEmissao.style.borderColor = 'red';
-      rsDatadeRecebimento.style.borderColor = 'red';
+      rsDatadeVencimento.style.borderColor = 'red';
       rsreceberDe.style.borderColor = 'red';
-      categorias.style.borderColor = 'red'
+      categorias.style.borderColor = 'red';
+      rsDatadeRecebimento.style.borderColor = 'red';
       alert("Por favor, preencha todos os campos.");
     }
-    else {
-      const contas = {
-        'conta': rsConta.value,
-        'valor': rsValor.value,
-        'parcelas': rsParcelas.value,
-        'datadeemissao': rsDatadeEmissao.value,
-        'dataderecebimento': rsDatadeRecebi.value,
-        'receberde': rsreceberDe.value,
-        'condicaorec': rsCondicaoRec.value,
-        'descricao': rsDescricao.value,
-        'categoria': rsCategoria.value,
-        'situacao': rsSituacao.value,
+    else
+      if (rsSituacao.value == "caReceber") {
+        const contas = {
+          'conta': rsConta.value,
+          'valor': rsValor.value,
+          'parcelas': rsParcelas.value,
+          'datadeemissao': rsDatadeEmissao.value,
+          'datadevencimento': rsDatadeVencimento.value,
+          'receberde': rsreceberDe.value,
+          'condicaorec': rsCondicaoRec.value,
+          'descricao': rsDescricao.value,
+          'categoria': categorias.value,
+          'situacao': rsSituacao.value,
+        }
+
+        contasAReceber.push(contas)
+        localStorage.setItem('contasAReceber', JSON.stringify(contasAReceber))
+
+        console.log(contasAReceber)
+        rsValor.style.borderColor = 'gray';
+        rsDatadeEmissao.style.borderColor = 'gray';
+        rsDatadeRecebimento.style.borderColor = 'gray';
+        rsreceberDe.style.borderColor = 'gray';
+        rsDatadeVencimento.style.borderColor = 'gray';
+        alert("Conta cadastrada com sucesso!");
+
+        window.location.href = './ContasAReceber.html'
       }
+      else {
+        const contas = {
+          'conta': rsConta.value,
+          'valor': rsValor.value,
+          'parcelas': rsParcelas.value,
+          'datadeemissao': rsDatadeEmissao.value,
+          'datadevencimento': rsDatadeVencimento.value,
+          'dataderecebimento': rsDatadeRecebimento.value,
+          'receberde': rsreceberDe.value,
+          'condicaorec': rsCondicaoRec.value,
+          'descricao': rsDescricao.value,
+          'categoria': categorias.value,
+          'situacao': rsSituacao.value,
+        }
 
-      contasAReceber.push(contas)
-      localStorage.setItem('contasAReceber', JSON.stringify(contasAReceber))
+        contasRecebidas.push(contas)
+        localStorage.setItem('contasRecebidas', JSON.stringify(contasRecebidas))
 
-      console.log(contasAReceber)
-      rsValor.style.borderColor = 'gray';
-      rsDatadeEmissao.style.borderColor = 'gray';
-      rsDatadeRecebimento.style.borderColor = 'gray';
-      rsreceberDe.style.borderColor = 'gray';
-      alert("Conta cadastrada com sucesso!");
+        console.log(contasRecebidas)
+        rsValor.style.borderColor = 'gray';
+        rsDatadeEmissao.style.borderColor = 'gray';
+        rsDatadeRecebimento.style.borderColor = 'gray';
+        rsreceberDe.style.borderColor = 'gray';
+        rsDatadeVencimento.style.borderColor = 'gray';
+        alert("Conta cadastrada com sucesso!");
 
-      location.reload();
-    }
+        window.location.href = './ContasRecebidas.html'
+      }
   })
 
-const rcontasTotalApagar = contasAReceber.length;
-const rcontasTotalPagas = contasRecebidas.length;
-let rcontasTotal = rcontasTotalApagar + rcontasTotalPagas;
+  console.log(contasRecebidas)
+  console.log(contasAReceber)
 
-rsConta.value = rcontasTotal;
-let rvalorIncrementado = rsConta.value;
-rvalorIncrementado++;
-rsConta.value = rvalorIncrementado;
+  const rcontasTotalApagar = contasAReceber.length;
+  const rcontasTotalPagas = contasRecebidas.length;
+  let rcontasTotal = rcontasTotalApagar + rcontasTotalPagas;
+
+  rsConta.value = rcontasTotal;
+  let rvalorIncrementado = rsConta.value;
+  rvalorIncrementado++;
+  rsConta.value = rvalorIncrementado;
 
 }
 
-// Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
-function logout() {
-  localStorage.removeItem('token')
-  window.location.href = 'login.html'
-}
