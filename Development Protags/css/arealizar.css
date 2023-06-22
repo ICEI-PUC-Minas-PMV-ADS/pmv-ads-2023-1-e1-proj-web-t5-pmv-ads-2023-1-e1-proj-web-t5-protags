@@ -222,3 +222,13 @@ table td.status-vencido {
 .editarIcon:hover {
     background-color: #F0DB4F;
 }
+
+.deleteIcon {
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+}
+
+.deleteIcon:hover {
+    background-color: #CF3700;
+}
