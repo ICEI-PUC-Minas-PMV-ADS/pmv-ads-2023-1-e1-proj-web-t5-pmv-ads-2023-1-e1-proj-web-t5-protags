@@ -44,7 +44,6 @@ if (localStorage.getItem('token') === null) {
     const conta = contasAPagar[i];
 
     const dataFormatadaVenci = formatarData(conta.datadevenci);
-    const dataFormatadaEmissao = formatarData(conta.datadeemissao);
 
     // Formata a data
     const newRow = document.createElement('tr');
@@ -63,18 +62,35 @@ if (localStorage.getItem('token') === null) {
             <option value="6" class="opt">PAGO</option>
         </select>
         <button onclick="editarConta(${i})"><img class="editarIcon" src="./images/editar.png"></button>
+        <button onclick="removerConta(${i})"><img class="deleteIcon" src="./images/delete.png"></button>
+
     </td>
     `;
 
     cardRealizados.appendChild(newRow);
   }
 
+  // Função para remover uma conta paga da lista
+  function removerConta(index) {
+    // Recupera o array contasPagas do localStorage
+    const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+
+    // Remove a conta da lista com base no índice fornecido
+    contasAPagar.splice(index, 1);
+
+    // Atualiza o array contasAPagar no localStorage
+    localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
+
+    // Recarrega a página para exibir a lista atualizada
+    window.location.reload();
+  }
+
+
   function editarConta(i) {
     const conta = contasAPagar[i];
-    const queryString = `?conta=${conta.id}&vencimento=${conta.datadevenci}&parcela=${conta.parcelas}&pagarpara=${conta.pagarpara}&descricao=${conta.descricao}&dataDePagamento=${conta.dataDePagamento}&exibirReais=${conta.valor}&status=${conta.status}`;
+    const queryString = `?conta=${conta.id}&datadeemissao=${conta.datadeemissao}&vencimento=${conta.datadevenci}&parcelas=${conta.parcelas}&pagarpara=${conta.pagarpara}&descricao=${conta.descricao}&valor=${conta.valor}&categoria=${conta.categoria}&condicaopag=${conta.condicaopag}`;
     window.location.href = `./apagar.html${queryString}`;
   }
-  
 
 
 
