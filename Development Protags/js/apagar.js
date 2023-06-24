@@ -23,11 +23,15 @@ if (localStorage.getItem('token') === null) {
   let categorias = document.querySelector('#psCategoria');
   let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar')) || [];
 
-  //Função de logout
-  function logout() {
-    localStorage.removeItem('token')
-    window.location.href = './login.html'
-  }
+  psSituacao.addEventListener('change', () => {
+    if (psSituacao.value == 'cPago') {
+      psDatadePagamentolabel.style.display = "block"
+      psDatadePagamento.style.display = "block";
+    } else {
+      psDatadePagamentolabel.style.display = "none"
+      psDatadePagamento.style.display = "none";
+    }
+  });
 
   btnCadastro.addEventListener('click', (e) => {
     e.preventDefault();
@@ -158,4 +162,10 @@ if (localStorage.getItem('token') === null) {
   pvalorIncrementado++;
   psConta.value = pvalorIncrementado;
 
+}
+
+//Função de logout
+function logout() {
+  localStorage.removeItem('token')
+  window.location.href = './login.html'
 }
