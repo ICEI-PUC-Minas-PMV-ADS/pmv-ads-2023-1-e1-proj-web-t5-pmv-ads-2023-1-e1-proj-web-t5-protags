@@ -77,7 +77,7 @@ if (localStorage.getItem('token') === null) {
         psPagarPara.style.borderColor = 'gray';
         alert("Conta cadastrada com sucesso!");
 
-        window.location.href = './ContasAPagar.html'
+        window.location.href = './ContasApagar.html'
 
       } else {
         const contas = {
