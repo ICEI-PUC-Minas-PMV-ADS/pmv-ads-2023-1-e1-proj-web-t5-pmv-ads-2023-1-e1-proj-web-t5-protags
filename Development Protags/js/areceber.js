@@ -22,12 +22,6 @@ if (localStorage.getItem('token') === null) {
   let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber')) || [];
   let contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas')) || [];
 
-  //Função de logout
-  function logout() {
-    localStorage.removeItem('token')
-    window.location.href = 'login.html'
-  }
-
   rsSituacao.addEventListener('change', () => {
     if (rsSituacao.value == 'cRecebido') {
       rsDatadeRecebimentolabel.style.display = "block"
@@ -121,3 +115,8 @@ if (localStorage.getItem('token') === null) {
 
 }
 
+//Função de logout
+function logout() {
+  localStorage.removeItem('token')
+  window.location.href = 'login.html'
+}
