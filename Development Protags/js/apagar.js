@@ -16,8 +16,8 @@ if (localStorage.getItem('token') === null) {
   const psDescricao = document.querySelector('#psDescricao')
   const psSituacao = document.querySelector('#psSituacao')
   const btnCadastro = document.querySelector('#pregCadastrar')
-  const psDatadePagamento = document.querySelector('#psDatadePagamento')
-  const psDatadePagamentolabel = document.getElementById('pdatadePagamento')
+  const btnVisualizar = document.querySelector('#pvisualizarArquivo')
+  const contasAtrasadas = JSON.parse(localStorage.getItem('contasAtrasadas')) || [];
   const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
 
   let categorias = document.querySelector('#psCategoria');
@@ -29,16 +29,6 @@ if (localStorage.getItem('token') === null) {
     window.location.href = './login.html'
   }
 
-  psSituacao.addEventListener('change', () => {
-    if (psSituacao.value == 'cPago') {
-      psDatadePagamentolabel.style.display = "block"
-      psDatadePagamento.style.display = "block";
-    } else {
-      psDatadePagamentolabel.style.display = "none"
-      psDatadePagamento.style.display = "none";
-    }
-  });
-
   btnCadastro.addEventListener('click', (e) => {
     e.preventDefault();
     if (psValor.value == "" || psParcelas.value == "" || psDatadeEmissao.value == "" || psDatadeVenci.value == "" || psPagarPara.value == "" || psSituacao == "" || categorias == '') {
@@ -46,8 +36,7 @@ if (localStorage.getItem('token') === null) {
       psDatadeEmissao.style.borderColor = 'red';
       psDatadeVenci.style.borderColor = 'red';
       psPagarPara.style.borderColor = 'red';
-      categorias.style.borderColor = 'red';
-      psDatadePagamento.style.borderColor = 'red';
+      categorias.style.borderColor = 'red'
       alert("Por favor, preencha todos os campos.");
     }
     else {
@@ -65,8 +54,8 @@ if (localStorage.getItem('token') === null) {
           'situacao': psSituacao.value,
           'dataDePagamento': ''
         }
-
         contasAPagar.push(contas)
+
         localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar))
 
         console.log(contasAPagar);
@@ -77,7 +66,7 @@ if (localStorage.getItem('token') === null) {
         psPagarPara.style.borderColor = 'gray';
         alert("Conta cadastrada com sucesso!");
 
-        window.location.href = './ContasAPagar.html'
+        window.location.href = './ContasApagar.html'
 
       } else {
         const contas = {
@@ -91,15 +80,13 @@ if (localStorage.getItem('token') === null) {
           'descricao': psDescricao.value,
           'categoria': categorias.value,
           'situacao': psSituacao.value,
-          'dataDePagamento': psDatadePagamento.value,
+          'dataDePagamento': ''
         }
-
         contasPagas.push(contas)
 
         localStorage.setItem('contasPagas', JSON.stringify(contasPagas))
 
         console.log(contasPagas);
-        console.log(psDatadePagamento.value)
 
         psValor.style.borderColor = 'gray';
         psDatadeEmissao.style.borderColor = 'gray';
@@ -120,22 +107,41 @@ if (localStorage.getItem('token') === null) {
   }
 
 
-  // Recupere os valores da URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const conta = urlParams.get('conta');
-  const vencimento = urlParams.get('vencimento');
-  const parcela = urlParams.get('parcela');
-  const pagarpara = urlParams.get('pagarpara');
-  const descricao = urlParams.get('descricao');
-  const valor = urlParams.get('valor');
+  if (URLSearchParams) {
+    // Recupera os valores da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const contaId = urlParams.get('conta');
+    const vencimento = urlParams.get('vencimento');
+    const parcela = urlParams.get('parcela');
+    const pagarpara = urlParams.get('pagarpara');
+    const descricao = urlParams.get('descricao');
+    const dataDePagamento = urlParams.get('dataDePagamento');
+    const exibirReais = urlParams.get('exibirReais');
+    const status = urlParams.get('status');
 
-  // Preencha os campos com os valores recuperados
-  document.querySelector('#psConta').value = conta;
-  document.querySelector('#psDatadeVenci').value = vencimento;
-  document.querySelector('#psParcelas').value = parcela;
-  document.querySelector('#psPagarPara').value = pagarpara;
-  document.querySelector('#psDescricao').value = descricao;
-  document.querySelector('#psValor').value = valor;
+    // Preenche os campos com os valores recuperados
+    const contaRec = document.querySelector('#conta').value = contaId;
+    const vencimentoRec = document.querySelector('#vencimento').value = vencimento;
+    const parcelaRec = document.querySelector('#parcela').value = parcela;
+    const pagarparaRec = document.querySelector('#pagarpara').value = pagarpara;
+    const descricaoRec = document.querySelector('#descricao').value = descricao;
+    const dataDePagamentoRec = document.querySelector('#dataDePagamento').value = dataDePagamento;
+    const exibirReaisRec = document.querySelector('#exibirReais').value = exibirReais;
+    const statusRec = document.querySelector('#select-menu').value = status;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
   //Preenchimento automático **REMOVER CASO NECESSÁRIO**
   document.querySelector('#psParcelas').value = "1";

@@ -16,118 +16,80 @@ if (localStorage.getItem('token') === null) {
   let dataDeRecebimento = document.querySelector('#dataDeRecebimento')
   let exibirReais = document.querySelector('#exibirReais')
   let selectMenu = document.querySelector('#select-menu')
-    //Dados para o menu "Contas Urgentes"
-    const rcontasAtrasadas = [];
-    const rdataAtual = new Date();
-    const menuUrgentes = document.querySelector('#menuUrgentes');
+  
+  //Dados para o menu "Contas Urgentes"
+  const rcontasAtrasadas = [];
+  const rdataAtual = new Date();
+  const menuUrgentes = document.querySelector('#menuUrgentes');
 
   // Formata a data para exibição
   function formatarData(data) {
-
     const partes = data.split('-');
-
     const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
-
     return dataFormatada;
-
   }
-
-
-
 
   // Array Contas A Receber recuperado do localStorage
 
   let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
 
-
-
-
   // Atribuir IDs individuais para cada conta
 
   contasAReceber.forEach((conta, index) => {
-
     conta.id = index + 1; // IDs começando em 1
-
   });
 
-
-
-
   const cardRealizados = document.querySelector('#table-exibicao');
-
   cardRealizados.innerHTML = '';
 
-
-
-
   for (let i = 0; i < contasAReceber.length; i++) {
-
     const conta = contasAReceber[i];
-
     const dataFormatadaVenci = formatarData(conta.dataderecebimento);
-
-
     // Formata a data
-
     const newRow = document.createElement('tr');
-
     newRow.innerHTML = `
-
     <td class="text-center" id="conta">${conta.id}</td>
-
     <td class="text-center" id="vencimento">${dataFormatadaVenci}</td>
-
     <td class="text-center" id="parcela">${conta.parcelas}</td>
-
     <td class="text-center" id="receberde">${conta.receberde}</td>
-
     <td class="text-center" id="descricao">${conta.descricao}</td>
-
     <td class="text-center" id="comprovante"><input type="file"></td>
-
     <td class="text-center" id="dataDeVencimento"><input type="date"></td>
-
     <td class="text-center" id="exibirReais">${conta.valor}</td>
-
     <td class="text-center">
-
       <select name="acoes" class="selectAcoes" id="select-menu-${conta.situacao}">
-
         <option value="3" class="opt">A RECEBER</option>
-
         <option value="6" class="opt">RECEBIDO</option>
-
       </select>
-
     </td>
 
   `;
-
-
-
-
     cardRealizados.appendChild(newRow);
-
   }
+
+
+
+
+
 
   btnUrgentes.addEventListener('click', () => {
     if (menuUrgentes.style.display !== "block") {
-        menuUrgentes.style.display = "block";
+      menuUrgentes.style.display = "block";
     } else {
-        menuUrgentes.style.display = "none";
+      menuUrgentes.style.display = "none";
     }
-});
+  });
 
-contasAReceber.forEach(conta => {
-  const dataVencimento = new Date(conta.dataderecebimento);
-  
-  const dataLimite = new Date(dataVencimento);
-  dataLimite.setDate(dataLimite.getDate() - 3);
+  contasAReceber.forEach(conta => {
+    const dataVencimento = new Date(conta.dataderecebimento);
 
-  if (rdataAtual >= dataLimite && rdataAtual < dataVencimento) {
-    rcontasAtrasadas.push(conta);
-  }
-});
+    const dataLimite = new Date(dataVencimento);
+    dataLimite.setDate(dataLimite.getDate() - 3);
+
+    if (rdataAtual >= dataLimite && rdataAtual < dataVencimento) {
+      rcontasAtrasadas.push(conta);
+    }
+  });
 
   for (let i = 0; i < rcontasAtrasadas.length; i++) {
     const bordaAppend = document.createElement('div');
