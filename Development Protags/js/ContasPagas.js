@@ -25,7 +25,7 @@ if (localStorage.getItem('token') === null) {
     const newRow = document.createElement('tr');
 
     newRow.innerHTML = `
-    <td class="text-center">${conta.id}</td>
+    <td class="text-center">${conta.conta}</td>
     <td class="text-center">${conta.parcelas}</td>
     <td class="text-center">${conta.pagarpara}</td>
     <td class="text-center">${conta.descricao}</td>
