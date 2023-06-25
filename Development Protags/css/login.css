@@ -15,19 +15,23 @@ body {
   margin: auto;
 }
 
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .login-form {
   max-width: 300px;
 }
 
 .card-body {
+  width: 400px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: 400px;
-  height: 80%;
-  margin: auto;
-  margin-top: 20px;
   border: solid 1px;
   box-shadow: 10px 10px 10px 5px black;
   background-color: #47141e;
