@@ -65,7 +65,7 @@
     -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
     border-radius: 20px;
-    width: 80%;
+    width: 85%;
     justify-content: center;
     margin: auto;
     margin-top: 50px;
@@ -148,48 +148,49 @@
     height: 5vh;
   }
   
-  #rsCategoria {
-    font-size: medium;
-  }
-  
   #rsConta {
     width: 70px;
   }
   
-  .testediv {
-    justify-content: center;
-  }
   
-  #dropMenuBtn {
-    --bs-dropdown-min-width: 5.4rem;
-  }
-  
-  @media only screen and (max-width: 768px) {
-  
-    .div4,
-    .div5,
-    .linha3,
-    .linha4 {
-      display: flex;
-      flex-direction: column;
+    #rsDatadeRecebi, #rdataderecebimento {
+      display: none;
     }
   
-    button,
-    input,
-    select,
-    #rvisualizarArquivo {
-      width: 140px;
+    .testediv {
+      justify-content: center;
     }
   
-    #footer,
-    .rcadastrar {
-      position: relative;
-      bottom: 0;
-      float: right;
-      margin: 10px 0 0 0;
+    #dropMenuBtn {
+      --bs-dropdown-min-width: 5.4rem;
     }
   
-    #dropdownMenuButton {
-      float: right;
+    @media only screen and (max-width: 768px) {
+  
+      .div4,
+      .div5,
+      .linha3,
+      .linha4 {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      button,
+      input,
+      select,
+      #rvisualizarArquivo {
+        width: 140px;
+      }
+  
+      #footer,
+      .rcadastrar {
+        position: relative;
+        bottom: 0;
+        float: right;
+        margin: 10px 0 0 0;
+      }
+  
+      #dropdownMenuButton {
+        float: right;
+      }
     }
-  }

@@ -107,24 +107,7 @@
                     <option value="24">24</option>
                 </select>
             </div>
-            <div class="linha3"> <!--ENTRADA DA DATA DE EMISSÃO-->
-                <label for="rdatadeEmissao">Data de emissão</label>
-                <input id="rsDatadeEmissao" type="date">
-            </div>
-            <div class="linha3"> <!--ENTRADA DA DATA DE RECEBIMENTO-->
-                <label for="rdatadeRecebimento">Data de Recebimento</label>
-                <input id="rsDatadeRecebi" type="date">
-            </div>
-        </div>
-        
-
-        <!--ELEMENTOS DA LINHA 2-->
-        <div class="div5">
-            <div class="linha4"> <!--ENTRADA DO PAGAR PARA-->
-                <label for="rreceberDe">Receber de</label>
-                <input id="rsreceberDe" type="text" placeholder="Insira um nome">
-            </div>
-            <div class="linha4"> <!--SELECIONADOR DE DATA-->
+            <div class="linha3"> <!--SELECIONADOR DE DATA-->
                 <label for="rcondicaoRecebimento">Condição de Recebimento</label>
                 <select id="rsCondicaoRec" name="rcondicaoRecebimento">
                     <option value="avista">À Vista</option>
@@ -135,6 +118,23 @@
                     <option value="75d">75 Dias</option>
                     <option value="90d">90 Dias</option>
                 </select>
+            </div>
+            <div class="linha3"> <!--ENTRADA DA DATA DE EMISSÃO-->
+                <label for="rdatadeEmissao">Data de emissão</label>
+                <input id="rsDatadeEmissao" type="date">
+            </div>
+            <div class="linha3"> <!--ENTRADA DA DATA DE VENCIMENTO-->
+                <label for="rdatadeVencimento">Data de Vencimento</label>
+                <input id="rsDatadeVencimento" type="date">
+            </div>
+        </div>
+        
+
+        <!--ELEMENTOS DA LINHA 2-->
+        <div class="div5">
+            <div class="linha4"> <!--ENTRADA DO PAGAR PARA-->
+                <label for="rreceberDe">Receber de</label>
+                <input id="rsreceberDe" type="text" placeholder="Insira um nome">
             </div>
             <div class="linha4"> <!--ENTRADA DA DESCRIÇÃO-->
                 <label for="rDescricao">Descrição (Opcional)</label>
@@ -149,8 +149,11 @@
                 <select id="rsSituacao" name="rSituacao">
                     <option value="caReceber">A Receber</option>
                     <option value="cRecebido">Recebido</option>
-                    <option value="crecebidoParci">Recebido Parcialmente</option>
                 </select>
+            </div>
+            <div class="linha3"> <!--ENTRADA DA DATA DE RECEBIMENTO-->
+                <label for="rdatadeRecebimento" id="rdataderecebimento">Data de Recebimento</label>
+                <input id="rsDatadeRecebi" type="date">
             </div>
         </div>
 
