@@ -44,16 +44,21 @@ for (let i = 0; i < aReceberPull.length; i++) {
         somaEntrada += entradaBRL;
     }
 }
+
+console.log(somaEntrada)
+
 var somaEntradaTransf = 0;
 for (let i = 0; i < entradaPull.length; i++) {
-    let dataVenciEntradaTransfSplit = entradaPull[i].dataderecebimento.split("-");
+    let dataVenciEntradaTransfSplit = entradaPull[i].datadevencimento.split("-");
     let dataVenciEntradaTransf = new Date(dataVenciEntradaTransfSplit[0], dataVenciEntradaTransfSplit[1] - 1, dataVenciEntradaTransfSplit[2]);
     if (dataVenciEntradaTransf >= dataInicioCaixaBase && dataVenciEntradaTransf <= dataFimCaixaBase) {
         var entradaValorTransf = entradaPull[i].valor;
-        var entradaTransfBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
+        var entradaTransfBRL = parseFloat(entradaValorTransf.replace('R$', '').replace(',', '.'));
         somaEntradaTransf += entradaTransfBRL;
     }
 }
+
+console.log(somaEntradaTransf)
 
 var somaSaida = 0;
 for (let i = 0; i < aPagarPull.length; i++) {
@@ -78,7 +83,7 @@ for (let i = 0; i < saidaPull.length; i++) {
 
 var somaAReceber = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
-    let dataVenciAReceberSplit = aReceberPull[i].dataderecebimento.split("-");
+    let dataVenciAReceberSplit = aReceberPull[i].datadevencimento.split("-");
     let dataVenciAReceber = new Date(dataVenciAReceberSplit[0], dataVenciAReceberSplit[1] - 1, dataVenciAReceberSplit[2]);
     if (aReceberPull[i].situacao === "caReceber" && dataVenciAReceber >= dataInicioCaixaBase && dataVenciAReceber <= dataFimCaixaBase) {
         var aReceberValor = aReceberPull[i].valor;
@@ -286,7 +291,6 @@ const categoriasValoresEntradas = agruparCategorias([...contasAReceber, ...conta
 const labelsEntradas = Object.keys(categoriasValoresEntradas);
 const valoresEntradas = Object.values(categoriasValoresEntradas);
 
-console.log(valoresEntradas)
 
 const ctx = document.getElementById('myChart').getContext('2d');
 const chartEntradas = new Chart(ctx, {
@@ -319,8 +323,6 @@ const chartEntradas = new Chart(ctx, {
 const categoriasValoresSaidas = agruparCategorias([...contasAPagar, ...contasPagas]);
 const labelsSaidas = Object.keys(categoriasValoresSaidas);
 const valoresSaidas = Object.values(categoriasValoresSaidas);
-
-console.log(valoresSaidas)
 
 
 const ctx2 = document.getElementById('myChart2').getContext('2d');
@@ -413,7 +415,6 @@ function filtroData() {
 
 
 function atualizarGraficosFiltrados() {
-    
     // Atualizar gráfico de entradas
     const categoriasValoresEntradasFiltrados = agruparCategorias([...contasAReceberFiltradas, ...contasRecebidasFiltradas]);
     const labelsEntradasFiltrados = Object.keys(categoriasValoresEntradasFiltrados);
