@@ -6,64 +6,80 @@ if (localStorage.getItem('token') === null) {
 
 } else {
 
-  // Variáveis armazenadas para exibição
-  let conta = document.querySelector('#conta')
-  let vencimento = document.querySelector('#vencimento')
-  let parcela = document.querySelector('#parcela')
-  let pagarpara = document.querySelector('#pagarpara')
-  let descricao = document.querySelector('#descricao')
-  let comprovante = document.querySelector('#comprovante')
-  let dataDeVencimento = document.querySelector('#dataDeVencimento')
-  let exibirReais = document.querySelector('#exibirReais')
-  let selectMenu = document.querySelector('#select-menu')
-    //Dados para o menu "Contas Urgentes"
-    const contasAtrasadas = [];
-    const dataAtual = new Date();
-    const menuUrgentes = document.querySelector('#menuUrgentes');
+  // Formata a data para exibição
+  function formatarData(data) {
 
+    const partes = data.split('-');
+    const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
+    return dataFormatada;
 
-  // Array contasAPagar recuperado do localStorage
-  let contasAPagar = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
-
-  if (contasAPagar.situacao === 'cPago') {
-
-    // Atribuir IDs individuais para cada conta
-    contasAPagar.forEach((conta, index) => {
-      conta.id = index + 1; // IDs começando em 1
-    });
-
-    const cardRealizados = document.querySelector('#table-exibicao');
-    cardRealizados.innerHTML = '';
-
-    for (let i = 0; i < contasAPagar.length; i++) {
-      const conta = contasAPagar[i];
-
-      const newRow = document.createElement('tr');
-      newRow.innerHTML = `
-      <td class="text-center" id="conta">${conta.id}</td> 
-      <td class="text-center" id="vencimento">${conta.datadevenci}</td> 
-      <td class="text-center" id="parcela">${conta.parcelas}</td>
-      <td class="text-center" id="pagarpara">${conta.pagarpara}</td>
-      <td class="text-center" id="descricao">${conta.descricao}</td>
-      <td class="text-center" id="comprovante">${conta.comprovante}</td>
-      <td class="text-center" id="dataDeVencimento">${conta.datadevenci}</td>
-      <td class="text-center" id="exibirReais">${conta.valor}</td>
-      <td class="text-center">
-        <select name="acoes" class="selectAcoes" id="select-menu-${conta.id}">
-          <option value="<null>" class="nullValue"></option>
-          <option value="3" class="opt">A PAGAR</option>
-          <option value="4" class="opt">A RECEBER</option>
-          <option value="6" class="opt">PAGO</option>
-          <option value="0" class="opt">RECEBIDO</option>
-        </select>
-      </td>
-    `;
-
-      cardRealizados.appendChild(newRow);
-    }
   }
 
+  // Recupere o array contasRecebidas do localStorage
+  const contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
+
+  // Obtenha a referência ao elemento onde você deseja exibir os dados
+  const tabelacontasRecebidas = document.querySelector('#table-exibicao');
+
+  contasRecebidas.forEach((conta) => {
+    const newRow = document.createElement('tr');
+
+    newRow.innerHTML = `
+    <td class="text-center">${conta.conta}</td>
+    <td class="text-center">${conta.parcelas}</td>
+    <td class="text-center">${conta.receberde}</td>
+    <td class="text-center">${conta.descricao}</td>
+    <td class="text-center">${formatarData(conta.datadevencimento)}</td>
+    <td class="text-center">${formatarData(conta.dataDePagamento)}</td>
+    <td class="text-center">${conta.valor}</td>
+
+    <td class="text-center"><div class="d-flex justify-content-around ms-3 me-3">
+    <button onclick="retornarConta()"><img class="returnIcon" src="./images/return.png"></button>
+    <img src="./images/correct.png" id="vVerde" style="width: 2rem; height: 2rem">
+    <button onclick="removerConta()"><img class="deleteIcon" src="./images/delete.png"></button>
+    </div></td>
+    `;
+
+    tabelacontasRecebidas.appendChild(newRow);
+  });
+
 }
+
+
+function retornarConta(index) {
+  const contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
+  const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+
+  const conta = contasRecebidas.splice(index, 1)[0];
+
+  contasAReceber.push(conta);
+
+  // Atualiza os arrays no localStorage
+  localStorage.setItem('contasRecebidas', JSON.stringify(contasRecebidas));
+  localStorage.setItem('contasAReceber', JSON.stringify(contasAReceber));
+  window.location.href = 'ContasAReceber.html'
+}
+
+
+
+
+// function removerConta(index) {
+//   const contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
+//   localStorage.setItem('contasRecebidas', JSON.stringify(contasRecebidas));
+//   window.location.reload();
+// }
+
+// Função para remover uma conta paga da lista
+function removerConta(index) {
+  let confirmar = confirm("Tem certeza de que deseja excluir?")
+  if (confirmar) {
+    const contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
+    contasRecebidas.splice(index, 1);
+    localStorage.setItem('contasRecebidas', JSON.stringify(contasRecebidas));
+    window.location.reload();
+  }
+}
+
 
 // Ao clicar em 'Sair', apaga o token de acesso, exigindo um novo login
 function logout() {

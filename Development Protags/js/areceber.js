@@ -104,6 +104,49 @@ if (localStorage.getItem('token') === null) {
   console.log(contasRecebidas)
   console.log(contasAReceber)
 
+ // Recupere os valores da URL
+ const urlParams = new URLSearchParams(window.location.search);
+ const contaId = urlParams.get('conta');
+ const vencimento = urlParams.get('vencimento');
+ const parcelas = urlParams.get('parcelas');
+ const receberde = urlParams.get('receberde');
+ const descricao = urlParams.get('descricao');
+ const valor = urlParams.get('valor');
+ const categoria = urlParams.get('categoria');
+ const condicaoRec = urlParams.get('rsCondicaoRec');
+ const datadeemissao = urlParams.get('datadeemissao');
+
+
+ const valorSemSimbolo = valor.replace(/R\$\s*/g, '');
+
+ // Preencha os campos com os valores recuperados
+ document.querySelector('#psConta').value = contaId;
+ document.querySelector('#psDatadeVenci').value = vencimento;
+ document.querySelector('#psParcelas').value = parcelas;
+ document.querySelector('#rsreceberDe').value = receberde;
+ document.querySelector('#psDescricao').value = descricao;
+ document.querySelector('#psValor').value = valorSemSimbolo;
+ document.querySelector('#psrsCondicaoRec').value = condicaoRec;
+ document.querySelector('#psCategoria').value = categoria;
+ document.querySelector('#psDatadeEmissao').value = datadeemissao;
+ console.log(valorSemSimbolo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const rcontasTotalApagar = contasAReceber.length;
   const rcontasTotalPagas = contasRecebidas.length;
   let rcontasTotal = rcontasTotalApagar + rcontasTotalPagas;

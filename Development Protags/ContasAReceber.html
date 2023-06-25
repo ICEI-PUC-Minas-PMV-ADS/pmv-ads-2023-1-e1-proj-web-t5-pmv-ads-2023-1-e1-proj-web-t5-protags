@@ -97,40 +97,37 @@
                     <li><a href="ContasRecebidas.html">Contas recebidas</a></li>
                 </ul>
             </li>
+            <td class="doublelineformat">
+                <div class="me-2 mt-1">
+                    <button type="button" title="" id="btnUrgentes">Contas Urgentes</button>
+                </div>
+                <div id="menuUrgentes">
+                    <div class="urgentesBorda" hidden>
+                        <div class="urgentesTítulo"></div>
+                        <div class="urgentesDataDeVenci"></div>
+                        <div class="urgentesValor"></div>
+                        <div class="urgentesParcelas"></div>
+                        <div class="urgentesPagarPara"></div>
+                    </div>
+                </div>
+            </td>
         </ul>
     </nav>
 
     <br>
 
-    <td class="doublelineformat ">
-        <div>
-            <button type="button" title="" id="btnUrgentes">Contas Urgentes</button>
-        </div>
-        <br>
-        <div id="menuUrgentes">
-            <button type="button" id="btnFechar">X</button>
-            <div class="urgentesBorda" hidden>
-                <div class="urgentesTítulo"></div>
-                <div class="urgentesDataDeVenci"></div>
-                <div class="urgentesValor"></div>
-                <div class="urgentesParcelas"></div>
-                <div class="urgentesPagarPara"></div>
-            </div>
-        </div>
-    </td>
 
-    <table class="table table-bordered" id="tableClient">
+    <table class="table table-bordered mt-2" id="tableClient">
         <thead class="table-dark">
             <tr>
-                <th scope="col">CONTA</th>
-                <th scope="col">VENCIMENTO</th>
-                <th scope="col">PARCELA</th>
-                <th scope="col">RECEBER DE</th>
-                <th scope="col">DESCRIÇÃO</th>
-                <th scope="col">COMPROVANTE</th>
-                <th scope="col">DATA DE RECEBIMENTO</th>
-                <th scope="col">VALOR</th>
-                <th scope="col">SITUAÇÃO</th>
+                <th scope="col" class="text-center">CONTA</th>
+                <th scope="col" class="text-center">PARCELA</th>
+                <th scope="col" class="text-center">RECEBER DE</th>
+                <th scope="col" class="text-center">DESCRIÇÃO</th>
+                <th scope="col" class="text-center">VENCIMENTO</th>
+                <th scope="col" class="text-center">DATA DE RECEBIMENTO</th>
+                <th scope="col" class="text-center">VALOR</th>
+                <th scope="col" class="text-center">SITUAÇÃO</th>
             </tr>
         </thead>
         <tbody id="table-exibicao">
@@ -139,48 +136,6 @@
             </tr>
         </tbody>
     </table>
-
-
-    <!-- MODAL APAGAR -->
-    <div class="modal" id="modal2">
-        <div class="modal-content">
-            <header class="modal-header">
-                <h2>Excluir Cliente</h2>
-                <span class="modal-close" id="modalClose2">&#10006;</span>
-            </header>
-            <div id='avisoDelete'>
-                <!-- aviso de delete -->
-            </div>
-            <footer class="modal-footer">
-                <button id="apagar" class="button red">Apagar</button>
-                <button id="cancelar2" class="button blue">Cancelar</button>
-            </footer>
-        </div>
-    </div>
-
-    <!-- MODAL CRIAR E EDITAR -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <header class="modal-header">
-                <h2>Novo Cliente</h2>
-                <span class="modal-close" id="modalClose">&#10006;</span>
-            </header>
-            <form id="form" class="modal-form">
-                <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"
-                    required>
-                <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
-                <input type="text" id="celular" class="modal-field" placeholder="Celular do Cliente" required>
-                <input type="text" id="cidade" class="modal-field" placeholder="Cidade do Cliente" required>
-            </form>
-            <footer class="modal-footer">
-                <button id="salvar" class="button green">Salvar</button>
-                <button id="cancelar" class="button blue">Cancelar</button>
-            </footer>
-        </div>
-    </div>
-
-
-
 
 
 
