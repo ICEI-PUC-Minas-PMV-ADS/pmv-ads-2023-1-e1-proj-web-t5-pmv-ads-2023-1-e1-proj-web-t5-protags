@@ -32,10 +32,12 @@ if (localStorage.getItem('token') === null) {
     <td class="text-center">${formatarData(conta.datadevenci)}</td>
     <td class="text-center">${formatarData(conta.dataDePagamento)}</td>
     <td class="text-center">${conta.valor}</td>
-    <td class="text-center"><img src="https://img.freepik.com/vetores-premium/sinal-correto-conjunto-de-icones-de-marca-direita-simbolo-plano-verde-marque-ok-sim-marcas-para-decisao-de-voto_473851-126.jpg?w=360" id="vVerde" style="width: 2rem; height: 2rem">
-    <button"><img class="editarIcon" src="./images/editar.png"></button>
-    <button" onclick="removerConta()"><img class="deleteIcon" src="./images/delete.png"></button>
-    </td>
+
+    <td class="text-center"><div class="d-flex justify-content-around ms-3 me-3">
+    <button onclick="retornarConta()"><img class="returnIcon" src="./images/return.png"></button>
+    <img src="./images/correct.png" id="vVerde" style="width: 2rem; height: 2rem">
+    <button onclick="removerConta()"><img class="deleteIcon" src="./images/delete.png"></button>
+    </div></td>
     `;
 
     tabelaContasPagas.appendChild(newRow);
@@ -43,22 +45,26 @@ if (localStorage.getItem('token') === null) {
 
 }
 
-// onclick="editarConta(${i})
-// )
 
-// Função para remover uma conta paga da lista
-function removerConta(index) {
-  // Recupera o array contasPagas do localStorage
+function retornarConta(index) {
   const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
-
-  // Remove a conta da lista com base no índice fornecido
-  contasPagas.splice(index, 1);
-
-  // Atualiza o array contasPagas no localStorage
+  const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+  const conta = contasPagas.splice(index, 1)[0];
+  contasAPagar.push(conta);
   localStorage.setItem('contasPagas', JSON.stringify(contasPagas));
+  localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
+  window.location.href = 'ContasApagar.html'
+}
 
-  // Recarrega a página para exibir a lista atualizada
-  window.location.reload();
+
+function removerConta(index) {
+  let confirmar = confirm("Tem certeza de que deseja excluir?")
+  if (confirmar) {
+    const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
+    contasPagas.splice(index, 1);
+    localStorage.setItem('contasPagas', JSON.stringify(contasPagas));
+    window.location.reload();
+  }
 }
 
 

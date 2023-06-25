@@ -132,6 +132,7 @@ if (localStorage.getItem('token') === null) {
   const datadeemissao = urlParams.get('datadeemissao');
 
 
+  const valorSemSimbolo = valor.replace(/R\$\s*/g, '');
 
   // Preencha os campos com os valores recuperados
   document.querySelector('#psConta').value = contaId;
@@ -139,10 +140,11 @@ if (localStorage.getItem('token') === null) {
   document.querySelector('#psParcelas').value = parcelas;
   document.querySelector('#psPagarPara').value = pagarpara;
   document.querySelector('#psDescricao').value = descricao;
-  document.querySelector('#psValor').value = valor;
+  document.querySelector('#psValor').value = valorSemSimbolo;
   document.querySelector('#psCondicaoPag').value = condicaopag;
   document.querySelector('#psCategoria').value = categoria;
   document.querySelector('#psDatadeEmissao').value = datadeemissao;
+  console.log(valorSemSimbolo)
 
   btnCadastro.addEventListener('click', editarConta);
 
@@ -186,18 +188,7 @@ if (localStorage.getItem('token') === null) {
 
 
 
-
-
-
-
-
-
-
-
-  //Preenchimento automático **REMOVER CASO NECESSÁRIO**
-  document.querySelector('#psParcelas').value = "1";
-  document.querySelector('#psValor').value = "R$";
-  //**FAVOR REMOVER ISTO CASO INTERFERIR EM ALGO**
+  
 
   //Sistema que mostra o número total de contas registradas
   const pcontasTotalApagar = contasAPagar.length;
@@ -208,7 +199,6 @@ if (localStorage.getItem('token') === null) {
   let pvalorIncrementado = psConta.value;
   pvalorIncrementado++;
   psConta.value = pvalorIncrementado;
-
 }
 
 //Função de logout

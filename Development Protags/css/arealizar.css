@@ -44,8 +44,6 @@
     height: 2.5rem;
     color: #fff;
     border: 1px solid gray;
-    margin-top: -20px;
-    margin-bottom: 20px;
     border-radius: 5px;
 }
 
@@ -233,4 +231,15 @@ table td.status-vencido {
 
 .deleteIcon:hover {
     background-color: #CF3700;
+}
+
+.returnIcon{
+    background-color: #fff;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: none;
+}
+
+.returnIcon:hover{
+    background-color: #F0DB4F;
 }
