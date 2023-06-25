@@ -7,22 +7,6 @@ if (localStorage.getItem('token') === null) {
 } else {
 
   // Variáveis armazenadas para exibição
-<<<<<<< HEAD
-  let conta = document.querySelector('#conta')
-  let vencimento = document.querySelector('#vencimento')
-  let parcela = document.querySelector('#parcela')
-  let receberde = document.querySelector('#receberde')
-  let descricao = document.querySelector('#descricao')
-  let comprovante = document.querySelector('#comprovante')
-  let dataDeRecebimento = document.querySelector('#dataDeRecebimento')
-  let exibirReais = document.querySelector('#exibirReais')
-  let selectMenu = document.querySelector('#select-menu')
-    //Dados para o menu "Contas Urgentes"
-    const rcontasAtrasadas = [];
-    const rdataAtual = new Date();
-    const menuUrgentes = document.querySelector('#menuUrgentes');
-    const btnFechar = document.querySelector('#btnFechar')
-=======
   let conta = document.querySelector('#conta');
   let vencimento = document.querySelector('#vencimento');
   let parcela = document.querySelector('#parcela');
@@ -36,7 +20,7 @@ if (localStorage.getItem('token') === null) {
   const pcontasAtrasadas = [];
   const pdataAtual = new Date();
   const menuUrgentes = document.querySelector('#menuUrgentes');
->>>>>>> 6325480bfa2d796618b3ea37c8396315a62f89e7
+  const btnFechar = document.querySelector('#btnFechar')
 
   // Formata a data para exibição
   function formatarData(data) {
@@ -152,25 +136,17 @@ if (localStorage.getItem('token') === null) {
     }
   });
 
-<<<<<<< HEAD
-btnFechar.addEventListener('click', () => {
-  if (menuUrgentes.style.display !== "block") {
-    menuUrgentes.style.display = "block";
-} else {
-    menuUrgentes.style.display = "none";
-}
-})
+  btnFechar.addEventListener('click', () => {
+    if (menuUrgentes.style.display !== "block") {
+      menuUrgentes.style.display = "block";
+  } else {
+      menuUrgentes.style.display = "none";
+  }
+  })
 
-contasAReceber.forEach(conta => {
-  const dataVencimento = new Date(conta.dataderecebimento);
-  
-  const dataLimite = new Date(dataVencimento);
-  dataLimite.setDate(dataLimite.getDate() - 3);
-=======
   //Função para apenas adicionar contas chegando perto da data de vencimento ao array "pcontasAtrasadas"
   contasAReceber.forEach(conta => {
     const dataVencimento = new Date(conta.datadevencimento);
->>>>>>> 6325480bfa2d796618b3ea37c8396315a62f89e7
 
     const dataLimite = new Date(dataVencimento);
     dataLimite.setDate(dataLimite.getDate() - 3);

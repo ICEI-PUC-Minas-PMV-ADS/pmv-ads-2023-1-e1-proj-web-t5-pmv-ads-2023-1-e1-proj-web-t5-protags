@@ -16,6 +16,9 @@ if (localStorage.getItem('token') === null) {
   const psDescricao = document.querySelector('#psDescricao')
   const psSituacao = document.querySelector('#psSituacao')
   const categorias = document.querySelector('#psCategoria');
+  const psDatadePagamentolabel = document.querySelector('#pdatadePagamentolabel')
+  const psDatadePagamento = document.querySelector('#psDatadePagamento')
+
 
 
 
