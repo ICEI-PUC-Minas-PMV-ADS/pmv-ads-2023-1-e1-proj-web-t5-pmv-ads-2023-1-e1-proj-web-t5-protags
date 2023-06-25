@@ -21,7 +21,7 @@ if (localStorage.getItem('token') === null) {
   // Obtenha a referência ao elemento onde você deseja exibir os dados
   const tabelaContasPagas = document.querySelector('#table-exibicao');
 
-  contasPagas.forEach((conta) => {
+  contasPagas.forEach((conta, index) => {
     const newRow = document.createElement('tr');
 
     newRow.innerHTML = `
@@ -34,9 +34,9 @@ if (localStorage.getItem('token') === null) {
     <td class="text-center">${conta.valor}</td>
 
     <td class="text-center"><div class="d-flex justify-content-around ms-3 me-3">
-    <button onclick="retornarConta()"><img class="returnIcon" src="./images/return.png"></button>
+    <button onclick="retornarConta(${index})"><img class="returnIcon" src="./images/return.png"></button>
     <img src="./images/correct.png" id="vVerde" style="width: 2rem; height: 2rem">
-    <button onclick="removerConta()"><img class="deleteIcon" src="./images/delete.png"></button>
+    <button onclick="removerConta(${index})"><img class="deleteIcon" src="./images/delete.png"></button>
     </div></td>
     `;
 

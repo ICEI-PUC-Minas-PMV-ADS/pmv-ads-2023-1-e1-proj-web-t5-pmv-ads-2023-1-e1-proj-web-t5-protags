@@ -56,6 +56,7 @@ if (localStorage.getItem('token') === null) {
           'descricao': rsDescricao.value,
           'categoria': categorias.value,
           'situacao': rsSituacao.value,
+          'dataderecebimento': ''
         }
 
         contasAReceber.push(contas)
@@ -84,6 +85,7 @@ if (localStorage.getItem('token') === null) {
           'descricao': rsDescricao.value,
           'categoria': categorias.value,
           'situacao': rsSituacao.value,
+          'dataderecebimento': rsDatadeRecebimento.value
         }
 
         contasRecebidas.push(contas)

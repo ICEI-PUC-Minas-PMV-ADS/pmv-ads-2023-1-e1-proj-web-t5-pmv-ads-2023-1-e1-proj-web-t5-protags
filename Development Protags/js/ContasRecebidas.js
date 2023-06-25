@@ -8,11 +8,9 @@ if (localStorage.getItem('token') === null) {
 
   // Formata a data para exibição
   function formatarData(data) {
-
     const partes = data.split('-');
     const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
     return dataFormatada;
-
   }
 
   // Recupere o array contasRecebidas do localStorage
@@ -21,7 +19,7 @@ if (localStorage.getItem('token') === null) {
   // Obtenha a referência ao elemento onde você deseja exibir os dados
   const tabelacontasRecebidas = document.querySelector('#table-exibicao');
 
-  contasRecebidas.forEach((conta) => {
+  contasRecebidas.forEach((conta, index) => {
     const newRow = document.createElement('tr');
 
     newRow.innerHTML = `
@@ -34,9 +32,9 @@ if (localStorage.getItem('token') === null) {
     <td class="text-center">${conta.valor}</td>
 
     <td class="text-center"><div class="d-flex justify-content-around ms-3 me-3">
-    <button onclick="retornarConta()"><img class="returnIcon" src="./images/return.png"></button>
+    <button onclick="retornarConta(${index})"><img class="returnIcon" src="./images/return.png"></button>
     <img src="./images/correct.png" id="vVerde" style="width: 2rem; height: 2rem">
-    <button onclick="removerConta()"><img class="deleteIcon" src="./images/delete.png"></button>
+    <button onclick="removerConta(${index})"><img class="deleteIcon" src="./images/delete.png"></button>
     </div></td>
     `;
 
@@ -49,25 +47,13 @@ if (localStorage.getItem('token') === null) {
 function retornarConta(index) {
   const contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
   const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
-
   const conta = contasRecebidas.splice(index, 1)[0];
-
   contasAReceber.push(conta);
-
   // Atualiza os arrays no localStorage
   localStorage.setItem('contasRecebidas', JSON.stringify(contasRecebidas));
   localStorage.setItem('contasAReceber', JSON.stringify(contasAReceber));
   window.location.href = 'ContasAReceber.html'
 }
-
-
-
-
-// function removerConta(index) {
-//   const contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
-//   localStorage.setItem('contasRecebidas', JSON.stringify(contasRecebidas));
-//   window.location.reload();
-// }
 
 // Função para remover uma conta paga da lista
 function removerConta(index) {

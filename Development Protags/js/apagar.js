@@ -91,7 +91,7 @@ if (localStorage.getItem('token') === null) {
           'descricao': psDescricao.value,
           'categoria': categorias.value,
           'situacao': psSituacao.value,
-          'dataDePagamento': ''
+          'dataDePagamento': psDatadePagamento.value
         }
         contasPagas.push(contas)
 
