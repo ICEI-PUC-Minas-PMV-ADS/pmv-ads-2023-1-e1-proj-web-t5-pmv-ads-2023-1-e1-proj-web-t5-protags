@@ -408,16 +408,12 @@ function filtroData() {
             contasRecebidasFiltradas.push(contasRecebidas[i]);
         }
     }
-    console.log(contasAPagarFiltradas)
-    console.log(contasPagasFiltradas)
-    console.log(contasAReceberFiltradas)
-    console.log(contasRecebidasFiltradas)
-
     atualizarGraficosFiltrados(); 
 }
 
 
 function atualizarGraficosFiltrados() {
+    
     // Atualizar gráfico de entradas
     const categoriasValoresEntradasFiltrados = agruparCategorias([...contasAReceberFiltradas, ...contasRecebidasFiltradas]);
     const labelsEntradasFiltrados = Object.keys(categoriasValoresEntradasFiltrados);
