@@ -262,6 +262,8 @@ function atualizarGraficosCaixa() {
 
 // GRÁFICOS LUCAS
 const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+const contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
+
 const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
 
@@ -280,9 +282,11 @@ function agruparCategorias(contas) {
 }
 
 // Gráfico de Entradas
-const categoriasValoresEntradas = agruparCategorias(contasAReceber);
+const categoriasValoresEntradas = agruparCategorias([...contasAReceber, ...contasRecebidas]);
 const labelsEntradas = Object.keys(categoriasValoresEntradas);
 const valoresEntradas = Object.values(categoriasValoresEntradas);
+
+console.log(valoresEntradas)
 
 const ctx = document.getElementById('myChart').getContext('2d');
 const chartEntradas = new Chart(ctx, {
@@ -316,6 +320,9 @@ const categoriasValoresSaidas = agruparCategorias([...contasAPagar, ...contasPag
 const labelsSaidas = Object.keys(categoriasValoresSaidas);
 const valoresSaidas = Object.values(categoriasValoresSaidas);
 
+console.log(valoresSaidas)
+
+
 const ctx2 = document.getElementById('myChart2').getContext('2d');
 const chartSaidas = new Chart(ctx2, {
     type: 'bar',
@@ -345,13 +352,17 @@ const chartSaidas = new Chart(ctx2, {
 
 // FILTRO DE DATAS
 let contasAPagarFiltradas = [];
-let contasAReceberFiltradas = [];
 let contasPagasFiltradas = [];
+
+let contasAReceberFiltradas = [];
+let contasRecebidasFiltradas = [];
 
 function filtroData() {
     contasAPagarFiltradas = [];
-    contasAReceberFiltradas = [];
     contasPagasFiltradas = [];
+
+    contasAReceberFiltradas = [];
+    contasRecebidasFiltradas = [];
 
     let dataInicioTESTE = document.querySelector('#dataInicioTESTE').value;
     let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
@@ -371,15 +382,6 @@ function filtroData() {
         }
     }
 
-    for (let i = 0; i < contasAReceber.length; i++) {
-        let partesDataAReceber = contasAReceber[i].dataderecebimento.split("-");
-        let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
-
-        if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
-            contasAReceberFiltradas.push(contasAReceber[i]);
-        }
-    }
-
     for (let i = 0; i < contasPagas.length; i++) {
         let partesDataPagas = contasPagas[i].dataDePagamento.split("-");
         let dataContaPaga = new Date(partesDataPagas[0], partesDataPagas[1] - 1, partesDataPagas[2]);
@@ -388,13 +390,36 @@ function filtroData() {
             contasPagasFiltradas.push(contasPagas[i]);
         }
     }
+
+    for (let i = 0; i < contasAReceber.length; i++) {
+        let partesDataAReceber = contasAReceber[i].datadevencimento.split("-");
+        let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
+
+        if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
+            contasAReceberFiltradas.push(contasAReceber[i]);
+        }
+    }
+
+    for (let i = 0; i < contasRecebidas.length; i++) {
+        let partesDataPagas = contasRecebidas[i].dataDePagamento.split("-");
+        let dataContaPaga = new Date(partesDataPagas[0], partesDataPagas[1] - 1, partesDataPagas[2]);
+
+        if (dataContaPaga >= dataInicio && dataContaPaga <= dataFim) {
+            contasRecebidasFiltradas.push(contasRecebidas[i]);
+        }
+    }
+    console.log(contasAPagarFiltradas)
+    console.log(contasPagasFiltradas)
+    console.log(contasAReceberFiltradas)
+    console.log(contasRecebidasFiltradas)
+
     atualizarGraficosFiltrados(); 
 }
 
 
 function atualizarGraficosFiltrados() {
     // Atualizar gráfico de entradas
-    const categoriasValoresEntradasFiltrados = agruparCategorias(contasAReceberFiltradas);
+    const categoriasValoresEntradasFiltrados = agruparCategorias([...contasAReceberFiltradas, ...contasRecebidasFiltradas]);
     const labelsEntradasFiltrados = Object.keys(categoriasValoresEntradasFiltrados);
     const valoresEntradasFiltrados = Object.values(categoriasValoresEntradasFiltrados);
 
