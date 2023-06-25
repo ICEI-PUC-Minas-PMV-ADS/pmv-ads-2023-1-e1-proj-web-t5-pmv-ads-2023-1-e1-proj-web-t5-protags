@@ -16,6 +16,7 @@
 
 .header {
   min-height: 12vh;
+  width: 100px;
   width: 100vw !important;
   background-color: #47141e;
 }

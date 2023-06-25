@@ -20,6 +20,7 @@ if (localStorage.getItem('token') === null) {
     const rcontasAtrasadas = [];
     const rdataAtual = new Date();
     const menuUrgentes = document.querySelector('#menuUrgentes');
+    const btnFechar = document.querySelector('#btnFechar')
 
   // Formata a data para exibição
   function formatarData(data) {
@@ -117,6 +118,14 @@ if (localStorage.getItem('token') === null) {
         menuUrgentes.style.display = "none";
     }
 });
+
+btnFechar.addEventListener('click', () => {
+  if (menuUrgentes.style.display !== "block") {
+    menuUrgentes.style.display = "block";
+} else {
+    menuUrgentes.style.display = "none";
+}
+})
 
 contasAReceber.forEach(conta => {
   const dataVencimento = new Date(conta.dataderecebimento);

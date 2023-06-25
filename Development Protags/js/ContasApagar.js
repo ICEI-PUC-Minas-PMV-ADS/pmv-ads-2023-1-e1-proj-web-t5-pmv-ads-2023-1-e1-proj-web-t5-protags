@@ -21,6 +21,7 @@ if (localStorage.getItem('token') === null) {
   const pcontasAtrasadas = [];
   const pdataAtual = new Date();
   const menuUrgentes = document.querySelector('#menuUrgentes');
+  const btnFechar = document.querySelector('#btnFechar')
 
   // Formata a data para exibição
   function formatarData(data) {
@@ -117,6 +118,14 @@ if (localStorage.getItem('token') === null) {
           menuUrgentes.style.display = "none";
       }
   });
+
+  btnFechar.addEventListener('click', () => {
+    if (menuUrgentes.style.display !== "block") {
+      menuUrgentes.style.display = "block";
+  } else {
+      menuUrgentes.style.display = "none";
+  }
+  })
 
   //Função para apenas adicionar contas chegando perto da data de vencimento ao array "pcontasAtrasadas"
 contasAPagar.forEach(conta => {
