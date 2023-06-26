@@ -72,7 +72,7 @@ for (let i = 0; i < aPagarPull.length; i++) {
 }
 var somaSaidaTransf = 0;
 for (let i = 0; i < saidaPull.length; i++) {
-    let dataVenciSaidaTransfSplit = saidaPull[i].dataDePagamento.split("-");
+    let dataVenciSaidaTransfSplit = saidaPull[i].datadevenci.split("-");
     let dataVenciSaidaTransf = new Date(dataVenciSaidaTransfSplit[0], dataVenciSaidaTransfSplit[1] - 1, dataVenciSaidaTransfSplit[2]);
     if (dataVenciSaidaTransf >= dataInicioCaixaBase && dataVenciSaidaTransf <= dataFimCaixaBase) {
         var saidaValorTransf = saidaPull[i].valor;
@@ -200,7 +200,7 @@ function filtrarGraficoTiago() {
         // Filtro Entradas 
         somaEntradaFiltro = 0
         for (let i = 0; i < aReceberPull.length; i++) {
-            let dataAReceberSplit = aReceberPull[i].dataderecebimento.split("-");
+            let dataAReceberSplit = aReceberPull[i].datadevencimento.split("-");
             let dataAReceberFormatado = new Date(dataAReceberSplit[0], dataAReceberSplit[1] - 1, dataAReceberSplit[2]);
             if (dataAReceberFormatado >= dataInicioTiago && dataAReceberFormatado <= dataFimTiago && aReceberPull[i].situacao === "cRecebido") {
                 var entradaValorFiltrado = aReceberPull[i].valor;
@@ -210,7 +210,7 @@ function filtrarGraficoTiago() {
         }
         somaEntradaFiltroTransf = 0
         for (let i = 0; i < entradaPull.length; i++) {
-            let dataEntradaTransfSplit = entradaPull[i].datadevenci.split("-");
+            let dataEntradaTransfSplit = entradaPull[i].datadevencimento.split("-");
             let dataEntradaTransfFormatado = new Date(dataEntradaTransfSplit[0], dataEntradaTransfSplit[1] - 1, dataEntradaTransfSplit[2]);
             if (dataEntradaTransfFormatado >= dataInicioTiago && dataEntradaTransfFormatado <= dataFimTiago) {
                 var entradaTransfValorFiltrado = entradaPull[i].valor;
