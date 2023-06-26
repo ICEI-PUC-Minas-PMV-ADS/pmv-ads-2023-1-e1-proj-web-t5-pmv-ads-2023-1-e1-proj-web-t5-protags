@@ -74,19 +74,34 @@ if (localStorage.getItem('token') === null) {
   // Função para remover uma conta paga da lista
   function removerConta(index) {
     let confirmar = confirm("Tem certeza de que deseja excluir?")
-    if (confirmar){
-    const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
-    contasAPagar.splice(index, 1);
-    localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
-    window.location.reload();
-  }}
+    if (confirmar) {
+      const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+      contasAPagar.splice(index, 1);
+      localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
+      window.location.reload();
+    }
+  }
 
 
   function editarConta(i) {
     const conta = contasAPagar[i];
-    const queryString = `?conta=${conta.id}&datadeemissao=${conta.datadeemissao}&parcelas=${conta.parcelas}&vencimento=${conta.datadevenci}&parcelas=${conta.parcelas}&pagarpara=${conta.pagarpara}&descricao=${conta.descricao}&valor=${conta.valor}&categoria=${conta.categoria}&condicaopag=${conta.condicaopag}`;
+    const params = new URLSearchParams();
+    params.set('conta', conta.conta);
+    params.set('datadeemissao', conta.datadeemissao);
+    params.set('parcelas', conta.parcelas);
+    params.set('vencimento', conta.datadevenci);
+    params.set('pagarpara', conta.pagarpara);
+    params.set('descricao', conta.descricao);
+    params.set('valor', conta.valor);
+    params.set('categoria', conta.categoria);
+    params.set('condicaopag', conta.condicaopag);
+
+    const queryString = `?${params.toString()}`;
     window.location.href = `./apagar.html${queryString}`;
   }
+
+
+
 
 
 
@@ -139,9 +154,9 @@ if (localStorage.getItem('token') === null) {
   btnFechar.addEventListener('click', () => {
     if (menuUrgentes.style.display !== "block") {
       menuUrgentes.style.display = "block";
-  } else {
+    } else {
       menuUrgentes.style.display = "none";
-  }
+    }
   })
 
   //Função para apenas adicionar contas chegando perto da data de vencimento ao array "pcontasAtrasadas"
