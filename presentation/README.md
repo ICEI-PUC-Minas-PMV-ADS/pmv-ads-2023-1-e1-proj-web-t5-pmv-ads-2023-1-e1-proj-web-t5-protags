@@ -1,7 +1,12 @@
 # Apresentação da Solução
 
-<a href="../docs/10-Apresentação do Projeto.md"> Orientações sobre os artefatos de apresentação do projeto</a>
+### Protags - Gestão eficiente
 
-Faça uma apresentação resumida de todo o projeto, desde a contextualização até a solução final desenvolvida, usando um pequeno vídeo.
+Um projeto criado com muito carinho para ajudar todos aqueles que sonham em empreender mas não conseguem por falta de ferramentas necessárias para os auxiliar pelo caminho!
 
-Faça o upload do arquivo de vídeo e dos slides usados na apresentação no formato PDF (caso tenha feito uso de slides).
+Confira nossa apresentação!
+
+
+<a href="Apresentação Protags.mp4">Vídeo da Apresentação
+<br>
+<a href="Apresentação final - ADS - Projeto Web Front-End - Turma 5 - Eixo 1 !.pptx">PowerPoint da Apresentação

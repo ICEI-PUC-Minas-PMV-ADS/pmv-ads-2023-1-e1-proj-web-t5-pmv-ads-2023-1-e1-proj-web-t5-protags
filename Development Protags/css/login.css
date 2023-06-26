@@ -1,6 +1,7 @@
 body {
   background-color: #fff;
   font-family: sans-serif;
+  width: 98.9%;
 }
 
 .logo {
@@ -9,10 +10,16 @@ body {
 }
 
 .img-log {
-  width: 17rem;
+  width: 16rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .login-form {
@@ -20,13 +27,11 @@ body {
 }
 
 .card-body {
+  width: 400px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: 400px;
-  height: 80%;
-  margin: auto;
   border: solid 1px;
   box-shadow: 10px 10px 10px 5px black;
   background-color: #47141e;

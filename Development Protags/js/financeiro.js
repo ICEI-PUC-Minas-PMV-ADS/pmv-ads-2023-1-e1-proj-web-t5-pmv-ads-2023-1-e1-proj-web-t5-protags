@@ -44,16 +44,21 @@ for (let i = 0; i < aReceberPull.length; i++) {
         somaEntrada += entradaBRL;
     }
 }
+
+console.log(somaEntrada)
+
 var somaEntradaTransf = 0;
 for (let i = 0; i < entradaPull.length; i++) {
-    let dataVenciEntradaTransfSplit = entradaPull[i].dataderecebimento.split("-");
+    let dataVenciEntradaTransfSplit = entradaPull[i].datadevencimento.split("-");
     let dataVenciEntradaTransf = new Date(dataVenciEntradaTransfSplit[0], dataVenciEntradaTransfSplit[1] - 1, dataVenciEntradaTransfSplit[2]);
-    if (entradaPull[i].situacao === "cRecebido" && dataVenciEntradaTransf >= dataInicioCaixaBase && dataVenciEntradaTransf <= dataFimCaixaBase) {
+    if (dataVenciEntradaTransf >= dataInicioCaixaBase && dataVenciEntradaTransf <= dataFimCaixaBase) {
         var entradaValorTransf = entradaPull[i].valor;
-        var entradaTransfBRL = parseFloat(entradaValor.replace('R$', '').replace(',', '.'));
+        var entradaTransfBRL = parseFloat(entradaValorTransf.replace('R$', '').replace(',', '.'));
         somaEntradaTransf += entradaTransfBRL;
     }
 }
+
+console.log(somaEntradaTransf)
 
 var somaSaida = 0;
 for (let i = 0; i < aPagarPull.length; i++) {
@@ -67,9 +72,9 @@ for (let i = 0; i < aPagarPull.length; i++) {
 }
 var somaSaidaTransf = 0;
 for (let i = 0; i < saidaPull.length; i++) {
-    let dataVenciSaidaTransfSplit = saidaPull[i].datadevenci.split("-");
+    let dataVenciSaidaTransfSplit = saidaPull[i].dataDePagamento.split("-");
     let dataVenciSaidaTransf = new Date(dataVenciSaidaTransfSplit[0], dataVenciSaidaTransfSplit[1] - 1, dataVenciSaidaTransfSplit[2]);
-    if (saidaPull[i].situacao === "cPago" && dataVenciSaidaTransf >= dataInicioCaixaBase && dataVenciSaidaTransf <= dataFimCaixaBase) {
+    if (dataVenciSaidaTransf >= dataInicioCaixaBase && dataVenciSaidaTransf <= dataFimCaixaBase) {
         var saidaValorTransf = saidaPull[i].valor;
         var saidaTransfBRL = parseFloat(saidaValorTransf.replace('R$', '').replace(',', '.'));
         somaSaidaTransf += saidaTransfBRL;
@@ -78,7 +83,7 @@ for (let i = 0; i < saidaPull.length; i++) {
 
 var somaAReceber = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
-    let dataVenciAReceberSplit = aReceberPull[i].dataderecebimento.split("-");
+    let dataVenciAReceberSplit = aReceberPull[i].datadevencimento.split("-");
     let dataVenciAReceber = new Date(dataVenciAReceberSplit[0], dataVenciAReceberSplit[1] - 1, dataVenciAReceberSplit[2]);
     if (aReceberPull[i].situacao === "caReceber" && dataVenciAReceber >= dataInicioCaixaBase && dataVenciAReceber <= dataFimCaixaBase) {
         var aReceberValor = aReceberPull[i].valor;
@@ -207,7 +212,7 @@ function filtrarGraficoTiago() {
         for (let i = 0; i < entradaPull.length; i++) {
             let dataEntradaTransfSplit = entradaPull[i].datadevenci.split("-");
             let dataEntradaTransfFormatado = new Date(dataEntradaTransfSplit[0], dataEntradaTransfSplit[1] - 1, dataEntradaTransfSplit[2]);
-            if (dataEntradaTransfFormatado >= dataInicioTiago && dataEntradaTransfFormatado <= dataFimTiago && entradaPull[i].situacao === "cRecebido") {
+            if (dataEntradaTransfFormatado >= dataInicioTiago && dataEntradaTransfFormatado <= dataFimTiago) {
                 var entradaTransfValorFiltrado = entradaPull[i].valor;
                 var entradaTransfBRLFiltrado = parseFloat(entradaTransfValorFiltrado.replace('R$', '').replace(',', '.'));
                 somaEntradaFiltroTransf += entradaTransfBRLFiltrado;
@@ -228,7 +233,7 @@ function filtrarGraficoTiago() {
         for (let i = 0; i < saidaPull.length; i++) {
             let dataSaidaTransfSplit = saidaPull[i].datadevenci.split("-");
             let dataSaidaTransfFormatado = new Date(dataSaidaTransfSplit[0], dataSaidaTransfSplit[1] - 1, dataSaidaTransfSplit[2]);
-            if (dataSaidaTransfFormatado >= dataInicioTiago && dataSaidaTransfFormatado <= dataFimTiago && saidaPull[i].situacao === "cPago") {
+            if (dataSaidaTransfFormatado >= dataInicioTiago && dataSaidaTransfFormatado <= dataFimTiago) {
                 var saidaTransfValorFiltrado = saidaPull[i].valor;
                 var saidaTransfBRLFiltrado = parseFloat(saidaTransfValorFiltrado.replace('R$', '').replace(',', '.'));
                 somaSaidaFiltroTransf += saidaTransfBRLFiltrado;
@@ -255,6 +260,8 @@ function atualizarGraficosCaixa() {
 
 // GRÁFICOS LUCAS
 const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber') || '[]');
+const contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas') || '[]');
+
 const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
 const contasPagas = JSON.parse(localStorage.getItem('contasPagas') || '[]');
 
@@ -273,9 +280,10 @@ function agruparCategorias(contas) {
 }
 
 // Gráfico de Entradas
-const categoriasValoresEntradas = agruparCategorias(contasAReceber);
+const categoriasValoresEntradas = agruparCategorias([...contasAReceber, ...contasRecebidas]);
 const labelsEntradas = Object.keys(categoriasValoresEntradas);
 const valoresEntradas = Object.values(categoriasValoresEntradas);
+
 
 const ctx = document.getElementById('myChart').getContext('2d');
 const chartEntradas = new Chart(ctx, {
@@ -309,6 +317,7 @@ const categoriasValoresSaidas = agruparCategorias([...contasAPagar, ...contasPag
 const labelsSaidas = Object.keys(categoriasValoresSaidas);
 const valoresSaidas = Object.values(categoriasValoresSaidas);
 
+
 const ctx2 = document.getElementById('myChart2').getContext('2d');
 const chartSaidas = new Chart(ctx2, {
     type: 'bar',
@@ -338,13 +347,17 @@ const chartSaidas = new Chart(ctx2, {
 
 // FILTRO DE DATAS
 let contasAPagarFiltradas = [];
-let contasAReceberFiltradas = [];
 let contasPagasFiltradas = [];
+
+let contasAReceberFiltradas = [];
+let contasRecebidasFiltradas = [];
 
 function filtroData() {
     contasAPagarFiltradas = [];
-    contasAReceberFiltradas = [];
     contasPagasFiltradas = [];
+
+    contasAReceberFiltradas = [];
+    contasRecebidasFiltradas = [];
 
     let dataInicioTESTE = document.querySelector('#dataInicioTESTE').value;
     let dataFimTESTE = document.querySelector('#dataFimTESTE').value;
@@ -364,15 +377,6 @@ function filtroData() {
         }
     }
 
-    for (let i = 0; i < contasAReceber.length; i++) {
-        let partesDataAReceber = contasAReceber[i].dataderecebimento.split("-");
-        let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
-
-        if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
-            contasAReceberFiltradas.push(contasAReceber[i]);
-        }
-    }
-
     for (let i = 0; i < contasPagas.length; i++) {
         let partesDataPagas = contasPagas[i].dataDePagamento.split("-");
         let dataContaPaga = new Date(partesDataPagas[0], partesDataPagas[1] - 1, partesDataPagas[2]);
@@ -381,13 +385,31 @@ function filtroData() {
             contasPagasFiltradas.push(contasPagas[i]);
         }
     }
+
+    for (let i = 0; i < contasAReceber.length; i++) {
+        let partesDataAReceber = contasAReceber[i].datadevencimento.split("-");
+        let dataContaReceber = new Date(partesDataAReceber[0], partesDataAReceber[1] - 1, partesDataAReceber[2]);
+
+        if (dataContaReceber >= dataInicio && dataContaReceber <= dataFim) {
+            contasAReceberFiltradas.push(contasAReceber[i]);
+        }
+    }
+
+    for (let i = 0; i < contasRecebidas.length; i++) {
+        let partesDataPagas = contasRecebidas[i].dataDePagamento.split("-");
+        let dataContaPaga = new Date(partesDataPagas[0], partesDataPagas[1] - 1, partesDataPagas[2]);
+
+        if (dataContaPaga >= dataInicio && dataContaPaga <= dataFim) {
+            contasRecebidasFiltradas.push(contasRecebidas[i]);
+        }
+    }
     atualizarGraficosFiltrados(); 
 }
 
 
 function atualizarGraficosFiltrados() {
     // Atualizar gráfico de entradas
-    const categoriasValoresEntradasFiltrados = agruparCategorias(contasAReceberFiltradas);
+    const categoriasValoresEntradasFiltrados = agruparCategorias([...contasAReceberFiltradas, ...contasRecebidasFiltradas]);
     const labelsEntradasFiltrados = Object.keys(categoriasValoresEntradasFiltrados);
     const valoresEntradasFiltrados = Object.values(categoriasValoresEntradasFiltrados);
 

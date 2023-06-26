@@ -91,7 +91,7 @@
         <div class="div1">
             <div class="linha1"> <!--ENTRADA DO NÚMERO DA CONTA-->
                 <label for="pconta">Conta</label>
-                <input id="psConta" type="number" readonly>
+                <input id="psConta" type="number">
             </div>
             <div class="linha1"> <!--ENTRADA DO VALOR-->
                 <label for="pvalor" id="pvalor">Valor</label>
@@ -107,6 +107,18 @@
                     <option value="6">6</option>
                     <option value="12">12</option>
                     <option value="24">24</option>
+                </select>
+            </div>
+            <div class="linha2"> <!--SELECIONADOR DE DATA-->
+                <label for="pcondicaoPagamento">Condição de Pagamento</label>
+                <select id="psCondicaoPag" name="pcondicaoPagamento">
+                    <option value="avista">À Vista</option>
+                    <option value="15d">15 Dias</option>
+                    <option value="30d">30 Dias</option>
+                    <option value="45d">45 Dias</option>
+                    <option value="60d">60 Dias</option>
+                    <option value="75d">75 Dias</option>
+                    <option value="90d">90 Dias</option>
                 </select>
             </div>
             <div class="linha1"> <!--ENTRADA DA DATA DE EMISSÃO-->
@@ -125,18 +137,6 @@
                 <label for="ppagarPara">Pagar para</label>
                 <input id="psPagarPara" type="text" placeholder="Insira um nome">
             </div>
-            <div class="linha2"> <!--SELECIONADOR DE DATA-->
-                <label for="pcondicaoPagamento">Condição de Pagamento</label>
-                <select id="psCondicaoPag" name="pcondicaoPagamento">
-                    <option value="avista">À Vista</option>
-                    <option value="15d">15 Dias</option>
-                    <option value="30d">30 Dias</option>
-                    <option value="45d">45 Dias</option>
-                    <option value="60d">60 Dias</option>
-                    <option value="75d">75 Dias</option>
-                    <option value="90d">90 Dias</option>
-                </select>
-            </div>
             <div class="linha2"> <!--ENTRADA DA DESCRIÇÃO-->
                 <label for="pDescricao">Descrição (Opcional)</label>
                 <input id ="psDescricao" type="text" placeholder="Insira a descrição">
@@ -150,9 +150,12 @@
                 <select id="psSituacao" name="pSituação" >
                     <option value="cAPagar">A Pagar</option>
                     <option value="cPago">Pago</option>
-                    <option value="cpagoParcialmente">Pago Parcialmente</option>
                 </select>
             </div>
+            <div class="linha2"> <!--ENTRADA DA DATA DE PAGAMENTO-->
+                <label for="pdatadePagamento" id="pdatadePagamentolabel">Data de Pagamento</label>
+                <input id="psDatadePagamento" type="date">
+            </div> 
         </div>
 
         <!--ELEMENTOS DA LINHA 3-->
@@ -176,7 +179,6 @@
     </footer>
 
     <script src="./js/apagar.js"></script>
-    <script src="./js/pdfjs.js/pdf.js"></script>
    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

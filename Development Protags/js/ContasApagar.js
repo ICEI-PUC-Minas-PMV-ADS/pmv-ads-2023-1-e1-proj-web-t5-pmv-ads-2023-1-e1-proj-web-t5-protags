@@ -12,7 +12,6 @@ if (localStorage.getItem('token') === null) {
   let parcela = document.querySelector('#parcela');
   let pagarpara = document.querySelector('#pagarpara');
   let descricao = document.querySelector('#descricao');
-  let comprovante = document.querySelector('#comprovante');
   let dataDePagamento = document.querySelector('#dataDePagamento');
   let exibirReais = document.querySelector('#exibirReais');
   let selectMenu = document.querySelector('#select-menu');
@@ -21,6 +20,7 @@ if (localStorage.getItem('token') === null) {
   const pcontasAtrasadas = [];
   const pdataAtual = new Date();
   const menuUrgentes = document.querySelector('#menuUrgentes');
+  const btnFechar = document.querySelector('#btnFechar')
 
   // Formata a data para exibição
   function formatarData(data) {
@@ -45,7 +45,6 @@ if (localStorage.getItem('token') === null) {
     const conta = contasAPagar[i];
 
     const dataFormatadaVenci = formatarData(conta.datadevenci);
-    const dataFormatadaEmissao = formatarData(conta.datadeemissao);
 
     // Formata a data
     const newRow = document.createElement('tr');
@@ -64,19 +63,46 @@ if (localStorage.getItem('token') === null) {
             <option value="6" class="opt">PAGO</option>
         </select>
         <button onclick="editarConta(${i})"><img class="editarIcon" src="./images/editar.png"></button>
+        <button onclick="removerConta(${i})"><img class="deleteIcon" src="./images/delete.png"></button>
+
     </td>
     `;
 
     cardRealizados.appendChild(newRow);
   }
 
-  function editarConta(i) {
-    // Recupera os valores da conta com base na posição 'i' no array contasAPagar
-    const conta = contasAPagar[i];
-
-    // Redireciona para a página "apagar.html" com os valores preenchidos como parâmetros na URL
-    window.location.href = `apagar.html?conta=${conta.id}&vencimento=${conta.datadevenci}&parcela=${conta.parcelas}&pagarpara=${conta.pagarpara}&descricao=${conta.descricao}&valor=${conta.valor}`;
+  // Função para remover uma conta paga da lista
+  function removerConta(index) {
+    let confirmar = confirm("Tem certeza de que deseja excluir?")
+    if (confirmar) {
+      const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar') || '[]');
+      contasAPagar.splice(index, 1);
+      localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
+      window.location.reload();
+    }
   }
+
+
+  function editarConta(i) {
+    const conta = contasAPagar[i];
+    const params = new URLSearchParams();
+    params.set('conta', conta.conta);
+    params.set('datadeemissao', conta.datadeemissao);
+    params.set('parcelas', conta.parcelas);
+    params.set('vencimento', conta.datadevenci);
+    params.set('pagarpara', conta.pagarpara);
+    params.set('descricao', conta.descricao);
+    params.set('valor', conta.valor);
+    params.set('categoria', conta.categoria);
+    params.set('condicaopag', conta.condicaopag);
+
+    const queryString = `?${params.toString()}`;
+    window.location.href = `./apagar.html${queryString}`;
+  }
+
+
+
+
 
 
   function salvarETransferir(i) {
@@ -109,28 +135,43 @@ if (localStorage.getItem('token') === null) {
     }
   }
 
+
+
+
+
+
+
+
   //eventListener para abrir e fechar o menu de contas urgentes
   btnUrgentes.addEventListener('click', () => {
-      if (menuUrgentes.style.display !== "block") {
-          menuUrgentes.style.display = "block";
-      } else {
-          menuUrgentes.style.display = "none";
-      }
+    if (menuUrgentes.style.display !== "block") {
+      menuUrgentes.style.display = "block";
+    } else {
+      menuUrgentes.style.display = "none";
+    }
   });
 
+  btnFechar.addEventListener('click', () => {
+    if (menuUrgentes.style.display !== "block") {
+      menuUrgentes.style.display = "block";
+    } else {
+      menuUrgentes.style.display = "none";
+    }
+  })
+
   //Função para apenas adicionar contas chegando perto da data de vencimento ao array "pcontasAtrasadas"
-contasAPagar.forEach(conta => {
-  const dataVencimento = new Date(conta.datadevenci);
-  
-  const dataLimite = new Date(dataVencimento);
-  dataLimite.setDate(dataLimite.getDate() - 3);
+  contasAPagar.forEach(conta => {
+    const dataVencimento = new Date(conta.datadevenci);
 
-  if (pdataAtual >= dataLimite && pdataAtual < dataVencimento) {
-    pcontasAtrasadas.push(conta);
-  }
-});
+    const dataLimite = new Date(dataVencimento);
+    dataLimite.setDate(dataLimite.getDate() - 3);
 
-//Função para dar Append nas informações das contas urgentes
+    if (pdataAtual >= dataLimite && pdataAtual < dataVencimento) {
+      pcontasAtrasadas.push(conta);
+    }
+  });
+
+  //Função para dar Append nas informações das contas urgentes
 
 
   for (let i = 0; i < pcontasAtrasadas.length; i++) {
@@ -141,7 +182,7 @@ contasAPagar.forEach(conta => {
 
     const títuloAppend = document.createElement('div');
     títuloAppend.classList.add('urgentesTítulo');
-    títuloAppend.innerHTML = `<div>Conta ${pcontasAtrasadas[i].conta}</div>`;
+    títuloAppend.innerHTML = `<div>Conta ${pcontasAtrasadas[i].id}</div>`;
     bordaAppend.appendChild(títuloAppend);
 
     const datadevenciAppend = document.createElement('div');
