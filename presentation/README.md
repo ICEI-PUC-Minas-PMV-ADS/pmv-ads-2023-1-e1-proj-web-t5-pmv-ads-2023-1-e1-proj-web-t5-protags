@@ -7,6 +7,6 @@ Um projeto criado com muito carinho para ajudar todos aqueles que sonham em empr
 Confira nossa apresentação!
 
 
-<a href="./presentation/Apresentação Protags.mp4">Vídeo da Apresentação
+<a href="Apresentação Protags.mp4">Vídeo da Apresentação
 <br>
-<a href="./presentation/Apresentação final - ADS - Projeto Web Front-End - Turma 5 - Eixo 1 !.pptx">PowerPoint da Apresentação
+<a href="Apresentação final - ADS - Projeto Web Front-End - Turma 5 - Eixo 1 !.pptx">PowerPoint da Apresentação
