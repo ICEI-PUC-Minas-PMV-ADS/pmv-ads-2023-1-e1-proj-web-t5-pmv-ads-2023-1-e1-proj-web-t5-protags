@@ -378,7 +378,7 @@ function filtroData() {
     }
 
     for (let i = 0; i < contasPagas.length; i++) {
-        let partesDataPagas = contasPagas[i].dataDePagamento.split("-");
+        let partesDataPagas = contasPagas[i].datadevenci.split("-");
         let dataContaPaga = new Date(partesDataPagas[0], partesDataPagas[1] - 1, partesDataPagas[2]);
 
         if (dataContaPaga >= dataInicio && dataContaPaga <= dataFim) {
@@ -396,7 +396,7 @@ function filtroData() {
     }
 
     for (let i = 0; i < contasRecebidas.length; i++) {
-        let partesDataPagas = contasRecebidas[i].dataDePagamento.split("-");
+        let partesDataPagas = contasRecebidas[i].datadevencimento.split("-");
         let dataContaPaga = new Date(partesDataPagas[0], partesDataPagas[1] - 1, partesDataPagas[2]);
 
         if (dataContaPaga >= dataInicio && dataContaPaga <= dataFim) {
