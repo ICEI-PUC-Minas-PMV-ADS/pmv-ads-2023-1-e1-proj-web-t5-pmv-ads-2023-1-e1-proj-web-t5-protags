@@ -67,12 +67,12 @@ if (localStorage.getItem('token') === null) {
   btnCadastro.addEventListener('click', (e) => {
     e.preventDefault();
     if (rsValor.value == "" || rsParcelas.value == "" || rsDatadeEmissao.value == "" || rsDatadeVencimento.value == "" || rsreceberDe.value == "" || rsSituacao == "" || categorias == '') {
-      rsValor.style.borderColor = 'red';
-      rsDatadeEmissao.style.borderColor = 'red';
-      rsDatadeVencimento.style.borderColor = 'red';
-      rsreceberDe.style.borderColor = 'red';
-      categorias.style.borderColor = 'red';
-      rsDatadeRecebimento.style.borderColor = 'red';
+      rsValor.style.border = '3px solid red';
+      rsDatadeEmissao.style.border = '3px solid red';
+      rsDatadeVencimento.style.border = '3px solid red';
+      rsreceberDe.style.border = '3px solid red';
+      categorias.style.border = '3px solid red';
+      rsDatadeRecebimento.style.border = '3px solid red';
       alert("Por favor, preencha todos os campos.");
     }
     else
@@ -148,6 +148,7 @@ if (localStorage.getItem('token') === null) {
     const indiceContaEditada = contasAReceber.findIndex(conta => conta.conta === contaId.toString());
 
     if (indiceContaEditada >= 0) {
+      btnCadastro.textContent = 'Atualizar'
       // Preencha os campos com os valores recuperados
       const contaEditada = contasAReceber[indiceContaEditada];
       rsConta.value = contaEditada.conta;

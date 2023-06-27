@@ -18,10 +18,10 @@
 
 <body>
 
-     <!-- MENU DE NAVEGAÇÃO -->
+    <!-- MENU DE NAVEGAÇÃO -->
 
 
-     <div class="header">
+    <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <a href="./inicio.html"><img src="./images/Protags.png" alt="logo" class="logopng"></img></a>
             <button class="navbar-toggler me-2 transparent" type="button" data-toggle="collapse"
@@ -84,89 +84,92 @@
 
     <div class="conteudo">
 
-        <!--ELEMENTOS DA LINHA 1-->
-        <div class="titulo">Contas a Receber</div>
-        <div class="div4">
-            <div class="linha3"> <!--ENTRADA DO NÚMERO DA CONTA-->
-                <label for="rconta">Conta</label>
-                <input id="rsConta" type="number" min="0">
-            </div>
-            <div class="linha3"> <!--ENTRADA DO VALOR-->
-                <label for="rvalor" id="rvalor">Valor</label>
-                <input id="rsValor" type="text" value="R$">
-            </div>
-            <div class="linha3"> <!--SELECIONADOR DE PARCELAS-->
-                <label for="rparcelas">Parcelas</label>
-                <select id="rsParcelas" name="rparcelas">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="6">6</option>
-                    <option value="12">12</option>
-                    <option value="24">24</option>
-                </select>
-            </div>
-            <div class="linha3"> <!--SELECIONADOR DE DATA-->
-                <label for="rcondicaoRecebimento">Condição de Recebimento</label>
-                <select id="rsCondicaoRec" name="rcondicaoRecebimento">
-                    <option value="avista">À Vista</option>
-                    <option value="15d">15 Dias</option>
-                    <option value="30d">30 Dias</option>
-                    <option value="45d">45 Dias</option>
-                    <option value="60d">60 Dias</option>
-                    <option value="75d">75 Dias</option>
-                    <option value="90d">90 Dias</option>
-                </select>
-            </div>
-            <div class="linha3"> <!--ENTRADA DA DATA DE EMISSÃO-->
-                <label for="rdatadeEmissao">Data de emissão</label>
-                <input id="rsDatadeEmissao" type="date">
-            </div>
-            <div class="linha3"> <!--ENTRADA DA DATA DE VENCIMENTO-->
-                <label for="rdatadeVencimento">Data de Vencimento</label>
-                <input id="rsDatadeVencimento" type="date">
-            </div>
-        </div>
-        
+        <div class="titulo mt-3">Contas a Receber</div>
 
-        <!--ELEMENTOS DA LINHA 2-->
-        <div class="div5">
-            <div class="linha4"> <!--ENTRADA DO PAGAR PARA-->
-                <label for="rreceberDe">Receber de</label>
-                <input id="rsreceberDe" type="text" placeholder="Insira um nome">
+        <div class="paiDasContas pt-1 pb-5 mt-5 text-center">
+
+            <!--ELEMENTOS DA LINHA 1-->
+            <div class="div4">
+                <div class="linha3"> <!--ENTRADA DO NÚMERO DA CONTA-->
+                    <label for="rconta">Conta</label>
+                    <input id="rsConta" type="number" min="0" class="text-center" readonly>
+                </div>
+                <div class="linha3"> <!--ENTRADA DO VALOR-->
+                    <label for="rvalor" id="rvalor">Valor</label>
+                    <input id="rsValor" type="text" value="R$">
+                </div>
+                <div class="linha3 ps-5"> <!--SELECIONADOR DE PARCELAS-->
+                    <label for="rparcelas">Parcelas</label>
+                    <select id="rsParcelas" name="rparcelas">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                        <option value="24">24</option>
+                    </select>
+                </div>
+                <div class="linha3"> <!--SELECIONADOR DE DATA-->
+                    <label for="rcondicaoRecebimento">Condição de Recebimento</label>
+                    <select id="rsCondicaoRec" name="rcondicaoRecebimento">
+                        <option value="avista">À Vista</option>
+                        <option value="15d">15 Dias</option>
+                        <option value="30d">30 Dias</option>
+                        <option value="45d">45 Dias</option>
+                        <option value="60d">60 Dias</option>
+                        <option value="75d">75 Dias</option>
+                        <option value="90d">90 Dias</option>
+                    </select>
+                </div>
+                <div class="linha3"> <!--ENTRADA DA DATA DE EMISSÃO-->
+                    <label for="rdatadeEmissao">Data de emissão</label>
+                    <input id="rsDatadeEmissao" type="date" class="text-center">
+                </div>
+                <div class="linha3"> <!--ENTRADA DA DATA DE VENCIMENTO-->
+                    <label for="rdatadeVencimento">Data de Vencimento</label>
+                    <input id="rsDatadeVencimento" type="date" class="text-center">
+                </div>
             </div>
-            <div class="linha4"> <!--ENTRADA DA DESCRIÇÃO-->
-                <label for="rDescricao">Descrição (Opcional)</label>
-                <input id="rsDescricao" type="text" placeholder="Insira a descrição">
+
+
+            <!--ELEMENTOS DA LINHA 2-->
+            <div class="div5">
+                <div class="linha4"> <!--ENTRADA DO PAGAR PARA-->
+                    <label for="rreceberDe">Receber de</label>
+                    <input id="rsreceberDe" type="text" placeholder="Insira um nome">
+                </div>
+                <div class="linha4"> <!--ENTRADA DA DESCRIÇÃO-->
+                    <label for="rDescricao">Descrição (Opcional)</label>
+                    <input id="rsDescricao" type="text" placeholder="Insira a descrição">
+                </div>
+                <div class="linha4"> <!--SELECIONADOR DE CATEGORIAS-->
+                    <label for="rcategoria">Categoria</label>
+                    <input type="text" id="rsCategoria" name="rpcategoria" placeholder="Ex: Vendas, Serviços">
+                </div>
+                <div class="linha4">
+                    <label for="rSituação">Situação</label> <!--SITUAÇÃO-->
+                    <select id="rsSituacao" name="rSituacao">
+                        <option value="caReceber">A Receber</option>
+                        <option value="cRecebido">Recebido</option>
+                    </select>
+                </div>
+                <div class="linha3"> <!--ENTRADA DA DATA DE RECEBIMENTO-->
+                    <label for="rdatadeRecebimento" id="rdataderecebimento">Data de Recebimento</label>
+                    <input id="rsDatadeRecebi" type="date" class="text-center">
+                </div>
             </div>
-            <div class="linha4"> <!--SELECIONADOR DE CATEGORIAS-->
-                <label for="rcategoria">Categoria</label>
-                <input type="text" id="rsCategoria" name="rpcategoria" placeholder="Ex: Vendas, Serviços">
+
+            <!--ELEMENTOS DA LINHA 3-->
+            <div class="div6">
             </div>
-            <div class="linha4">
-                <label for="rSituação">Situação</label> <!--SITUAÇÃO-->
-                <select id="rsSituacao" name="rSituacao">
-                    <option value="caReceber">A Receber</option>
-                    <option value="cRecebido">Recebido</option>
-                </select>
-            </div>
-            <div class="linha3"> <!--ENTRADA DA DATA DE RECEBIMENTO-->
-                <label for="rdatadeRecebimento" id="rdataderecebimento">Data de Recebimento</label>
-                <input id="rsDatadeRecebi" type="date">
+            <div class="rcadastrar mt-4 pt-5 pe-3"> <!--CADASTRAR C. PARA RECEBER-->
+                <button id="rregCadastrar">Cadastrar</button>
             </div>
         </div>
 
-        <!--ELEMENTOS DA LINHA 3-->
-        <div class="div6">
-        </div>
-        <div class="rcadastrar"> <!--CADASTRAR C. PARA RECEBER-->
-            <button id="rregCadastrar">Cadastrar</button>
-        </div>
+
     </div>
-    
-
-
 
 
 

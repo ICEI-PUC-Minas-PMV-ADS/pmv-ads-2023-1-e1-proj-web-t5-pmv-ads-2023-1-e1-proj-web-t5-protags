@@ -19,11 +19,9 @@
 
 }
 
-
 .texto {
     margin-bottom: 0;
 }
-
 
 .conteudo {
     min-height: 78vh;
@@ -44,12 +42,6 @@
     --bs-dropdown-min-width: 5.5rem;
 }
 
-
-
-/* *{box-sizing: border-box;}
-main { width: 50%; float: left;}
-aside { width: 48%; float: right;}
-*/
 /* Box para Entradas e Saidas */
 
 .containerEntradaSaida {
@@ -183,7 +175,6 @@ h5 {
     border-color: #000;
 }
 
-
 .resultFiltro {
     display: flex;
     justify-content: center;
@@ -211,7 +202,6 @@ h5 {
     border-radius: 20px;
 }
 
-
 #infosGrafico {
     -webkit-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
@@ -223,7 +213,6 @@ h5 {
 #dropMenuBtn {
     --bs-dropdown-min-width: 5.3rem;
 }
-
 
 #btnFiltrar {
     background-color: #47141E;
@@ -237,4 +226,12 @@ h5 {
     background-color: #fff;
     color: #000;
     border-color: #000;
+}
+
+#dataInicioTESTE {
+    border-radius: 5px;
+}
+
+#dataFimTESTE {
+    border-radius: 5px;
 }

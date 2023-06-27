@@ -66,7 +66,7 @@
   -moz-box-shadow: 2px 2px 22px 8px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 2px 22px 8px rgba(150, 147, 147, 0.75);
   border-radius: 20px;
-  width: 85%;
+  width: 95%;
   justify-content: center;
   margin: auto;
   margin-top: 50px;
@@ -124,11 +124,11 @@ input {
 }
 
 select {
-  font-size: 3vh;
+  font-size: 2vh;
   align-items: center;
   border-radius: .3rem;
   text-align: center;
-  width: 8vw;
+  width: 10vw;
   height: 5vh;
 }
 
@@ -185,4 +185,54 @@ button {
   #dropdownMenuButton {
     float: right;
   }
+}
+
+.paiDasContas {
+  color: #fff;
+  background-color: #47141E;
+  align-items: center;
+  border-radius: 30px;
+  margin: 0% 5%;
+}
+
+#psValor {
+  width: 8vw;
+}
+
+#psDatadeVenci {
+  width: 11vw;
+}
+
+#psDatadeEmissao {
+  width: 11vw;
+}
+
+#psDatadePagamento {
+  width: 11vw;
+}
+
+#psParcelas{
+  width: 7vw;
+}
+
+#psCondicaoPag{
+  width: 9vw;
+}
+
+#psSituacao{
+  width: 7vw;
+}
+
+#pregCadastrar {
+  background-color: #47141E;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+#pregCadastrar:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
 }

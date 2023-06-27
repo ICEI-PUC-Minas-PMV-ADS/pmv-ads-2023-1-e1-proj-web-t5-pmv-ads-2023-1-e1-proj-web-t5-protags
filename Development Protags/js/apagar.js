@@ -58,7 +58,7 @@ if (localStorage.getItem('token') === null) {
     // Salva as alterações no localStorage
     localStorage.setItem('contasAPagar', JSON.stringify(contasAPagar));
 
-    alert('Conta alterada com sucesso!');
+    alert('Conta atualizada com sucesso!');
 
     // Redireciona de volta para a página ContasApagar.html
     window.location.href = 'ContasApagar.html';
@@ -69,11 +69,12 @@ if (localStorage.getItem('token') === null) {
     btnCadastro.addEventListener('click', (e) => {
       e.preventDefault();
       if (psValor.value === '' || psParcelas.value === '' || psDatadeEmissao.value === '' || psDatadeVenci.value === '' || psPagarPara.value === '' || psSituacao === '' || categorias === '') {
-        psValor.style.borderColor = 'red';
-        psDatadeEmissao.style.borderColor = 'red';
-        psDatadeVenci.style.borderColor = 'red';
-        psPagarPara.style.borderColor = 'red';
-        categorias.style.borderColor = 'red';
+        psValor.style.border = '3px solid red';
+        psDatadeEmissao.style.border = '3px solid red';
+        psDatadeVenci.style.border = '3px solid red';
+        psPagarPara.style.border = '3px solid red';
+        categorias.style.border = '3px solid red';
+        psDatadePagamento.style.border = '3px solid red';
         alert('Por favor, preencha todos os campos.');
       } else {
         if (psSituacao.value === 'cAPagar') {
@@ -120,7 +121,7 @@ if (localStorage.getItem('token') === null) {
           psDatadeEmissao.style.borderColor = 'gray';
           psDatadeVenci.style.borderColor = 'gray';
           psPagarPara.style.borderColor = 'gray';
-          alert('Conta cadastrada como paga com sucesso!');
+          alert('Conta cadastrada com sucesso!');
           window.location.href = 'ContasApagar.html';
         }
       }
@@ -136,6 +137,7 @@ if (localStorage.getItem('token') === null) {
     const indiceContaEditada = contasAPagar.findIndex(conta => conta.conta === contaId.toString());
 
     if (indiceContaEditada >= 0) {
+      btnCadastro.textContent = 'Atualizar'
       // Preencha os campos com os valores recuperados
       const contaEditada = contasAPagar[indiceContaEditada];
       psConta.value = contaEditada.conta;
