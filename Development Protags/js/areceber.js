@@ -17,10 +17,12 @@ if (localStorage.getItem('token') === null) {
   const btnCadastro = document.querySelector('#rregCadastrar')
   const rsDatadeVencimento = document.querySelector('#rsDatadeVencimento')
   const rsDatadeRecebimentolabel = document.getElementById('rdataderecebimento')
+  const categorias = document.querySelector('#rsCategoria')
 
-  let categorias = document.querySelector('#rsCategoria')
-  let contasAReceber = JSON.parse(localStorage.getItem('contasAReceber')) || [];
-  let contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas')) || [];
+  const contasAReceber = JSON.parse(localStorage.getItem('contasAReceber')) || [];
+  const contasRecebidas = JSON.parse(localStorage.getItem('contasRecebidas')) || [];
+
+  rsConta.value = contasAReceber.length + 1;
 
   rsSituacao.addEventListener('change', () => {
     if (rsSituacao.value == 'cRecebido') {
@@ -103,31 +105,31 @@ if (localStorage.getItem('token') === null) {
       }
   })
 
- // Recupere os valores da URL
- const urlParams = new URLSearchParams(window.location.search);
- const contaId = urlParams.get('conta');
- const vencimento = urlParams.get('vencimento');
- const parcelas = urlParams.get('parcelas');
- const receberde = urlParams.get('receberde');
- const descricao = urlParams.get('descricao');
- const valor = urlParams.get('valor');
- const categoria = urlParams.get('categoria');
- const condicaoRec = urlParams.get('rsCondicaoRec');
- const datadeemissao = urlParams.get('datadeemissao');
+  // Recupere os valores da URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const contaId = urlParams.get('conta');
+  const vencimento = urlParams.get('vencimento');
+  const parcelas = urlParams.get('parcelas');
+  const receberde = urlParams.get('receberde');
+  const descricao = urlParams.get('descricao');
+  const valor = urlParams.get('valor');
+  const categoria = urlParams.get('categoria');
+  const condicaoRec = urlParams.get('rsCondicaoRec');
+  const datadeemissao = urlParams.get('datadeemissao');
 
 
- const valorSemSimbolo = valor.replace(/R\$\s*/g, '');
+  const valorSemSimbolo = valor.replace(/R\$\s*/g, '');
 
- // Preencha os campos com os valores recuperados
- document.querySelector('#rsConta').value = contaId;
- document.querySelector('#rsDatadeVencimento').value = vencimento;
- document.querySelector('#rsParcelas').value = parcelas;
- document.querySelector('#rsreceberDe').value = receberde;
- document.querySelector('#rsDescricao').value = descricao;
- document.querySelector('#rsValor').value = valorSemSimbolo;
- document.querySelector('#rsCondicaoRec').value = condicaoRec;
- document.querySelector('#rsCategoria').value = categoria;
- document.querySelector('#rsDatadeEmissao').value = datadeemissao;
+  // Preencha os campos com os valores recuperados
+  document.querySelector('#rsConta').value = contaId;
+  document.querySelector('#rsDatadeVencimento').value = vencimento;
+  document.querySelector('#rsParcelas').value = parcelas;
+  document.querySelector('#rsreceberDe').value = receberde;
+  document.querySelector('#rsDescricao').value = descricao;
+  document.querySelector('#rsValor').value = valorSemSimbolo;
+  document.querySelector('#rsCondicaoRec').value = condicaoRec;
+  document.querySelector('#rsCategoria').value = categoria;
+  document.querySelector('#rsDatadeEmissao').value = datadeemissao;
 
 
 

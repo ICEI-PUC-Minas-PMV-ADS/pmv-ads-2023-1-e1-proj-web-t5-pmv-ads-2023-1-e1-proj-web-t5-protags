@@ -20,7 +20,7 @@ if (localStorage.getItem('token') === null) {
 
   const contasAtrasadas = JSON.parse(localStorage.getItem('contasAtrasadas')) || [];
   const contasPagas = JSON.parse(localStorage.getItem('contasPagas')) || [];
-  let contasAPagar = JSON.parse(localStorage.getItem('contasAPagar')) || [];
+  const contasAPagar = JSON.parse(localStorage.getItem('contasAPagar')) || [];
 
   // Preenche o campo psConta com a quantidade de objetos no array contasAPagar
   psConta.value = contasAPagar.length + 1;
@@ -159,4 +159,10 @@ if (localStorage.getItem('token') === null) {
   } else {
     adicionarConta();
   }
+}
+
+//Função de logout
+function logout() {
+  localStorage.removeItem('token')
+  window.location.href = 'login.html'
 }
