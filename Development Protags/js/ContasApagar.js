@@ -85,6 +85,9 @@ if (localStorage.getItem('token') === null) {
 
   function editarConta(i) {
     const conta = contasAPagar[i];
+    var testeValor = conta.valor;
+    var testeBRL = parseFloat(testeValor.replace('R$', '').replace(',', '.'));
+
     const params = new URLSearchParams();
     params.set('conta', conta.conta);
     params.set('datadeemissao', conta.datadeemissao);
@@ -92,7 +95,7 @@ if (localStorage.getItem('token') === null) {
     params.set('vencimento', conta.datadevenci);
     params.set('pagarpara', conta.pagarpara);
     params.set('descricao', conta.descricao);
-    params.set('valor', conta.valor);
+    params.set('valor', testeBRL);
     params.set('categoria', conta.categoria);
     params.set('condicaopag', conta.condicaopag);
 
