@@ -34,6 +34,36 @@ if (localStorage.getItem('token') === null) {
     }
   });
 
+  
+  function editarConta(contaEditada) {
+    const contaId = parseInt(rsConta.value);
+    const novoVencimento = rsDatadeVencimento.value;
+    const novaParcela = parseInt(rsParcelas.value);
+    const novoPagarPara = rsreceberDe.value;
+    const novaDescricao = rsDescricao.value;
+    const novoValor = rsValor.value;
+    const novaCategoria = categorias.value;
+    const novaDataDeEmissao = rsDatadeEmissao.value;
+
+    // Atualiza os valores da conta editada
+    contaEditada.valor = novoValor;
+    contaEditada.parcelas = novaParcela;
+    contaEditada.datadevenci = novoVencimento;
+    contaEditada.pagarpara = novoPagarPara;
+    contaEditada.descricao = novaDescricao;
+    contaEditada.categoria = novaCategoria;
+    contaEditada.datadeemissao = novaDataDeEmissao;
+
+    // Salva as alterações no localStorage
+    localStorage.setItem('contasAReceber', JSON.stringify(contasAReceber));
+
+    alert('Conta alterada com sucesso!');
+
+    // Redireciona de volta para a página ContasApagar.html
+    window.location.href = 'ContasAReceber.html';
+  }
+
+  function adicionarConta() {
   btnCadastro.addEventListener('click', (e) => {
     e.preventDefault();
     if (rsValor.value == "" || rsParcelas.value == "" || rsDatadeEmissao.value == "" || rsDatadeVencimento.value == "" || rsreceberDe.value == "" || rsSituacao == "" || categorias == '') {
@@ -104,43 +134,50 @@ if (localStorage.getItem('token') === null) {
         window.location.href = './ContasRecebidas.html'
       }
   })
+  }
 
-  // Recupere os valores da URL
+
+
+ 
+  // Verifique se há parâmetros na URL
   const urlParams = new URLSearchParams(window.location.search);
   const contaId = urlParams.get('conta');
-  const vencimento = urlParams.get('vencimento');
-  const parcelas = urlParams.get('parcelas');
-  const receberde = urlParams.get('receberde');
-  const descricao = urlParams.get('descricao');
-  const valor = urlParams.get('valor');
-  const categoria = urlParams.get('categoria');
-  const condicaoRec = urlParams.get('rsCondicaoRec');
-  const datadeemissao = urlParams.get('datadeemissao');
 
+  if (contaId) {
+    // Encontra o índice da conta a ser editada pelo ID
+    const indiceContaEditada = contasAReceber.findIndex(conta => conta.conta === contaId.toString());
 
-  const valorSemSimbolo = valor.replace(/R\$\s*/g, '');
+    if (indiceContaEditada >= 0) {
+      // Preencha os campos com os valores recuperados
+      const contaEditada = contasAReceber[indiceContaEditada];
+      rsConta.value = contaEditada.conta;
+      rsDatadeVencimento.value = contaEditada.datadevencimento;
+      rsParcelas.value = contaEditada.parcelas;
+      rsreceberDe.value = contaEditada.receberde;
+      rsDescricao.value = contaEditada.descricao;
+      rsValor.value = contaEditada.valor.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      rsCondicaoRec.value = contaEditada.condicaorec;
+      categorias.value = contaEditada.categoria;
+      rsDatadeEmissao.value = contaEditada.datadeemissao;
 
-  // Preencha os campos com os valores recuperados
-  document.querySelector('#rsConta').value = contaId;
-  document.querySelector('#rsDatadeVencimento').value = vencimento;
-  document.querySelector('#rsParcelas').value = parcelas;
-  document.querySelector('#rsreceberDe').value = receberde;
-  document.querySelector('#rsDescricao').value = descricao;
-  document.querySelector('#rsValor').value = valorSemSimbolo;
-  document.querySelector('#rsCondicaoRec').value = condicaoRec;
-  document.querySelector('#rsCategoria').value = categoria;
-  document.querySelector('#rsDatadeEmissao').value = datadeemissao;
+      // Adicione um ouvinte de evento de clique ao botão de cadastrar/editar conta
+      btnCadastro.addEventListener('click', () => {
+        editarConta(contaEditada); // Passe a conta editada como argumento
+      });
+    } else {
+      alert('Conta não encontrada');
+      window.location.href = 'ContasAReceber.html';
+    }
+  } else {
+    adicionarConta();
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
+//Função de logout
+function logout() {
+  localStorage.removeItem('token')
+  window.location.href = 'login.html'
+}
 
 
 
@@ -155,11 +192,3 @@ if (localStorage.getItem('token') === null) {
   let rvalorIncrementado = rsConta.value;
   rvalorIncrementado++;
   rsConta.value = rvalorIncrementado;
-
-}
-
-//Função de logout
-function logout() {
-  localStorage.removeItem('token')
-  window.location.href = 'login.html'
-}
