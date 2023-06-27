@@ -57,7 +57,7 @@ if (localStorage.getItem('token') === null) {
     // Salva as alterações no localStorage
     localStorage.setItem('contasAReceber', JSON.stringify(contasAReceber));
 
-    alert('Conta alterada com sucesso!');
+    alert('Conta atualizada com sucesso!');
 
     // Redireciona de volta para a página ContasApagar.html
     window.location.href = 'ContasAReceber.html';

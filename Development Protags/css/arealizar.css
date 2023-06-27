@@ -37,22 +37,6 @@
     background-color: #ffff;
 }
 
-#btnUrgentes {
-    float: right;
-    background-color: #47141E;
-    width: 8.5rem;
-    height: 2.5rem;
-    color: #fff;
-    border: 1px solid gray;
-    border-radius: 5px;
-}
-
-#btnUrgentes:hover {
-    background-color: white;
-    border: 1px solid #47141E;
-    color: black;
-}
-
 #btnFechar {
     color: white;
     background-color: #96384a;
@@ -129,7 +113,6 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 main {
@@ -173,31 +156,54 @@ table td.status-vencido {
     --cor-hover: #47141e;
 }
 
+#btnUrgentes {
+    background-color: #47141E;
+    width: 8.5rem;
+    height: 2.91rem;
+    color: #fff;
+    border: 1px solid gray;
+    border-radius: 5px;
+    align-items: flex-end;
+}
+
+#btnUrgentes:hover {
+    background-color: white;
+    border: 1px solid #47141E;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
 .dp-menu ul {
     list-style-type: none;
     padding: 0px;
 }
 
 .dp-menu ul {
-    background-color: var(--cor-fundo);
+    background-color: #47141E;
     position: relative;
+    border: 1px solid gray;
 }
 
 .dp-menu ul li {
     display: inline-block;
+    border-radius: 5px;
 }
 
 .dp-menu ul li a {
-    color: var(--cor-texto);
+    color: #fff;
+    background-color: #47141E;
     text-decoration: none;
     padding: 10px;
     display: inline-block;
-    transition: background 0.3s;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 
 .dp-menu ul li a:hover {
-    background-color: var(--cor-hover);
-}
+    background-color: white;
+    border: 1px solid #47141E;
+    color: black;}
 
 /*sub menu*/
 .dp-menu ul ul {
@@ -208,6 +214,9 @@ table td.status-vencido {
 .dp-menu ul li:hover ul {
     display: block;
     width: auto;
+    background-color: white;
+    border: 1px solid #47141E;
+    color: black;
 }
 
 .dp-menu ul ul {
@@ -243,13 +252,17 @@ table td.status-vencido {
     background-color: #CF3700;
 }
 
-.returnIcon{
+.returnIcon {
     background-color: #fff;
     width: 1.2rem;
     height: 1.2rem;
     border: none;
 }
 
-.returnIcon:hover{
+.returnIcon:hover {
     background-color: #F0DB4F;
+}
+
+#titulos {
+background: #47141E;
 }
