@@ -42,7 +42,7 @@ if (localStorage.getItem('token') === null) {
     const novaParcela = parseInt(psParcelas.value);
     const novoPagarPara = psPagarPara.value;
     const novaDescricao = psDescricao.value;
-    const novoValor = parseInt(psValor.value.replace(/\D/g, ''), 10);
+    const novoValor = psValor.value;
     const novaCategoria = categorias.value;
     const novaDataDeEmissao = psDatadeEmissao.value;
 
