@@ -36,7 +36,7 @@ var dataFimCaixaBase = new Date(dataFimCaixaSplit[0], dataFimCaixaSplit[1] - 1, 
 // Filtros onload contas MÊS
 var somaEntrada = 0;
 for (let i = 0; i < aReceberPull.length; i++) {
-    let dataVenciEntradaSplit = aReceberPull[i].dataderecebimento.split("-");
+    let dataVenciEntradaSplit = aReceberPull[i].datadevencimento.split("-");
     let dataVenciEntrada = new Date(dataVenciEntradaSplit[0], dataVenciEntradaSplit[1] - 1, dataVenciEntradaSplit[2]);
     if (aReceberPull[i].situacao === "cRecebido" && dataVenciEntrada >= dataInicioCaixaBase && dataVenciEntrada <= dataFimCaixaBase) {
         var entradaValor = aReceberPull[i].valor;
