@@ -157,6 +157,10 @@ table td.status-vencido {
 }
 
 #btnUrgentes {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 0;
     background-color: #47141E;
     width: 8.5rem;
     height: 2.91rem;
@@ -164,7 +168,7 @@ table td.status-vencido {
     border: 1px solid gray;
     border-radius: 5px;
     align-items: flex-end;
-}
+  }
 
 #btnUrgentes:hover {
     background-color: white;
@@ -172,6 +176,11 @@ table td.status-vencido {
     color: black;
     border: 1px solid gray;
     border-radius: 5px;
+
+}
+
+.dp-menu {
+  position: relative;
 }
 
 .dp-menu ul {

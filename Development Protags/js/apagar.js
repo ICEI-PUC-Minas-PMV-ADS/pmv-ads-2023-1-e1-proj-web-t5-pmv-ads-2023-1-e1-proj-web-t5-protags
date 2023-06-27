@@ -122,7 +122,7 @@ if (localStorage.getItem('token') === null) {
           psDatadeVenci.style.borderColor = 'gray';
           psPagarPara.style.borderColor = 'gray';
           alert('Conta cadastrada com sucesso!');
-          window.location.href = 'ContasApagar.html';
+          window.location.href = 'ContasPagas.html';
         }
       }
     });
