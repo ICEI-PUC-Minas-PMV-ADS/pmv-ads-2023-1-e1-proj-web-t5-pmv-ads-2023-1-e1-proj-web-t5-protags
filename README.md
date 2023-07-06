@@ -21,7 +21,6 @@ Nosso projeto aborda o problema que pequenas empresas enfrentam ao se organizare
 ## Integrantes
 
 * Aline Azedias de Souza
-* Carine Pinho Lacerda 
 * Lucas Gabriel Duarte Enis
 * Talysson Moraes Lourenço de Oliveira
 * Tiago Henrique Oliveira Souza 
